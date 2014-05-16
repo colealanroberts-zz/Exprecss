@@ -1,0 +1,11 @@
+@while $grid-index <= $grid-columns
+    .col-#{$grid-index}
+        @include span-columns($grid-index)
+        @include breakpoint(tablet)
+            width: 50%
+            float: none
+            margin-right: 0
+        @include breakpoint(mobile)
+            width: 100%
+
+    $grid-index: $grid-index + 1 !global

@@ -1,0 +1,35 @@
+// Responsive Breakpoint
+@mixin breakpoint($point)
+    @if $point == desktop
+        @media screen and (min-width: $breakpoint-desktop)
+            @content
+
+    @else if $point == tablet
+        @media screen and (max-width: $breakpoint-tablet)
+            @content
+
+    @else if $point == mobile
+        @media screen and (max-width: $breakpoint-mobile)
+            @content
+
+    @else if $point == $point
+        @media screen and (max-width: $point)
+            @content
+
+// Background Clip
+@mixin background-clip($property)
+    background-clip: $property + "-box"
+    -moz-background-clip: $property
+    -webkit-background-clip: $property
+
+
+// Button Mixin
+@mixin button-transition($button-transition)
+    @if $button-transition == true
+        @include transition(all, $ease-out-cubic, $transition-duration-default)
+
+        &:hover
+            @include transition(all, $ease-out-cubic, $transition-duration-default)
+    @extend %btn
+    color: $white
+    border-radius: $border-radius-default

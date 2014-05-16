@@ -1,0 +1,58 @@
+.btn
+    @include transition(all, linear, 300ms)
+    @extend %btn
+    padding: 12px 20px
+    color: $white
+    border-radius: $border-radius-default
+    font:
+        size: $font-size-l1
+        weight: 500
+
+    @include breakpoint(mobile)
+        width: 100%
+        float: none
+
+.btn-primary
+    @include linear-gradient(darken($white, 1%), darken($white, 3%))
+    @extend %box-shadow-default
+    color: $dark-grey
+    border: 1px solid $border-grey
+
+.btn-submit
+    background: $brand-green
+
+.btn-important
+    background: #DF4938
+
+// Grouped Buttons
+.btn-group
+    overflow: auto
+
+    input[type="radio"]
+        display: none
+
+        + label
+            @include linear-gradient(darken($white, 1%), darken($white, 3%))
+            float: left
+            width: auto
+            text-align: center
+            cursor: pointer
+            margin: 0
+            display: inline-block
+            padding: 8px 25px
+            border-top: 1px solid $border-grey
+            border-left: 1px solid $border-grey
+            border-bottom: 1px solid $border-grey
+
+        &:first-of-type + label
+            border-radius: $border-radius-default 0 0 $border-radius-default !important
+
+        &:last-of-type + label
+            border-right: 1px solid $border-grey
+            border-radius: 0 $border-radius-default $border-radius-default 0 !important
+
+        &:checked + label
+            color: $white
+            background: $base-color
+            border: 1px solid darken($base-color, 15%) !important
+            box-shadow: none

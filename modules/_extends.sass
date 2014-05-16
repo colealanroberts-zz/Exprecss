@@ -1,0 +1,29 @@
+%btn
+    display: inline-block
+    margin-bottom: 0
+    text-align: center
+    vertical-align: middle
+    cursor: pointer
+    border: transparent
+    white-space: nowrap
+    text-decoration: none
+
+%clearfix
+    *zoom: 1
+    clear: both
+
+    &:after, &:before
+        content: ''
+        display: table
+        clear: both
+
+%font-smoothing-antialiased
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    font-smoothing: antialiased
+
+%box-shadow-default
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.045), inset 0 0 1px 1px rgba(255, 255, 255, 0.9)
+
+%force-hardware-accel
+    @include transform(translate3d(0,0,0))

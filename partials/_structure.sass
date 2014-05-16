@@ -1,0 +1,161 @@
+html, body
+    @extend %font-smoothing-antialiased
+    width: 100%
+    margin: 0
+    color: $dark-grey
+    background: $white
+    font: normal 100%/1.618 $font-family-default
+        border: 0
+    @include breakpoint(mobile)
+        -webkit-touch-callout: none
+        -webkit-text-size-adjust: none
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+        -webkit-user-select: text
+.brand
+    color: $white
+    font:
+        weight: 600
+
+// For Style Guide Only
+
+.navbar
+    @include transition(all, linear, $transition-duration-default)
+    position: absolute !important
+    top: 0
+    left: 0
+    border-bottom: none !important
+    background: transparent !important
+
+    ul
+        li
+            float: right
+
+            a.changelog
+
+                // Change log
+                @include transition(all, linear, $transition-duration-default)
+                display: inline-block
+                position: relative
+                top: 20px
+                padding: 8px 12px
+                color: rgba($white, 0.8)
+                border: 1px solid rgba($white, 0.3)
+                border-radius: $border-radius-default
+                font:
+                    size: $font-size-l0
+                @include breakpoint(mobile)
+                    display: none
+
+                &:hover
+                    color: $white
+                    border-color: $white
+
+
+.svg-logo
+    margin-top: 20px
+    position: relative
+    width: 40px
+    height: 40px
+    @include breakpoint(mobile)
+        @include transform(translateX(-50%))
+        position: relative
+        left: 50%
+
+    polygon, polyline
+        stroke: #1ABC9C
+
+.grid
+    div[class^='col-'], div[class*='col-']
+        @include omega
+        background: $brand-blue
+        height: 40px
+        color: $white
+        padding: 10px
+
+        &:nth-of-type(2n + 1)
+            background: darken($brand-blue, 5%)
+
+        &:nth-of-type(odd)
+            @include breakpoint(tablet)
+                float: left
+
+        &:nth-of-type(even)
+            @include breakpoint(tablet)
+                float: right
+
+section
+    padding: 40px 0
+
+    &:nth-of-type(even)
+        background: #F8F8F8
+
+.prettyprint
+    width: 100%
+    overflow-x: scroll
+    overflow-y: auto
+
+.hero-unit-demo
+    background-image: -webkit-linear-gradient(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9)), url('../img/bg-hero-unit.jpg')
+    background-image: -moz-linear-gradient(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9)), url('../img/bg-hero-unit.jpg')
+    background-image: -o-linear-gradient(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9)), url('../img/bg-hero-unit.jpg')
+    background-image: linear-gradient(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9)), url('../img/bg-hero-unit.jpg')
+    padding: 150px 0
+    background:
+        size: cover
+        repeat: no-repeat
+        position: center center
+    @include breakpoint(mobile)
+        padding: 80px 0 30px 0
+
+    h1, p
+        @include breakpoint(mobile)
+            text-align: center
+
+    .name
+        color: $white
+        margin: 0
+        font:
+            size: em(50)
+            weight: 100
+            family: 'Gotham-Thin', sans-serif
+
+    .tagline
+        color: darken($white, 10%)
+        margin-top: 0
+        @include breakpoint(mobile)
+            font:
+                size: em(11)
+
+    .version
+        position: relative
+        text-align: center
+        display: block
+        font-size: em(10)
+        text-shadow: 0 1px 2px darken($base-color, 10%)
+        color: darken($white, 10%)
+
+.btn-explore
+    @include transition(all, linear, $transition-duration-default)
+    @include linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
+    margin-top: 20px
+    border: 1px solid #25516F
+    box-shadow: 0 1px 4px rgba(black, 0.1), inset 0 1px 0 rgba($white, 0.15)
+    letter-spacing: 1px
+    text-shadow: 0 2px 4px darken($base-color, 10%)
+    padding: 15px 35px !important
+    font:
+        size: em(11)
+        weight: 500
+
+// Everything Else
+.section-title
+    font:
+        size: $font-size-l4
+
+hr
+    margin: 20px 0
+    display: block
+    border: 0
+    height: 1px
+    width: 100%
+    background: $border-grey

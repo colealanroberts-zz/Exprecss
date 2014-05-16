@@ -1,0 +1,39 @@
+.select
+    @include appearance(none)
+    @include fill-parent
+    position: relative
+    background: transparent
+    border: none
+
+    select
+        @include linear-gradient(darken($white, 1%), darken($white, 3%))
+        @include transition(all, linear, $transition-duration-default)
+        @include box-sizing(border-box)
+        @include appearance(none)
+        @extend %box-shadow-default
+        outline: 1px none
+        padding: 15px 10px
+        width: 100%
+        overflow: hidden
+        border: 1px solid $border-grey
+        border-radius: $border-radius-default
+        font:
+            size: $font-size-l0
+
+        // This is sort of hacky, but this removes the ugly down arrow on Firefox
+        // See Gist: https://gist.github.com/joaocunha/6273016
+        text-indent: 0.01px
+        text-overflow: ''
+
+        &:focus
+            outline: 1px none
+            box-shadow: 0
+            border: 1px solid $base-color
+
+    &:after
+        @include triangle(12px, gray, down)
+        display: inline-block
+        content: ''
+        top: 40px
+        right: 20px
+        position: absolute

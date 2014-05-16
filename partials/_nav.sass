@@ -1,0 +1,24 @@
+.navbar
+    @include transition(all, linear, $transition-duration-default)
+    @include fill-parent
+    position: relative
+    top: 0
+    left: 0
+    height: auto
+    overflow: auto
+    background: $white
+    border-bottom: 1px solid #E8E8E8
+
+    ul
+        max-width: 68em
+        margin: 0 auto
+        padding: 10px
+        list-style-type: none
+
+        li
+            margin: 0
+            padding: 0
+            display: inline
+
+            a
+                text-decoration: none

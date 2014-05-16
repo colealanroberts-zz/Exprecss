@@ -1,0 +1,23 @@
+.container
+    @include outer-container
+    padding-left: 20px
+    padding-right: 20px
+
+.fill-parent
+    @include fill-parent
+
+.center-relative
+    @include transform(translateX(-50%))
+    position: relative
+    left: 50%
+
+.center-absolute
+    @include transform(translateX(-50%))
+    position: absolute
+    left: 50%
+
+.float-left
+    float: left
+
+.float-right
+    float: right
