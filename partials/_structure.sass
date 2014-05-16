@@ -134,10 +134,22 @@ section
         text-shadow: 0 1px 2px darken($base-color, 10%)
         color: darken($white, 10%)
 
+.btn-view-examples
+    @include transition(all, linear, $transition-duration-default)
+    margin-top: 20px
+    border: 1px solid rgba($white, 0.5)
+    letter-spacing: 1px
+    color: rgba($white, 0.8)
+    padding: 20px 35px !important
+    background: transparent
+    font:
+        size: em(11)
+        weight: 500
+
 .btn-explore
     @include transition(all, linear, $transition-duration-default)
     @include linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
-    margin-top: 20px
+    margin: 20px 5px 0 0
     border: 1px solid #25516F
     box-shadow: 0 1px 4px rgba(black, 0.1), inset 0 1px 0 rgba($white, 0.15)
     letter-spacing: 1px
@@ -159,3 +171,6 @@ hr
     height: 1px
     width: 100%
     background: $border-grey
+
+.group
+    display: block
