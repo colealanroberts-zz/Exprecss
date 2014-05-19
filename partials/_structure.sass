@@ -101,12 +101,14 @@ section
 .hero-unit-demo
     @include background-image(linear-gradient(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9)), url('../img/bg-hero-unit.jpg'))
     padding: 150px 0
+    height: 577px
     background:
         size: cover
         repeat: no-repeat
         position: center center
     @include breakpoint(mobile)
         padding: 80px 0 30px 0
+        height: auto
 
     h1, p
         @include breakpoint(mobile)
