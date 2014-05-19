@@ -40,11 +40,15 @@ html, body
         li
             float: right
 
+            a.logo
+                float: left
+
             a.changelog
                 @include transition(all, linear, $transition-duration-default)
                 text-decoration: none
                 display: inline-block
                 position: relative
+                float: right
                 top: 20px
                 padding: 8px 12px
                 color: rgba($white, 0.8)

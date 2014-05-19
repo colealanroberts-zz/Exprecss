@@ -401,6 +401,8 @@ html, body {
       clear: both; }
     .navbar-exprecss ul li {
       float: right; }
+      .navbar-exprecss ul li a.logo {
+        float: left; }
       .navbar-exprecss ul li a.changelog {
         -webkit-transition: all, linear, 300ms;
         -moz-transition: all, linear, 300ms;
@@ -408,6 +410,7 @@ html, body {
         text-decoration: none;
         display: inline-block;
         position: relative;
+        float: right;
         top: 20px;
         padding: 8px 12px;
         color: rgba(255, 255, 255, 0.8);
