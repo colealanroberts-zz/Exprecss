@@ -1,5 +1,6 @@
 html, body
     @extend %font-smoothing-antialiased
+    height: 100%
     width: 100%
     margin: 0
     color: $dark-grey
@@ -13,6 +14,7 @@ html, body
         -webkit-text-size-adjust: none
         -webkit-tap-highlight-color: rgba(0,0,0,0)
         -webkit-user-select: text
+
 .brand
     color: $white
     font:
@@ -158,10 +160,21 @@ section
         size: em(11)
         weight: 500
 
-// Everything Else
 .section-title
     font:
         size: $font-size-l4
+
+// Everything Else
+
+
+.wrapper
+    min-height: 100%
+    margin-bottom: -($height-sticky-footer)
+
+    &:after
+        content: ''
+        display: block
+        height: $height-sticky-footer
 
 hr
     @include linear-gradient(to right, darken($white, 6%) 10%, darken($white, 10%), darken($white, 6%) 90%)

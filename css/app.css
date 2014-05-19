@@ -360,6 +360,7 @@ html, body {
       background: #3498db; }
 
 html, body {
+  height: 100%;
   width: 100%;
   margin: 0;
   color: #5c5c5c;
@@ -515,6 +516,14 @@ section {
 
 .section-title {
   font-size: 2.25em; }
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -84px; }
+  .wrapper:after {
+    content: "";
+    display: block;
+    height: 84px; }
 
 hr {
   background-color: #f0f0f0;
@@ -772,6 +781,9 @@ label {
         color: #5c5c5c;
         font-size: 0.6875em;
         font-weight: 600; }
+
+.sticky-footer {
+  height: 84px; }
 
 .copyright {
   display: block;
