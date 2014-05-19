@@ -22,22 +22,27 @@ html, body
 
 // For Style Guide Only
 
-.navbar
-    @include transition(all, linear, $transition-duration-default)
-    position: absolute !important
+.navbar-exprecss
+    @include fill-parent
+    position: absolute
     top: 0
     left: 0
-    border-bottom: none !important
-    background: transparent !important
+    border-bottom: none
+    background: transparent
+    height: auto
+    overflow: auto
 
     ul
+        @include outer-container
+        padding: 10px
+        list-style-type: none
+
         li
             float: right
 
             a.changelog
-
-                // Change log
                 @include transition(all, linear, $transition-duration-default)
+                text-decoration: none
                 display: inline-block
                 position: relative
                 top: 20px

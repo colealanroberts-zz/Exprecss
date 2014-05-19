@@ -380,35 +380,46 @@ html, body {
   color: white;
   font-weight: 600; }
 
-.navbar {
-  -webkit-transition: all, linear, 300ms;
-  -moz-transition: all, linear, 300ms;
-  transition: all, linear, 300ms;
-  position: absolute !important;
+.navbar-exprecss {
+  width: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  border-bottom: none !important;
-  background: transparent !important; }
-  .navbar ul li {
-    float: right; }
-    .navbar ul li a.changelog {
-      -webkit-transition: all, linear, 300ms;
-      -moz-transition: all, linear, 300ms;
-      transition: all, linear, 300ms;
-      display: inline-block;
-      position: relative;
-      top: 20px;
-      padding: 8px 12px;
-      color: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 2px;
-      font-size: 0.75em; }
-      @media screen and (max-width: 480px) {
-        .navbar ul li a.changelog {
-          display: none; } }
-      .navbar ul li a.changelog:hover {
-        color: white;
-        border-color: white; }
+  border-bottom: none;
+  background: transparent;
+  height: auto;
+  overflow: auto; }
+  .navbar-exprecss ul {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    list-style-type: none; }
+    .navbar-exprecss ul:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .navbar-exprecss ul li {
+      float: right; }
+      .navbar-exprecss ul li a.changelog {
+        -webkit-transition: all, linear, 300ms;
+        -moz-transition: all, linear, 300ms;
+        transition: all, linear, 300ms;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        top: 20px;
+        padding: 8px 12px;
+        color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+        font-size: 0.75em; }
+        @media screen and (max-width: 480px) {
+          .navbar-exprecss ul li a.changelog {
+            display: none; } }
+        .navbar-exprecss ul li a.changelog:hover {
+          color: white;
+          border-color: white; }
 
 .svg-logo {
   margin-top: 20px;
@@ -780,9 +791,6 @@ label {
       box-shadow: none; }
 
 .navbar {
-  -webkit-transition: all, linear, 300ms;
-  -moz-transition: all, linear, 300ms;
-  transition: all, linear, 300ms;
   width: 100%;
   position: relative;
   top: 0;
@@ -801,6 +809,9 @@ label {
       padding: 0;
       display: inline; }
       .navbar ul li a {
+        -webkit-transition: all, linear, 300ms;
+        -moz-transition: all, linear, 300ms;
+        transition: all, linear, 300ms;
         text-decoration: none; }
 
 .footer {

@@ -1,5 +1,4 @@
 .navbar
-    @include transition(all, linear, $transition-duration-default)
     @include fill-parent
     position: relative
     top: 0
@@ -21,4 +20,5 @@
             display: inline
 
             a
+                @include transition(all, linear, $transition-duration-default)
                 text-decoration: none
