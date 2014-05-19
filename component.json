@@ -1,5 +1,9 @@
 {
     "name": "exprecss",
     "version": "0.0.1",
-    "main": "css/app.css"
+    "main": "css/app.css",
+    "dependencies": {
+        "bourbon": "latest",
+        "neat": "latest"
+    }
 }

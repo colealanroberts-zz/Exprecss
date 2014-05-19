@@ -164,9 +164,50 @@ section
     font:
         size: $font-size-l4
 
+.hero-group
+    display: block
+
+.bower-install
+    display: inline-block
+    border-radius: $border-radius-default
+    margin-top: 10px
+    overflow-y: auto
+    width: 435px
+    display: block
+    padding: 6px 10px
+    border: 8px solid rgba(255, 255, 255, 0.1)
+    background: rgba(#2F353E, 0.7)
+    -webkit-background-clip: padding-box
+    -moz-background-clip: padding-box
+    background-clip: padding-box
+    @include breakpoint(tablet)
+        text-align: center
+        width: 100%
+
+    span
+        top: 2px
+        position: relative
+        color: #FFCC2F
+        font:
+            size: em(11)
+            weight: 600
+        @include breakpoint(tablet)
+            top: 0
+
+.bower-logo
+    -webkit-user-drag: none
+    width: 30px
+    margin-right: 8px
+    height: auto
+    display: inline-block
+    float: left
+    -webkit-user-select: none
+    -moz-user-select: none
+    user-select: none
+    @include breakpoint(tablet)
+        display: none
+
 // Everything Else
-
-
 .wrapper
     min-height: 100%
     margin-bottom: -($height-sticky-footer)
@@ -183,10 +224,6 @@ hr
     border: 0
     height: 1px
     width: 100%
-    /* background: $border-grey */
-
-.group
-    display: block
 
 .footer .download
     color: $base-color !important

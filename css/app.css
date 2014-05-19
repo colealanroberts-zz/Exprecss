@@ -517,6 +517,50 @@ section {
 .section-title {
   font-size: 2.25em; }
 
+.hero-group {
+  display: block; }
+
+.bower-install {
+  display: inline-block;
+  border-radius: 2px;
+  margin-top: 10px;
+  overflow-y: auto;
+  width: 435px;
+  display: block;
+  padding: 6px 10px;
+  border: 8px solid rgba(255, 255, 255, 0.1);
+  background: rgba(47, 53, 62, 0.7);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box; }
+  @media screen and (max-width: 800px) {
+    .bower-install {
+      text-align: center;
+      width: 100%; } }
+  .bower-install span {
+    top: 2px;
+    position: relative;
+    color: #ffcc2f;
+    font-size: 0.6875em;
+    font-weight: 600; }
+    @media screen and (max-width: 800px) {
+      .bower-install span {
+        top: 0; } }
+
+.bower-logo {
+  -webkit-user-drag: none;
+  width: 30px;
+  margin-right: 8px;
+  height: auto;
+  display: inline-block;
+  float: left;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+  @media screen and (max-width: 800px) {
+    .bower-logo {
+      display: none; } }
+
 .wrapper {
   min-height: 100%;
   margin-bottom: -84px; }
@@ -533,11 +577,7 @@ hr {
   display: block;
   border: 0;
   height: 1px;
-  width: 100%;
-  /* background: $border-grey */ }
-
-.group {
-  display: block; }
+  width: 100%; }
 
 .footer .download {
   color: #3498db !important; }
