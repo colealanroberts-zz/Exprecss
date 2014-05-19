@@ -399,10 +399,10 @@ html, body {
       content: "";
       display: table;
       clear: both; }
+    .navbar-exprecss ul .logo {
+      float: left; }
     .navbar-exprecss ul li {
       float: right; }
-      .navbar-exprecss ul li a.logo {
-        float: left; }
       .navbar-exprecss ul li a.changelog {
         -webkit-transition: all, linear, 300ms;
         -moz-transition: all, linear, 300ms;
