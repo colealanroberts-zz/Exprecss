@@ -66,6 +66,30 @@
             <div class="col-6">col-6</div>
         </div>
     </section>
+    <section class="scaffolding">
+        <div class="container">
+            <p class="section-title">Scaffolding</p>
+            <h3>Row</h3>
+            <p>Example Usage</p>
+            <pre class="prettyprint lang-html">
+&lt;div class="row"&gt;
+    &lt;div class="col-4"&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Buttons in Row&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Buttons in Row&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Buttons in Row&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            <div class="row">
+                <div class="col-4"><a href="#" class="btn btn-primary">Buttons in Row</a></div>
+                <div class="col-4"><a href="#" class="btn btn-primary">Buttons in Row</a></div>
+                <div class="col-4"><a href="#" class="btn btn-primary">Buttons in Row</a></div>
+            </div>
+        </div>
+    </section>
     <section class="buttons">
         <div class="container">
             <p class="section-title">UI Components</p>
@@ -257,27 +281,91 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="helpers">
         <div class="container">
-            <h2>Helper Classes</h2>
+            <p class="section-title">Helper Classes</p>
             <h3>Centering Elements</h3>
             <p>Example Usage</p>
             <pre class="prettyprint lang-html">
-&lt;form action=""&gt;
+&lt;div class="col-4"&gt;
+    &lt;a href="#" class="btn btn-submit&gt;Centered Button&lt;/a&gt;
+&lt;div&gt;</pre>
+            <div class="row">
+                <div class="col-12">
+                    <a href="#" class="btn btn-submit center-relative">Centered Button</a>
+                </div>
+            </div>
+            <hr>
+            <h3>Full Width Elements</h3>
+            <p>Example Usage</p>
+            <pre class="prettyprint lang-html">
+&lt;div class="row"&gt;
     &lt;div class="col-4"&gt;
-        &lt;label for="username"&gt;Username&lt;label&gt;
-        &lt;span&gt;Example Placeholder&lt;span&gt;
-        &lt;input type="text"&gt;
-        &lt;label for="username"&gt;Username&lt;label&gt;
-        &lt;span&gt;Example Placeholder&lt;span&gt;
-        &lt;input type="text"&gt;
-    &lt;div&gt;
-&lt;form&gt;</pre>
-            <div class="col-12">
-                <a href="#" class="btn btn-submit center-relative">Centered Button</a>
+        &lt;a href="#" class="btn btn-primary full-width&gt;Full Width Button&lt;/a&gt;
+    &lt;/div&gt;
+&lt;div&gt;</pre>
+            <div class="row">
+                <div class="col-4">
+                    <a href="#" class="btn btn-primary full-width">Full Width Button</a>
+                </div>
+            </div>
+            <hr>
+            <h3>Text Alignment</h3>
+            <p>Example Usage</p>
+            <pre class="prettyprint lang-html">
+&lt;div class="row"&gt;
+    &lt;div class="col-4"&gt;
+        &lt;p class="text-left"&gt;Text Left&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;p class="text-center"&gt;Text Center&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;p class="text-right"&gt;Text Right&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            <div class="row">
+                <div class="col-4">
+                    <p class="text-left">Text Left</p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center">Text Center</p>
+                </div>
+                <div class="col-4">
+                    <p class="text-right">Text Right</p>
+                </div>
             </div>
         </div>
     </section>
+    <section class="sticky-footer">
+        <div class="container">
+            <p class="section-title">Sticky Footer</p>
+            <p>Example Usage</p>
+            <pre class="prettyprint lang-html">
+// The wrapper class must be applied to the outermost div
+&lt;div class="wrapper"&gt;
+    &lt;div class="some-divs"&gt;&lt;/div&gt;
+    &lt;div class="some-divs"&gt;&lt;/div&gt;
+    &lt;div class="some-divs"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;footer class="footer&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a&gt;Download on Github&lt;/a&gt;&lt;/li&gt;
+        &lt;span class="copyright">Copyright &copy; 2014. Cole Roberts.&lt;/span&gt;
+    &lt;/ul&gt;
+&lt;/a&gt;
+</pre>
+        </div>
+    </section>
+    <footer class="footer text-center">
+        <div class="container">
+            <ul>
+                <li><a href="#" class="download">Download on Github</a></li>
+                <span class="copyright">Copyright &copy; 2014. Cole Roberts.</span>
+            </ul>
+        </div>
+    </footer>
 <!-- Le JS -->
 <body onload="prettyPrint()">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>

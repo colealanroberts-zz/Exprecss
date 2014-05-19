@@ -9,12 +9,12 @@
         weight: 500
 
     @include breakpoint(mobile)
+        margin-bottom: 10px
         width: 100%
         float: none
 
 .btn-primary
     @include linear-gradient(darken($white, 1%), darken($white, 3%))
-    @extend %box-shadow-default
     color: $dark-grey
     border: 1px solid $border-grey
 

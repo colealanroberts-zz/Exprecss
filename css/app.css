@@ -19,7 +19,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased; }
 
-.select select, .btn-primary {
+.select select {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.045), inset 0 0 1px 1px rgba(255, 255, 255, 0.9); }
 
 .col-1 {
@@ -242,6 +242,14 @@ html, body {
   background: rgba(241, 196, 15, 0.2);
   border: 1px solid #927608; }
 
+.row {
+  position: relative;
+  display: block;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  max-width: 100%; }
+
 .control-group {
   display: block;
   margin-bottom: 10px; }
@@ -360,6 +368,8 @@ html, body {
     font-border: 0; }
   @media screen and (max-width: 480px) {
     html, body {
+      -ms-touch-start-action: manipulation;
+      touch-action: manipulation;
       -webkit-touch-callout: none;
       -webkit-text-size-adjust: none;
       -webkit-tap-highlight-color: transparent;
@@ -443,8 +453,6 @@ section {
 
 .hero-unit-demo {
   background-image: -webkit-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../img/bg-hero-unit.jpg");
-  background-image: -moz-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../img/bg-hero-unit.jpg");
-  background-image: -o-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../img/bg-hero-unit.jpg");
   background-image: linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../img/bg-hero-unit.jpg");
   padding: 150px 0;
   background-size: cover;
@@ -509,15 +517,21 @@ section {
   font-size: 2.25em; }
 
 hr {
+  background-color: #f0f0f0;
+  background-image: -webkit-linear-gradient(left, #f0f0f0 10%, #e6e6e6, #f0f0f0 90%);
+  background-image: linear-gradient(to right,#f0f0f0 10%, #e6e6e6, #f0f0f0 90%);
   margin: 20px 0;
   display: block;
   border: 0;
   height: 1px;
   width: 100%;
-  background: #e8e8e8; }
+  /* background: $border-grey */ }
 
 .group {
   display: block; }
+
+.footer .download {
+  color: #3498db !important; }
 
 .select {
   -webkit-appearance: none;
@@ -607,7 +621,6 @@ input[type="text"], input[type="password"], input[type="number"], input[type="te
  *         size: 16px */
 label {
   display: block;
-  letter-spacing: 1px;
   line-height: 1.5;
   text-transform: uppercase;
   font-size: 0.6875em;
@@ -628,7 +641,7 @@ label {
     display: table;
     clear: both; }
 
-.fill-parent {
+.full-width {
   width: 100%; }
 
 .center-relative {
@@ -655,6 +668,15 @@ label {
 .float-right {
   float: right; }
 
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
 .btn {
   -webkit-transition: all, linear, 300ms;
   -moz-transition: all, linear, 300ms;
@@ -666,6 +688,7 @@ label {
   font-weight: 500; }
   @media screen and (max-width: 480px) {
     .btn {
+      margin-bottom: 10px;
       width: 100%;
       float: none; } }
 
@@ -734,3 +757,23 @@ label {
       display: inline; }
       .navbar ul li a {
         text-decoration: none; }
+
+.footer {
+  display: block; }
+  .footer ul {
+    margin: 0;
+    padding: 20px 0;
+    list-style-type: none; }
+    .footer ul li {
+      display: inline; }
+      .footer ul li a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #5c5c5c;
+        font-size: 0.6875em;
+        font-weight: 600; }
+
+.copyright {
+  display: block;
+  color: #999999;
+  font-size: 0.75em; }

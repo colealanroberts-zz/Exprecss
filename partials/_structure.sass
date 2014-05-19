@@ -7,6 +7,8 @@ html, body
     font: normal 100%/1.618 $font-family-default
         border: 0
     @include breakpoint(mobile)
+        -ms-touch-start-action: manipulation
+        touch-action: manipulation
         -webkit-touch-callout: none
         -webkit-text-size-adjust: none
         -webkit-tap-highlight-color: rgba(0,0,0,0)
@@ -95,10 +97,7 @@ section
     overflow-y: auto
 
 .hero-unit-demo
-    background-image: -webkit-linear-gradient(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9)), url('../img/bg-hero-unit.jpg')
-    background-image: -moz-linear-gradient(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9)), url('../img/bg-hero-unit.jpg')
-    background-image: -o-linear-gradient(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9)), url('../img/bg-hero-unit.jpg')
-    background-image: linear-gradient(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9)), url('../img/bg-hero-unit.jpg')
+    @include background-image(linear-gradient(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9)), url('../img/bg-hero-unit.jpg'))
     padding: 150px 0
     background:
         size: cover
@@ -165,12 +164,16 @@ section
         size: $font-size-l4
 
 hr
+    @include linear-gradient(to right, darken($white, 6%) 10%, darken($white, 10%), darken($white, 6%) 90%)
     margin: 20px 0
     display: block
     border: 0
     height: 1px
     width: 100%
-    background: $border-grey
+    /* background: $border-grey */
 
 .group
     display: block
+
+.footer .download
+    color: $base-color !important
