@@ -376,11 +376,6 @@ html, body {
       -webkit-tap-highlight-color: transparent;
       -webkit-user-select: text; } }
 
-.preload * {
-  -webkit-transition: none;
-  -moz-transition: none;
-  transition: none; }
-
 .brand {
   color: white;
   font-weight: 600; }
