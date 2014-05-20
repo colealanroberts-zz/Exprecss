@@ -401,6 +401,9 @@ html, body {
       clear: both; }
     .navbar-exprecss ul .logo {
       float: left; }
+      @media screen and (max-width: 800px) {
+        .navbar-exprecss ul .logo {
+          float: none; } }
     .navbar-exprecss ul li {
       float: right; }
       .navbar-exprecss ul li a.changelog {
@@ -478,6 +481,8 @@ section {
     .hero-unit-demo {
       padding: 80px 0 30px 0;
       height: auto; } }
+  .hero-unit-demo h1 {
+    line-height: 1.2em; }
   @media screen and (max-width: 480px) {
     .hero-unit-demo h1, .hero-unit-demo p {
       text-align: center; } }
@@ -488,8 +493,12 @@ section {
     font-weight: 100;
     font-family: "Gotham-Thin", sans-serif; }
   .hero-unit-demo .tagline {
-    color: #e6e6e6;
-    margin-top: 0; }
+    margin-top: 0;
+    font-size: 1em; }
+    .hero-unit-demo .tagline p {
+      color: #d9d9d9; }
+    .hero-unit-demo .tagline span {
+      color: white; }
     @media screen and (max-width: 480px) {
       .hero-unit-demo .tagline {
         font-size: 0.6875em; } }
@@ -793,6 +802,17 @@ label {
       border: 1px solid #1d6fa5 !important;
       box-shadow: none; }
 
+.btn-responsive-nav {
+  display: none; }
+  @media screen and (max-width: 800px) {
+    .btn-responsive-nav {
+      margin-bottom: 0;
+      float: right;
+      color: white !important;
+      width: auto !important;
+      background: #3498db;
+      display: inline-block !important; } }
+
 .navbar {
   width: 100%;
   position: relative;
@@ -806,16 +826,27 @@ label {
     max-width: 68em;
     margin: 0 auto;
     padding: 10px;
+    overflow-x: auto;
     list-style-type: none; }
     .navbar ul li {
       margin: 0;
-      padding: 0;
+      padding: 0 15px;
       display: inline; }
+      @media screen and (max-width: 800px) {
+        .navbar ul li {
+          display: none;
+          padding: 0; } }
+      .navbar ul li:first-of-type {
+        padding-left: 0; }
       .navbar ul li a {
         -webkit-transition: all, linear, 300ms;
         -moz-transition: all, linear, 300ms;
         transition: all, linear, 300ms;
-        text-decoration: none; }
+        text-transform: uppercase;
+        color: #5c5c5c;
+        text-decoration: none;
+        font-size: 0.75em;
+        font-weight: 600; }
 
 .footer {
   display: block; }

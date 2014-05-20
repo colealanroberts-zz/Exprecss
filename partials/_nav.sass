@@ -12,13 +12,25 @@
         max-width: 68em
         margin: 0 auto
         padding: 10px
+        overflow-x: auto
         list-style-type: none
 
         li
             margin: 0
-            padding: 0
+            padding: 0 15px
             display: inline
+            @include breakpoint(tablet)
+                display: none
+                padding: 0
+
+            &:first-of-type
+                padding-left: 0
 
             a
                 @include transition(all, linear, $transition-duration-default)
+                text-transform: uppercase
+                color: $dark-grey
                 text-decoration: none
+                font:
+                    size: $font-size-l0
+                    weight: 600

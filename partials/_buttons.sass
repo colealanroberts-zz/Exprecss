@@ -56,3 +56,13 @@
             background: $base-color
             border: 1px solid darken($base-color, 15%) !important
             box-shadow: none
+
+.btn-responsive-nav
+    display: none
+    @include breakpoint(tablet)
+        margin-bottom: 0
+        float: right
+        color: $white !important
+        width: auto !important
+        background: $base-color
+        display: inline-block !important // I need to get rid of this nonsense

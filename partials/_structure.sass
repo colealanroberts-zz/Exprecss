@@ -39,6 +39,8 @@ html, body
 
         .logo
             float: left
+            @include breakpoint(tablet)
+                float: none
 
         li
             float: right
@@ -119,6 +121,9 @@ section
         padding: 80px 0 30px 0
         height: auto
 
+    h1
+        line-height: 1.2em
+
     h1, p
         @include breakpoint(mobile)
             text-align: center
@@ -132,8 +137,15 @@ section
             family: 'Gotham-Thin', sans-serif
 
     .tagline
-        color: darken($white, 10%)
         margin-top: 0
+        font-size: $font-size-l2
+
+        p
+            color: darken($white, 15%)
+
+        span
+            color: $white
+
         @include breakpoint(mobile)
             font:
                 size: em(11)
