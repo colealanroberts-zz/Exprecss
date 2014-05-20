@@ -1,11 +1,37 @@
-.control-group
-    display: block
+.checkbox
+    /* float: left */
+    width: 22px
+    height: 22px
+    position: relative
     margin-bottom: 10px
 
-    label
-        display: inline-block
+    .checkbox-label
+        border-radius: $border-radius-default
+        position: absolute
+        padding: 10px
+        top: 0
+        border: 1px solid $border-grey
+        width: 22px
+        height: 22px
+        cursor: pointer
+        background: $light-grey
+
+        &:after
+            @include transform(rotate(-45deg))
+            opacity: 0
+            content: ''
+            position: absolute
+            width: 9px
+            height: 5px
+            background: transparent
+            top: 5px
+            left: 4px
+            border: 3px solid $base-color
+            border-top: none
+            border-right: none
 
     input[type="checkbox"]
-        position: relative
-        float: left
-        margin: 7px 10px 0 0
+        visibility: hidden
+
+        &:checked + label:after
+            opacity: 1

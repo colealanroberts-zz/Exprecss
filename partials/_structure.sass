@@ -124,6 +124,9 @@ section
     h1
         line-height: 1.2em
 
+    p
+        @extend %text-shadow-default
+
     h1, p
         @include breakpoint(mobile)
             text-align: center
@@ -160,6 +163,7 @@ section
 
 .btn-view-examples
     margin-top: 20px
+    margin-bottom: 0
     border: 1px solid rgba($white, 0.5)
     letter-spacing: 1px
     color: rgba($white, 0.8)
@@ -193,7 +197,7 @@ section
     border-radius: $border-radius-default
     margin-top: 10px
     overflow-y: auto
-    width: 418px
+    width: 435px
     display: block
     padding: 6px 10px
     border: 8px solid rgba(255, 255, 255, 0.1)
@@ -240,7 +244,7 @@ section
 
 hr
     @include linear-gradient(to right, darken($white, 6%) 10%, darken($white, 10%), darken($white, 6%) 90%)
-    margin: 20px 0
+    margin-bottom: 10px
     display: block
     border: 0
     height: 1px

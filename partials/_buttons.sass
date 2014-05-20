@@ -1,5 +1,4 @@
 .btn
-    @include transition(all, linear, 300ms)
     @extend %btn
     padding: 12px 20px
     color: $white
@@ -13,16 +12,16 @@
         width: 100%
         float: none
 
-.btn-primary
-    @include linear-gradient(darken($white, 1%), darken($white, 3%))
-    color: $dark-grey
-    border: 1px solid $border-grey
+    &-primary
+        @include linear-gradient(darken($white, 1%), darken($white, 3%))
+        color: $dark-grey
+        border: 1px solid $border-grey
 
-.btn-submit
-    background: $brand-green
+    &-submit
+        background: $brand-green
 
-.btn-important
-    background: #DF4938
+    &-important
+        background: #DF4938
 
 // Grouped Buttons
 .btn-group

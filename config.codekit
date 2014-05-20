@@ -36,6 +36,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/avatar-twitter.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 35581,
+		"inputAbbreviatedPath": "\/img\/avatar-twitter.png",
+		"outputAbbreviatedPath": "\/img\/avatar-twitter.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/bg-hero-unit.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
