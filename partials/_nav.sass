@@ -29,8 +29,12 @@
             a
                 @include transition(all, linear, $transition-duration-default)
                 text-transform: uppercase
-                color: $dark-grey
+                color: lighten($dark-grey, 20%)
                 text-decoration: none
+                letter-spacing: 1px
                 font:
                     size: $font-size-l0
-                    weight: 600
+                    family: 'Gotham-Bold'
+
+                &:hover
+                    color: $dark-grey

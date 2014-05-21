@@ -22,18 +22,6 @@
     -moz-background-clip: $property
     -webkit-background-clip: $property
 
-
-// Button Mixin
-@mixin button-transition($button-transition)
-    @if $button-transition == true
-        @include transition(all, $ease-out-cubic, $transition-duration-default)
-
-        &:hover
-            @include transition(all, $ease-out-cubic, $transition-duration-default)
-    @extend %btn
-    color: $white
-    border-radius: $border-radius-default
-
 // Background Image
 @mixin background-linear-gradient($g1, $g2)
     background-image: -webkit-linear-gradient($g1, $g2)

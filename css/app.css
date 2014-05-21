@@ -227,19 +227,19 @@ html, body {
 
 @font-face {
   font-family: Gotham-Bold;
-  font-weight: normal;
+  font-weight: 600;
   font-style: normal;
   src: url("../fonts/Gotham-Bold/Gotham-Bold.eot");
   src: url("../fonts/Gotham-Bold/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Bold/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold/Gotham-Bold.ttf") format("truetype"), url("../fonts/Gotham-Bold/Gotham-Bold.svg#Gotham-Bold") format("svg"); }
 @font-face {
   font-family: Gotham-Book;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   src: url("../fonts/Gotham-Book/Gotham-Book.eot");
   src: url("../fonts/Gotham-Book/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Book/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book/Gotham-Book.ttf") format("truetype"), url("../fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book") format("svg"); }
 @font-face {
   font-family: Gotham-Thin;
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal;
   src: url("../fonts/Gotham-Thin/Gotham-Thin.eot");
   src: url("../fonts/Gotham-Thin/Gotham-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Thin/Gotham-Thin.woff") format("woff"), url("../fonts/Gotham-Thin/Gotham-Thin.ttf") format("truetype"), url("../fonts/Gotham-Thin/Gotham-Thin.svg#Gotham-Thin") format("svg"); }
@@ -278,6 +278,16 @@ html, body {
       transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
       bottom: 10px;
       opacity: 1; }
+    .card-header:hover .card-image {
+      -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+      -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+      transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+      -webkit-filter: blur(2px);
+      filter: blur(0px); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .card-header:hover .card-image {
+          -webkit-filter: blur(0);
+          blur: 0; } }
     .card-header:after {
       background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.8));
       background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.8));
@@ -291,6 +301,11 @@ html, body {
       height: 60%;
       display: block; }
   .card-image {
+    -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+    -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+    transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     width: 100%;
     z-index: 0; }
   .card-title {
@@ -975,10 +990,13 @@ label {
         -moz-transition: all, linear, 300ms;
         transition: all, linear, 300ms;
         text-transform: uppercase;
-        color: #5c5c5c;
+        color: #8f8f8f;
         text-decoration: none;
+        letter-spacing: 1px;
         font-size: 0.75em;
-        font-weight: 600; }
+        font-family: "Gotham-Bold"; }
+        .navbar ul li a:hover {
+          color: #5c5c5c; }
 
 .footer {
   display: block; }

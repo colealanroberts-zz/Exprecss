@@ -15,6 +15,7 @@
         max-height: 175px
 
         &:hover
+
             .card-title
                 @include transition(all, $ease-out-cubic, 250ms)
                 bottom: 25px
@@ -24,6 +25,16 @@
                 bottom: 10px
                 opacity: 1
 
+            .card-image
+                @include transition(all, $ease-out-cubic, 250ms)
+                -webkit-filter: blur(2px)
+                filter: blur(0px)
+
+                // Turn off blur on Retina devices, this causes serious FPS issues
+                // In Chrome
+                @include hidpi(2)
+                    -webkit-filter: blur(0)
+                    blur: (0)
 
         &:after
             @include background-linear-gradient(transparent, rgba(black, 0.8))
@@ -36,6 +47,8 @@
             display: block
 
     &-image
+        @include transition(all, $ease-out-cubic, 250ms)
+        @include backface-visibility(hidden)
         width: 100%
         z-index: 0
 
