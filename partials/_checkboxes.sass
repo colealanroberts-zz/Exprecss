@@ -1,11 +1,13 @@
 .checkbox
-    /* float: left */
-    width: 22px
-    height: 22px
     position: relative
     margin-bottom: 10px
 
-    .checkbox-label
+    &-sidelabel
+        position: relative
+        margin-left: 30px
+        top: 4px
+
+    &-input
         border-radius: $border-radius-default
         position: absolute
         padding: 10px
@@ -17,6 +19,7 @@
         background: $light-grey
 
         &:after
+            @include transition(transform, linear, 150ms)
             @include transform(rotate(-45deg))
             opacity: 0
             content: ''
@@ -31,6 +34,8 @@
             border-right: none
 
     input[type="checkbox"]
+        position: relative
+        top: -15px
         visibility: hidden
 
         &:checked + label:after

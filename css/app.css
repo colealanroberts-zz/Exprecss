@@ -20,11 +20,18 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased; }
 
-.select select {
+.card, .select select {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.045), inset 0 0 1px 1px rgba(255, 255, 255, 0.9); }
 
 .hero-unit-demo p {
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
+
+.card-header, .card-title {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
 
 .col-1 {
   float: left;
@@ -246,21 +253,96 @@ html, body {
   background: rgba(241, 196, 15, 0.2);
   border: 1px solid #927608; }
 
+.card {
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  background: white;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+  .card-header {
+    -webkit-transition: all, linear, 300ms;
+    -moz-transition: all, linear, 300ms;
+    transition: all, linear, 300ms;
+    position: relative;
+    overflow: hidden;
+    max-height: 175px; }
+    .card-header:hover .card-title {
+      -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+      -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+      transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+      bottom: 25px; }
+    .card-header:hover .card-info {
+      -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
+      -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
+      transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
+      bottom: 10px;
+      opacity: 1; }
+    .card-header:after {
+      background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      background-iamge: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 60%;
+      display: block; }
+  .card-image {
+    width: 100%;
+    z-index: 0; }
+  .card-title {
+    -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+    -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+    transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
+    position: absolute;
+    z-index: 1030;
+    left: 15px;
+    bottom: 10px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    font-family: "Gotham-Bold"; }
+  .card-info {
+    -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
+    -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
+    transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
+    opacity: 0;
+    z-index: 1030;
+    position: absolute;
+    bottom: -20px;
+    margin: 0 15px;
+    color: #e6e6e6;
+    font-size: 0.875em;
+    font-family: "Georgia", serif; }
+  .card-body {
+    padding: 15px;
+    font-size: 0.875em; }
+    .card-body p {
+      margin-bottom: 10px; }
+
 .row {
   position: relative;
   display: block;
   width: auto;
   height: auto;
-  overflow: auto;
   max-width: 100%; }
 
+.row-overflow {
+  overflow: auto; }
+
 .checkbox {
-  /* float: left */
-  width: 22px;
-  height: 22px;
   position: relative;
   margin-bottom: 10px; }
-  .checkbox .checkbox-label {
+  .checkbox-sidelabel {
+    position: relative;
+    margin-left: 30px;
+    top: 4px; }
+  .checkbox-input {
     border-radius: 2px;
     position: absolute;
     padding: 10px;
@@ -270,7 +352,10 @@ html, body {
     height: 22px;
     cursor: pointer;
     background: #fcfcfc; }
-    .checkbox .checkbox-label:after {
+    .checkbox-input:after {
+      -webkit-transition: -webkit-transform, linear, 150ms;
+      -moz-transition: -moz-transform, linear, 150ms;
+      transition: transform, linear, 150ms;
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
@@ -288,6 +373,8 @@ html, body {
       border-top: none;
       border-right: none; }
   .checkbox input[type="checkbox"] {
+    position: relative;
+    top: -15px;
     visibility: hidden; }
     .checkbox input[type="checkbox"]:checked + label:after {
       opacity: 1; }
@@ -370,6 +457,7 @@ html, body {
   padding: 4px;
   width: 20px;
   height: 20px;
+  cursor: pointer;
   background: white;
   border: 1px solid #e8e8e8; }
   .radio input[type="radio"]:checked {
@@ -577,7 +665,7 @@ section {
   border-radius: 2px;
   margin-top: 10px;
   overflow-y: auto;
-  width: 435px;
+  width: 470px;
   display: block;
   padding: 6px 10px;
   border: 8px solid rgba(255, 255, 255, 0.1);
@@ -630,6 +718,19 @@ hr {
   border: 0;
   height: 1px;
   width: 100%; }
+
+a {
+  color: #3498db;
+  text-decoration: none; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+li {
+  margin: 0;
+  padding: 0; }
 
 .footer .download {
   color: #3498db !important; }
@@ -702,11 +803,14 @@ input[type="text"], input[type="password"], input[type="number"], input[type="te
   -o-appearance: none;
   appearance: none;
   width: 100%;
-  padding: 15px 10px;
+  padding: 12px 10px;
   margin-bottom: 10px;
-  border-radius: 2px;
+  color: #5c5c5c;
   background: #fcfcfc;
-  border: 1px solid #e8e8e8; }
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  font-size: 13px;
+  font-family: "Gotham-Book", sans-serif; }
   input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="tel"]:focus {
     -webkit-appearance: none;
     -moz-appearance: none;
