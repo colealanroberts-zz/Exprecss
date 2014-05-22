@@ -17,51 +17,61 @@
         color: $dark-grey
         border: 1px solid $border-grey
 
-    &-submit
+    &-action
         background: $brand-green
 
+    &-info
+        background: $exprecss-blue
+
     &-important
-        background: #DF4938
+        background: $brand-red
 
-// Grouped Buttons
-.btn-group
-    overflow: auto
+    &-group
+        overflow: auto
 
-    input[type="radio"]
+        input[type="radio"]
+            display: none
+
+            + label
+                @include linear-gradient(darken($white, 1%), darken($white, 3%))
+                float: left
+                width: auto
+                text-align: center
+                cursor: pointer
+                margin: 0
+                display: inline-block
+                padding: 8px 25px
+                border-top: 1px solid $border-grey
+                border-left: 1px solid $border-grey
+                border-bottom: 1px solid $border-grey
+
+            &:first-of-type + label
+                border-radius: $border-radius-default 0 0 $border-radius-default !important
+
+            &:last-of-type + label
+                border-right: 1px solid $border-grey
+                border-radius: 0 $border-radius-default $border-radius-default 0 !important
+
+            &:checked + label
+                color: $white
+                background: $base-color
+                border: 1px solid $base-color
+                box-shadow: none
+
+    &-responsive-nav
         display: none
-
-        + label
-            @include linear-gradient(darken($white, 1%), darken($white, 3%))
-            float: left
-            width: auto
-            text-align: center
-            cursor: pointer
-            margin: 0
-            display: inline-block
-            padding: 8px 25px
-            border-top: 1px solid $border-grey
-            border-left: 1px solid $border-grey
-            border-bottom: 1px solid $border-grey
-
-        &:first-of-type + label
-            border-radius: $border-radius-default 0 0 $border-radius-default !important
-
-        &:last-of-type + label
-            border-right: 1px solid $border-grey
-            border-radius: 0 $border-radius-default $border-radius-default 0 !important
-
-        &:checked + label
-            color: $white
+        @include breakpoint(tablet)
+            margin-bottom: 0
+            float: right
+            color: $white !important
+            width: auto !important
             background: $base-color
-            border: 1px solid darken($base-color, 15%) !important
-            box-shadow: none
+            display: inline-block !important // I need to get rid of this nonsense
 
-.btn-responsive-nav
-    display: none
-    @include breakpoint(tablet)
-        margin-bottom: 0
-        float: right
-        color: $white !important
-        width: auto !important
-        background: $base-color
-        display: inline-block !important // I need to get rid of this nonsense
+    &-dropdown
+        position: relative
+
+        &:hover + .dropdown-menu
+            @include opacity(1, $white)
+            display: block
+            visibility: visible

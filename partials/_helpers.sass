@@ -6,27 +6,33 @@
 .full-width
     @include fill-parent
 
-.center-relative
-    @include transform(translateX(-50%))
-    position: relative
-    left: 50%
+.center
+    &-relative
+        @include transform(translateX(-50%))
+        position: relative
+        left: 50%
 
-.center-absolute
-    @include transform(translateX(-50%))
-    position: absolute
-    left: 50%
+    &-absolute
+        @include transform(translateX(-50%))
+        position: absolute
+        left: 50%
 
-.float-left
-    float: left
+.float
+    &-left
+        float: left
 
-.float-right
-    float: right
+    &-right
+        float: right
 
-.text-left
-    text-align: left
+    &-none
+        float: none
 
-.text-center
-    text-align: center
+.text
+    &-left
+        text-align: left
 
-.text-right
-    text-align: right
+    &-center
+        text-align: center
+
+    &-right
+        text-align: right

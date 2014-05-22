@@ -27,14 +27,7 @@
 
             .card-image
                 @include transition(all, $ease-out-cubic, 250ms)
-                -webkit-filter: blur(2px)
-                filter: blur(0px)
-
-                // Turn off blur on Retina devices, this causes serious FPS issues
-                // In Chrome
-                @include hidpi(2)
-                    -webkit-filter: blur(0)
-                    blur: (0)
+                @include opacity(0.9)
 
         &:after
             @include background-linear-gradient(transparent, rgba(black, 0.8))

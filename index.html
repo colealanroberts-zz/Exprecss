@@ -191,8 +191,46 @@
                 <pre class="prettyprint lang-html">
     &lt;a href="#" class="btn btn-primary">Example Button&lt;/a&gt;</pre>
                 <a href="#" class="btn btn-primary">.btn-primary</a>
-                <a href="#" class="btn btn-submit">.btn-submit</a>
+                <a href="#" class="btn btn-action">.btn-action</a>
+                <a href="#" class="btn btn-info">.btn-info</a>
                 <a href="#" class="btn btn-important">.btn-important</a>
+                <hr>
+                <h3>Grouped Buttons</h3>
+                <p>Example Usage</p>
+                <pre class="prettyprint lang-html">
+&lt;div class="row"&gt;
+    &lt;div class="col-12"&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;input type="radio" id="example-checkbox-1" name="example" checked&gt;
+            &lt;label for="example-checkbox-1"&gt;One&lt;/label&gt;
+
+            &lt;input type="radio" id="example-checkbox-2" name="example" checked&gt;
+            &lt;label for="example-checkbox-2"&gt;One&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="btn-group">
+                            <input type="radio" id="example-grouped-1" name="example-grouped-1" checked>
+                            <label for="example-grouped-1">One</label>
+
+                            <input type="radio" id="example-grouped-2" name="example-grouped-1">
+                            <label for="example-grouped-2">Two</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h3>Dropdown Menu</h3>
+                <p>Example Usage</p>
+                <div class="dropdown">
+                    <a href="#" class="btn btn-info btn-dropdown">Dropdown Toggle<span class="caret caret-light"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">item1</a></li>
+                        <li><a href="#">item2</a></li>
+                        <li><a href="#">item3</a></li>
+                    </ul>
+                </div>
                 <hr>
                 <h3>Inputs</h3>
                 <h4>Horizontal Forms</h4>
@@ -215,21 +253,26 @@
         &lt;input type="text"&gt;
     &lt;div&gt;
 &lt;form&gt;</pre>
-                <div class="form-group">
+                <div class="row">
                     <form action="">
-                        <div class="col-4">
+                        <div class="col-3">
                             <label for="username">First Name</label>
-                            <span>Placeholder</span>
+                            <span>Default Placeholder</span>
                             <input type="text">
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <label for="">Last Name</label>
-                            <span>Placeholder</span>
+                            <span class="placeholder-success">Placeholder Success</span>
                             <input type="text">
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <label for="">Email</label>
-                            <span>Placeholder</span>
+                            <span class="placeholder-info">Placeholder Info</span>
+                            <input type="text">
+                        </div>
+                        <div class="col-3">
+                            <label for="">Another Field</label>
+                            <span class="placeholder-important">Placeholder</span>
                             <input type="text">
                         </div>
                     </form>
@@ -241,7 +284,7 @@
 &lt;form action=""&gt;
     &lt;div class="col-4"&gt;
         &lt;label for="username"&gt;Username&lt;label&gt;
-        &lt;span&gt;Placeholder&lt;span&gt;
+        &lt;span class="placeholder-important"&gt;Placeholder&lt;span&gt;
         &lt;input type="text"&gt;
         &lt;label for="password"&gt;Username&lt;label&gt;
         &lt;span&gt;Placeholder&lt;span&gt;
@@ -250,32 +293,32 @@
             &lt;label for="checkbox"&gt;Remember Me&lt;label&gt;
             &lt;input type="checkbox"&gt;
         &lt;div&gt;
-        &lt;a href="#" class="btn btn-primary fill-parent"&gt;Sign In&lt;/a&gt;
+        &lt;a href="#" class="btn btn-primary full-width"&gt;Sign In&lt;/a&gt;
     &lt;div&gt;
 &lt;form&gt;</pre>
-                <div class="form-group">
+                <div class="row">
                     <div class="col-4">
                         <label for="">Username</label>
                         <span>Placeholder</span>
-                        <input type="text">
+                        <input type="text" class="input-fail">
                         <label for="">Password</label>
                         <span>Placeholder</span>
                         <input type="password">
-                        <div class="form-group">
+                        <div class="row">
                             <div class="checkbox">
                                 <label for="example-checkbox" class="checkbox-sidelabel">Remember Me</label>
                                 <input type="checkbox" id="example-checkbox" checked>
                                 <label for="example-checkbox" class="checkbox-input"></label>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-primary fill-parent">Sign In</a>
+                        <a href="#" class="btn btn-primary full-width">Sign In</a>
                     </div>
                 </div>
                 <hr>
-                <h3>Dropdowns</h3>
+                <h3>Selects</h3>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
-&lt;div class="form-group"&gt;
+&lt;div class="row"&gt;
     &lt;div class="col-4"&gt;
         &lt;div class="select"&gt;
             &lt;label for="example"&gt;Pick One&gt;labe&gt;
@@ -287,7 +330,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
-                <div class="form-group">
+                <div class="row">
                     <div class="col-4">
                         <div class="select">
                             <label for="example">Pick One</label>
@@ -303,13 +346,13 @@
                 <h3>Radio Buttons</h3>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
-&lt;div class="form-group"&gt;
+&lt;div class="row"&gt;
     &lt;div class="radio"&gt;
         &lt;input type="radio" name="radio-example checked&gt;
         &lt;input type="radio" name="radio-example&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
-                <div class="form-group">
+                <div class="row">
                     <div class="radio">
                         <input type="radio" name="radio-example" checked>
                         <input type="radio" name="radio-example">
@@ -319,13 +362,13 @@
                 <h3>Checkboxes</h3>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
-&lt;div class="form-group"&gt;
+&lt;div class="row"&gt;
     &lt;div class="radio"&gt;
         &lt;input type="radio" name="radio-example checked&gt;
         &lt;input type="radio" name="radio-example&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
-                <div class="form-group">
+                <div class="row">
                     <div class="control-group">
                         <div class="checkbox">
                             <input type="checkbox" id="example-checkbox-2">
@@ -334,42 +377,16 @@
                     </div>
                 </div>
                 <hr>
-                <h3>Grouped Buttons</h3>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="form-group"&gt;
-    &lt;div class="col-12"&gt;
-        &lt;div class="btn-group"&gt;
-            &lt;input type="radio" id="example-checkbox-1" name="example" checked&gt;
-            &lt;label for="example-checkbox-1"&gt;One&lt;/label&gt;
-
-            &lt;input type="radio" id="example-checkbox-2" name="example" checked&gt;
-            &lt;label for="example-checkbox-2"&gt;One&lt;/label&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                <div class="form-group">
-                    <div class="col-12">
-                        <div class="btn-group">
-                            <input type="radio" id="example-checkbox-1" name="example" checked>
-                            <label for="example-checkbox-1">One</label>
-
-                            <input type="radio" id="example-checkbox-2" name="example">
-                            <label for="example-checkbox-2">Two</label>
-                        </div>
-                    </div>
-                </div>
-                <hr>
                 <h3>Toggles</h3>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
-&lt;div class="form-group"&gt;
+&lt;div class="row"&gt;
     &lt;div class="toggle"&gt;
         &lt;label for=""&gt;The Lights&lt;/label&gt;
         &lt;input type="checkbox"&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
-                <div class="form-group">
+                <div class="row">
                     <div class="toggle">
                         <label for="">The Lights</label>
                         <input type="checkbox">
@@ -384,11 +401,11 @@
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
 &lt;div class="col-4"&gt;
-    &lt;a href="#" class="btn btn-submit&gt;Centered Button&lt;/a&gt;
+    &lt;a href="#" class="btn btn-action&gt;Centered Button&lt;/a&gt;
 &lt;div&gt;</pre>
                 <div class="row">
                     <div class="col-12">
-                        <a href="#" class="btn btn-submit center-relative">Centered Button</a>
+                        <a href="#" class="btn btn-action center-relative">Centered Button</a>
                     </div>
                 </div>
                 <hr>
@@ -453,7 +470,7 @@
         </div>
         </section>
     </div>
-    <footer class="footer sticky-footer text-center">
+    <footer class="footer footer-sticky text-center">
         <div class="container">
             <ul>
                 <li><a href="https://github.com/colealanroberts/Exprecss" class="download">Download Exprecss on Github</a></li>

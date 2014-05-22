@@ -1,0 +1,45 @@
+.caret
+    display: inline-block
+    content: ''
+    top: -2px
+    margin-left: 5px
+    position: relative
+    width: 10px
+    height: 10px
+
+    &-dark
+        @include triangle(10px, $dark-grey, down)
+
+    &-light
+        @include triangle(10px, $white, down)
+
+
+.dropdown
+    position: relative
+    display: inline-block
+
+    &-menu
+        @include transition(opacity, 200ms)
+        @include opacity(0)
+        @extend %box-shadow-default
+        border: 1px solid $border-grey
+        width: auto
+        min-width: 183px
+        height: auto
+        margin: 0
+        padding: 0
+        display: block
+        position: absolute
+        visibility: hidden
+        border-radius: $border-radius-default
+
+        li
+            display: block
+            border-bottom: 1px solid $border-grey
+
+            &:last-of-type
+                border-bottom: none
+
+            a
+                padding: 10px
+                display: block
