@@ -1,27 +1,9 @@
-html, body
-    @extend %font-smoothing-antialiased
-    height: 100%
-    width: 100%
-    margin: 0
-    color: $dark-grey
-    background: $white
-    font: normal 100%/1.618 $font-family-default
-        border: 0
-    @include breakpoint(mobile)
-        -ms-touch-start-action: manipulation
-        touch-action: manipulation
-        -webkit-touch-callout: none
-        -webkit-text-size-adjust: none
-        -webkit-tap-highlight-color: rgba(0,0,0,0)
-        -webkit-user-select: text
-
 .brand
     color: $white
     font:
         weight: 600
 
 // For Style Guide Only
-
 .navbar-exprecss
     @include fill-parent
     position: absolute
@@ -232,7 +214,27 @@ section
     @include breakpoint(tablet)
         display: none
 
+.footer .download
+    color: $base-color !important
+
 // Everything Else
+html, body
+    @extend %font-smoothing-antialiased
+    height: 100%
+    width: 100%
+    margin: 0
+    color: $dark-grey
+    background: $white
+    font: normal 100%/1.618 $font-family-default
+        border: 0
+    @include breakpoint(mobile)
+        -ms-touch-start-action: manipulation
+        touch-action: manipulation
+        -webkit-touch-callout: none
+        -webkit-text-size-adjust: none
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+        -webkit-user-select: text
+
 .wrapper
     min-height: 100%
     margin-bottom: -($height-sticky-footer)
@@ -262,6 +264,3 @@ ul
 li
     margin: 0
     padding: 0
-
-.footer .download
-    color: $base-color !important
