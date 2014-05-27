@@ -1,0 +1,210 @@
+.navbar-exprecss {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: none;
+  background: transparent;
+  height: auto;
+  overflow: auto; }
+  .navbar-exprecss ul {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    list-style-type: none; }
+    .navbar-exprecss ul .logo {
+      float: left; }
+      @media screen and (max-width: 480px) {
+        .navbar-exprecss ul .logo {
+          float: none;
+          clear: both; } }
+    .navbar-exprecss ul li {
+      float: right; }
+      .navbar-exprecss ul li a.changelog {
+        -webkit-transition: all, linear, 300ms;
+        -moz-transition: all, linear, 300ms;
+        -o-transition: all, linear, 300ms;
+        transition: all, linear, 300ms;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        float: right;
+        top: 20px;
+        padding: 8px 12px;
+        color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+        font-size: 12px; }
+        @media screen and (max-width: 480px) {
+          .navbar-exprecss ul li a.changelog {
+            display: none; } }
+        .navbar-exprecss ul li a.changelog:hover {
+          color: white;
+          border-color: white; }
+
+.svg-logo {
+  margin-top: 20px;
+  position: relative;
+  width: 40px;
+  height: 40px; }
+  @media screen and (max-width: 480px) {
+    .svg-logo {
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+      position: relative;
+      left: 50%; } }
+  .svg-logo polygon, .svg-logo polyline {
+    stroke: #1abc9c; }
+
+.grid div[class^='col-'], .grid div[class*='col-'] {
+  margin-right: 0;
+  background: #3498db;
+  height: 40px;
+  color: white;
+  padding: 10px; }
+  .grid div[class^='col-']:nth-of-type(2n + 1), .grid div[class*='col-']:nth-of-type(2n + 1) {
+    background: #258cd1; }
+  @media screen and (max-width: 800px) {
+    .grid div[class^='col-']:nth-of-type(odd), .grid div[class*='col-']:nth-of-type(odd) {
+      float: left; } }
+  @media screen and (max-width: 800px) {
+    .grid div[class^='col-']:nth-of-type(even), .grid div[class*='col-']:nth-of-type(even) {
+      float: right; } }
+
+section {
+  padding: 40px 0; }
+  section:nth-of-type(even) {
+    background: #f8f8f8; }
+
+.prettyprint {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: auto; }
+
+.hero-unit-demo {
+  background-image: -webkit-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../../docs/img/bg-hero-unit.jpg");
+  background-image: -moz-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../../docs/img/bg-hero-unit.jpg");
+  background-image: -o-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../../docs/img/bg-hero-unit.jpg");
+  background-iamge: linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../../docs/img/bg-hero-unit.jpg");
+  padding: 150px 0;
+  height: 577px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  @media screen and (max-width: 480px) {
+    .hero-unit-demo {
+      padding: 80px 0 30px 0;
+      height: auto; } }
+  .hero-unit-demo h1 {
+    line-height: 1.2em; }
+  .hero-unit-demo p {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
+  @media screen and (max-width: 480px) {
+    .hero-unit-demo h1, .hero-unit-demo p {
+      text-align: center; } }
+  .hero-unit-demo .name {
+    color: white;
+    margin: 0;
+    font-size: 50px;
+    font-weight: 100;
+    font-family: "Gotham-Thin", sans-serif; }
+  .hero-unit-demo .tagline {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 16px; }
+    .hero-unit-demo .tagline p {
+      color: #d9d9d9; }
+    .hero-unit-demo .tagline span {
+      color: white; }
+    @media screen and (max-width: 480px) {
+      .hero-unit-demo .tagline {
+        font-size: 11px; } }
+  .hero-unit-demo .version {
+    position: relative;
+    text-align: center;
+    display: block;
+    font-size: 10px;
+    text-shadow: 0 1px 2px #217dbb;
+    color: #e6e6e6; }
+
+@media screen and (max-width: 800px) {
+  .btn-download-repo, .btn-view-examples {
+    width: 100%;
+    float: none; } }
+
+.btn-download-repo {
+  background-image: -webkit-linear-gradient(#258cd1, #217dbb);
+  background-image: -moz-linear-gradient(#258cd1, #217dbb);
+  background-image: -o-linear-gradient(#258cd1, #217dbb);
+  border: 1px solid #25516f;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px #217dbb;
+  padding: 15px 35px !important;
+  font-size: 11px;
+  font-weight: 500; }
+
+.btn-view-examples {
+  margin-left: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 22px 35px !important;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 500; }
+  @media screen and (max-width: 800px) {
+    .btn-view-examples {
+      margin-left: 0; } }
+
+.section-title {
+  font-size: 36px; }
+
+.hero-group {
+  display: block; }
+
+.bower-install {
+  display: inline-block;
+  border-radius: 2px;
+  overflow-y: auto;
+  width: 470px;
+  display: block;
+  padding: 6px 10px;
+  border: 8px solid rgba(255, 255, 255, 0.1);
+  background: rgba(47, 53, 62, 0.7);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box; }
+  @media screen and (max-width: 800px) {
+    .bower-install {
+      text-align: center;
+      width: 100%; } }
+  .bower-install span {
+    top: 2px;
+    position: relative;
+    color: #ffcc2f;
+    font-size: 11px;
+    font-weight: 600; }
+    @media screen and (max-width: 800px) {
+      .bower-install span {
+        top: 0; } }
+
+.bower-logo {
+  -webkit-user-drag: none;
+  width: 30px;
+  margin-right: 8px;
+  height: auto;
+  display: inline-block;
+  float: left;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+  @media screen and (max-width: 800px) {
+    .bower-logo {
+      display: none; } }
+
+.footer .download {
+  color: #3498db !important; }

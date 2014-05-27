@@ -1,11 +1,70 @@
-.brand
-    color: $white
-    font:
-        weight: 600
-
 // For Style Guide Only
+// Colors
+$exprecss-blue: #3498DB
+$white: #FFFFFF
+$brand-green: #6BAD42
+$brand-red: #DF4938
+$brand-yellow: ''
+$dark-grey: #5C5C5C
+$border-grey: #E8E8E8
+$brand-blue: #3498DB
+$light-grey: #FCFCFC
+$brand-background-grey: #F8F8F8
+$base-color: $exprecss-blue
+
+// Links
+$anchor-color: $exprecss-blue
+
+// Border Radius
+$border-radius-default: 2px
+
+// Transitions
+$transition-duration-default: 300ms
+
+// Breakpoints
+$breakpoint-mobile: 480px
+$breakpoint-tablet: 800px
+$breakpoint-desktop: 980px
+
+$font-size-l0: 12px
+$font-size-l1: 14px
+$font-size-l2: 16px
+$font-size-l3: 24px
+$font-size-l4: 36px
+
+// Mixins
+@mixin breakpoint($point)
+    @if $point == desktop
+        @media screen and (min-width: $breakpoint-desktop)
+            @content
+
+    @else if $point == tablet
+        @media screen and (max-width: $breakpoint-tablet)
+            @content
+
+    @else if $point == mobile
+        @media screen and (max-width: $breakpoint-mobile)
+            @content
+
+    @else if $point == $point
+        @media screen and (max-width: $point)
+            @content
+
+@mixin transition($arg1, $arg2, $arg3)
+    -webkit-transition: $arg1, $arg2, $arg3
+    -moz-transition: $arg1, $arg2, $arg3
+    -o-transition: $arg1, $arg2, $arg3
+    transition: $arg1, $arg2, $arg3
+
+// Background Image
+@mixin linear-gradient-image($g1, $g2, $bg-image)
+    background-image: -webkit-linear-gradient($g1, $g2), url($bg-image)
+    background-image: -moz-linear-gradient($g1, $g2), url($bg-image)
+    background-image: -o-linear-gradient($g1, $g2), url($bg-image)
+    background-iamge: linear-gradient($g1, $g2), url($bg-image)
+
 .navbar-exprecss
-    @include fill-parent
+    width: 100%
     position: absolute
     top: 0
     left: 0
@@ -15,20 +74,23 @@
     overflow: auto
 
     ul
-        @include outer-container
+        max-width: 68em
+        margin-left: auto
+        margin-right: auto
         padding: 10px
         list-style-type: none
 
         .logo
             float: left
-            @include breakpoint(tablet)
+            @include breakpoint(mobile)
                 float: none
+                clear: both
 
         li
             float: right
 
             a.changelog
-                @include transition(all, linear, $transition-duration-default)
+                @include transition(all, linear, 300ms)
                 text-decoration: none
                 display: inline-block
                 position: relative
@@ -37,7 +99,7 @@
                 padding: 8px 12px
                 color: rgba($white, 0.8)
                 border: 1px solid rgba($white, 0.3)
-                border-radius: $border-radius-default
+                border-radius: 2px
                 font:
                     size: $font-size-l0
                 @include breakpoint(mobile)
@@ -54,7 +116,10 @@
     width: 40px
     height: 40px
     @include breakpoint(mobile)
-        @include transform(translateX(-50%))
+        -webkit-transform: translateX(-50%)
+        -moz-transform: translateX(-50%)
+        -o-transform: translateX(-50%)
+        transform: translateX(-50%)
         position: relative
         left: 50%
 
@@ -63,7 +128,7 @@
 
 .grid
     div[class^='col-'], div[class*='col-']
-        @include omega
+        margin-right: 0
         background: $brand-blue
         height: 40px
         color: $white
@@ -92,7 +157,7 @@ section
     overflow-y: auto
 
 .hero-unit-demo
-    @include background-image(linear-gradient(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9)), url('../img/bg-hero-unit.jpg'))
+    @include linear-gradient-image(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9), '../../docs/img/bg-hero-unit.jpg')
     padding: 150px 0
     height: 577px
     background:
@@ -107,7 +172,7 @@ section
         line-height: 1.2em
 
     p
-        @extend %text-shadow-default
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.1)
 
     h1, p
         @include breakpoint(mobile)
@@ -117,12 +182,13 @@ section
         color: $white
         margin: 0
         font:
-            size: em(50)
+            size: 50px
             weight: 100
             family: 'Gotham-Thin', sans-serif
 
     .tagline
         margin-top: 0
+        margin-bottom: 30px
         font-size: $font-size-l2
 
         p
@@ -133,39 +199,46 @@ section
 
         @include breakpoint(mobile)
             font:
-                size: em(11)
+                size: 11px
 
     .version
         position: relative
         text-align: center
         display: block
-        font-size: em(10)
+        font-size: 10px
         text-shadow: 0 1px 2px darken($base-color, 10%)
         color: darken($white, 10%)
 
-.btn-view-examples
-    margin-top: 20px
-    margin-bottom: 0
-    border: 1px solid rgba($white, 0.5)
-    letter-spacing: 1px
-    color: rgba($white, 0.8)
-    padding: 20px 35px !important
-    background: transparent
-    font:
-        size: em(11)
-        weight: 500
+.btn-download-repo, .btn-view-examples
+    @include breakpoint(tablet)
+        width: 100%
+        float: none
 
-.btn-explore
-    @include linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
-    margin: 20px 5px 0 0
+.btn-download-repo
+    background-image: -webkit-linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
+    background-image: -moz-linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
+    background-image: -o-linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
     border: 1px solid #25516F
     box-shadow: 0 1px 4px rgba(black, 0.1), inset 0 1px 0 rgba($white, 0.15)
     letter-spacing: 1px
     text-shadow: 0 2px 4px darken($base-color, 10%)
     padding: 15px 35px !important
     font:
-        size: em(11)
+        size: 11px
         weight: 500
+
+.btn-view-examples
+    margin-left: 5px
+    border: 1px solid rgba($white, 0.5)
+    letter-spacing: 1px
+    color: rgba($white, 0.8)
+    padding: 22px 35px !important
+    background: transparent
+    font:
+        size: 11px
+        weight: 500
+    @include breakpoint(tablet)
+        margin-left: 0
 
 .section-title
     font:
@@ -177,7 +250,6 @@ section
 .bower-install
     display: inline-block
     border-radius: $border-radius-default
-    margin-top: 10px
     overflow-y: auto
     width: 470px
     display: block
@@ -196,7 +268,7 @@ section
         position: relative
         color: #FFCC2F
         font:
-            size: em(11)
+            size: 11px
             weight: 600
         @include breakpoint(tablet)
             top: 0
@@ -216,51 +288,3 @@ section
 
 .footer .download
     color: $base-color !important
-
-// Everything Else
-html, body
-    @extend %font-smoothing-antialiased
-    height: 100%
-    width: 100%
-    margin: 0
-    color: $dark-grey
-    background: $white
-    font: normal 100%/1.618 $font-family-default
-        border: 0
-    @include breakpoint(mobile)
-        -ms-touch-start-action: manipulation
-        touch-action: manipulation
-        -webkit-touch-callout: none
-        -webkit-text-size-adjust: none
-        -webkit-tap-highlight-color: rgba(0,0,0,0)
-        -webkit-user-select: text
-
-.wrapper
-    min-height: 100%
-    margin-bottom: -($height-sticky-footer)
-
-    &:after
-        content: ''
-        display: block
-        height: $height-sticky-footer
-
-hr
-    @include linear-gradient(to right, darken($white, 6%) 10%, darken($white, 10%), darken($white, 6%) 90%)
-    margin-bottom: 10px
-    display: block
-    border: 0
-    height: 1px
-    width: 100%
-
-a
-    color: $anchor-color
-    text-decoration: none
-
-ul
-    margin: 0
-    padding: 0
-    list-style-type: none
-
-li
-    margin: 0
-    padding: 0
