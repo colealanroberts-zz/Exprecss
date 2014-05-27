@@ -1,1 +1,1 @@
-function responsiveNav(){$(".navbar ul").toggleClass("nav-close nav-open")}$(document).ready(function(){$(".btn-responsive-nav").on("click",function(n){responsiveNav(),n.preventDefault()})});
+function responsiveNavOpen(){$(".navbar ul").toggleClass("nav-close nav-open")}function responsiveNavClose(){$(".navbar ul").toggleClass("nav-close nav-open")}$(document).ready(function(){$(".btn-responsive-nav").on("click",function(n){responsiveNavOpen(),n.preventDefault()}),$(".btn-responsive-nav-close").on("click",function(n){responsiveNavClose(),n.preventDefault()})});

@@ -69,11 +69,21 @@
     &-responsive-nav-close
         display: none
         @include breakpoint(tablet)
-            z-index: 9999
+            cursor: pointer
+            position: relative
             float: right
-            color: $white !important
-            background: $base-color
+            padding-right: 10px
+            padding-top: 10px
+            z-index: 9999
             display: inline-block !important // I need to get rid of this nonsense
+
+            svg
+                display: inline-block
+                width: 14px
+                height: 14px
+
+                path
+                    fill: lighten($dark-grey, 20%)
 
     &-dropdown
         position: relative

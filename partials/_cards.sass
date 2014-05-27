@@ -12,7 +12,7 @@
         @include transition(all, linear, $transition-duration-default)
         position: relative
         overflow: hidden
-        max-height: 175px
+        height: 175px
 
         &:hover
 
@@ -43,6 +43,7 @@
         @include transition(all, $ease-out-cubic, 250ms)
         @include backface-visibility(hidden)
         width: 100%
+        height: 100%
         z-index: 0
 
     &-title
