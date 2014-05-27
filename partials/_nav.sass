@@ -3,7 +3,6 @@
     position: relative
     top: 0
     left: 0
-    height: auto
     overflow: auto
     background: $white
     border-bottom: 1px solid #E8E8E8
@@ -24,6 +23,13 @@
             top: 0
             right: 0
             z-index: 999 // Use a var instead
+
+        .brand
+            color: $exprecss-blue
+            text-transform: none
+            letter-spacing: initial
+            font:
+                size: $font-size-l2
 
         li
             margin: 0
@@ -57,3 +63,21 @@
                 color: $dark-grey
                 @include breakpoint(tablet)
                     color: $white
+
+
+    &-fixed
+        @include backface-visibility(hidden)
+        z-index: $z-index-nav-fixed
+        position: fixed
+        top: 0
+        left: 0
+        overflow: initial
+
+        ul
+            padding-top: 30px
+            padding-bottom: 30px
+
+    &-absolute
+        position: absolute
+        top: 0
+        left: 0

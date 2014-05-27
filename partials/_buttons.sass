@@ -60,10 +60,14 @@
 
     &-responsive-nav
         display: none
+        @extend %btn
         @include breakpoint(tablet)
+            padding: 8px 16px
+            margin: 10px
             float: right
             color: $white !important
             background: $base-color
+            border-radius: $border-radius-default
             display: inline-block !important // I need to get rid of this nonsense
 
     &-responsive-nav-close
