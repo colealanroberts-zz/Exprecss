@@ -1,0 +1,27 @@
+@include keyframes (anim-nav-open)
+    0%
+        @include transform(translateX(999px))
+        opacity: 0
+
+    100%
+        @include transform(translateX(0px))
+        opacity: 1
+
+@include keyframes(anim-nav-close)
+    0%
+        @include transform(translateX(0px))
+        opacity: 0
+
+    100%
+        @include transform(translateX(999px))
+        opacity: 0
+
+.nav-open
+    @include animation(anim-nav-open $ease-out-cubic 650ms)
+    display: block
+    right: 0
+
+.nav-close
+    @include breakpoint(tablet)
+        @include animation(anim-nav-close $ease-out-cubic 650ms)
+        display: none !important

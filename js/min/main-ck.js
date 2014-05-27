@@ -1,0 +1,1 @@
+function responsiveNav(){$(".navbar ul").toggleClass("nav-close nav-open")}$(document).ready(function(){$(".btn-responsive-nav").on("click",function(n){responsiveNav(),n.preventDefault()})});

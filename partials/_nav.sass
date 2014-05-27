@@ -14,13 +14,23 @@
         padding: 10px
         overflow-x: auto
         list-style-type: none
+        display: block
+        @include breakpoint(tablet)
+            @include linear-gradient(to bottom, #313437, darken(#313437, 10%))
+            min-height: 100%
+            min-width: 80%
+            width: 80%
+            position: fixed
+            top: 0
+            right: 0
+            z-index: 999 // Use a var instead
 
         li
             margin: 0
             padding: 0 15px
             display: inline
             @include breakpoint(tablet)
-                display: none
+                display: block
                 padding: 0
 
             &:first-of-type
@@ -35,6 +45,9 @@
                 font:
                     size: $font-size-l0
                     family: 'Gotham-Bold'
+                @include breakpoint(mobile)
+                    padding: 5px 10px
+                    display: block
 
                 &:hover
                     color: $dark-grey
