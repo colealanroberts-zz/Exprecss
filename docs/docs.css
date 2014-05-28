@@ -185,7 +185,9 @@ section {
     font-size: 16px; }
     .hero-unit-demo .tagline p {
       color: #d9d9d9; }
-    .hero-unit-demo .tagline span {
+    .hero-unit-demo .tagline #description-rotate {
+      vertical-align: top;
+      width: 0;
       color: #d9d9d9; }
     @media screen and (max-width: 480px) {
       .hero-unit-demo .tagline {
