@@ -32,6 +32,77 @@ $font-size-l2: 16px
 $font-size-l3: 24px
 $font-size-l4: 36px
 
+$animation-rotate-duration: 3050ms
+
+// Rotate Text In
+@-webkit-keyframes rotate-text
+    0%
+        opacity: 0
+
+    30%
+        opacity: 1
+
+    50%
+        opacity: 1
+
+    70%
+        opacity: 1
+
+
+    100%
+        opacity: 0
+
+@-moz-keyframes rotate-text
+    0%
+        opacity: 0
+
+    30%
+        opacity: 1
+
+    50%
+        opacity: 1
+
+    70%
+        opacity: 1
+
+
+    100%
+        opacity: 0
+
+@-o-keyframes rotate-text
+    0%
+        opacity: 0
+
+    30%
+        opacity: 1
+
+    50%
+        opacity: 1
+
+    70%
+        opacity: 1
+
+
+    100%
+        opacity: 0
+
+@-keyframes rotate-text
+    0%
+        opacity: 0
+
+    30%
+        opacity: 1
+
+    50%
+        opacity: 1
+
+    70%
+        opacity: 1
+
+
+    100%
+        opacity: 0
+
 // Mixins
 @mixin breakpoint($point)
     @if $point == desktop
@@ -62,6 +133,12 @@ $font-size-l4: 36px
     background-image: -moz-linear-gradient($g1, $g2), url($bg-image)
     background-image: -o-linear-gradient($g1, $g2), url($bg-image)
     background-iamge: linear-gradient($g1, $g2), url($bg-image)
+
+.rotate-text
+    -webkit-animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
+    -moz-animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
+    -o-animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
+    animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
 
 .navbar-exprecss
     width: 100%
@@ -198,7 +275,7 @@ section
             color: darken($white, 15%)
 
         span
-            color: $white
+            color: darken($white, 15%)
 
         @include breakpoint(mobile)
             font:

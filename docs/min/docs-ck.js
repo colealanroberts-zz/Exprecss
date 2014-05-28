@@ -1,0 +1,1 @@
+function loop(i){description.text(descriptionArray[i%descriptionLength]),setTimeout(function(){loop(i+1),description.addClass("rotate-text")},3050)}var descriptionArray=["lightweight responsive","mobile optimized","beautifully simple","scalable front-end"],descriptionLength=descriptionArray.length,description=$("#description-rotate");loop(0);
