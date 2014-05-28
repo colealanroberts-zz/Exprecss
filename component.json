@@ -1,17 +1,16 @@
 {
     "name": "exprecss",
     "version": "0.0.3",
-    "main": "css/app.css",
+    "main": "dist/css/app.css",
     "description": "A lightweight responsive framework built on Bourbon & Neat",
-    "license": "MIT",
-    "dependencies": {
-        "bourbon": "latest",
-        "neat": "latest"
-    },
-    "ignore": [
+      "ignore": [
         ".*",
         "docs/",
         "vendor/",
         "component.json"
     ],
+    "dependencies": {
+        "bourbon": "latest",
+        "neat": "latest"
+    },
 }
