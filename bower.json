@@ -1,3 +1,17 @@
 {
-    "ignore": ["./config.codekit", "./vendor", "./fonts"]
+    "name": "exprecss",
+    "version": "0.0.3",
+    "main": "css/app.css",
+    "description": "A lightweight responsive framework built on Bourbon & Neat",
+    "license": "MIT",
+    "dependencies": {
+        "bourbon": "latest",
+        "neat": "latest"
+    },
+    "ignore": [
+        ".*",
+        "docs/",
+        "vendor/",
+        "component.json"
+    ],
 }
