@@ -85,10 +85,10 @@ section {
   overflow-y: auto; }
 
 .hero-unit-demo {
-  background-image: -webkit-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs//img/bg-hero-unit.jpg");
-  background-image: -moz-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs//img/bg-hero-unit.jpg");
-  background-image: -o-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs//img/bg-hero-unit.jpg");
-  background-iamge: linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs//img/bg-hero-unit.jpg");
+  background-image: -webkit-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
+  background-image: -moz-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
+  background-image: -o-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
+  background-iamge: linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
   padding: 150px 0;
   height: 577px;
   background-size: cover;
@@ -111,6 +111,8 @@ section {
     font-size: 50px;
     font-weight: 100;
     font-family: "Gotham-Thin", sans-serif; }
+    .hero-unit-demo .name span {
+      color: #1abc9c; }
   .hero-unit-demo .tagline {
     margin-top: 0;
     margin-bottom: 30px;
@@ -170,7 +172,7 @@ section {
   display: inline-block;
   border-radius: 2px;
   overflow-y: auto;
-  width: 470px;
+  width: 407px;
   display: block;
   padding: 6px 10px;
   border: 8px solid rgba(255, 255, 255, 0.1);
