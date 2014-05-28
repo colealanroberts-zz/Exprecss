@@ -85,10 +85,10 @@ section {
   overflow-y: auto; }
 
 .hero-unit-demo {
-  background-image: -webkit-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../../docs/img/bg-hero-unit.jpg");
-  background-image: -moz-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../../docs/img/bg-hero-unit.jpg");
-  background-image: -o-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../../docs/img/bg-hero-unit.jpg");
-  background-iamge: linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../../docs/img/bg-hero-unit.jpg");
+  background-image: -webkit-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs//img/bg-hero-unit.jpg");
+  background-image: -moz-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs//img/bg-hero-unit.jpg");
+  background-image: -o-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs//img/bg-hero-unit.jpg");
+  background-iamge: linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs//img/bg-hero-unit.jpg");
   padding: 150px 0;
   height: 577px;
   background-size: cover;
