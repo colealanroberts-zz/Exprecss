@@ -1,1 +1,4 @@
-components
+# Ignore specific files
+.DS_Store
+.htaccess
+.sass-cache
