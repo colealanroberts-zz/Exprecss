@@ -1,5 +1,5 @@
 # Ignore specific files
 .DS_Store
 .htaccess
-.sass-cache
+*.sass-cache
 */codekit-config.json
