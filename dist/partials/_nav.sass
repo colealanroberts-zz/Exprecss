@@ -8,18 +8,18 @@
     border-bottom: 1px solid #E8E8E8
 
     ul
-        max-width: 68em
+        display: block
         margin: 0 auto
         padding: 10px
+        max-width: 68em
         overflow-x: auto
         list-style-type: none
-        display: block
         @include breakpoint(tablet)
             @include linear-gradient(darken(#313437, 10%), darken(#313437, 10%))
-            min-height: 100%
-            width: 225px
             position: fixed
             padding-top: 15px
+            min-height: 100%
+            width: 225px
             top: 0
             right: 0
             z-index: 999 // Use a var instead
@@ -67,11 +67,11 @@
 
     &-fixed
         @include backface-visibility(hidden)
-        z-index: $z-index-nav-fixed
         position: fixed
         top: 0
         left: 0
         overflow: initial
+        z-index: $z-index-nav-fixed
 
         ul
             padding-top: 30px

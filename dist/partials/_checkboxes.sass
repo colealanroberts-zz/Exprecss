@@ -8,30 +8,30 @@
         top: 4px
 
     &-input
-        border-radius: $border-radius-default
         position: absolute
         padding: 10px
         top: 0
-        border: 1px solid $border-grey
         width: 22px
         height: 22px
         cursor: pointer
         background: $light-grey
+        border: 1px solid $border-grey
+        border-radius: $border-radius-default
 
         &:after
             @include transition(transform, linear, 100ms)
             @include transform(rotate(-45deg))
+            position: absolute
             opacity: 0
             content: ''
-            position: absolute
             width: 9px
             height: 5px
-            background: transparent
             top: 5px
             left: 4px
             border: 3px solid $base-color
             border-top: none
             border-right: none
+            background: transparent
 
     input[type="checkbox"]
         position: relative

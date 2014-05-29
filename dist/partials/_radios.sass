@@ -10,6 +10,7 @@
         cursor: pointer
         background: $white
         border: 1px solid $border-grey
+        font-size: 65% // This may be incorrect. Will figure out later.
 
         &:checked
             @include appearance(none)
@@ -18,12 +19,12 @@
             border: 1px solid $base-color
 
             &:after
-                outline: 0
-                position: relative
-                content: ''
                 display: block
+                position: relative
                 width: 10px
                 height: 10px
+                outline: 0
+                content: ''
                 border-radius: 50%
                 background: $base-color
 

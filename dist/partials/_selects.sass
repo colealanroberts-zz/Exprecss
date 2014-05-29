@@ -1,7 +1,11 @@
+select::-ms-expand
+    display: none
+
 .select
     @include appearance(none)
     @include fill-parent
     position: relative
+    display: inline-block
     background: transparent
     border: none
 
@@ -11,25 +15,50 @@
         @include box-sizing(border-box)
         @include appearance(none)
         @extend %box-shadow-default
-        color: $dark-grey
-        outline: 1px none
+        display: inline-block
         padding: 15px 10px
+        cursor: pointer
+        color: $dark-grey
         width: 100%
         overflow: hidden
+        outline: 1px none
         border: 1px solid $border-grey
         border-radius: $border-radius-default
         font:
             size: $font-size-l0
+
+        &:focus
+            outline: 1px none
+            box-shadow: 0
+            border: 1px solid $base-color
+
+            &:-moz-focusring
+                color: transparent
+                text-shadow: 0 0 0 #000
 
         // This is sort of hacky, but this removes the ugly down arrow on Firefox
         // See Gist: https://gist.github.com/joaocunha/6273016
         text-indent: 0.01px
         text-overflow: ''
 
-        &:focus
-            outline: 1px none
-            box-shadow: 0
-            border: 1px solid $base-color
+        // IE9 hack to hide the arrow, we've purposely excluded the breakpoint mixin.
+        @media screen and (min-width: 0\0)
+            z-index: 1
+            padding: .5rem 1.5rem .5rem 1rem
+
+            &:after
+                z-index: 5
+
+            &:before
+                position: absolute
+                top: 0
+                right: 1rem
+                bottom: 0
+                z-index: 2
+                content: ''
+                display: block
+                width: 1.5rem
+                background: darken($white, 2%)
 
     &:after
         @include triangle(12px, gray, down)

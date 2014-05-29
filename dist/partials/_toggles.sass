@@ -2,17 +2,17 @@
     input[type="checkbox"]
         @include transition(all, linear, $transition-duration-default * 1.5)
         @include appearance(none)
+        display: inline-block
+        position: relative
         margin-left: 0
         margin-right: 0
-        position: relative
-        display: inline-block
-        outline: 0
         width: 65px
         height: 28px
         cursor: pointer
+        outline: 0
+        background: $light-grey
         border: 1px solid $border-grey
         border-radius: 20px
-        background: $light-grey
         box-shadow: 0 1px 1px rgba($white, 0.9)
         @include breakpoint(mobile)
 
@@ -22,28 +22,27 @@
         &:after
             @include transition(all, linear, $transition-duration-default * 1.5)
             @include appearance(none)
-            outline: 0
-            content: ''
             position: absolute
             display: block
+            padding: 10px
+            content: ''
             top: -1px
             left: 0px
-            padding: 10px
             width: 6px
             height: 6px
             border-radius: 50%
+            outline: 0
             background: $white
             border: 1px solid $border-grey
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18), inset 0 0 1px 1px rgba(255, 255, 255, 0.7)
 
         &:checked
-            box-shadow: none
             outline: 0
             background: $base-color
             border: 1px solid $border-grey
+            box-shadow: none
 
             &:after
-                box-shadow: none
                 display: block
                 outline: 0
                 top: -1px
