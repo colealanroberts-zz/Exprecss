@@ -201,7 +201,7 @@ $animation-rotate-duration: 3050ms
         left: 50%
 
     polygon, polyline
-        stroke: #1ABC9C
+        stroke: rgba($white, 0.8)
 
 .grid
     div[class^='col-'], div[class*='col-']
@@ -236,7 +236,7 @@ section
 .hero-unit-demo
     @include linear-gradient-image(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9), '../docs/img/bg-hero-unit.jpg')
     padding: 150px 0
-    height: 577px
+    height: auto
     background:
         size: cover
         repeat: no-repeat
@@ -264,7 +264,9 @@ section
             family: 'Gotham-Thin', sans-serif
 
         span
-            color: #1ABC9C
+            color: $white
+            font:
+                weight: 600
 
     .tagline
         margin-top: 0
@@ -273,10 +275,10 @@ section
 
         p
             color: darken($white, 15%)
+            height: 50px
 
         #description-rotate
             vertical-align: top
-            width: 0
             color: darken($white, 15%)
 
         @include breakpoint(mobile)

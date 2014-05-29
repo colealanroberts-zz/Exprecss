@@ -123,7 +123,7 @@
       position: relative;
       left: 50%; } }
   .svg-logo polygon, .svg-logo polyline {
-    stroke: #1abc9c; }
+    stroke: rgba(255, 255, 255, 0.8); }
 
 .grid div[class^='col-'], .grid div[class*='col-'] {
   margin-right: 0;
@@ -156,7 +156,7 @@ section {
   background-image: -o-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
   background-iamge: linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
   padding: 150px 0;
-  height: 577px;
+  height: auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
@@ -178,16 +178,17 @@ section {
     font-weight: 100;
     font-family: "Gotham-Thin", sans-serif; }
     .hero-unit-demo .name span {
-      color: #1abc9c; }
+      color: white;
+      font-weight: 600; }
   .hero-unit-demo .tagline {
     margin-top: 0;
     margin-bottom: 30px;
     font-size: 16px; }
     .hero-unit-demo .tagline p {
-      color: #d9d9d9; }
+      color: #d9d9d9;
+      height: 50px; }
     .hero-unit-demo .tagline #description-rotate {
       vertical-align: top;
-      width: 0;
       color: #d9d9d9; }
     @media screen and (max-width: 480px) {
       .hero-unit-demo .tagline {

@@ -1,13 +1,21 @@
-var descriptionArray = ['lightweight responsive', 'mobile optimized', 'beautifully simple', 'scalable front-end'];
-var descriptionLength = descriptionArray.length;
-var description = $('#description-rotate');
+var arr = ['mobile optimized', 'beautifully simple', 'scalable front-end', 'lightweight responsive'];
+var i = 0;
+var len = arr.length;
+var $el = $('#description-rotate');
+var $temp = $('<span />');
 
-function loop(i) {
-    description.text(descriptionArray[i%descriptionLength]);
-    setTimeout(function() {
-        loop(i+1);
-        description.addClass('rotate-text');
-    }, 3050); // This duration must match the length of the animation
+$temp.hide().appendTo($el.parent());
+
+function loop() {
+    var width = $temp.text(arr[i%=len]).width();
+    $el.fadeTo(1000, 0).animate({
+        width: width
+    }, 300, function() {
+        $(this).text(arr[i++]).fadeTo(1000, 1);
+    });
+    setTimeout(loop, 4000);
 }
 
-loop(0);
+$(document).ready(function() {
+    loop(0);
+});
