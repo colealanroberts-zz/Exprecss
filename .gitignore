@@ -3,3 +3,4 @@
 .htaccess
 *.sass-cache
 */codekit-config.json
+**/.sass-cache/*
