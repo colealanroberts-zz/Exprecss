@@ -168,6 +168,7 @@ section {
   background-image: -moz-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
   background-image: -o-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
   background-iamge: linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#1E3174', endColorstr='#3C859F');
   padding: 150px 0;
   height: auto;
   background-size: cover;
@@ -223,6 +224,8 @@ section {
   background-image: -webkit-linear-gradient(#258cd1, #217dbb);
   background-image: -moz-linear-gradient(#258cd1, #217dbb);
   background-image: -o-linear-gradient(#258cd1, #217dbb);
+  background-image: linear-gradient(#258cd1, #217dbb);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#258CD1', endColorstr='#217DBB');
   border: 1px solid #25516f;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   letter-spacing: 1px;
