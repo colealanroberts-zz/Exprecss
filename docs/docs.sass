@@ -134,6 +134,20 @@ $animation-rotate-duration: 3050ms
     background-image: -o-linear-gradient($g1, $g2), url($bg-image)
     background-iamge: linear-gradient($g1, $g2), url($bg-image)
 
+.node-depth
+    *
+        background-color: rgba(255,0,0,.2)
+    * *
+        background-color: rgba(0,255,0,.2)
+    * * *
+        background-color: rgba(0,0,255,.2)
+    * * * *
+        background-color: rgba(255,0,255,.2)
+    * * * * *
+        background-color: rgba(0,255,255,.2)
+    * * * * * *
+        background-color: rgba(255,255,0,.2)
+
 .rotate-text
     -webkit-animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
     -moz-animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
@@ -323,10 +337,6 @@ section
         weight: 500
     @include breakpoint(tablet)
         margin-left: 0
-
-.section-title
-    font:
-        size: $font-size-l4
 
 .hero-group
     display: block

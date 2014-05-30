@@ -3,10 +3,10 @@ var i = 0;
 var len = arr.length;
 var $el = $('#description-rotate');
 var $temp = $('<span />');
-
-$temp.hide().appendTo($el.parent());
+var dev = true;
 
 function loop() {
+    $temp.hide().appendTo($el.parent());
     var width = $temp.text(arr[i%=len]).width();
     $el.fadeTo(1000, 0).animate({
         width: width
@@ -16,6 +16,20 @@ function loop() {
     setTimeout(loop, 4000);
 }
 
+function nodeDepth() {
+    if (dev == true) {
+        var nKey = 78;
+        $(document).keydown(function(e) {
+            if(e.which == nKey) {$('body').toggleClass('node-depth');
+            }
+        });
+    } else {
+        console.log('var dev is set to ' + dev);
+    }
+}
+
 $(document).ready(function() {
     loop(0);
+    nodeDepth();
 });
+

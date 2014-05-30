@@ -58,6 +58,19 @@
 
   100% {
     opacity: 0; } }
+.node-depth * {
+  background-color: rgba(255, 0, 0, 0.2); }
+.node-depth * * {
+  background-color: rgba(0, 255, 0, 0.2); }
+.node-depth * * * {
+  background-color: rgba(0, 0, 255, 0.2); }
+.node-depth * * * * {
+  background-color: rgba(255, 0, 255, 0.2); }
+.node-depth * * * * * {
+  background-color: rgba(0, 255, 255, 0.2); }
+.node-depth * * * * * * {
+  background-color: rgba(255, 255, 0, 0.2); }
+
 .rotate-text {
   -webkit-animation: rotate-text 3050ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
   -moz-animation: rotate-text 3050ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
@@ -230,9 +243,6 @@ section {
   @media screen and (max-width: 800px) {
     .btn-view-examples {
       margin-left: 0; } }
-
-.section-title {
-  font-size: 36px; }
 
 .hero-group {
   display: block; }
