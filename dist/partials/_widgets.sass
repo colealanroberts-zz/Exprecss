@@ -1,0 +1,54 @@
+.widget
+    overflow: hidden
+    background: $white
+    border-radius: $border-radius-default
+    display: block
+    @include breakpoint(mobile)
+        margin-bottom: 10px
+
+    &-header
+        padding: 10px 20px
+        overflow: auto
+        font:
+            weight: 600
+
+        &.default
+            border: 1px solid $border-grey
+
+        &.success
+            color: $white
+            background: $brand-green
+
+        &.info
+            color: $white
+            background: $brand-blue
+
+        &.important
+            color: $white
+            background: $brand-red
+
+        &.border-bottom
+            border-bottom: 1px solid $border-grey
+
+    &-body
+        padding: 15px
+        border-left: 1px solid $border-grey
+        border-right: 1px solid $border-grey
+        border-bottom: 1px solid $border-grey
+
+        p
+            margin: 0 0 10px 0
+            font:
+                size: $font-size-l1
+
+    &-footer
+        margin: 0
+        padding: 10px
+        background: $background-grey
+        border-left: 1px solid $border-grey
+        border-right: 1px solid $border-grey
+        border-bottom: 1px solid $border-grey
+
+        .btn
+            margin-bottom: 0px
+

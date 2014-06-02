@@ -1,11 +1,12 @@
 .card
     @extend %box-shadow-default
+    height: auto
+    overflow: hidden
+    background: $white
     border: 1px solid $border-grey
     border-radius: $border-radius-default
-    background: $white
-    height: auto
-    overflow-x: hidden
-    overflow-y: hidden
+    @include breakpoint(mobile)
+        margin-bottom: 10px
 
     &-header
         @extend %force-hardware-accel
@@ -75,8 +76,11 @@
 
     &-body
         padding: 15px
-        font:
-            size: $font-size-l1
 
         p
             margin-bottom: 10px
+            font:
+                size: $font-size-l1
+
+        .btn
+            margin-bottom: 0px
