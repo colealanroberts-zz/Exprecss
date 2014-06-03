@@ -290,5 +290,17 @@ section {
     .bower-logo {
       display: none; } }
 
-.footer .download {
-  color: #3498db !important; }
+.footer .btn-download {
+  -webkit-transition: all, linear, 300ms;
+  -moz-transition: all, linear, 300ms;
+  -o-transition: all, linear, 300ms;
+  transition: all, linear, 300ms;
+  padding: 20px 32px;
+  border: 1px solid #3498db;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  display: inline-block;
+  color: #3498db; }
+  .footer .btn-download:hover {
+    color: white;
+    background: #3498db; }

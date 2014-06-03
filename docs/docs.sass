@@ -383,5 +383,15 @@ section
     @include breakpoint(tablet)
         display: none
 
-.footer .download
-    color: $base-color !important
+.footer .btn-download
+    @include transition(all, linear, 300ms)
+    padding: 20px 32px
+    border: 1px solid $base-color
+    margin-bottom: 20px
+    border-radius: 999px
+    display: inline-block
+    color: $base-color
+
+    &:hover
+        color: $white
+        background: $base-color
