@@ -15,7 +15,9 @@ $index2: 1
     @for $index2 from $index1 through 12
         .col-#{$index1}-of-#{$index2}
             @if $index1 == $index2
-                // Do nothing
+                /*  We don't want to generate classes when $index1 is equal to $index2
+                    It'd be better to simply use .col-X which assumes full width */
+                @debug 'Skipped generating class: .col-' + $index1 + '-of-' + $index2
             @else
                 @include span-columns($index1 of $index2)
 

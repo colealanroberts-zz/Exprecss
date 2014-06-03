@@ -4,10 +4,12 @@ select::-ms-expand
 .select
     @include appearance(none)
     @include fill-parent
+    height: $height-input-default
     position: relative
     display: inline-block
     background: transparent
     border: none
+    margin-bottom: 10px
 
     select
         @include linear-gradient(darken($white, 1%), darken($white, 3%))
@@ -15,13 +17,15 @@ select::-ms-expand
         @include box-sizing(border-box)
         @include appearance(none)
         @extend %box-shadow-default
+        padding: 10px
+        position: relative
         display: inline-block
-        padding: 15px 10px
         cursor: pointer
         color: $dark-grey
+        height: 100%
         width: 100%
         overflow: hidden
-        outline: 1px none
+        outline: 0px none
         border: 1px solid $border-grey
         border-radius: $border-radius-default
         font:
@@ -61,9 +65,9 @@ select::-ms-expand
                 background: darken($white, 2%)
 
     &:after
-        @include triangle(12px, gray, down)
+        @include triangle(10px, gray, down)
         display: inline-block
         content: ''
-        top: 40px
+        top: 20px
         right: 20px
         position: absolute

@@ -214,6 +214,11 @@ html, body {
   }
 }
 
+.col-1-of-1 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
+}
+
 .col-1-of-2 {
   float: left;
   display: block;
@@ -324,6 +329,11 @@ html, body {
   margin-right: 0;
 }
 
+.col-2-of-2 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
+}
+
 .col-2-of-3 {
   float: left;
   display: block;
@@ -424,6 +434,11 @@ html, body {
   margin-right: 0;
 }
 
+.col-3-of-3 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
+}
+
 .col-3-of-4 {
   float: left;
   display: block;
@@ -514,6 +529,11 @@ html, body {
   margin-right: 0;
 }
 
+.col-4-of-4 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
+}
+
 .col-4-of-5 {
   float: left;
   display: block;
@@ -594,6 +614,11 @@ html, body {
   margin-right: 0;
 }
 
+.col-5-of-5 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
+}
+
 .col-5-of-6 {
   float: left;
   display: block;
@@ -664,6 +689,11 @@ html, body {
   margin-right: 0;
 }
 
+.col-6-of-6 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
+}
+
 .col-6-of-7 {
   float: left;
   display: block;
@@ -724,6 +754,11 @@ html, body {
   margin-right: 0;
 }
 
+.col-7-of-7 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
+}
+
 .col-7-of-8 {
   float: left;
   display: block;
@@ -774,6 +809,11 @@ html, body {
   margin-right: 0;
 }
 
+.col-8-of-8 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
+}
+
 .col-8-of-9 {
   float: left;
   display: block;
@@ -814,6 +854,11 @@ html, body {
   margin-right: 0;
 }
 
+.col-9-of-9 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
+}
+
 .col-9-of-10 {
   float: left;
   display: block;
@@ -844,6 +889,11 @@ html, body {
   margin-right: 0;
 }
 
+.col-10-of-10 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
+}
+
 .col-10-of-11 {
   float: left;
   display: block;
@@ -864,6 +914,11 @@ html, body {
   margin-right: 0;
 }
 
+.col-11-of-11 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
+}
+
 .col-11-of-12 {
   float: left;
   display: block;
@@ -872,6 +927,11 @@ html, body {
 }
 .col-11-of-12:last-child {
   margin-right: 0;
+}
+
+.col-12-of-12 {
+  /*  We don't want to generate classes when $index1 is equal to $index2
+   * It'd be better to simply use .col-X which assumes full width */
 }
 
 @font-face {
@@ -1282,6 +1342,10 @@ li {
 .checkbox {
   position: relative;
   margin-bottom: 10px;
+  height: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 .checkbox-sidelabel {
   position: relative;
@@ -1449,10 +1513,12 @@ select::-ms-expand {
   -o-appearance: none;
   appearance: none;
   width: 100%;
+  height: 39px;
   position: relative;
   display: inline-block;
   background: transparent;
   border: none;
+  margin-bottom: 10px;
 }
 .select select {
   background-color: #fcfcfc;
@@ -1469,13 +1535,15 @@ select::-ms-expand {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
+  padding: 10px;
+  position: relative;
   display: inline-block;
-  padding: 15px 10px;
   cursor: pointer;
   color: #3e4044;
+  height: 100%;
   width: 100%;
   overflow: hidden;
-  outline: 1px none;
+  outline: 0px none;
   border: 1px solid #e8e8e8;
   border-radius: 2px;
   font-size: 0.75em;
@@ -1514,12 +1582,12 @@ select::-ms-expand {
 .select:after {
   height: 0;
   width: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid gray;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid gray;
   display: inline-block;
   content: "";
-  top: 40px;
+  top: 20px;
   right: 20px;
   position: absolute;
 }
@@ -1537,12 +1605,13 @@ input[type="text"], input[type="password"], input[type="number"], input[type="te
   -o-appearance: none;
   appearance: none;
   width: 100%;
-  padding: 12px 10px;
-  margin-bottom: 10px;
+  padding: 10px;
+  height: 39px;
   color: #3e4044;
   background: #fcfcfc;
   border: 1px solid #e8e8e8;
   border-radius: 2px;
+  margin-bottom: 10px;
   font-size: 13px;
   font-family: "Gotham-Book", sans-serif;
 }
