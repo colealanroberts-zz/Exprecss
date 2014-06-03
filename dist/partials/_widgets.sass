@@ -6,14 +6,16 @@
     @include breakpoint(mobile)
         margin-bottom: 10px
 
+    .btn:last-of-type
+        margin-bottom: 0px
+
     &-header
         padding: 10px 20px
         overflow: auto
+        color: $white
+        background: $header-grey
         font:
             weight: 600
-
-        &.default
-            border: 1px solid $border-grey
 
         &.success
             color: $white
@@ -31,7 +33,8 @@
             border-bottom: 1px solid $border-grey
 
     &-body
-        padding: 15px
+        overflow: auto
+        padding: $padding-default
         border-left: 1px solid $border-grey
         border-right: 1px solid $border-grey
         border-bottom: 1px solid $border-grey
@@ -42,13 +45,10 @@
                 size: $font-size-l1
 
     &-footer
+        overflow: auto
         margin: 0
         padding: 10px
         background: $background-grey
         border-left: 1px solid $border-grey
         border-right: 1px solid $border-grey
         border-bottom: 1px solid $border-grey
-
-        .btn
-            margin-bottom: 0px
-

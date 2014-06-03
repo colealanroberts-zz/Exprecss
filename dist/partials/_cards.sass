@@ -8,6 +8,9 @@
     @include breakpoint(mobile)
         margin-bottom: 10px
 
+    .btn:last-of-type
+        margin-bottom: 0px
+
     &-header
         @extend %force-hardware-accel
         @include transition(all, linear, $transition-duration-default)
@@ -75,12 +78,10 @@
             family: 'Georgia', serif
 
     &-body
-        padding: 15px
+        overflow: auto
+        padding: $padding-default
 
         p
             margin-bottom: 10px
             font:
                 size: $font-size-l1
-
-        .btn
-            margin-bottom: 0px

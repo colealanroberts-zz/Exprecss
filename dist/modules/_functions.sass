@@ -1,4 +1,4 @@
-// Generate Grid
+// Generate Columns
 @while $grid-index <= $grid-columns
     .col-#{$grid-index}
         @include span-columns($grid-index)
@@ -6,3 +6,18 @@
             width: 100%
 
     $grid-index: $grid-index + 1 !global
+
+// Span Columns X of 12
+$index1: 1
+$index2: 1
+
+@while $index1 <= $grid-columns
+    @for $index2 from $index1 through 12
+        .col-#{$index1}-of-#{$index2}
+            @if $index1 == $index2
+                // Do nothing
+            @else
+                @include span-columns($index1 of $index2)
+
+        $index2: $index2 + 1 !global
+    $index1: $index1 + 1 !global
