@@ -30,6 +30,6 @@ function nodeDepth() {
 
 $(document).ready(function() {
     loop(0);
-    nodeDepth();
+    nodeDepth(dev);
 });
 
