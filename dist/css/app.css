@@ -49,6 +49,172 @@ html, body {
   }
 }
 
+.col-1-of-1 {
+  float: left;
+  display: block;
+  margin-right: 38.19821%;
+  width: 100%;
+}
+.col-1-of-1:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-1-of-1 {
+    width: 100%;
+  }
+}
+
+.col-1-of-2 {
+  float: left;
+  display: block;
+  margin-right: 16.03631%;
+  width: 41.98184%;
+}
+.col-1-of-2:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-1-of-2 {
+    width: 100%;
+  }
+}
+
+.col-1-of-3 {
+  float: left;
+  display: block;
+  margin-right: 10.1484%;
+  width: 26.56773%;
+}
+.col-1-of-3:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-1-of-3 {
+    width: 100%;
+  }
+}
+
+.col-1-of-4 {
+  float: left;
+  display: block;
+  margin-right: 7.42297%;
+  width: 19.43277%;
+}
+.col-1-of-4:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-1-of-4 {
+    width: 100%;
+  }
+}
+
+.col-1-of-5 {
+  float: left;
+  display: block;
+  margin-right: 5.85151%;
+  width: 15.3188%;
+}
+.col-1-of-5:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-1-of-5 {
+    width: 100%;
+  }
+}
+
+.col-1-of-6 {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 12.64237%;
+}
+.col-1-of-6:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-1-of-6 {
+    width: 100%;
+  }
+}
+
+.col-1-of-7 {
+  float: left;
+  display: block;
+  margin-right: 4.11092%;
+  width: 10.76207%;
+}
+.col-1-of-7:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-1-of-7 {
+    width: 100%;
+  }
+}
+
+.col-1-of-8 {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 9.36867%;
+}
+.col-1-of-8:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-1-of-8 {
+    width: 100%;
+  }
+}
+
+.col-1-of-9 {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 8.29472%;
+}
+.col-1-of-9:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-1-of-9 {
+    width: 100%;
+  }
+}
+
+.col-1-of-10 {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 7.44167%;
+}
+.col-1-of-10:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-1-of-10 {
+    width: 100%;
+  }
+}
+
+.col-1-of-11 {
+  float: left;
+  display: block;
+  margin-right: 2.57751%;
+  width: 6.74772%;
+}
+.col-1-of-11:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-1-of-11 {
+    width: 100%;
+  }
+}
+
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-2 {
   float: left;
   display: block;
@@ -64,6 +230,157 @@ html, body {
   }
 }
 
+.col-2-of-2 {
+  float: left;
+  display: block;
+  margin-right: 16.03631%;
+  width: 100%;
+}
+.col-2-of-2:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-2-of-2 {
+    width: 100%;
+  }
+}
+
+.col-2-of-3 {
+  float: left;
+  display: block;
+  margin-right: 10.1484%;
+  width: 63.28387%;
+}
+.col-2-of-3:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-2-of-3 {
+    width: 100%;
+  }
+}
+
+.col-2-of-4 {
+  float: left;
+  display: block;
+  margin-right: 7.42297%;
+  width: 46.28851%;
+}
+.col-2-of-4:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-2-of-4 {
+    width: 100%;
+  }
+}
+
+.col-2-of-5 {
+  float: left;
+  display: block;
+  margin-right: 5.85151%;
+  width: 36.4891%;
+}
+.col-2-of-5:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-2-of-5 {
+    width: 100%;
+  }
+}
+
+.col-2-of-6 {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 30.11389%;
+}
+.col-2-of-6:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-2-of-6 {
+    width: 100%;
+  }
+}
+
+.col-2-of-7 {
+  float: left;
+  display: block;
+  margin-right: 4.11092%;
+  width: 25.63506%;
+}
+.col-2-of-7:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-2-of-7 {
+    width: 100%;
+  }
+}
+
+.col-2-of-8 {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 22.316%;
+}
+.col-2-of-8:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-2-of-8 {
+    width: 100%;
+  }
+}
+
+.col-2-of-9 {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 19.75788%;
+}
+.col-2-of-9:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-2-of-9 {
+    width: 100%;
+  }
+}
+
+.col-2-of-10 {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 17.72593%;
+}
+.col-2-of-10:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-2-of-10 {
+    width: 100%;
+  }
+}
+
+.col-2-of-11 {
+  float: left;
+  display: block;
+  margin-right: 2.57751%;
+  width: 16.07295%;
+}
+.col-2-of-11:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-2-of-11 {
+    width: 100%;
+  }
+}
+
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-3 {
   float: left;
   display: block;
@@ -79,6 +396,142 @@ html, body {
   }
 }
 
+.col-3-of-3 {
+  float: left;
+  display: block;
+  margin-right: 10.1484%;
+  width: 100%;
+}
+.col-3-of-3:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-3-of-3 {
+    width: 100%;
+  }
+}
+
+.col-3-of-4 {
+  float: left;
+  display: block;
+  margin-right: 7.42297%;
+  width: 73.14426%;
+}
+.col-3-of-4:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-3-of-4 {
+    width: 100%;
+  }
+}
+
+.col-3-of-5 {
+  float: left;
+  display: block;
+  margin-right: 5.85151%;
+  width: 57.6594%;
+}
+.col-3-of-5:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-3-of-5 {
+    width: 100%;
+  }
+}
+
+.col-3-of-6 {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 47.58542%;
+}
+.col-3-of-6:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-3-of-6 {
+    width: 100%;
+  }
+}
+
+.col-3-of-7 {
+  float: left;
+  display: block;
+  margin-right: 4.11092%;
+  width: 40.50805%;
+}
+.col-3-of-7:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-3-of-7 {
+    width: 100%;
+  }
+}
+
+.col-3-of-8 {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 35.26334%;
+}
+.col-3-of-8:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-3-of-8 {
+    width: 100%;
+  }
+}
+
+.col-3-of-9 {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 31.22104%;
+}
+.col-3-of-9:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-3-of-9 {
+    width: 100%;
+  }
+}
+
+.col-3-of-10 {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 28.01019%;
+}
+.col-3-of-10:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-3-of-10 {
+    width: 100%;
+  }
+}
+
+.col-3-of-11 {
+  float: left;
+  display: block;
+  margin-right: 2.57751%;
+  width: 25.39818%;
+}
+.col-3-of-11:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-3-of-11 {
+    width: 100%;
+  }
+}
+
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-4 {
   float: left;
   display: block;
@@ -94,6 +547,127 @@ html, body {
   }
 }
 
+.col-4-of-4 {
+  float: left;
+  display: block;
+  margin-right: 7.42297%;
+  width: 100%;
+}
+.col-4-of-4:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-4-of-4 {
+    width: 100%;
+  }
+}
+
+.col-4-of-5 {
+  float: left;
+  display: block;
+  margin-right: 5.85151%;
+  width: 78.8297%;
+}
+.col-4-of-5:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-4-of-5 {
+    width: 100%;
+  }
+}
+
+.col-4-of-6 {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 65.05695%;
+}
+.col-4-of-6:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-4-of-6 {
+    width: 100%;
+  }
+}
+
+.col-4-of-7 {
+  float: left;
+  display: block;
+  margin-right: 4.11092%;
+  width: 55.38104%;
+}
+.col-4-of-7:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-4-of-7 {
+    width: 100%;
+  }
+}
+
+.col-4-of-8 {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 48.21067%;
+}
+.col-4-of-8:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-4-of-8 {
+    width: 100%;
+  }
+}
+
+.col-4-of-9 {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 42.6842%;
+}
+.col-4-of-9:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-4-of-9 {
+    width: 100%;
+  }
+}
+
+.col-4-of-10 {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 38.29445%;
+}
+.col-4-of-10:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-4-of-10 {
+    width: 100%;
+  }
+}
+
+.col-4-of-11 {
+  float: left;
+  display: block;
+  margin-right: 2.57751%;
+  width: 34.7234%;
+}
+.col-4-of-11:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-4-of-11 {
+    width: 100%;
+  }
+}
+
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-5 {
   float: left;
   display: block;
@@ -109,6 +683,112 @@ html, body {
   }
 }
 
+.col-5-of-5 {
+  float: left;
+  display: block;
+  margin-right: 5.85151%;
+  width: 100%;
+}
+.col-5-of-5:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-5-of-5 {
+    width: 100%;
+  }
+}
+
+.col-5-of-6 {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 82.52847%;
+}
+.col-5-of-6:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-5-of-6 {
+    width: 100%;
+  }
+}
+
+.col-5-of-7 {
+  float: left;
+  display: block;
+  margin-right: 4.11092%;
+  width: 70.25402%;
+}
+.col-5-of-7:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-5-of-7 {
+    width: 100%;
+  }
+}
+
+.col-5-of-8 {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 61.158%;
+}
+.col-5-of-8:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-5-of-8 {
+    width: 100%;
+  }
+}
+
+.col-5-of-9 {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 54.14736%;
+}
+.col-5-of-9:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-5-of-9 {
+    width: 100%;
+  }
+}
+
+.col-5-of-10 {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 48.57871%;
+}
+.col-5-of-10:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-5-of-10 {
+    width: 100%;
+  }
+}
+
+.col-5-of-11 {
+  float: left;
+  display: block;
+  margin-right: 2.57751%;
+  width: 44.04863%;
+}
+.col-5-of-11:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-5-of-11 {
+    width: 100%;
+  }
+}
+
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-6 {
   float: left;
   display: block;
@@ -124,6 +804,97 @@ html, body {
   }
 }
 
+.col-6-of-6 {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 100%;
+}
+.col-6-of-6:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-6-of-6 {
+    width: 100%;
+  }
+}
+
+.col-6-of-7 {
+  float: left;
+  display: block;
+  margin-right: 4.11092%;
+  width: 85.12701%;
+}
+.col-6-of-7:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-6-of-7 {
+    width: 100%;
+  }
+}
+
+.col-6-of-8 {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 74.10533%;
+}
+.col-6-of-8:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-6-of-8 {
+    width: 100%;
+  }
+}
+
+.col-6-of-9 {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 65.61052%;
+}
+.col-6-of-9:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-6-of-9 {
+    width: 100%;
+  }
+}
+
+.col-6-of-10 {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 58.86297%;
+}
+.col-6-of-10:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-6-of-10 {
+    width: 100%;
+  }
+}
+
+.col-6-of-11 {
+  float: left;
+  display: block;
+  margin-right: 2.57751%;
+  width: 53.37386%;
+}
+.col-6-of-11:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-6-of-11 {
+    width: 100%;
+  }
+}
+
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-7 {
   float: left;
   display: block;
@@ -139,6 +910,82 @@ html, body {
   }
 }
 
+.col-7-of-7 {
+  float: left;
+  display: block;
+  margin-right: 4.11092%;
+  width: 100%;
+}
+.col-7-of-7:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-7-of-7 {
+    width: 100%;
+  }
+}
+
+.col-7-of-8 {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 87.05267%;
+}
+.col-7-of-8:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-7-of-8 {
+    width: 100%;
+  }
+}
+
+.col-7-of-9 {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 77.07368%;
+}
+.col-7-of-9:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-7-of-9 {
+    width: 100%;
+  }
+}
+
+.col-7-of-10 {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 69.14722%;
+}
+.col-7-of-10:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-7-of-10 {
+    width: 100%;
+  }
+}
+
+.col-7-of-11 {
+  float: left;
+  display: block;
+  margin-right: 2.57751%;
+  width: 62.69909%;
+}
+.col-7-of-11:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-7-of-11 {
+    width: 100%;
+  }
+}
+
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-8 {
   float: left;
   display: block;
@@ -154,6 +1001,67 @@ html, body {
   }
 }
 
+.col-8-of-8 {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 100%;
+}
+.col-8-of-8:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-8-of-8 {
+    width: 100%;
+  }
+}
+
+.col-8-of-9 {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 88.53684%;
+}
+.col-8-of-9:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-8-of-9 {
+    width: 100%;
+  }
+}
+
+.col-8-of-10 {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 79.43148%;
+}
+.col-8-of-10:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-8-of-10 {
+    width: 100%;
+  }
+}
+
+.col-8-of-11 {
+  float: left;
+  display: block;
+  margin-right: 2.57751%;
+  width: 72.02432%;
+}
+.col-8-of-11:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-8-of-11 {
+    width: 100%;
+  }
+}
+
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-9 {
   float: left;
   display: block;
@@ -169,6 +1077,52 @@ html, body {
   }
 }
 
+.col-9-of-9 {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 100%;
+}
+.col-9-of-9:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-9-of-9 {
+    width: 100%;
+  }
+}
+
+.col-9-of-10 {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 89.71574%;
+}
+.col-9-of-10:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-9-of-10 {
+    width: 100%;
+  }
+}
+
+.col-9-of-11 {
+  float: left;
+  display: block;
+  margin-right: 2.57751%;
+  width: 81.34954%;
+}
+.col-9-of-11:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-9-of-11 {
+    width: 100%;
+  }
+}
+
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-10 {
   float: left;
   display: block;
@@ -184,6 +1138,37 @@ html, body {
   }
 }
 
+.col-10-of-10 {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 100%;
+}
+.col-10-of-10:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-10-of-10 {
+    width: 100%;
+  }
+}
+
+.col-10-of-11 {
+  float: left;
+  display: block;
+  margin-right: 2.57751%;
+  width: 90.67477%;
+}
+.col-10-of-11:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-10-of-11 {
+    width: 100%;
+  }
+}
+
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-11 {
   float: left;
   display: block;
@@ -199,6 +1184,22 @@ html, body {
   }
 }
 
+.col-11-of-11 {
+  float: left;
+  display: block;
+  margin-right: 2.57751%;
+  width: 100%;
+}
+.col-11-of-11:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .col-11-of-11 {
+    width: 100%;
+  }
+}
+
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-12 {
   float: left;
   display: block;
@@ -214,726 +1215,7 @@ html, body {
   }
 }
 
-.col-1-of-1 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
-.col-1-of-2 {
-  float: left;
-  display: block;
-  margin-right: 16.03631%;
-  width: 41.98184%;
-}
-.col-1-of-2:last-child {
-  margin-right: 0;
-}
-
-.col-1-of-3 {
-  float: left;
-  display: block;
-  margin-right: 10.1484%;
-  width: 26.56773%;
-}
-.col-1-of-3:last-child {
-  margin-right: 0;
-}
-
-.col-1-of-4 {
-  float: left;
-  display: block;
-  margin-right: 7.42297%;
-  width: 19.43277%;
-}
-.col-1-of-4:last-child {
-  margin-right: 0;
-}
-
-.col-1-of-5 {
-  float: left;
-  display: block;
-  margin-right: 5.85151%;
-  width: 15.3188%;
-}
-.col-1-of-5:last-child {
-  margin-right: 0;
-}
-
-.col-1-of-6 {
-  float: left;
-  display: block;
-  margin-right: 4.82916%;
-  width: 12.64237%;
-}
-.col-1-of-6:last-child {
-  margin-right: 0;
-}
-
-.col-1-of-7 {
-  float: left;
-  display: block;
-  margin-right: 4.11092%;
-  width: 10.76207%;
-}
-.col-1-of-7:last-child {
-  margin-right: 0;
-}
-
-.col-1-of-8 {
-  float: left;
-  display: block;
-  margin-right: 3.57866%;
-  width: 9.36867%;
-}
-.col-1-of-8:last-child {
-  margin-right: 0;
-}
-
-.col-1-of-9 {
-  float: left;
-  display: block;
-  margin-right: 3.16844%;
-  width: 8.29472%;
-}
-.col-1-of-9:last-child {
-  margin-right: 0;
-}
-
-.col-1-of-10 {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 7.44167%;
-}
-.col-1-of-10:last-child {
-  margin-right: 0;
-}
-
-.col-1-of-11 {
-  float: left;
-  display: block;
-  margin-right: 2.57751%;
-  width: 6.74772%;
-}
-.col-1-of-11:last-child {
-  margin-right: 0;
-}
-
-.col-1-of-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%;
-}
-.col-1-of-12:last-child {
-  margin-right: 0;
-}
-
-.col-2-of-2 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
-.col-2-of-3 {
-  float: left;
-  display: block;
-  margin-right: 10.1484%;
-  width: 63.28387%;
-}
-.col-2-of-3:last-child {
-  margin-right: 0;
-}
-
-.col-2-of-4 {
-  float: left;
-  display: block;
-  margin-right: 7.42297%;
-  width: 46.28851%;
-}
-.col-2-of-4:last-child {
-  margin-right: 0;
-}
-
-.col-2-of-5 {
-  float: left;
-  display: block;
-  margin-right: 5.85151%;
-  width: 36.4891%;
-}
-.col-2-of-5:last-child {
-  margin-right: 0;
-}
-
-.col-2-of-6 {
-  float: left;
-  display: block;
-  margin-right: 4.82916%;
-  width: 30.11389%;
-}
-.col-2-of-6:last-child {
-  margin-right: 0;
-}
-
-.col-2-of-7 {
-  float: left;
-  display: block;
-  margin-right: 4.11092%;
-  width: 25.63506%;
-}
-.col-2-of-7:last-child {
-  margin-right: 0;
-}
-
-.col-2-of-8 {
-  float: left;
-  display: block;
-  margin-right: 3.57866%;
-  width: 22.316%;
-}
-.col-2-of-8:last-child {
-  margin-right: 0;
-}
-
-.col-2-of-9 {
-  float: left;
-  display: block;
-  margin-right: 3.16844%;
-  width: 19.75788%;
-}
-.col-2-of-9:last-child {
-  margin-right: 0;
-}
-
-.col-2-of-10 {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 17.72593%;
-}
-.col-2-of-10:last-child {
-  margin-right: 0;
-}
-
-.col-2-of-11 {
-  float: left;
-  display: block;
-  margin-right: 2.57751%;
-  width: 16.07295%;
-}
-.col-2-of-11:last-child {
-  margin-right: 0;
-}
-
-.col-2-of-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%;
-}
-.col-2-of-12:last-child {
-  margin-right: 0;
-}
-
-.col-3-of-3 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
-.col-3-of-4 {
-  float: left;
-  display: block;
-  margin-right: 7.42297%;
-  width: 73.14426%;
-}
-.col-3-of-4:last-child {
-  margin-right: 0;
-}
-
-.col-3-of-5 {
-  float: left;
-  display: block;
-  margin-right: 5.85151%;
-  width: 57.6594%;
-}
-.col-3-of-5:last-child {
-  margin-right: 0;
-}
-
-.col-3-of-6 {
-  float: left;
-  display: block;
-  margin-right: 4.82916%;
-  width: 47.58542%;
-}
-.col-3-of-6:last-child {
-  margin-right: 0;
-}
-
-.col-3-of-7 {
-  float: left;
-  display: block;
-  margin-right: 4.11092%;
-  width: 40.50805%;
-}
-.col-3-of-7:last-child {
-  margin-right: 0;
-}
-
-.col-3-of-8 {
-  float: left;
-  display: block;
-  margin-right: 3.57866%;
-  width: 35.26334%;
-}
-.col-3-of-8:last-child {
-  margin-right: 0;
-}
-
-.col-3-of-9 {
-  float: left;
-  display: block;
-  margin-right: 3.16844%;
-  width: 31.22104%;
-}
-.col-3-of-9:last-child {
-  margin-right: 0;
-}
-
-.col-3-of-10 {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 28.01019%;
-}
-.col-3-of-10:last-child {
-  margin-right: 0;
-}
-
-.col-3-of-11 {
-  float: left;
-  display: block;
-  margin-right: 2.57751%;
-  width: 25.39818%;
-}
-.col-3-of-11:last-child {
-  margin-right: 0;
-}
-
-.col-3-of-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-}
-.col-3-of-12:last-child {
-  margin-right: 0;
-}
-
-.col-4-of-4 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
-.col-4-of-5 {
-  float: left;
-  display: block;
-  margin-right: 5.85151%;
-  width: 78.8297%;
-}
-.col-4-of-5:last-child {
-  margin-right: 0;
-}
-
-.col-4-of-6 {
-  float: left;
-  display: block;
-  margin-right: 4.82916%;
-  width: 65.05695%;
-}
-.col-4-of-6:last-child {
-  margin-right: 0;
-}
-
-.col-4-of-7 {
-  float: left;
-  display: block;
-  margin-right: 4.11092%;
-  width: 55.38104%;
-}
-.col-4-of-7:last-child {
-  margin-right: 0;
-}
-
-.col-4-of-8 {
-  float: left;
-  display: block;
-  margin-right: 3.57866%;
-  width: 48.21067%;
-}
-.col-4-of-8:last-child {
-  margin-right: 0;
-}
-
-.col-4-of-9 {
-  float: left;
-  display: block;
-  margin-right: 3.16844%;
-  width: 42.6842%;
-}
-.col-4-of-9:last-child {
-  margin-right: 0;
-}
-
-.col-4-of-10 {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 38.29445%;
-}
-.col-4-of-10:last-child {
-  margin-right: 0;
-}
-
-.col-4-of-11 {
-  float: left;
-  display: block;
-  margin-right: 2.57751%;
-  width: 34.7234%;
-}
-.col-4-of-11:last-child {
-  margin-right: 0;
-}
-
-.col-4-of-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-}
-.col-4-of-12:last-child {
-  margin-right: 0;
-}
-
-.col-5-of-5 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
-.col-5-of-6 {
-  float: left;
-  display: block;
-  margin-right: 4.82916%;
-  width: 82.52847%;
-}
-.col-5-of-6:last-child {
-  margin-right: 0;
-}
-
-.col-5-of-7 {
-  float: left;
-  display: block;
-  margin-right: 4.11092%;
-  width: 70.25402%;
-}
-.col-5-of-7:last-child {
-  margin-right: 0;
-}
-
-.col-5-of-8 {
-  float: left;
-  display: block;
-  margin-right: 3.57866%;
-  width: 61.158%;
-}
-.col-5-of-8:last-child {
-  margin-right: 0;
-}
-
-.col-5-of-9 {
-  float: left;
-  display: block;
-  margin-right: 3.16844%;
-  width: 54.14736%;
-}
-.col-5-of-9:last-child {
-  margin-right: 0;
-}
-
-.col-5-of-10 {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 48.57871%;
-}
-.col-5-of-10:last-child {
-  margin-right: 0;
-}
-
-.col-5-of-11 {
-  float: left;
-  display: block;
-  margin-right: 2.57751%;
-  width: 44.04863%;
-}
-.col-5-of-11:last-child {
-  margin-right: 0;
-}
-
-.col-5-of-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%;
-}
-.col-5-of-12:last-child {
-  margin-right: 0;
-}
-
-.col-6-of-6 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
-.col-6-of-7 {
-  float: left;
-  display: block;
-  margin-right: 4.11092%;
-  width: 85.12701%;
-}
-.col-6-of-7:last-child {
-  margin-right: 0;
-}
-
-.col-6-of-8 {
-  float: left;
-  display: block;
-  margin-right: 3.57866%;
-  width: 74.10533%;
-}
-.col-6-of-8:last-child {
-  margin-right: 0;
-}
-
-.col-6-of-9 {
-  float: left;
-  display: block;
-  margin-right: 3.16844%;
-  width: 65.61052%;
-}
-.col-6-of-9:last-child {
-  margin-right: 0;
-}
-
-.col-6-of-10 {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 58.86297%;
-}
-.col-6-of-10:last-child {
-  margin-right: 0;
-}
-
-.col-6-of-11 {
-  float: left;
-  display: block;
-  margin-right: 2.57751%;
-  width: 53.37386%;
-}
-.col-6-of-11:last-child {
-  margin-right: 0;
-}
-
-.col-6-of-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-}
-.col-6-of-12:last-child {
-  margin-right: 0;
-}
-
-.col-7-of-7 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
-.col-7-of-8 {
-  float: left;
-  display: block;
-  margin-right: 3.57866%;
-  width: 87.05267%;
-}
-.col-7-of-8:last-child {
-  margin-right: 0;
-}
-
-.col-7-of-9 {
-  float: left;
-  display: block;
-  margin-right: 3.16844%;
-  width: 77.07368%;
-}
-.col-7-of-9:last-child {
-  margin-right: 0;
-}
-
-.col-7-of-10 {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 69.14722%;
-}
-.col-7-of-10:last-child {
-  margin-right: 0;
-}
-
-.col-7-of-11 {
-  float: left;
-  display: block;
-  margin-right: 2.57751%;
-  width: 62.69909%;
-}
-.col-7-of-11:last-child {
-  margin-right: 0;
-}
-
-.col-7-of-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%;
-}
-.col-7-of-12:last-child {
-  margin-right: 0;
-}
-
-.col-8-of-8 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
-.col-8-of-9 {
-  float: left;
-  display: block;
-  margin-right: 3.16844%;
-  width: 88.53684%;
-}
-.col-8-of-9:last-child {
-  margin-right: 0;
-}
-
-.col-8-of-10 {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 79.43148%;
-}
-.col-8-of-10:last-child {
-  margin-right: 0;
-}
-
-.col-8-of-11 {
-  float: left;
-  display: block;
-  margin-right: 2.57751%;
-  width: 72.02432%;
-}
-.col-8-of-11:last-child {
-  margin-right: 0;
-}
-
-.col-8-of-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%;
-}
-.col-8-of-12:last-child {
-  margin-right: 0;
-}
-
-.col-9-of-9 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
-.col-9-of-10 {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 89.71574%;
-}
-.col-9-of-10:last-child {
-  margin-right: 0;
-}
-
-.col-9-of-11 {
-  float: left;
-  display: block;
-  margin-right: 2.57751%;
-  width: 81.34954%;
-}
-.col-9-of-11:last-child {
-  margin-right: 0;
-}
-
-.col-9-of-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
-}
-.col-9-of-12:last-child {
-  margin-right: 0;
-}
-
-.col-10-of-10 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
-.col-10-of-11 {
-  float: left;
-  display: block;
-  margin-right: 2.57751%;
-  width: 90.67477%;
-}
-.col-10-of-11:last-child {
-  margin-right: 0;
-}
-
-.col-10-of-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-}
-.col-10-of-12:last-child {
-  margin-right: 0;
-}
-
-.col-11-of-11 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
-.col-11-of-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%;
-}
-.col-11-of-12:last-child {
-  margin-right: 0;
-}
-
-.col-12-of-12 {
-  /*  We don't want to generate classes when $index1 is equal to $index2
-   * It'd be better to simply use .col-X which assumes full width */
-}
-
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 @font-face {
   font-family: Gotham-Bold;
   font-weight: 600;
