@@ -156,13 +156,11 @@ $animation-rotate-duration: 3050ms
 
 .navbar-exprecss
     width: 100%
-    position: absolute
-    top: 0
-    left: 0
-    border-bottom: none
-    background: transparent
+    position: relative
     height: auto
     overflow: auto
+    border-bottom: none
+    background: transparent
 
     ul
         max-width: 68em
@@ -249,6 +247,7 @@ section
 
 .hero-unit-demo
     @include linear-gradient-image(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9), '../docs/img/bg-hero-unit.jpg')
+    margin-top: -78px
     filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#1E3174', endColorstr='#3C859F')
     padding: 150px 0
     height: auto
@@ -257,6 +256,7 @@ section
         repeat: no-repeat
         position: center center
     @include breakpoint(mobile)
+        margin-top: -89px
         padding: 80px 0 30px 0
         height: auto
 
@@ -391,6 +391,9 @@ section
     border-radius: 999px
     display: inline-block
     color: $base-color
+    font:
+        size: 11px
+        weight: 500
 
     &:hover
         color: $white
