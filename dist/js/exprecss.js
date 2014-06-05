@@ -14,8 +14,12 @@ function responsiveNavClose() {
 
 function dropdownMenu() {
     $('.dropdown-menu').addClass('dropdown-menu-inactive');
-    $('.btn-dropdown').click(function(e) {
-        $('.dropdown-menu').toggleClass('dropdown-menu-inactive dropdown-menu-active');
+    $('body').on('click', '.btn-dropdown', function(e) {
+        var that = $(this),
+            menu = $('#' + that.data('for'));
+
+
+        menu.toggleClass('dropdown-menu-inactive dropdown-menu-active');
         e.preventDefault();
     });
 }

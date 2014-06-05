@@ -1,7 +1,10 @@
+.no-blur
+    @include transform(preserve3d)
+
 .full-width
     @include fill-parent
 
-.center
+.center-h
     &-relative
         @include transform(translateX(-50%))
         position: relative
@@ -10,6 +13,17 @@
     &-absolute
         @include transform(translateX(-50%))
         position: absolute
+        left: 50%
+
+.center-v
+    &-relative
+        @include transform(translateX(-50%))
+        position: relative
+        left: 50%
+
+    &-absolute
+        @include transform(translateY(-50%))
+        position: relative
         left: 50%
 
 .float

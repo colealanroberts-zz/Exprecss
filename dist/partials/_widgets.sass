@@ -4,7 +4,7 @@
     border-radius: $border-radius-default
     display: block
     @include breakpoint(mobile)
-        margin-bottom: 10px
+        margin-bottom: $margin-bottom-default
 
     .btn:last-of-type
         margin-bottom: 0px
@@ -12,24 +12,26 @@
     &-header
         padding: 10px 20px
         overflow: auto
-        color: $white
-        background: $header-grey
+        color: $header-grey
+        border-top: 1px solid $border-grey
+        border-left: 1px solid $border-grey
+        border-right: 1px solid $border-grey
         font:
             weight: 600
 
-        &.success
+        &-success
             color: $white
             background: $brand-green
 
-        &.info
+        &-info
             color: $white
             background: $brand-blue
 
-        &.important
+        &-important
             color: $white
             background: $brand-red
 
-        &.border-bottom
+        &-border-bottom
             border-bottom: 1px solid $border-grey
 
     &-body
@@ -52,3 +54,6 @@
         border-left: 1px solid $border-grey
         border-right: 1px solid $border-grey
         border-bottom: 1px solid $border-grey
+
+        .btn:last-of-type
+            margin-bottom: 0px
