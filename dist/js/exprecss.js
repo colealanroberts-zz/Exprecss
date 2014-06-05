@@ -20,8 +20,16 @@ function dropdownMenu() {
 
 
         menu.toggleClass('dropdown-menu-inactive dropdown-menu-active');
+		that.focus();
         e.preventDefault();
     });
+	$('body').on('blur', '.btn-dropdown', function(e) {
+		var that = $(this),
+			menu = $('#' + that.data('for'));
+
+
+		menu.toggleClass('dropdown-menu-inactive dropdown-menu-active');
+	});
 }
 
 $(document).ready(function() {
