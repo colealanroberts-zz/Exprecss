@@ -1336,11 +1336,6 @@ li {
   font-size: 2.25em;
 }
 
-*:focus {
-  outline: 0 none;
-  border: 1px solid #3498db !important;
-}
-
 ::selection {
   background: rgba(52, 152, 219, 0.2);
 }
@@ -2231,13 +2226,15 @@ label + span {
   margin-bottom: 0px;
 }
 .widget-header {
-  padding: 10px 20px;
+  padding: 20px;
   overflow: auto;
   color: #6a7781;
   border-top: 1px solid #e8e8e8;
   border-left: 1px solid #e8e8e8;
   border-right: 1px solid #e8e8e8;
-  font-weight: 600;
+}
+.widget-header.small {
+  padding: 10px 20px;
 }
 .widget-header-success {
   color: white;
