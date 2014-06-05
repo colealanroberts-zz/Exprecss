@@ -327,42 +327,90 @@
                 <h4>Stacked Forms</h4>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
+// Sign In Form
 &lt;div class="row"&gt;
     &lt;div class="col-4"&gt;
         &lt;div class="widget"&gt;
-            &lt;div class="widget-header"&gt;Sign In&lt;/div&gt;
-            &lt;div class="widget-body"&gt;
-                ...
+        &lt;div class="widget-header text-center"&gt;Sign In&lt;/div&gt;
+        &lt;div class="widget-body"&gt;
+            &lt;label for=""&gt;Username&lt;/label&gt;
+            &lt;span&gt;Placeholder&lt;/div&gt;
+            &lt;input type="text"&gt;
+            &lt;label for=""&gt;Password&lt;/label&gt;
+            &lt;span&gt;Placeholder&lt;/div&gt;
+            &lt;input type="password"&gt;
+            &lt;div class="checkbox"&gt;
+                &lt;label for="example-checkbox" class="checkbox-sidelabel"&gt;Remember Me&lt;/label&gt;
+                &lt;input type="checkbox" id="example-checkbox" checked&gt;
+                &lt;label for="example-checkbox" class="checkbox-input"&gt;&lt;/label&gt;
             &lt;/div&gt;
+        &lt;div class="widget-footer&gt;
+            &lt;a href="#" class="btn btn-primary full-width"&gt;Sign In&lt;/a&gt;
+        &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
+&lt;/div&gt;
+
+// Credit Card Information Form
+&lt;div class="row"&gt;
     &lt;div class="col-8"&gt;
-        &lt;div class="col-4-of-8"&gt;
-            &lt;div class="widget"&gt;
-                &lt;div class="widget-header"&gt;Sign In&lt;/div&gt;
-                &lt;div class="widget-body"&gt;
+        &lt;div class="widget"&gt;
+        &lt;div class="widget-header text-center"&gt;Credit Card Information&lt;/div&gt;
+        &lt;div class="widget-body"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-8-of-8"&gt;
+                    &lt;class="col-4-of-8"&gt;
+                        &lt;label for=""&gt;Card Nicknamme&lt;/label&gt;
+                        &lt;input type="text"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-3-of-8"&gt;
+                    ...
+                &lt;/div&gt;
+                &lt;div class="col-1-of-8"&gt;
+                    ...
+                &lt;/div&gt;
+                &lt;div class="col-2-of-8"&gt;
+                    ...
+                &lt;/div&gt;
+                &lt;div class="col-2-of-8"&gt;
                     ...
                 &lt;/div&gt;
             &lt;/div&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-3-of-8"&gt;
+                    ...
+                &lt;/div&gt;
+                &lt;div class="col-3-of-8"&gt;
+                    ...
+                &lt;/div&gt;
+                &lt;div class="col-2-of-8"&gt;
+                    ...
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-8-of-8"&gt;
+                    ...
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div class="widget-footer&gt;
+            &lt;a href="#" class="btn btn-info float-right"&gt;Submit&lt;/a&gt;
         &lt;/div&gt;
-        &lt;div class="col-4-of-8"&gt;
-            &lt;div class="widget"&gt;
-                &lt;div class="widget-header"&gt;Sign In&lt;/div&gt;
-                &lt;div class="widget-body"&gt;
-                    ...
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+
+</pre>
                 <div class="row">
                     <div class="col-4">
                         <div class="widget">
-                            <div class="widget-header text-">Sign In</div>
+                            <div class="widget-header text-center">Sign In</div>
                             <div class="widget-body">
                                 <label for="">Username</label>
                                 <span>Placeholder</span>
-                                <input type="text" class="input-fail">
+                                <input type="text">
                                 <label for="">Password</label>
                                 <span>Placeholder</span>
                                 <input type="password">
@@ -428,7 +476,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-3-of-8">
-                                        <label for="">Name on Card</label>
+                                        <label for="">Name of Cardholder</label>
                                         <input type="text">
                                     </div>
                                     <div class="col-3-of-8">
@@ -441,7 +489,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-8">
+                                    <div class="col-8-of-8">
                                         <div class="checkbox">
                                             <label for="example-checkbox" class="checkbox-sidelabel">Remember My Info</label>
                                             <input type="checkbox" id="example-checkbox-cc" checked>
@@ -450,9 +498,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="widget-footer">
-                            <a href="#" class="btn btn-info">Submit</a>
+                            <div class="widget-footer">
+                                <a href="#" class="btn btn-info float-right">Submit</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -462,7 +510,7 @@
                 <div class="row">
                     <div class="col-3">
                         <div class="widget">
-                            <div class="widget-header">Hello</div>
+                            <div class="widget-header small">Hello</div>
                             <div class="widget-body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, maxime non nulla vitae eaque quibusdam consectetur error mollitia. Aperiam, doloribus necessitatibus illo labore assumenda sunt ullam excepturi commodi quis quam.</p>
                             </div>
@@ -473,7 +521,7 @@
                     </div>
                     <div class="col-3">
                         <div class="widget">
-                            <div class="widget-header widget-header-success">success</div>
+                            <div class="widget-header widget-header-success small">success</div>
                             <div class="widget-body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, maxime non nulla vitae eaque quibusdam consectetur error mollitia. Aperiam, doloribus necessitatibus illo labore assumenda sunt ullam excepturi commodi quis quam.</p>
                             </div>
@@ -484,7 +532,7 @@
                     </div>
                     <div class="col-3">
                         <div class="widget">
-                            <div class="widget-header widget-header-info">info</div>
+                            <div class="widget-header widget-header-info small">info</div>
                             <div class="widget-body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, maxime non nulla vitae eaque quibusdam consectetur error mollitia. Aperiam, doloribus necessitatibus illo labore assumenda sunt ullam excepturi commodi quis quam.</p>
                             </div>
@@ -495,7 +543,7 @@
                     </div>
                     <div class="col-3">
                         <div class="widget">
-                            <div class="widget-header widget-header-important">important</div>
+                            <div class="widget-header widget-header-important small">important</div>
                             <div class="widget-body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, maxime non nulla vitae eaque quibusdam consectetur error mollitia. Aperiam, doloribus necessitatibus illo labore assumenda sunt ullam excepturi commodi quis quam.</p>
                             </div>
@@ -670,7 +718,7 @@
         <div class="container">
             <ul>
                 <li><a href="https://github.com/colealanroberts/Exprecss" class="btn-download">Download Exprecss on Github</a></li>
-                <span class="copyright">Copyright &copy; 2014. Crafted by <a href="twitter.com/colealan">Cole Roberts</a> and <a href="">Jacob Bigs</a></span>
+                <span class="copyright">Copyright &copy; 2014. Crafted by <a href="twitter.com/colealan">Cole Roberts</a> and <a href="">Jacob Biggs</a></span>
             </ul>
         </div>
     </footer>
