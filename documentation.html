@@ -254,8 +254,16 @@
 &lt;/div&gt;</pre>
                 <div class="row">
                     <div class="dropdown">
-                        <a href="#" class="btn btn-info btn-dropdown">Dropdown Toggle<span class="caret caret-light"></span></a>
-                        <ul class="dropdown-menu">
+                        <a href="#" class="btn btn-info btn-dropdown" data-for="something">Dropdown Toggle<span class="caret caret-light"></span></a>
+                        <ul class="dropdown-menu" id="something">
+                            <li><a href="#">item1</a></li>
+                            <li><a href="#">item2</a></li>
+                            <li><a href="#">item3</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="btn btn-info btn-dropdown" data-for="something2">Dropdown Toggle<span class="caret caret-light"></span></a>
+                        <ul class="dropdown-menu" id="something2">
                             <li><a href="#">item1</a></li>
                             <li><a href="#">item2</a></li>
                             <li><a href="#">item3</a></li>
@@ -350,7 +358,7 @@
                 <div class="row">
                     <div class="col-4">
                         <div class="widget">
-                            <div class="widget-header">Sign In</div>
+                            <div class="widget-header text-">Sign In</div>
                             <div class="widget-body">
                                 <label for="">Username</label>
                                 <span>Placeholder</span>
@@ -371,48 +379,82 @@
                     </div>
                     <div class="col-8">
                         <div class="widget">
-                            <div class="widget-header">Sign In</div>
+                            <div class="widget-header white">Credit Card Information</div>
                             <div class="widget-body">
-                                <div class="col-4-of-8">
-                                    <label for="">Username</label>
-                                    <span>Placeholder</span>
-                                    <input type="text" class="input-fail">
-                                    <label for="">Password</label>
-                                    <span>Placeholder</span>
-                                    <input type="password">
-                                    <div class="checkbox">
-                                        <label for="example-checkbox" class="checkbox-sidelabel">Remember My Card</label>
-                                        <input type="checkbox" id="example-checkbox" checked>
-                                        <label for="example-checkbox" class="checkbox-input"></label>
+                                <div class="row">
+                                    <div class="col-8-of-8">
+                                        <div class="col-4-of-8">
+                                            <label for="">Card Nickname</label>
+                                            <input type="text">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-4-of-8">
-                                    <label for="example">Pick One</label>
-                                    <span>Placeholder</span>
-                                    <div class="select">
-                                        <select name="example" id="example">
-                                            <option value="">Gotham</option>
-                                            <option value="">Proxima Nova</option>
-                                            <option value="">Avenir</option>
-                                        </select>
+                                <div class="row">
+                                    <div class="col-3-of-8">
+                                        <label for="">Credit Card Number</label>
+                                        <input type="text">
                                     </div>
-                                    <label for="example">Pick One</label>
-                                    <span>Placeholder</span>
-                                    <div class="select">
-                                        <select name="example" id="example">
-                                            <option value="">Gotham</option>
-                                            <option value="">Proxima Nova</option>
-                                            <option value="">Avenir</option>
-                                        </select>
+                                    <div class="col-1-of-8">
+                                        <label for="">CCV</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="col-2-of-8">
+                                        <label for="example">Exp Month</label>
+                                        <div class="select">
+                                            <select name="example" id="example">
+                                                <option value="">January</option>
+                                                <option value="">February</option>
+                                                <option value="">March</option>
+                                                <option value="">April</option>
+                                                <option value="">May</option>
+                                                <option value="">June</option>
+                                                <option value="">July</option>
+                                                <option value="">August</option>
+                                                <option value="">September</option>
+                                                <option value="">Octocat</option>
+                                                <option value="">November</option>
+                                                <option value="">December</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-2-of-8">
+                                        <label for="example">Exp Year</label>
+                                        <div class="select">
+                                            <select name="example" id="example">
+                                                <option value="">2014</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="widget-footer">
-                                <a href="#" class="btn btn-primary">Sign In</a>
+                                <div class="row">
+                                    <div class="col-3-of-8">
+                                        <label for="">Name on Card</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="col-3-of-8">
+                                        <label for="">Address on Card</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="col-2-of-8">
+                                        <label for="">Zip</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="checkbox">
+                                            <label for="example-checkbox" class="checkbox-sidelabel">Remember My Info</label>
+                                            <input type="checkbox" id="example-checkbox-cc" checked>
+                                            <label for="example-checkbox-cc" class="checkbox-input"></label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="widget-footer">
+                            <a href="#" class="btn btn-info">Submit</a>
+                        </div>
                     </div>
-
                 </div>
                 <hr>
                 <h3>Widgets</h3>
@@ -431,7 +473,7 @@
                     </div>
                     <div class="col-3">
                         <div class="widget">
-                            <div class="widget-header success">Hello</div>
+                            <div class="widget-header widget-header-success">success</div>
                             <div class="widget-body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, maxime non nulla vitae eaque quibusdam consectetur error mollitia. Aperiam, doloribus necessitatibus illo labore assumenda sunt ullam excepturi commodi quis quam.</p>
                             </div>
@@ -442,7 +484,7 @@
                     </div>
                     <div class="col-3">
                         <div class="widget">
-                            <div class="widget-header info">Hello</div>
+                            <div class="widget-header widget-header-info">info</div>
                             <div class="widget-body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, maxime non nulla vitae eaque quibusdam consectetur error mollitia. Aperiam, doloribus necessitatibus illo labore assumenda sunt ullam excepturi commodi quis quam.</p>
                             </div>
@@ -453,7 +495,7 @@
                     </div>
                     <div class="col-3">
                         <div class="widget">
-                            <div class="widget-header important">Hello</div>
+                            <div class="widget-header widget-header-important">important</div>
                             <div class="widget-body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, maxime non nulla vitae eaque quibusdam consectetur error mollitia. Aperiam, doloribus necessitatibus illo labore assumenda sunt ullam excepturi commodi quis quam.</p>
                             </div>
@@ -559,7 +601,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <a href="#" class="btn btn-action center-relative">Button Centered: Relative</a>
+                        <a href="#" class="btn btn-action center-h-relative">Button Centered: Relative</a>
                     </div>
                 </div>
                 <hr>
@@ -628,7 +670,7 @@
         <div class="container">
             <ul>
                 <li><a href="https://github.com/colealanroberts/Exprecss" class="btn-download">Download Exprecss on Github</a></li>
-                <span class="copyright">Copyright &copy; 2014. Crafted by <a href="twitter.com/colealan">@colealan</a> and <a href="twitter.com/chadaldous">@chadaldous</a></span>
+                <span class="copyright">Copyright &copy; 2014. Crafted by <a href="twitter.com/colealan">Cole Roberts</a> and <a href="">Jacob Bigs</a></span>
             </ul>
         </div>
     </footer>
@@ -637,6 +679,6 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="docs/docs.js"></script>
-<script src="dist/js/app.js"></script>
+<script src="dist/js/exprecss.js"></script>
 </body>
 </html>
