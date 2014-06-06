@@ -1,3 +1,21 @@
+@include keyframes(modal-open)
+    0%
+        @include transform(scale(0.8) translateY(40px))
+        opacity: 0
+
+    100%
+        @include transform(scale(1.0))
+        opacity: 1
+
+@include keyframes(modal-hide)
+    0%
+        @include transform(scale(1.0) translateY(0px))
+        opacity: 0
+
+    100%
+        @include transform(scale(0.8))
+        opacity: 0
+
 .nav-open, .nav-close
     @include transition(all, linear, $transition-duration-default)
     @include backface-visibility(hidden)
@@ -10,3 +28,18 @@
 .nav-close
     @include breakpoint(tablet)
         @include transform(translateX(225px))
+
+.modal-open
+    @include animation(modal-open $ease-in-out-back 400ms)
+
+.modal-hide
+    @include animation(modal-hide $ease-in-cubic 250ms)
+    visibility: hidden
+
+.modal-overlay-in
+    @include transition(all, linear, 300ms)
+    opacity: 0
+
+.modal-overlay-out
+    @include transition(all, linear, 300ms)
+    opacity: 1

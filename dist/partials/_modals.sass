@@ -1,0 +1,71 @@
+.modal
+    @include backface-visibility(hidden)
+    @extend %box-shadow-default
+    @extned %force-hardware-accel
+    z-index: $z-index-modal
+    position: fixed
+    overflow-x: hidden
+    top: 35%
+    left: 50%
+    margin-left: -300px
+    min-width: 350px
+    height: auto
+    width: 600px
+    background: $white
+    border-radius: $border-radius-default
+    border: 1px solid $border-grey
+    @include breakpoint(mobile)
+        width: 100%
+
+    &-header
+        padding: 20px
+        overflow: auto
+        color: $header-grey
+
+        &.small
+            padding: 14px 20px
+
+        &-success
+            color: $white
+            background: $brand-green
+
+        &-info
+            color: $white
+            background: $brand-blue
+
+        &-important
+            color: $white
+            background: $brand-red
+
+        &-border-bottom
+            border-bottom: 1px solid $border-grey
+
+    &-body
+        overflow: auto
+        padding: $padding-default
+
+    p
+        margin: 0 0 10px 0
+        font:
+            size: $font-size-l1
+
+    &-footer
+        overflow: auto
+        margin: 0
+        padding: 10px
+        /* background: $background-grey */
+
+        .btn:last-of-type
+            margin-bottom: 0px
+
+    &-overlay
+        @include transition(all linear 200ms)
+        z-index: $z-index-modal-overlay
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        height: 100%
+        width: 100%
+        background: rgba($background-grey, 0.9)

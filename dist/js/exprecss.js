@@ -1,3 +1,10 @@
+function toggleModal() {
+    $('#modal-example').on('click', function(e) {
+        e.preventDefault();
+        $('body').append('<div class="modal-overlay"></div');
+        $('.modal').toggleClass('modal-hide modal-open');
+    });
+}
 function responsiveNavOpen() {
     $('.btn-responsive-nav').on('click', function(e) {
         $('.navbar ul').toggleClass('nav-close nav-open');
@@ -41,6 +48,9 @@ $(document).ready(function() {
     // Responsive Nav
     responsiveNavOpen();
     responsiveNavClose();
+
+    // Modal
+    toggleModal();
 });
 
 (function() {
