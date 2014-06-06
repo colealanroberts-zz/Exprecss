@@ -56,15 +56,15 @@ $(document).ready(function() {
 		var applyMask = function(charArray, mask) {
 			var i = 0, len = charArray.length, result = '';
 			for (var n in mask) {
-				if (i >= len) {
-					break;
-				}
-
 				var c = mask.charAt(n);
 
 				if (separator.test(c)) {
 					result += c;
 				} else {
+					if (i >= len) {
+						break;
+					}
+
 					result += charArray[i++];
 				}
 			}
@@ -72,19 +72,57 @@ $(document).ready(function() {
 			return result;
 		}
 
+		// Get plain number array
 		var clean = function(str) {
 			return str.replace(separators, '').split('');
 		}
+
+		// Get positions for cursor by number index
+		var nextPositions = function(mask) {
+			var posArr = [];
+			for (var n in mask) {
+				if (!separator.test(mask[n])) {
+					posArr.push(+n);
+				}
+			}
+
+			posArr.push(posArr[posArr.length - 1] + 1);
+			posArr.shift()
+
+			return posArr;
+		}
+
+		// Get indexes for numbers by string position
+		var whichChars = function(mask) {
+			var i = 0, indexArr = [];
+			for (var n in mask) {
+				indexArr.push(i);
+
+				if (!separator.test(mask[n])) {
+					i++
+				}
+			}
+
+			return indexArr;
+		}
+
 
 		return {
 			restrict: 'A',
 			scope: true,
 			link: function(scope, elem, attr) {
 				var mask = attr['exMask'],
-					charArray = [];
+					charPositions = nextPositions(mask),
+					strPositions = whichChars(mask);
+
+				console.log(charPositions, strPositions);
 
 				if (!maskPattern.test(mask)) {
 					$log.error("Invalid mask for input")
+				}
+
+				var remask = function (char) {
+
 				}
 
 				elem.on('keydown', function(e){
@@ -95,35 +133,47 @@ $(document).ready(function() {
 							end = elem[0].selectionEnd,
 							selection = end - start,
 							str = elem.val(),
-							arr;
+							arr, final;
 
-						console.log(str);
 						if (selection === 0) {
 							(arr = str.split('')).splice(start - 1, 1);
 							str = arr.join('');
+							final = start - 1;
 						} else {
-							(arr = str.split('')).splice(start - 1, selection);
+							(arr = str.split('')).splice(start, selection);
 							str = arr.join('');
+							final = start;
 						}
 
-						elem.val(applyMask(charArray = clean(str), mask));
+						elem.val(applyMask(clean(str), mask));
 
-						elem[0].selectionStart = start;
-						elem[0].selectionEnd = start;
+						elem[0].selectionStart = elem[0].selectionEnd = final;
 					}
 				});
 
 				elem.on('keypress', function(e){
 					e.preventDefault();
 
-					console.log(e.which);
+					var start = elem[0].selectionStart,
+						end = elem[0].selectionEnd,
+						selection = end - start,
+						str = elem.val(),
+						arr;
 
 					var char = String.fromCharCode(e.which);
 					if (/[0-9]/.test(char)) {
-						charArray.push(char);
+						if (selection === 0) {
+							(arr = str.split('')).splice(start, 0, char);
+							str = arr.join('');
+						} else {
+							(arr = str.split('')).splice(start, selection, char);
+							str = arr.join('');
+						}
 					}
 
-					elem.val(applyMask(charArray, mask));
+					elem.val(applyMask(clean(str), mask));
+
+					elem[0].selectionStart = elem[0].selectionEnd = charPositions[strPositions[start]];
 				});
 			}
 		}
