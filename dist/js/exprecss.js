@@ -49,19 +49,20 @@ $(document).ready(function() {
 	var app = angular.module('exprecss', []);
 
 	app.directive('exMask', function($log) {
-		var maskPattern = /[\(\)\[\]0-9\-\ ]+/,
-			separators = /[\(\)\[\]\ \-]/g;
+		var maskPattern = /[\(\)\[\]0-9\-\s]+/,
+			separators = /[\(\)\[\]\s\-]/g,
+			separator = /[\(\)\[\]\s\-]/;
 
 		var applyMask = function(charArray, mask) {
-			var i = 0, len = charArray.length, result = "";
+			var i = 0, len = charArray.length, result = '';
 			for (var n in mask) {
 				if (i >= len) {
 					break;
 				}
 
-				var c = mask[n];
+				var c = mask.charAt(n);
 
-				if (separators.test(c)) {
+				if (separator.test(c)) {
 					result += c;
 				} else {
 					result += charArray[i++];
