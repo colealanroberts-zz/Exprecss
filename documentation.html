@@ -142,6 +142,13 @@
                 </nav>
             </div>
         </section>
+        <section class="modals">
+            <div class="container">
+                <p class="section-title">Modal</p>
+                <p>Example Modals</p>
+                <a href="" class="btn btn-info" id="modal-example">Open Modal</a>
+            </div>
+        </section>
         <section class="cards hidden-mobile">
             <div class="container">
                 <p class="section-title">Cards</p>
@@ -435,12 +442,16 @@
                                             <label for="">Card Nickname</label>
                                             <input type="text">
                                         </div>
+                                        <div class="col-4-of-8">
+                                            <label for="">Name of Cardholder</label>
+                                            <input type="text">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-3-of-8">
                                         <label for="">Credit Card Number</label>
-                                        <input type="text" ex-mask="9999-9999-9999-9999">
+                                        <input type="text" ex-mask="0000-0000-0000-0000">
                                     </div>
                                     <div class="col-1-of-8">
                                         <label for="">CCV</label>
@@ -475,11 +486,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-3-of-8">
-                                        <label for="">Name of Cardholder</label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="col-3-of-8">
+                                    <div class="col-4-of-8">
                                         <label for="">Address on Card</label>
                                         <input type="text">
                                     </div>
@@ -722,6 +729,15 @@
             </ul>
         </div>
     </footer>
+<div class="modal modal-hide">
+    <div class="modal-header modal-header-info">A Modal Header</div>
+    <div class="modal-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, at, vel, id, similique nemo voluptatibus ab iure quis quod aut dolorum culpa vero aspernatur impedit nisi facilis deserunt tenetur. Iste.</p>
+    </div>
+    <div class="modal-footer">
+        <a href="" class="btn btn-primary float-right" id="modal-close">Okay</a>
+    </div>
+</div>
 <!-- Le JS -->
 <body onload="prettyPrint()">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
