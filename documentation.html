@@ -19,7 +19,7 @@
 
 </script>
 </head>
-<body>
+<body ng-app="exprecss">
     <div class="wrapper">
         <nav class="navbar-exprecss">
             <ul>
@@ -440,7 +440,7 @@
                                 <div class="row">
                                     <div class="col-3-of-8">
                                         <label for="">Credit Card Number</label>
-                                        <input type="text">
+                                        <input type="text" ex-mask="9999-9999-9999-9999">
                                     </div>
                                     <div class="col-1-of-8">
                                         <label for="">CCV</label>
@@ -726,6 +726,7 @@
 <body onload="prettyPrint()">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="vendor/angular/angular.min.js"></script>
 <script src="docs/docs.js"></script>
 <script src="dist/js/exprecss.js"></script>
 </body>
