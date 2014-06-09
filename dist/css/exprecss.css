@@ -21,7 +21,7 @@
   margin-bottom: 10px;
 }
 
-html, body {
+html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -31,7 +31,7 @@ html, body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.045), inset 0 0 1px 1px rgba(255, 255, 255, 0.9);
 }
 
-.nav-open, .nav-close, .card-header, .card-title {
+.nav-open, .nav-close, .modal, .modal-overlay, .card-header, .card-title {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -1242,44 +1242,56 @@ html, body {
   src: url("../fonts/Gotham-Thin/Gotham-Thin.eot");
   src: url("../fonts/Gotham-Thin/Gotham-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Thin/Gotham-Thin.woff") format("woff"), url("../fonts/Gotham-Thin/Gotham-Thin.ttf") format("truetype"), url("../fonts/Gotham-Thin/Gotham-Thin.svg#Gotham-Thin") format("svg");
 }
+/* @include keyframes(modal-open)
+ * 0%
+ *     @include transform(scale3d(0.1, 0.1, 1))
+ *
+ * 55%
+ *     @include transform(scale3d(1.01, 1.01, 1))
+ *
+ * 75%
+ *     @include transform(scale3d(0.99, 0.99, 1))
+ *
+ * 100%
+ *     @include transform(scale3d(1, 1, 1)) */
 @-webkit-keyframes modal-open {
   0% {
-    -webkit-transform: scale(0.8) translateY(40px);
+    -webkit-transform: translateY(20px);
     opacity: 0;
   }
 
   100% {
-    -webkit-transform: scale(1);
+    -webkit-transform: translateY(0px);
     opacity: 1;
   }
 }
 @-moz-keyframes modal-open {
   0% {
-    -moz-transform: scale(0.8) translateY(40px);
+    -moz-transform: translateY(20px);
     opacity: 0;
   }
 
   100% {
-    -moz-transform: scale(1);
+    -moz-transform: translateY(0px);
     opacity: 1;
   }
 }
 @keyframes modal-open {
   0% {
-    -webkit-transform: scale(0.8) translateY(40px);
-    -moz-transform: scale(0.8) translateY(40px);
-    -ms-transform: scale(0.8) translateY(40px);
-    -o-transform: scale(0.8) translateY(40px);
-    transform: scale(0.8) translateY(40px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
     opacity: 0;
   }
 
   100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
@@ -1353,9 +1365,9 @@ html, body {
 }
 
 .modal-open {
-  -webkit-animation: modal-open cubic-bezier(0.68, -0.55, 0.265, 1.55) 400ms;
-  -moz-animation: modal-open cubic-bezier(0.68, -0.55, 0.265, 1.55) 400ms;
-  animation: modal-open cubic-bezier(0.68, -0.55, 0.265, 1.55) 400ms;
+  -webkit-animation: modal-open cubic-bezier(0.215, 0.61, 0.355, 1) 400ms;
+  -moz-animation: modal-open cubic-bezier(0.215, 0.61, 0.355, 1) 400ms;
+  animation: modal-open cubic-bezier(0.215, 0.61, 0.355, 1) 400ms;
 }
 
 .modal-hide {
@@ -1379,17 +1391,13 @@ html, body {
   opacity: 1;
 }
 
-html, body {
+html {
   height: 100%;
   width: 100%;
   margin: 0;
-  color: #3e4044;
-  background: white;
-  font: normal 100%/1.618 "Gotham-Book", sans-serif;
-  font-border: 0;
 }
 @media screen and (max-width: 800px) {
-  html, body {
+  html {
     height: 100%;
     max-height: 100%;
     overflow-y: scroll;
@@ -1401,6 +1409,14 @@ html, body {
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: text;
   }
+}
+
+body {
+  min-height: 100%;
+  color: #66696c;
+  background: white;
+  font: normal 100%/1.618 "Gotham-Book", sans-serif;
+  font-border: 0;
 }
 
 .wrapper {
@@ -2223,7 +2239,6 @@ label + span {
 .modal {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  @extned %force-hardware-accel;
   z-index: 2020;
   position: fixed;
   overflow-x: hidden;
@@ -2235,7 +2250,6 @@ label + span {
   width: 600px;
   background: white;
   border-radius: 2px;
-  border: 1px solid #e8e8e8;
 }
 @media screen and (max-width: 480px) {
   .modal {
@@ -2277,23 +2291,18 @@ label + span {
   overflow: auto;
   margin: 0;
   padding: 10px;
-  /* background: $background-grey */
 }
 .modal-footer .btn:last-of-type {
   margin-bottom: 0px;
 }
 .modal-overlay {
-  -webkit-transition: all linear 200ms;
-  -moz-transition: all linear 200ms;
-  transition: all linear 200ms;
-  z-index: 2010;
   position: fixed;
+  display: block;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100%;
-  width: 100%;
   background: rgba(248, 248, 248, 0.9);
 }
 

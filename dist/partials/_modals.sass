@@ -1,7 +1,7 @@
 .modal
     @include backface-visibility(hidden)
     @extend %box-shadow-default
-    @extned %force-hardware-accel
+    @extend %force-hardware-accel
     z-index: $z-index-modal
     position: fixed
     overflow-x: hidden
@@ -13,7 +13,6 @@
     width: 600px
     background: $white
     border-radius: $border-radius-default
-    border: 1px solid $border-grey
     @include breakpoint(mobile)
         width: 100%
 
@@ -53,19 +52,17 @@
         overflow: auto
         margin: 0
         padding: 10px
-        /* background: $background-grey */
 
         .btn:last-of-type
             margin-bottom: 0px
 
     &-overlay
-        @include transition(all linear 200ms)
-        z-index: $z-index-modal-overlay
+        @extend %force-hardware-accel
         position: fixed
+        display: block
+        overflow-y: scroll
         top: 0
         left: 0
         right: 0
         bottom: 0
-        height: 100%
-        width: 100%
         background: rgba($background-grey, 0.9)

@@ -1,10 +1,23 @@
+/* @include keyframes(modal-open)
+    0%
+        @include transform(scale3d(0.1, 0.1, 1))
+
+    55%
+        @include transform(scale3d(1.01, 1.01, 1))
+
+    75%
+        @include transform(scale3d(0.99, 0.99, 1))
+
+    100%
+        @include transform(scale3d(1, 1, 1)) */
+
 @include keyframes(modal-open)
     0%
-        @include transform(scale(0.8) translateY(40px))
+        @include transform(translateY($modal-animate-distance))
         opacity: 0
 
     100%
-        @include transform(scale(1.0))
+        @include transform(translateY(0px))
         opacity: 1
 
 @include keyframes(modal-hide)
@@ -30,7 +43,7 @@
         @include transform(translateX(225px))
 
 .modal-open
-    @include animation(modal-open $ease-in-out-back 400ms)
+    @include animation(modal-open $ease-out-cubic 400ms)
 
 .modal-hide
     @include animation(modal-hide $ease-in-cubic 250ms)

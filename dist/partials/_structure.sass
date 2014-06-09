@@ -1,13 +1,9 @@
 // Everything Else
-html, body
+html
     @extend %font-smoothing-antialiased
     height: 100%
     width: 100%
     margin: 0
-    color: $dark-grey
-    background: $white
-    font: normal 100%/1.618 $font-family-default
-        border: 0
     @include breakpoint(tablet)
         height: 100%
         max-height: 100%
@@ -19,6 +15,13 @@ html, body
         -webkit-text-size-adjust: none
         -webkit-tap-highlight-color: rgba(0,0,0,0)
         -webkit-user-select: text
+
+body
+    min-height: 100%
+    color: $body-grey
+    background: $white
+    font: normal 100%/1.618 $font-family-default
+        border: 0
 
 .wrapper
     min-height: 100%
