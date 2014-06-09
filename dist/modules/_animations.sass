@@ -49,10 +49,16 @@
     @include animation(modal-hide $ease-in-cubic 250ms)
     visibility: hidden
 
-.modal-overlay-in
+.modal-overlay.ng-enter
     @include transition(all, linear, 300ms)
     opacity: 0
 
-.modal-overlay-out
+    .ng-enter-active
+        opacity: 1
+
+.modal-overlay.ng-leave
     @include transition(all, linear, 300ms)
     opacity: 1
+
+    .ng-leave-active
+        opacity: 0

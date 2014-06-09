@@ -46,37 +46,30 @@ $(document).ready(function() {
 (function() {
 	'use strict';
 
-	var app = angular.module('exprecss', []).run(function() {
+	var app = angular.module('exprecss', ['ngAnimate']).run(function() {
 
 	});
 
-	app.service('$expModal', function($compile) {
-		var overlay = angular.element('<div class="modal-overlay"></div>'),
-			overlayVisible = false,
+	app.service('$expModal', function($compile, $rootScope) {
+		var scope = $rootScope.$new(true),
+			overlay = angular.element($compile('<div class="modal-overlay" ng-if="showOverlay" ng-click="close()"></div>')(scope)),
+			overlayAdded = false,
 			$body = angular.element('body'),
 			registry = {},
 			i = 0;
 
 		this.showOverlay = function(listener) {
-			if (!overlayVisible) {
+			if (!overlayAdded) {
 				$body.append(overlay);
-				overlayVisible = true;
-
-				if (angular.isFunction(listener)) {
-					overlay.on('click', listener);
-				}
+				overlayAdded = true;
 			}
+
+			scope.showOverlay = true;
+			scope.close = listener;
 		};
 
-		this.hideOverlay = function(listener) {
-			if (overlayVisible) {
-				overlay.remove();
-				overlayVisible = false;
-
-				if (angular.isFunction(listener)) {
-					overlay.off('click', listener);
-				}
-			}
+		this.hideOverlay = function() {
+			scope.showOverlay = false;
 		};
 
 		this.register = function(options, scope) {
@@ -118,7 +111,7 @@ $(document).ready(function() {
 					if (val) {
 						$expModal.showOverlay(overlayListener);
 					} else {
-						$expModal.hideOverlay(overlayListener);
+						$expModal.hideOverlay();
 					}
 				});
 
