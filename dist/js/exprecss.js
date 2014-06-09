@@ -1,7 +1,7 @@
 function toggleModal() {
     $('#modal-example').on('click', function(e) {
         e.preventDefault();
-        $('body').append('<div class="modal-overlay"></div');
+        $('body').append('<div class="modal-overlay"></div>');
         $('.modal').toggleClass('modal-hide modal-open');
     });
 }
@@ -112,6 +112,9 @@ $(document).ready(function() {
 					i++
 				}
 			}
+
+			// Double up the last value to prevent index out of range bugs
+			indexArr.push(indexArr[indexArr.length - 1]);
 
 			return indexArr;
 		}
