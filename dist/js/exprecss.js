@@ -1,10 +1,3 @@
-function toggleModal() {
-    $('#modal-example').on('click', function(e) {
-        e.preventDefault();
-        $('body').append('<div class="modal-overlay"></div>');
-        $('.modal').toggleClass('modal-hide modal-open');
-    });
-}
 function responsiveNavOpen() {
     $('.btn-responsive-nav').on('click', function(e) {
         $('.navbar ul').toggleClass('nav-close nav-open');
@@ -48,17 +41,124 @@ $(document).ready(function() {
     // Responsive Nav
     responsiveNavOpen();
     responsiveNavClose();
-
-    // Modal
-    toggleModal();
 });
 
 (function() {
 	'use strict';
 
-	var app = angular.module('exprecss', []);
+	var app = angular.module('exprecss', []).run(function() {
 
-	app.directive('exMask', function($log) {
+	});
+
+	app.service('$expModal', function($compile) {
+		var overlay = angular.element('<div class="modal-overlay"></div>'),
+			overlayVisible = false,
+			$body = angular.element('body'),
+			registry = {},
+			i = 0;
+
+		this.showOverlay = function(listener) {
+			if (!overlayVisible) {
+				$body.append(overlay);
+				overlayVisible = true;
+
+				if (angular.isFunction(listener)) {
+					overlay.on('click', listener);
+				}
+			}
+		};
+
+		this.hideOverlay = function(listener) {
+			if (overlayVisible) {
+				overlay.remove();
+				overlayVisible = false;
+
+				if (angular.isFunction(listener)) {
+					overlay.off('click', listener);
+				}
+			}
+		};
+
+		this.register = function(options, scope) {
+			var _options = angular.extend({
+				title: "Modal Title",
+				html: "Modal Html"
+			}, options);
+
+			registry[i] = $compile(angular.element('<div exp-modal-open="isOpen" exp-modal="'+_options.title+'">'+_options.html+'</div>'))(scope);
+
+			$body.append(registry[i]);
+
+			return i++;
+		};
+
+		this.deregister = function(key) {
+			$body.remove(registry[key]);
+			delete registry[key];
+		}
+	});
+
+	app.directive('expModal', function($expModal) {
+		return {
+			restrict: 'AE',
+			scope: {
+				title: '@expModal',
+				open: '=expModalOpen'
+			},
+			templateUrl: 'dist/templates/modal.html',
+			replace: true,
+			transclude: true,
+			link: function(scope, elem, attr) {
+				var overlayListener = function() {
+					scope.open = false;
+					scope.$apply();
+				}
+
+				scope.$watch('open', function(val) {
+					if (val) {
+						$expModal.showOverlay(overlayListener);
+					} else {
+						$expModal.hideOverlay(overlayListener);
+					}
+				});
+
+				scope.close = function() {
+					scope.open = false;
+				}
+			}
+		}
+	});
+
+	app.directive('expModalClick', function($expModal) {
+		return {
+			restrict: "A",
+			scope: {
+				title: '@expModalClick',
+				html: '@expModalClickHtml'
+			},
+			link: function(scope, elem, attr) {
+				scope.isOpen = false;
+
+				var registryKey = $expModal.register({
+					title: scope.title,
+					html: scope.html
+				}, scope);
+
+				elem.on('click', function(e) {
+					e.preventDefault();
+
+					scope.isOpen = true;
+					scope.$apply();
+				});
+
+				scope.$on('$destroy', function() {
+					$expModal.deregister(registryKey);
+				});
+			}
+		}
+	});
+
+	app.directive('expMask', function($log) {
 		var maskPattern = /[\(\)\[\]0-9\-\s]+/,
 			separators = /[\(\)\[\]\s\-]/g,
 			separator = /[\(\)\[\]\s\-]/;
@@ -87,7 +187,14 @@ $(document).ready(function() {
 			return str.replace(separators, '').split('');
 		}
 
-		// Get positions for cursor by number index
+		/* Get next position for cursor by number index
+
+		 * ex. For mask: 0000-0000
+		 * return [1,2,3,5,6,7,8,9]
+		 *
+		 * ex. For mask: (000) 000-0000
+		 * return [2,3,6,7,9,10,11,12,13,14]
+		 */
 		var nextPositions = function(mask) {
 			var posArr = [];
 			for (var n in mask) {
@@ -124,11 +231,9 @@ $(document).ready(function() {
 			restrict: 'A',
 			scope: true,
 			link: function(scope, elem, attr) {
-				var mask = attr['exMask'],
+				var mask = attr['expMask'],
 					charPositions = nextPositions(mask),
 					strPositions = whichChars(mask);
-
-				console.log(charPositions, strPositions);
 
 				if (!maskPattern.test(mask)) {
 					$log.error("Invalid mask for input")

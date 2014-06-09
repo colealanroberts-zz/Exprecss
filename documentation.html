@@ -41,9 +41,10 @@
                 <h1 class="name">Expre<span>css</span></h1>
                 <div class="tagline">
                     <p>A <span id="description-rotate">lightweight responsive</span> framework built on
-                        <span><strong>Bourbon</strong></span>
-                        &amp;
+                        <span><strong>Bourbon</strong></span>,
                         <span><strong>Neat</strong></span>
+                        &amp;
+                        <span><strong>AngularJS</strong></span>
                     </p>
                 </div>
                 <div class="hero-group">
@@ -146,7 +147,7 @@
             <div class="container">
                 <p class="section-title">Modal</p>
                 <p>Example Modals</p>
-                <a href="" class="btn btn-info" id="modal-example">Open Modal</a>
+                <a href="" class="btn btn-info" id="modal-example" exp-modal-click="Modal Title" exp-modal-click-html='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, at, vel, id, similique nemo voluptatibus ab iure quis quod aut dolorum culpa vero aspernatur impedit nisi facilis deserunt tenetur. Iste.</p>'>Open Modal</a>
             </div>
         </section>
         <section class="cards hidden-mobile">
@@ -451,7 +452,7 @@
                                 <div class="row">
                                     <div class="col-3-of-8">
                                         <label for="">Credit Card Number</label>
-                                        <input type="text" ex-mask="0000-0000-0000-0000">
+                                        <input type="text" exp-mask="0000-0000-0000-0000">
                                     </div>
                                     <div class="col-1-of-8">
                                         <label for="">CCV</label>
@@ -729,15 +730,6 @@
             </ul>
         </div>
     </footer>
-<div class="modal modal-hide">
-    <div class="modal-header modal-header-info">A Modal Header</div>
-    <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, at, vel, id, similique nemo voluptatibus ab iure quis quod aut dolorum culpa vero aspernatur impedit nisi facilis deserunt tenetur. Iste.</p>
-    </div>
-    <div class="modal-footer">
-        <a href="" class="btn btn-primary float-right" id="modal-close">Okay</a>
-    </div>
-</div>
 <!-- Le JS -->
 <body onload="prettyPrint()">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
