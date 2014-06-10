@@ -21,7 +21,7 @@
   margin-bottom: 10px;
 }
 
-html {
+html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -1410,13 +1410,19 @@ html {
   opacity: 0;
 }
 
-html {
+html, body {
   height: 100%;
   width: 100%;
+  min-height: 100%;
   margin: 0;
+  padding: 0;
+  color: #66696c;
+  background: white;
+  font: normal 100%/1.618 "Gotham-Book", sans-serif;
+  font-border: 0;
 }
 @media screen and (max-width: 800px) {
-  html {
+  html, body {
     height: 100%;
     max-height: 100%;
     overflow-y: scroll;
@@ -1428,14 +1434,6 @@ html {
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: text;
   }
-}
-
-body {
-  min-height: 100%;
-  color: #66696c;
-  background: white;
-  font: normal 100%/1.618 "Gotham-Book", sans-serif;
-  font-border: 0;
 }
 
 .wrapper {
