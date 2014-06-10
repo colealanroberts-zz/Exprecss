@@ -42,3 +42,9 @@
 
     @else if $bg-color == $bg-color
         background: rgba($bg-color, $opacity)
+
+// Will Change
+@mixin will-change($property)
+    -webkit-will-change: $property
+    -moz-will-change: $property
+    will-change: $property
