@@ -4,12 +4,12 @@ select::-ms-expand
 .select
     @include appearance(none)
     @include fill-parent
-    height: $height-input-default
     position: relative
     display: inline-block
-    background: transparent
     border: none
+    height: $height-input-default
     margin-bottom: $margin-bottom-default
+    background: transparent
 
     select
         @include linear-gradient(darken($white, 1%), darken($white, 3%))

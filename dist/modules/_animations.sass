@@ -1,4 +1,4 @@
-/* @include keyframes(modal-open)
+@include keyframes(modal-open)
     0%
         @include transform(scale3d(0.1, 0.1, 1))
 
@@ -9,16 +9,7 @@
         @include transform(scale3d(0.99, 0.99, 1))
 
     100%
-        @include transform(scale3d(1, 1, 1)) */
-
-@include keyframes(modal-open)
-    0%
-        @include transform(translateY($modal-animate-distance))
-        opacity: 0
-
-    100%
-        @include transform(translateY(0px))
-        opacity: 1
+        @include transform(scale3d(1, 1, 1))
 
 @include keyframes(modal-hide)
     0%

@@ -1,10 +1,10 @@
 .container
     @include outer-container
-    padding-left: 20px
-    padding-right: 20px
+    padding-left: $padding-container
+    padding-right: $padding-container
     @include breakpoint(mobile)
-        padding-left: 10px
-        padding-right: 10px
+        padding-left: $padding-container-responsive
+        padding-right: $padding-container-responsive
 
 .row
     position: relative

@@ -18,11 +18,11 @@
             @include linear-gradient(darken(#313437, 10%), darken(#313437, 10%))
             position: fixed
             padding-top: 15px
-            min-height: 100%
-            width: 225px
             top: 0
             right: 0
-            z-index: 999 // Use a var instead
+            min-height: 100%
+            z-index: $z-index-navbar
+            width: $width-navbar-responsive
 
         .brand
             color: $exprecss-blue
