@@ -18,7 +18,6 @@ function dropdownMenu() {
         var that = $(this),
             menu = $('#' + that.data('for'));
 
-
         menu.toggleClass('dropdown-menu-inactive dropdown-menu-active');
 		that.focus();
         e.preventDefault();
@@ -27,8 +26,8 @@ function dropdownMenu() {
 		var that = $(this),
 			menu = $('#' + that.data('for'));
 
-
-		menu.toggleClass('dropdown-menu-inactive dropdown-menu-active');
+		menu.removeClass('dropdown-menu-active');
+		menu.addClass('dropdown-menu-inactive');
 	});
 }
 
