@@ -27,7 +27,7 @@ html, body {
   font-smoothing: antialiased;
 }
 
-.select select, .modal, .card {
+.box-shadow-default, .select select, .modal {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.045), inset 0 0 1px 1px rgba(255, 255, 255, 0.9);
 }
 
@@ -1419,7 +1419,6 @@ html, body {
   color: #66696c;
   background: white;
   font: normal 100%/1.618 "Gotham-Book", sans-serif;
-  font-border: 0;
 }
 @media screen and (max-width: 800px) {
   html, body {
@@ -1434,16 +1433,6 @@ html, body {
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: text;
   }
-}
-
-.wrapper {
-  min-height: 100%;
-  margin-bottom: -84px;
-}
-.wrapper:after {
-  content: "";
-  display: block;
-  height: 84px;
 }
 
 hr {
@@ -1471,6 +1460,20 @@ ul {
 li {
   margin: 0;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -84px;
+}
+.wrapper:after {
+  content: "";
+  display: block;
+  height: 84px;
 }
 
 .section-title {
