@@ -2092,7 +2092,7 @@ select::-ms-expand {
   position: absolute;
 }
 
-input[type="text"], input[type="password"], input[type="number"], input[type="tel"] {
+.input-default {
   -webkit-transition: all, linear, 300ms;
   -moz-transition: all, linear, 300ms;
   transition: all, linear, 300ms;
@@ -2115,7 +2115,7 @@ input[type="text"], input[type="password"], input[type="number"], input[type="te
   font-size: 13px;
   font-family: "Gotham-Book", sans-serif;
 }
-input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="tel"]:focus {
+.input-default:focus {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2449,23 +2449,24 @@ label + span {
   padding: 20px;
   overflow: auto;
   color: #6a7781;
-  border-top: 1px solid #e8e8e8;
-  border-left: 1px solid #e8e8e8;
-  border-right: 1px solid #e8e8e8;
+  border: 1px solid #e8e8e8;
 }
 .widget-header.small {
   padding: 14px 20px;
 }
 .widget-header-success {
   color: white;
+  border: none;
   background: #6bad42;
 }
 .widget-header-info {
   color: white;
+  border: none;
   background: #2e8aab;
 }
 .widget-header-important {
   color: white;
+  border: none;
   background: #d0021b;
 }
 .widget-header-border-bottom {
