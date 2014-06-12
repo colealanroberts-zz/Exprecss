@@ -5,7 +5,8 @@
     overflow: auto
     background: $white
     border-bottom: 1px solid #E8E8E8
-
+    @include breakpoint(tablet)
+        overflow: initial
 
     ul
         display: block
@@ -38,11 +39,6 @@
             @include breakpoint(tablet)
                 display: block
                 padding: 5px 10px
-
-            &:first-of-type
-                padding-left: 0
-                @include breakpoint(tablet)
-                    padding-left: inherit
 
             a
                 @include transition(all, linear, $transition-duration-default)

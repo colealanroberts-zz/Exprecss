@@ -1874,6 +1874,11 @@ img {
   background: white;
   border-bottom: 1px solid #e8e8e8;
 }
+@media screen and (max-width: 800px) {
+  .navbar {
+    overflow: initial;
+  }
+}
 .navbar ul {
   display: block;
   margin: 0 auto;
@@ -1911,14 +1916,6 @@ img {
   .navbar ul li {
     display: block;
     padding: 5px 10px;
-  }
-}
-.navbar ul li:first-of-type {
-  padding-left: 0;
-}
-@media screen and (max-width: 800px) {
-  .navbar ul li:first-of-type {
-    padding-left: inherit;
   }
 }
 .navbar ul li a {
@@ -2031,6 +2028,7 @@ img {
   width: auto;
   min-width: 180px;
   height: auto;
+  z-index: 2040;
   visibility: hidden;
   border-radius: 2px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.06);
@@ -2309,6 +2307,15 @@ select::-ms-expand {
   font-size: 0.75em;
   text-indent: 0.01px;
   text-overflow: "";
+}
+.select select.success {
+  border: 1px solid #6bad42;
+}
+.select select.info {
+  border: 1px solid #2e8aab;
+}
+.select select.failed {
+  border: 1px solid #d0021b;
 }
 .select select:focus {
   outline: 1px none;
