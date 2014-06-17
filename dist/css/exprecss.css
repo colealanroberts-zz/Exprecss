@@ -73,6 +73,7 @@ html, body {
   }
 }
 
+@warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2;
 .col-1-of-2 {
   float: left;
   display: block;
@@ -263,6 +264,7 @@ html, body {
   margin-left: 9.32523%;
 }
 
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-2 {
   float: left;
   display: block;
@@ -297,6 +299,7 @@ html, body {
   }
 }
 
+@warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2;
 .col-2-of-3 {
   float: left;
   display: block;
@@ -468,6 +471,7 @@ html, body {
   margin-left: 18.65046%;
 }
 
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-3 {
   float: left;
   display: block;
@@ -502,6 +506,7 @@ html, body {
   }
 }
 
+@warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2;
 .col-3-of-4 {
   float: left;
   display: block;
@@ -654,6 +659,7 @@ html, body {
   margin-left: 27.97568%;
 }
 
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-4 {
   float: left;
   display: block;
@@ -688,6 +694,7 @@ html, body {
   }
 }
 
+@warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2;
 .col-4-of-5 {
   float: left;
   display: block;
@@ -821,6 +828,7 @@ html, body {
   margin-left: 37.30091%;
 }
 
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-5 {
   float: left;
   display: block;
@@ -855,6 +863,7 @@ html, body {
   }
 }
 
+@warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2;
 .col-5-of-6 {
   float: left;
   display: block;
@@ -969,6 +978,7 @@ html, body {
   margin-left: 46.62614%;
 }
 
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-6 {
   float: left;
   display: block;
@@ -1003,6 +1013,7 @@ html, body {
   }
 }
 
+@warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2;
 .col-6-of-7 {
   float: left;
   display: block;
@@ -1098,6 +1109,7 @@ html, body {
   margin-left: 55.95137%;
 }
 
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-7 {
   float: left;
   display: block;
@@ -1132,6 +1144,7 @@ html, body {
   }
 }
 
+@warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2;
 .col-7-of-8 {
   float: left;
   display: block;
@@ -1208,6 +1221,7 @@ html, body {
   margin-left: 65.2766%;
 }
 
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-8 {
   float: left;
   display: block;
@@ -1242,6 +1256,7 @@ html, body {
   }
 }
 
+@warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2;
 .col-8-of-9 {
   float: left;
   display: block;
@@ -1299,6 +1314,7 @@ html, body {
   margin-left: 74.60182%;
 }
 
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-9 {
   float: left;
   display: block;
@@ -1333,6 +1349,7 @@ html, body {
   }
 }
 
+@warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2;
 .col-9-of-10 {
   float: left;
   display: block;
@@ -1371,6 +1388,7 @@ html, body {
   margin-left: 83.92705%;
 }
 
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-10 {
   float: left;
   display: block;
@@ -1405,6 +1423,7 @@ html, body {
   }
 }
 
+@warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2;
 .col-10-of-11 {
   float: left;
   display: block;
@@ -1424,6 +1443,7 @@ html, body {
   margin-left: 93.25228%;
 }
 
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-11 {
   float: left;
   display: block;
@@ -1458,6 +1478,8 @@ html, body {
   }
 }
 
+@warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2;
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 .col-12 {
   float: left;
   display: block;
@@ -1477,6 +1499,7 @@ html, body {
   margin-left: 102.35765%;
 }
 
+@warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2;
 @font-face {
   font-family: Gotham-Bold;
   font-weight: 600;
@@ -1776,6 +1799,14 @@ img {
   content: "";
   display: table;
   clear: both;
+}
+
+.remove-padding {
+  padding: 0;
+}
+
+.remove-margin {
+  padding: 0;
 }
 
 .no-blur {

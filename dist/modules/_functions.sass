@@ -1,7 +1,4 @@
 // Generate Columns
-$index1: 1
-$index2: 1
-
 @while $index1 <= $grid-columns
     @for $index2 from $index1 through 12
         @if $index1 == $index2
@@ -14,7 +11,7 @@ $index2: 1
                 @include shift($index1)
 
         @if $index2 == 12
-            @warn 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2
+            @warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2
 
         @else
             .col-#{$index1}-of-#{$index2}
@@ -23,7 +20,7 @@ $index2: 1
                     width: 100%
 
             @if $index1 == $index2
-                @warn 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2
+                @warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2
 
 
             @else
