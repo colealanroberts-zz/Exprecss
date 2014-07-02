@@ -1933,7 +1933,6 @@ img {
   text-decoration: none;
   letter-spacing: 1px;
   font-size: 0.75em;
-  font-family: "Gotham-Bold";
 }
 .navbar ul li a:hover {
   color: #3e4044;
@@ -2675,7 +2674,6 @@ label + span {
   color: white;
   text-transform: uppercase;
   font-size: 0.875em;
-  font-family: "Gotham-Bold";
 }
 .card-info {
   -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
@@ -2688,7 +2686,6 @@ label + span {
   bottom: -20px;
   color: #e6e6e6;
   font-size: 0.875em;
-  font-family: "Georgia", serif;
 }
 .card-body {
   overflow: auto;
