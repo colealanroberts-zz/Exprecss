@@ -321,3 +321,6 @@ section {
   .footer .btn-download:hover {
     color: white;
     background: #3498db; }
+
+.input-default {
+  font-family: "Gotham-Book", sans-serif; }
