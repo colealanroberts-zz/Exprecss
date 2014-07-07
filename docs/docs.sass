@@ -7,6 +7,7 @@ $brand-red: #DF4938
 $brand-yellow: ''
 $dark-grey: #5C5C5C
 $border-grey: #E8E8E8
+$body-grey: #5F6A80
 $brand-blue: #3498DB
 $light-grey: #FCFCFC
 $brand-background-grey: #F8F8F8
@@ -35,27 +36,35 @@ $font-size-l4: 36px
 
 $animation-rotate-duration: 3050ms
 
-// Import Gotham Fontface
-@font-face
-    font-family: Gotham-Bold
-    font-weight: 600
-    font-style: normal
-    src: url("../fonts/Gotham-Bold/Gotham-Bold.eot")
-    src: url("../fonts/Gotham-Bold/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Bold/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold/Gotham-Bold.ttf") format("truetype"), url("../fonts/Gotham-Bold/Gotham-Bold.svg#Gotham-Bold") format("svg")
+%font-xlight
+    font:
+        family: 'Gotham A', 'Gotham B'
+        weight: 200
+        style: normal
 
-@font-face
-    font-family: Gotham-Book
-    font-weight: 400
-    font-style: normal
-    src: url("../fonts/Gotham-Book/Gotham-Book.eot")
-    src: url("../fonts/Gotham-Book/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Book/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book/Gotham-Book.ttf") format("truetype"), url("../fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book") format("svg")
+%font-light
+    font:
+        family: 'Gotham A', 'Gotham B'
+        weight: 300
+        style: normal
 
-@font-face
-    font-family: Gotham-Thin
-    font-weight: 100
-    font-style: normal
-    src: url("../fonts/Gotham-Thin/Gotham-Thin.eot")
-    src: url("../fonts/Gotham-Thin/Gotham-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Thin/Gotham-Thin.woff") format("woff"), url("../fonts/Gotham-Thin/Gotham-Thin.ttf") format("truetype"), url("../fonts/Gotham-Thin/Gotham-Thin.svg#Gotham-Thin") format("svg")
+%font-default
+    font:
+        family: 'Gotham A', 'Gotham B'
+        weight: 400
+        style: normal
+
+%font-medium
+    font:
+        family: 'Gotham A', 'Gotham B'
+        weight: 500
+        style: normal
+
+%font-bold
+    font:
+        family: 'Gotham A', 'Gotham B'
+        weight: 700
+        style: normal
 
 // Rotate Text In
 @-webkit-keyframes rotate-text
@@ -170,6 +179,10 @@ $animation-rotate-duration: 3050ms
         background-color: rgba(0,255,255,.2)
     * * * * * *
         background-color: rgba(255,255,0,.2)
+
+body
+    @extend %font-default
+    color: $body-grey
 
 .rotate-text
     -webkit-animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
@@ -420,3 +433,14 @@ section
 .input-default
     font:
         family: $font-family-default
+
+
+.section-title
+    @extend %font-light
+    color: darken($body-grey, 20%)
+    margin: 0
+    font:
+        size: $font-size-l4
+
+h3
+    @extend %font-medium
