@@ -5,6 +5,10 @@ html, body
     min-height: 100%
     margin: 0
     padding: 0
+    line-height: 1.618
+    font-size: 100%
+    font-style: normal
+    background: $white
     @include breakpoint(tablet)
         height: 100%
         max-height: 100%
@@ -52,11 +56,6 @@ img
 
 .box-shadow-default
     @extend %box-shadow-default
-
-.section-title
-    margin: 0
-    font:
-        size: $font-size-l4
 
 ::selection
     background: rgba($base-color, 0.2)

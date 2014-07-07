@@ -1,11 +1,11 @@
 .btn
     @extend %btn
+    @extend %font-medium
     padding: 12px 20px
     color: $white
     border-radius: $border-radius-default
     font:
         size: $font-size-l1
-        weight: 500
 
     @include breakpoint(mobile)
         margin-bottom: $margin-bottom-default
@@ -13,8 +13,8 @@
         float: none
 
     &-primary
-        @include linear-gradient(darken($white, 1%), darken($white, 3%))
         color: $dark-grey
+        background: $white
         border: 1px solid $border-grey
 
     &-action

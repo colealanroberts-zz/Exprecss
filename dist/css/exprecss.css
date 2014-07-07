@@ -1674,6 +1674,10 @@ html, body {
   min-height: 100%;
   margin: 0;
   padding: 0;
+  line-height: 1.618;
+  font-size: 100%;
+  font-style: normal;
+  background: white;
 }
 @media screen and (max-width: 800px) {
   html, body {
@@ -1731,11 +1735,6 @@ img {
   height: 84px;
 }
 
-.section-title {
-  margin: 0;
-  font-size: 2.25em;
-}
-
 ::selection {
   background: rgba(52, 152, 219, 0.2);
 }
@@ -1778,11 +1777,10 @@ img {
 }
 
 .remove-padding {
-  padding: 0;
+  padding: 0 !important;
 }
-
 .remove-margin {
-  padding: 0;
+  margin: 0 !important;
 }
 
 .no-blur {
@@ -2426,7 +2424,6 @@ label + span {
   color: white;
   border-radius: 2px;
   font-size: 0.875em;
-  font-weight: 500;
 }
 @media screen and (max-width: 480px) {
   .btn {
@@ -2436,10 +2433,8 @@ label + span {
   }
 }
 .btn-primary {
-  background-color: #fcfcfc;
-  background-image: -webkit-linear-gradient(#fcfcfc, #f7f7f7);
-  background-image: linear-gradient(#fcfcfc, #f7f7f7);
   color: #3e4044;
+  background: white;
   border: 1px solid #e8e8e8;
 }
 .btn-action {
@@ -2556,7 +2551,7 @@ label + span {
 }
 .modal-header-info {
   color: white;
-  background: #2e8aab;
+  background: #3498db;
 }
 .modal-header-important {
   color: white;
