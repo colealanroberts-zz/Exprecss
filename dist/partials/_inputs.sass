@@ -1,17 +1,19 @@
 .input-default
+    height: $height-input-default
+
+.input-default, .textarea-default
     @include transition(all, linear, $transition-duration-default)
     @include box-sizing(border-box)
     @include appearance(none)
     @include fill-parent
     padding: 10px
-    height: $height-input-default
     color: $dark-grey
     background: darken($white, 1%)
     border: 1px solid $border-grey
     border-radius: $border-radius-default
     margin-bottom: $margin-bottom-default
     font:
-        size: 13px
+        size: em(13)
 
     &:focus
         @include appearance(none)

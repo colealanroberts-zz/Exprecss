@@ -48,3 +48,14 @@
     -webkit-will-change: $property
     -moz-will-change: $property
     will-change: $property
+
+// Image Retina
+@mixin image-retina($path, $type, $width, $height)
+    background-image: url($path + '.' + $type)
+
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ration: 2)
+        &
+            background-image: url($path + '@2x.' + $type)
+            -webkit-background-size: $width $height
+            -moz-background-size: $width $height
+            background-size: $width $height

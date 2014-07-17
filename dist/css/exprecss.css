@@ -39,6 +39,12 @@ html, body {
   transform: translate3d(0, 0, 0);
 }
 
+.btn {
+  font-family: "Gotham A", "Gotham B";
+  font-weight: 500;
+  font-style: normal;
+}
+
 .col-1 {
   float: left;
   display: block;
@@ -2363,6 +2369,10 @@ select::-ms-expand {
 }
 
 .input-default {
+  height: 39px;
+}
+
+.input-default, .textarea-default {
   -webkit-transition: all, linear, 300ms;
   -moz-transition: all, linear, 300ms;
   transition: all, linear, 300ms;
@@ -2376,15 +2386,14 @@ select::-ms-expand {
   appearance: none;
   width: 100%;
   padding: 10px;
-  height: 39px;
   color: #3e4044;
   background: #fcfcfc;
   border: 1px solid #e8e8e8;
   border-radius: 2px;
   margin-bottom: 15px;
-  font-size: 13px;
+  font-size: 0.8125em;
 }
-.input-default:focus {
+.input-default:focus, .textarea-default:focus {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2400,8 +2409,8 @@ label {
   line-height: 1.5;
   text-transform: uppercase;
   color: #6a7781;
+  margin-bottom: 4px;
   font-size: 0.6875em;
-  font-weight: 600;
 }
 label + span {
   color: #56595f;
@@ -2692,7 +2701,8 @@ label + span {
 }
 
 .widget {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: white;
   border-radius: 2px;
   display: block;
@@ -2734,6 +2744,7 @@ label + span {
 }
 .widget-body {
   padding: 20px;
+  overflow: auto;
   border-left: 1px solid #e8e8e8;
   border-right: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
