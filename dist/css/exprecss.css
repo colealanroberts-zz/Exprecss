@@ -2276,10 +2276,10 @@ select::-ms-expand {
   width: 100%;
   position: relative;
   display: inline-block;
-  border: none;
   height: 39px;
+  background: white;
+  border: 1px solid #e8e8e8;
   margin-bottom: 15px;
-  background: transparent;
 }
 .select select {
   background-color: #fcfcfc;
@@ -2305,11 +2305,12 @@ select::-ms-expand {
   width: 100%;
   overflow: hidden;
   outline: 0px none;
-  border: 1px solid #e8e8e8;
+  border: none;
   border-radius: 2px;
   font-size: 0.75em;
   text-indent: 0.01px;
   text-overflow: "";
+  -moz-appearance: treeitem;
 }
 .select select.success {
   border: 1px solid #6bad42;
@@ -2364,6 +2365,10 @@ select::-ms-expand {
 
 .input-default {
   height: 39px;
+}
+
+.textarea-default {
+  resize: none;
 }
 
 .input-default, .textarea-default {

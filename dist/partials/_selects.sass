@@ -6,10 +6,10 @@ select::-ms-expand
     @include fill-parent
     position: relative
     display: inline-block
-    border: none
     height: $height-input-default
+    background: $white
+    border: 1px solid $border-grey
     margin-bottom: $margin-bottom-default
-    background: transparent
 
     select
         @include linear-gradient(darken($white, 1%), darken($white, 3%))
@@ -26,7 +26,7 @@ select::-ms-expand
         width: 100%
         overflow: hidden
         outline: 0px none
-        border: 1px solid $border-grey
+        border: none
         border-radius: $border-radius-default
         font:
             size: $font-size-l0
@@ -49,10 +49,13 @@ select::-ms-expand
                 color: transparent
                 text-shadow: 0 0 0 #000
 
-        // This is sort of hacky, but this removes the ugly down arrow on Firefox
+        // This is sort of hacky, but this removes the ugly down arrow on Firefox 29
         // See Gist: https://gist.github.com/joaocunha/6273016
         text-indent: 0.01px
         text-overflow: ''
+
+        // More hacks for FireFox 30
+        -moz-appearance: treeitem
 
         // IE9 hack to hide the arrow, we've purposely excluded the breakpoint mixin.
         @media screen and (min-width: 0\0)
