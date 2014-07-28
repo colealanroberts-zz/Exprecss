@@ -10,22 +10,14 @@
             .shift-#{$index1}
                 @include shift($index1)
 
-        @if $index2 == 12
-            @warn:quiet 'Skipping generated class:' + '.col-' + $index1 + '-of-' + $index2
-
         @else
             .col-#{$index1}-of-#{$index2}
                 @include span-columns($index1 of $index2)
                 @include breakpoint(mobile)
                     width: 100%
 
-            @if $index1 == $index2
-                @warn:quiet 'Skipping generated class:' + '.shift-' + $index1 + '-of-' + $index2
-
-
-            @else
-                .shift-#{$index1}-of-#{$index2}
-                    @include shift($index1 of $index2)
+            .shift-#{$index1}-of-#{$index2}
+                @include shift($index1 of $index2)
 
         $index2: $index2 + 1 !global
     $index1: $index1 + 1 !global
