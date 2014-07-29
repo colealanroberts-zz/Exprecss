@@ -136,7 +136,7 @@ $(document).ready(function() {
 	app.directive('expConfirm', function ($expModal) {
 		return {
 			restrict: 'AE',
-			templateUrl: 'dist/templates/confirm.html',
+			template: '<div class="modal">\n    <div class="modal-header modal-header-info">{{ title }}</div>\n    <div class="modal-body" ng-bind-html="html">\n    </div>\n    <div class="modal-footer">\n        <a class="btn btn-primary float-left" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>\n        <a class="btn btn-primary float-right" ng-click="confirm()">{{ confirmText }}</a>\n    </div>\n</div>',
 			link: function(scope, elem, attr) {
 				console.log(scope);
 			}
