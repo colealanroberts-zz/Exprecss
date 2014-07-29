@@ -88,15 +88,16 @@ $(document).ready(function() {
 				open: '=expModalOpen'
 			},
 			templateUrl: 'dist/templates/modal.html',
-			replace: true,
 			transclude: true,
+			controller: function($scope) {
+				$scope.thing = 'thing';
+			},
 			link: function(scope, elem, attr) {
-				var overlayListener = function() {
+				var overlayListener = function () {
 					scope.open = false;
-					scope.$apply();
 				}
 
-				scope.$watch('open', function(val) {
+				scope.$watch('open', function (val) {
 					if (val) {
 						$expModal.showOverlay(overlayListener);
 					} else {
@@ -127,7 +128,6 @@ $(document).ready(function() {
 				}, scope);
 
 				elem.on('click', function(e) {
-					e.preventDefault();
 
 					scope.isOpen = true;
 					scope.$apply();
