@@ -328,7 +328,9 @@ $(document).ready(function() {
 						elem.val(maskedValue);
 
 						if (ngModel) {
-							ngModel.$setViewValue(maskedValue);
+							scope.$apply(function() {
+								ngModel.$setViewValue(maskedValue);
+							});
 						}
 
 						elem[0].selectionStart = elem[0].selectionEnd = final;
@@ -359,7 +361,9 @@ $(document).ready(function() {
 					elem.val(maskedValue);
 
 					if (ngModel) {
-						ngModel.$setViewValue(maskedValue);
+						scope.$apply(function() {
+							ngModel.$setViewValue(maskedValue);
+						});
 					}
 
 					elem[0].selectionStart = elem[0].selectionEnd = charPositions[strPositions[start]];
