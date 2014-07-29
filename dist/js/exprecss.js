@@ -88,7 +88,7 @@ $(document).ready(function() {
 		}
 	});
 
-	app.factory('$expConfirm', function($q, $rootScope, $compile, $expModal, $sce) {
+	app.factory('$expConfirm', function($q, $rootScope, $compile, $expModal, $document, $sce) {
 		var $expConfirm = function(title, html, confirmText, cancelText) {
 			var deferred = $q.defer(),
 				scope = $rootScope.$new(),
@@ -122,9 +122,24 @@ $(document).ready(function() {
 			});
 
 			if (cancelText) {
+				$document.on('keyup', function onEsc(e) {
+					if (e.which === 27) {
+						cancel();
+						$document.off('keyup', onEsc);
+					} else if (e.which === 13) {
+						confirm();
+						$document.off('keyup', onEsc)
+					}
+				});
 				$expModal.showOverlay(cancel);
 			} else {
 				$expModal.showOverlay(confirm);
+				$document.on('keyup', function onEsc(e) {
+					if (e.which === 27 || e.which === 13) {
+						confirm();
+						$document.off('keyup', onEsc);
+					}
+				});
 			}
 
 			return deferred.promise;
@@ -138,7 +153,6 @@ $(document).ready(function() {
 			restrict: 'AE',
 			template: '<div class="modal">\n    <div class="modal-header modal-header-info">{{ title }}</div>\n    <div class="modal-body" ng-bind-html="html">\n    </div>\n    <div class="modal-footer">\n        <a class="btn btn-primary float-left" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>\n        <a class="btn btn-primary float-right" ng-click="confirm()">{{ confirmText }}</a>\n    </div>\n</div>',
 			link: function(scope, elem, attr) {
-				console.log(scope);
 			}
 		}
 	});
