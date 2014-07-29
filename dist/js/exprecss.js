@@ -97,7 +97,7 @@ $(document).ready(function() {
 			angular.extend(scope, {
 				title: title,
 				html: $sce.trustAsHtml(html),
-				confirmText: confirmText,
+				confirmText: confirmText || 'Okay',
 				cancelText: cancelText,
 				open: true
 			});
@@ -286,7 +286,8 @@ $(document).ready(function() {
 		return {
 			restrict: 'A',
 			scope: true,
-			link: function(scope, elem, attr) {
+			require: '?ngModel',
+			link: function(scope, elem, attr, ngModel) {
 				var mask = attr['expMask'],
 					charPositions = nextPositions(mask),
 					strPositions = whichChars(mask);
@@ -295,8 +296,12 @@ $(document).ready(function() {
 					$log.error("Invalid mask for input")
 				}
 
-				var remask = function (char) {
-
+				if (ngModel) {
+					ngModel.$render = function() {
+						if (angular.isString(ngModel.$modelValue)) {
+							elem.val(applyMask(clean(ngModel.$modelValue), mask));
+						}
+					};
 				}
 
 				elem.on('keydown', function(e){
@@ -319,7 +324,12 @@ $(document).ready(function() {
 							final = start;
 						}
 
-						elem.val(applyMask(clean(str), mask));
+						var maskedValue = applyMask(clean(str), mask);
+						elem.val(maskedValue);
+
+						if (ngModel) {
+							ngModel.$setViewValue(maskedValue);
+						}
 
 						elem[0].selectionStart = elem[0].selectionEnd = final;
 					}
@@ -345,7 +355,12 @@ $(document).ready(function() {
 						}
 					}
 
-					elem.val(applyMask(clean(str), mask));
+					var maskedValue = applyMask(clean(str), mask);
+					elem.val(maskedValue);
+
+					if (ngModel) {
+						ngModel.$setViewValue(maskedValue);
+					}
 
 					elem[0].selectionStart = elem[0].selectionEnd = charPositions[strPositions[start]];
 				});
