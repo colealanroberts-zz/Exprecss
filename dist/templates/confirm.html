@@ -1,0 +1,9 @@
+<div class="modal">
+    <div class="modal-header modal-header-info">{{ title }}</div>
+    <div class="modal-body" ng-bind-html="html">
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-primary float-left" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>
+        <a class="btn btn-primary float-right" ng-click="confirm()">{{ confirmText }}</a>
+    </div>
+</div>

@@ -35,24 +35,32 @@ $(document).ready(function() {
 (function() {
 	'use strict';
 
-	var app = angular.module('exprecss', ['ngAnimate']).run(function() {
+	var app = angular.module('exprecss', ['ngAnimate']).run(function($rootScope, $expConfirm) {
+		$rootScope.errorConfirm = function() {
+			$expConfirm('Error', 'Something real bad just now!', 'Freak out', 'Ignore').then(function() {
+				alert('You freaked out');
+			}, function() {
+				alert('You ignored it');
+			});
+		};
 
+		$rootScope.errorAlert = function() {
+			$expConfirm('Error', 'Something real bad just now!', 'Whatever').then(function() {
+				alert('You dismissed alert');
+			});
+		};
 	});
 
 	app.service('$expModal', function($compile, $rootScope) {
 		var scope = $rootScope.$new(true),
-			overlay = angular.element($compile('<div class="modal-overlay" ng-if="showOverlay" ng-click="close()"></div>')(scope)),
-			overlayAdded = false,
 			$body = angular.element('body'),
+			overlay = $compile('<div class="modal-overlay" ng-if="showOverlay" ng-click="close()"></div>')(scope, function(elem) {
+				$body.append(elem);
+			}),
 			registry = {},
 			i = 0;
 
 		this.showOverlay = function(listener) {
-			if (!overlayAdded) {
-				$body.append(overlay);
-				overlayAdded = true;
-			}
-
 			scope.showOverlay = true;
 			scope.close = listener;
 		};
@@ -80,6 +88,61 @@ $(document).ready(function() {
 		}
 	});
 
+	app.factory('$expConfirm', function($q, $rootScope, $compile, $expModal, $sce) {
+		var $expConfirm = function(title, html, confirmText, cancelText) {
+			var deferred = $q.defer(),
+				scope = $rootScope.$new(),
+				$body = angular.element('body');
+
+			angular.extend(scope, {
+				title: title,
+				html: $sce.trustAsHtml(html),
+				confirmText: confirmText,
+				cancelText: cancelText,
+				open: true
+			});
+
+			var confirmModal = $compile(angular.element('<div exp-confirm></div>'))(scope, function(elem) {
+					$body.append(elem);
+				}),
+				cancel = function() {
+					confirmModal.remove();
+					$expModal.hideOverlay();
+					deferred.reject();
+				},
+				confirm = function() {
+					confirmModal.remove();
+					$expModal.hideOverlay();
+					deferred.resolve();
+				}
+
+			angular.extend(scope, {
+				cancel: cancel,
+				confirm: confirm
+			});
+
+			if (cancelText) {
+				$expModal.showOverlay(cancel);
+			} else {
+				$expModal.showOverlay(confirm);
+			}
+
+			return deferred.promise;
+		};
+
+		return $expConfirm;
+	});
+
+	app.directive('expConfirm', function ($expModal) {
+		return {
+			restrict: 'AE',
+			templateUrl: 'dist/templates/confirm.html',
+			link: function(scope, elem, attr) {
+				console.log(scope);
+			}
+		}
+	});
+
 	app.directive('expModal', function($expModal) {
 		return {
 			restrict: 'AE',
@@ -89,9 +152,6 @@ $(document).ready(function() {
 			},
 			templateUrl: 'dist/templates/modal.html',
 			transclude: true,
-			controller: function($scope) {
-				$scope.thing = 'thing';
-			},
 			link: function(scope, elem, attr) {
 				var overlayListener = function () {
 					scope.open = false;
