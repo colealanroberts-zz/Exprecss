@@ -89,16 +89,28 @@ $(document).ready(function() {
 	});
 
 	app.factory('$expConfirm', function($q, $rootScope, $compile, $expModal, $document, $sce) {
-		var $expConfirm = function(title, html, confirmText, cancelText) {
+		var $expConfirm = function(title, html, confirmText, cancelText, options) {
 			var deferred = $q.defer(),
 				scope = $rootScope.$new(),
 				$body = angular.element('body');
+
+
+			options = options || {};
+
+			var _options = angular.extend({
+				headerClass: 'modal-header-info',
+				confirmClass: 'btn-primary',
+				cancelClass: 'btn-primary'
+			}, options);
 
 			angular.extend(scope, {
 				title: title,
 				html: $sce.trustAsHtml(html),
 				confirmText: confirmText || 'Okay',
 				cancelText: cancelText,
+				headerClass: [_options.headerClass],
+				confirmClass: [_options.confirmClass],
+				cancelClass: [_options.cancelClass],
 				open: true
 			});
 
@@ -151,7 +163,7 @@ $(document).ready(function() {
 	app.directive('expConfirm', function ($expModal) {
 		return {
 			restrict: 'AE',
-			template: '<div class="modal">\n    <div class="modal-header modal-header-info">{{ title }}</div>\n    <div class="modal-body" ng-bind-html="html">\n    </div>\n    <div class="modal-footer">\n        <a class="btn btn-primary float-left" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>\n        <a class="btn btn-primary float-right" ng-click="confirm()">{{ confirmText }}</a>\n    </div>\n</div>',
+			template: '<div class="modal">\n    <div class="modal-header" ng-class="headerClass">{{ title }}</div>\n    <div class="modal-body" ng-bind-html="html">\n    </div>\n    <div class="modal-footer">\n        <a class="btn float-left" ng-class="cancelClass" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>\n        <a class="btn float-right" ng-class="confirmClass" ng-click="confirm()">{{ confirmText }}</a>\n    </div>\n</div>',
 			link: function(scope, elem, attr) {
 			}
 		}
