@@ -53,14 +53,30 @@
     &-right
         text-align: right
 
-.hidden-mobile
-    @include breakpoint(mobile)
-        display: none !important
+.hidden
+    &-mobile
+        @include breakpoint(mobile)
+            display: none !important
 
-.hidden-tablet
-    @include breakpoint(tablet)
-        display: none !important
+    &-tablet
+        @include breakpoint(tablet)
+            display: none !important
 
-.hidden-desktop
-    @include breakpoint(desktop)
-        display: none !important
+    &-desktop
+        @include breakpoint(desktop)
+            display: none !important
+
+.font-size-12
+    font-size: $font-size-12
+
+.font-size-14
+    font-size: $font-size-14
+
+.font-size-16
+    font-size: $font-size-16
+
+.font-size-24
+    font-size: $font-size-24
+
+.font-size-36
+    font-size: $font-size-36

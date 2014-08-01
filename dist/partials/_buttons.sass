@@ -1,10 +1,21 @@
+button
+    -webkit-font-smoothing: antialiased
+    -moz-font-smoothing: antialiased
+    -o-font-smoothing: antialised
+    font-smoothing: antialiased
+
+    &:focus
+        @include appearance(none)
+        box-shadow: none
+        outline: 0 none
+
 .btn
     @extend %btn
     padding: 12px 20px
     color: $white
     border-radius: $border-radius-default
     font:
-        size: $font-size-l1
+        size: $font-size-14
 
     @include breakpoint(mobile)
         margin-bottom: $margin-bottom-default
@@ -18,12 +29,15 @@
 
     &-action
         background: $brand-green
+        border: 1px solid $brand-green
 
     &-info
         background: $exprecss-blue
+        border: 1px solid $exprecss-blue
 
     &-important
         background: $brand-red
+        border: 1px solid $brand-red
 
     &-group
         overflow: auto

@@ -46,7 +46,7 @@
     p
         margin: 0 0 10px 0
         font:
-            size: $font-size-l1
+            size: $font-size-14
 
     &-footer
         overflow: auto
@@ -59,6 +59,7 @@
     &-overlay
         @extend %force-hardware-accel
         position: fixed
+        z-index: $z-index-alpha
         display: block
         overflow-y: scroll
         top: 0

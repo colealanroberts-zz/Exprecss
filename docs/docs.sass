@@ -28,11 +28,11 @@ $breakpoint-tablet: 800px
 $breakpoint-desktop: 980px
 
 $font-family-default: 'Gotham-Book', sans-serif
-$font-size-l0: 12px
-$font-size-l1: 14px
-$font-size-l2: 16px
-$font-size-l3: 24px
-$font-size-l4: 36px
+$font-size-12: 12px
+$font-size-14: 14px
+$font-size-16: 16px
+$font-size-24: 24px
+$font-size-36: 36px
 
 $animation-rotate-duration: 3050ms
 
@@ -226,7 +226,7 @@ body
                 border: 1px solid rgba($white, 0.3)
                 border-radius: 2px
                 font:
-                    size: $font-size-l0
+                    size: $font-size-12
                 @include breakpoint(mobile)
                     display: none
 
@@ -317,7 +317,7 @@ section
     .tagline
         margin-top: 0
         margin-bottom: 30px
-        font-size: $font-size-l2
+        font-size: $font-size-14
 
         p
             color: darken($white, 15%)
@@ -440,7 +440,7 @@ section
     color: darken($body-grey, 20%)
     margin: 0
     font:
-        size: $font-size-l4
+        size: $font-size-36
 
 h3
     @extend %font-medium
