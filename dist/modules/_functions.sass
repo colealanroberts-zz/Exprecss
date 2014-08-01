@@ -1,4 +1,4 @@
-// Generate Columns
+// Generate Columns & Shifts
 @while $index1 <= $grid-columns
     @for $index2 from $index1 through 12
         @if $index1 == $index2
@@ -21,6 +21,15 @@
 
         $index2: $index2 + 1 !global
     $index1: $index1 + 1 !global
-
-// Generate Shift
 @while $index1 <= $grid-columns
+
+// Generate Margin & Padding
+$direction-list: top right bottom left
+
+@each $name, $number in (tiny: 10px, small: 25px, default: 40px, large: 60px, xlarge: 100px)
+    @each $direction in $direction-list
+        .padding-#{$direction}-#{$name}
+            padding-#{$direction}: $number
+
+        .margin-#{$direction}-#{$name}
+            margin-#{$direction}: $number

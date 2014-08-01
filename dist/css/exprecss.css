@@ -1521,6 +1521,166 @@ html, body {
   margin-left: 102.35765%;
 }
 
+.padding-top-tiny {
+  padding-top: 10px;
+}
+
+.margin-top-tiny {
+  margin-top: 10px;
+}
+
+.padding-right-tiny {
+  padding-right: 10px;
+}
+
+.margin-right-tiny {
+  margin-right: 10px;
+}
+
+.padding-bottom-tiny {
+  padding-bottom: 10px;
+}
+
+.margin-bottom-tiny {
+  margin-bottom: 10px;
+}
+
+.padding-left-tiny {
+  padding-left: 10px;
+}
+
+.margin-left-tiny {
+  margin-left: 10px;
+}
+
+.padding-top-small {
+  padding-top: 25px;
+}
+
+.margin-top-small {
+  margin-top: 25px;
+}
+
+.padding-right-small {
+  padding-right: 25px;
+}
+
+.margin-right-small {
+  margin-right: 25px;
+}
+
+.padding-bottom-small {
+  padding-bottom: 25px;
+}
+
+.margin-bottom-small {
+  margin-bottom: 25px;
+}
+
+.padding-left-small {
+  padding-left: 25px;
+}
+
+.margin-left-small {
+  margin-left: 25px;
+}
+
+.padding-top-default {
+  padding-top: 40px;
+}
+
+.margin-top-default {
+  margin-top: 40px;
+}
+
+.padding-right-default {
+  padding-right: 40px;
+}
+
+.margin-right-default {
+  margin-right: 40px;
+}
+
+.padding-bottom-default {
+  padding-bottom: 40px;
+}
+
+.margin-bottom-default {
+  margin-bottom: 40px;
+}
+
+.padding-left-default {
+  padding-left: 40px;
+}
+
+.margin-left-default {
+  margin-left: 40px;
+}
+
+.padding-top-large {
+  padding-top: 60px;
+}
+
+.margin-top-large {
+  margin-top: 60px;
+}
+
+.padding-right-large {
+  padding-right: 60px;
+}
+
+.margin-right-large {
+  margin-right: 60px;
+}
+
+.padding-bottom-large {
+  padding-bottom: 60px;
+}
+
+.margin-bottom-large {
+  margin-bottom: 60px;
+}
+
+.padding-left-large {
+  padding-left: 60px;
+}
+
+.margin-left-large {
+  margin-left: 60px;
+}
+
+.padding-top-xlarge {
+  padding-top: 100px;
+}
+
+.margin-top-xlarge {
+  margin-top: 100px;
+}
+
+.padding-right-xlarge {
+  padding-right: 100px;
+}
+
+.margin-right-xlarge {
+  margin-right: 100px;
+}
+
+.padding-bottom-xlarge {
+  padding-bottom: 100px;
+}
+
+.margin-bottom-xlarge {
+  margin-bottom: 100px;
+}
+
+.padding-left-xlarge {
+  padding-left: 100px;
+}
+
+.margin-left-xlarge {
+  margin-left: 100px;
+}
+
 @-webkit-keyframes modal-open {
   0% {
     -webkit-transform: scale3d(0.1, 0.1, 1);
@@ -2637,9 +2797,9 @@ button:focus {
 .modal-footer {
   overflow: auto;
   margin: 0;
-  padding: 10px;
+  padding: 20px;
 }
-.modal-footer .btn:last-of-type {
+.modal-footer .btn {
   margin-bottom: 0px;
 }
 .modal-overlay {
