@@ -2010,7 +2010,7 @@ img {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  position: relative;
+  position: absolute;
   top: 50%;
 }
 
