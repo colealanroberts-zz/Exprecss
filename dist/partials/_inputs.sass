@@ -23,3 +23,46 @@
         outline: 0
         background: lighten($base-color, 45%)
         border: 1px solid $base-color
+
+.input-prepend
+    position: relative
+    display: inline-block
+    overflow: auto
+    width: 100%
+    height: $height-input-default + 1px
+
+    &:after
+        @include triangle(10px, gray, down)
+        position: absolute
+        display: inline-block
+        content: ''
+        z-index: $z-index-alpha
+        top: 17px
+        right: 5px
+        pointer-events: none
+        margin: 0 10px
+
+    .input-default
+        height: 38px
+
+    .select, .input-default
+        position: absolute
+        margin-bottom: 0
+        height: $height-input-default
+
+    .select
+        display: inline-block
+        z-index: $z-index-alpha - 1
+        right: 0
+        top: 1px
+        right: 1px
+        width: auto
+        height: $height-input-default - 2px
+        padding: 0 35px 0 20px
+        border: 0
+        cursor: pointer
+        border-left: 1px solid $border-grey
+        border-radius: 0 $border-radius-default $border-radius-default 0
+
+        &:focus
+            outline: 0 none
