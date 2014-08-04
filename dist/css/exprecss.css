@@ -2096,11 +2096,11 @@ img {
     background-image: -webkit-linear-gradient(#191a1c, #191a1c);
     background-image: linear-gradient(#191a1c, #191a1c);
     position: fixed;
+    z-index: 9999;
     padding-top: 15px;
     top: 0;
     right: 0;
     min-height: 100%;
-    z-index: 2030;
     width: 225px;
   }
 }
@@ -2154,7 +2154,6 @@ img {
   top: 0;
   left: 0;
   overflow: initial;
-  z-index: 2000;
 }
 .navbar-fixed ul {
   padding-top: 30px;
