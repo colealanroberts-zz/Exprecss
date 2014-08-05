@@ -17,24 +17,20 @@
 .center-h
     &-relative
         @include transform(translateX(-50%))
-        position: relative
-        left: 50%
+        @include position(relative, null null null 50%)
 
     &-absolute
         @include transform(translateX(-50%))
-        position: absolute
-        left: 50%
+        @include position(absolute, null null null 50%)
 
 .center-v
     &-relative
         @include transform(translateY(-50%))
-        position: relative
-        top: 50%
+        @include position(relative, 50% null null null)
 
     &-absolute
         @include transform(translateY(-50%))
-        position: absolute
-        top: 50%
+        @include position(absolute, 50% null null null)
 
 .float
     &-left

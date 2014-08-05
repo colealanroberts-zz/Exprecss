@@ -1,11 +1,9 @@
 .caret
+    @include position(relative, -2px null null null)
+    @include size(10px 10px)
     display: inline-block
     margin-left: $margin-left-caret
     content: ''
-    top: -2px
-    position: relative
-    width: 10px
-    height: 10px
 
     &-dark
         @include triangle(10px, $dark-grey, down)
@@ -18,13 +16,12 @@
     display: inline-block
 
     &-menu
+        @include margin(0)
+        @include padding(0)
+        @include size(auto auto)
         position: absolute
         display: block
-        margin: 0
-        padding: 0
-        width: auto
         min-width: $min-width-dropdown-menu
-        height: auto
         z-index: $z-index-dropdown-menu
         visibility: hidden
         border-radius: $border-radius-default
@@ -33,9 +30,7 @@
         &:before
             @include triangle(18px, $white, up)
             @include transform(translateX(-50%))
-            left: 50%
-            top: -9px
-            position: absolute
+            @include position(absolute, -9px null null 50%)
             content: ''
             display: block
 
@@ -47,8 +42,8 @@
                 border-bottom: none
 
             a
+                @include padding(10px)
                 display: block
-                padding: 10px
 
         &-inactive
             @include transition(all, $ease-in-out-back, $transition-duration-default)

@@ -191,18 +191,16 @@ body
     animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
 
 .navbar-exprecss
-    width: 100%
+    @include size(100% auto)
     position: relative
-    height: auto
     overflow: auto
     border-bottom: none
     background: transparent
 
     ul
+        @include margin(0 auto)
+        @include padding(10px)
         max-width: 68em
-        margin-left: auto
-        margin-right: auto
-        padding: 10px
         list-style-type: none
 
         .logo
@@ -216,12 +214,11 @@ body
 
             a.changelog
                 @include transition(all, linear, 300ms)
+                @include position(relative, 20px null null null)
+                @include padding(8px 12px)
                 text-decoration: none
                 display: inline-block
-                position: relative
                 float: right
-                top: 20px
-                padding: 8px 12px
                 color: rgba($white, 0.8)
                 border: 1px solid rgba($white, 0.3)
                 border-radius: 2px
@@ -236,10 +233,9 @@ body
 
 
 .svg-logo
+    @include size(40px 40px)
     margin-top: 20px
     position: relative
-    width: 40px
-    height: 40px
     @include breakpoint(mobile)
         -webkit-transform: translateX(-50%)
         -moz-transform: translateX(-50%)
@@ -253,11 +249,11 @@ body
 
 .grid
     div[class^='col-'], div[class*='col-']
+        @include padding(10px)
         margin-right: 0
         background: $brand-blue
         height: 40px
         color: $white
-        padding: 10px
 
         &:nth-of-type(2n + 1)
             background: darken($brand-blue, 5%)
@@ -271,7 +267,7 @@ body
                 float: right
 
 section
-    padding: 40px 0
+    @include padding(40px 0)
 
     &:nth-of-type(even)
         background: #F8F8F8
@@ -285,15 +281,15 @@ section
     @include linear-gradient-image(rgba(#172A71, 0.95), rgba(#2E7F9C, 0.9), '../docs/img/bg-hero-unit.jpg')
     margin-top: -78px
     filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#1E3174', endColorstr='#3C859F')
-    padding: 150px 0
+    @include padding(150px 0)
     height: auto
     background:
         size: cover
         repeat: no-repeat
         position: center center
     @include breakpoint(mobile)
+        @include padding(80px 0 30px 0)
         margin-top: -89px
-        padding: 80px 0 30px 0
         height: auto
 
     h1
@@ -376,12 +372,12 @@ section
     display: block
 
 .bower-install
+    @include padding(6px 10px)
     display: inline-block
     border-radius: $border-radius-default
     overflow-y: auto
     width: 407px
     display: block
-    padding: 6px 10px
     border: 8px solid rgba(255, 255, 255, 0.1)
     background: rgba(#2F353E, 0.7)
     -webkit-background-clip: padding-box
@@ -416,7 +412,7 @@ section
 
 .footer .btn-download
     @include transition(all, linear, 300ms)
-    padding: 20px 32px
+    @include padding(20px 32px)
     border: 1px solid $base-color
     margin-bottom: 20px
     border-radius: 999px
