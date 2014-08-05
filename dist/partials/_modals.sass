@@ -2,11 +2,9 @@
     @include backface-visibility(hidden)
     @extend %box-shadow-default
     @extend %force-hardware-accel
+    @include position(fixed, 35% null null 50%)
     z-index: $z-index-modal
-    position: fixed
     overflow-x: hidden
-    top: 35%
-    left: 50%
     margin-left: -($width-modal / 2)
     min-width: $width-modal / 2
     height: auto
@@ -17,8 +15,8 @@
         width: 100%
 
     &-header
+        @include padding(15px 20px)
         position: relative
-        padding: 15px 20px
         overflow: auto
         color: $header-grey
         letter-spacing: 1px
@@ -27,7 +25,7 @@
             size: $font-size-14
 
         &.small
-            padding: 14px 20px
+            @include padding(14px 20px)
 
         &-success
             color: $white
@@ -45,30 +43,26 @@
             border-bottom: 1px solid $border-grey
 
     &-body
+        @include padding($padding-default)
         overflow: auto
-        padding: $padding-default
 
     p
-        margin: 0 0 10px 0
+        @include margin(0 0 10px 0)
         font:
             size: $font-size-14
 
     &-footer
+        @include margin(0)
+        @include padding(20px)
         overflow: auto
-        margin: 0
-        padding: 20px
 
         .btn
-            margin-bottom: 0px
+            @include margin(null null 0px null)
 
     &-overlay
         @extend %force-hardware-accel
-        position: fixed
+        @include position(fixed, 0 0 0 0)
         z-index: $z-index-alpha
         display: block
         overflow-y: scroll
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
         background: rgba($background-grey, 0.9)

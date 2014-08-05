@@ -9,7 +9,7 @@
     @include box-sizing(border-box)
     @include appearance(none)
     @include fill-parent
-    padding: 10px
+    @include padding(10px)
     color: $dark-grey
     background: darken($white, 1%)
     border: 1px solid $border-grey
@@ -33,14 +33,12 @@
 
     &:after
         @include triangle(10px, gray, down)
-        position: absolute
+        @include position(absolute, 17px null 5px null)
+        @include margin(0 10px)
         display: inline-block
         content: ''
         z-index: $z-index-alpha
-        top: 17px
-        right: 5px
         pointer-events: none
-        margin: 0 10px
 
     .input-default
         height: 38px
@@ -51,6 +49,7 @@
         height: $height-input-default
 
     .select
+        @include padding(0 35px 0 20px)
         display: inline-block
         z-index: $z-index-alpha - 1
         right: 0
@@ -58,7 +57,6 @@
         right: 1px
         width: auto
         height: $height-input-default - 2px
-        padding: 0 35px 0 20px
         border: 0
         cursor: pointer
         border-left: 1px solid $border-grey

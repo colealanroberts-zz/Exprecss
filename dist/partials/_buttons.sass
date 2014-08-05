@@ -11,7 +11,7 @@ button
 
 .btn
     @extend %btn
-    padding: 12px 20px
+    @include padding(12px 20px)
     color: $white
     border-radius: $border-radius-default
     font:
@@ -47,9 +47,9 @@ button
 
             + label
                 @include linear-gradient(darken($white, 1%), darken($white, 3%))
+                @include padding(8px 25px)
+                @include margin(0)
                 display: inline-block
-                margin: 0
-                padding: 8px 25px
                 float: left
                 width: auto
                 text-align: center
@@ -76,8 +76,8 @@ button
         @extend %btn
         @include breakpoint(tablet)
             display: inline-block !important // I need to get rid of this nonsense
-            margin: 10px
-            padding: 8px 16px
+            @include margin(10px)
+            @include padding(8px 16px)
             float: right
             color: $white !important
             background: $base-color
@@ -86,18 +86,16 @@ button
     &-responsive-nav-close
         display: none
         @include breakpoint(tablet)
+            @include padding(null 10px null 10px)
             position: relative
             display: inline-block !important // I need to get rid of this nonsense
             float: right
-            padding-right: 10px
-            padding-top: 10px
             cursor: pointer
             z-index: 9999
 
             svg
+                @include size(14px 14px)
                 display: inline-block
-                width: 14px
-                height: 14px
 
                 path
                     fill: lighten($dark-grey, 20%)

@@ -5,19 +5,19 @@
     border-radius: $border-radius-default
     display: block
     @include breakpoint(mobile)
-        margin-bottom: $margin-bottom-default
+        @include margin(null null $margin-bottom-default null)
 
     .btn:last-of-type
-        margin-bottom: 0px
+        @include margin(null null 0px null)
 
     &-header
-        padding: 15px 20px
+        @include padding(15px 20px)
         overflow: auto
         color: $header-grey
         border: 1px solid $border-grey
 
         &.small
-            padding: 14px 20px
+            @include padding(14px 20px)
 
         &-success
             color: $white
@@ -38,25 +38,25 @@
             border-bottom: 1px solid $border-grey
 
     &-body
-        padding: $padding-default
+        @include padding($padding-default)
         overflow: auto
         border-left: 1px solid $border-grey
         border-right: 1px solid $border-grey
         border-bottom: 1px solid $border-grey
 
         p
-            margin: 0 0 10px 0
+            @include margin(0 0 10px 0)
             font:
                 size: $font-size-14
 
     &-footer
+        @include margin(0)
+        @include padding(10px)
         overflow: auto
-        margin: 0
-        padding: 10px
         background: $background-grey
         border-left: 1px solid $border-grey
         border-right: 1px solid $border-grey
         border-bottom: 1px solid $border-grey
 
         .btn
-            margin-bottom: 0px
+            @include margin(null null 0px null)
