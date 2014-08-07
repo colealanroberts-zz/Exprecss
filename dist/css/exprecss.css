@@ -1683,69 +1683,75 @@ html, body {
 
 @-webkit-keyframes modal-open {
   0% {
-    -webkit-transform: scale3d(0.1, 0.1, 1);
+    -webkit-transform: scale3d(0.1, 0.1, 1) translate(-50%, -50%);
+    opacity: 0;
   }
 
   55% {
-    -webkit-transform: scale3d(1.01, 1.01, 1);
+    -webkit-transform: scale3d(1.01, 1.01, 1) translate(-50%, -50%);
+    opacity: 1;
   }
 
   75% {
-    -webkit-transform: scale3d(0.99, 0.99, 1);
+    -webkit-transform: scale3d(0.99, 0.99, 1) translate(-50%, -50%);
   }
 
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1) translate(-50%, -50%);
   }
 }
 @-moz-keyframes modal-open {
   0% {
-    -moz-transform: scale3d(0.1, 0.1, 1);
+    -moz-transform: scale3d(0.1, 0.1, 1) translate(-50%, -50%);
+    opacity: 0;
   }
 
   55% {
-    -moz-transform: scale3d(1.01, 1.01, 1);
+    -moz-transform: scale3d(1.01, 1.01, 1) translate(-50%, -50%);
+    opacity: 1;
   }
 
   75% {
-    -moz-transform: scale3d(0.99, 0.99, 1);
+    -moz-transform: scale3d(0.99, 0.99, 1) translate(-50%, -50%);
   }
 
   100% {
-    -moz-transform: scale3d(1, 1, 1);
+    -moz-transform: scale3d(1, 1, 1) translate(-50%, -50%);
   }
 }
 @keyframes modal-open {
   0% {
-    -webkit-transform: scale3d(0.1, 0.1, 1);
-    -moz-transform: scale3d(0.1, 0.1, 1);
-    -ms-transform: scale3d(0.1, 0.1, 1);
-    -o-transform: scale3d(0.1, 0.1, 1);
-    transform: scale3d(0.1, 0.1, 1);
+    -webkit-transform: scale3d(0.1, 0.1, 1) translate(-50%, -50%);
+    -moz-transform: scale3d(0.1, 0.1, 1) translate(-50%, -50%);
+    -ms-transform: scale3d(0.1, 0.1, 1) translate(-50%, -50%);
+    -o-transform: scale3d(0.1, 0.1, 1) translate(-50%, -50%);
+    transform: scale3d(0.1, 0.1, 1) translate(-50%, -50%);
+    opacity: 0;
   }
 
   55% {
-    -webkit-transform: scale3d(1.01, 1.01, 1);
-    -moz-transform: scale3d(1.01, 1.01, 1);
-    -ms-transform: scale3d(1.01, 1.01, 1);
-    -o-transform: scale3d(1.01, 1.01, 1);
-    transform: scale3d(1.01, 1.01, 1);
+    -webkit-transform: scale3d(1.01, 1.01, 1) translate(-50%, -50%);
+    -moz-transform: scale3d(1.01, 1.01, 1) translate(-50%, -50%);
+    -ms-transform: scale3d(1.01, 1.01, 1) translate(-50%, -50%);
+    -o-transform: scale3d(1.01, 1.01, 1) translate(-50%, -50%);
+    transform: scale3d(1.01, 1.01, 1) translate(-50%, -50%);
+    opacity: 1;
   }
 
   75% {
-    -webkit-transform: scale3d(0.99, 0.99, 1);
-    -moz-transform: scale3d(0.99, 0.99, 1);
-    -ms-transform: scale3d(0.99, 0.99, 1);
-    -o-transform: scale3d(0.99, 0.99, 1);
-    transform: scale3d(0.99, 0.99, 1);
+    -webkit-transform: scale3d(0.99, 0.99, 1) translate(-50%, -50%);
+    -moz-transform: scale3d(0.99, 0.99, 1) translate(-50%, -50%);
+    -ms-transform: scale3d(0.99, 0.99, 1) translate(-50%, -50%);
+    -o-transform: scale3d(0.99, 0.99, 1) translate(-50%, -50%);
+    transform: scale3d(0.99, 0.99, 1) translate(-50%, -50%);
   }
 
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    -moz-transform: scale3d(1, 1, 1);
-    -ms-transform: scale3d(1, 1, 1);
-    -o-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1) translate(-50%, -50%);
+    -moz-transform: scale3d(1, 1, 1) translate(-50%, -50%);
+    -ms-transform: scale3d(1, 1, 1) translate(-50%, -50%);
+    -o-transform: scale3d(1, 1, 1) translate(-50%, -50%);
+    transform: scale3d(1, 1, 1) translate(-50%, -50%);
   }
 }
 @-webkit-keyframes modal-hide {
@@ -2790,19 +2796,28 @@ button:focus {
 }
 
 .modal {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  z-index: 2020;
   position: fixed;
-  overflow-x: hidden;
-  top: 35%;
+  z-index: 10000;
+  top: 50%;
   left: 50%;
-  margin-left: -275px;
-  min-width: 275px;
+  overflow-x: hidden;
   height: auto;
   width: 550px;
   background: white;
   border-radius: 2px;
+  border: 1px solid #e8e8e8;
 }
 @media screen and (max-width: 480px) {
   .modal {
@@ -2821,16 +2836,16 @@ button:focus {
 .modal-header.small {
   padding: 14px 20px;
 }
-.modal-header-success {
+.modal-header-success, .modal-header-info, .modal-header-important {
   color: white;
+}
+.modal-header-success {
   background: #6bad42;
 }
 .modal-header-info {
-  color: white;
   background: #3498db;
 }
 .modal-header-important {
-  color: white;
   background: #d0021b;
 }
 .modal-header-border-bottom {
@@ -2839,6 +2854,9 @@ button:focus {
 .modal-body {
   overflow: auto;
   padding: 20px;
+  overflow: auto;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
 }
 .modal p {
   margin: 0 0 10px 0;
@@ -2847,10 +2865,19 @@ button:focus {
 .modal-footer {
   overflow: auto;
   margin: 0;
-  padding: 20px;
+  padding: 10px;
+  background: #f8f8f8;
 }
 .modal-footer .btn {
   margin-bottom: 0px;
+}
+@media screen and (max-width: 480px) {
+  .modal-footer .btn {
+    margin-bottom: 10px;
+  }
+  .modal-footer .btn:last-of-type {
+    margin-bottom: 0;
+  }
 }
 .modal-overlay {
   position: fixed;
@@ -2974,6 +3001,7 @@ button:focus {
   background: white;
   border-radius: 2px;
   display: block;
+  border: 1px solid #e8e8e8;
 }
 @media screen and (max-width: 480px) {
   .widget {
@@ -2987,24 +3015,22 @@ button:focus {
   padding: 15px 20px;
   overflow: auto;
   color: #6a7781;
-  border: 1px solid #e8e8e8;
 }
 .widget-header.small {
   padding: 14px 20px;
 }
-.widget-header-success {
+.widget-header-success, .widget-header-info, .widget-header-important {
   color: white;
-  border: none;
+  border: 0 !important;
+}
+.widget-header-success {
   background: #6bad42;
 }
 .widget-header-info {
-  color: white;
-  border: none;
   background: #2e8aab;
+  border: 1px solid #2e8aab;
 }
 .widget-header-important {
-  color: white;
-  border: none;
   background: #d0021b;
 }
 .widget-header-border-bottom {
@@ -3013,8 +3039,7 @@ button:focus {
 .widget-body {
   padding: 20px;
   overflow: auto;
-  border-left: 1px solid #e8e8e8;
-  border-right: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
 }
 .widget-body p {
@@ -3026,9 +3051,6 @@ button:focus {
   margin: 0;
   padding: 10px;
   background: #f8f8f8;
-  border-left: 1px solid #e8e8e8;
-  border-right: 1px solid #e8e8e8;
-  border-bottom: 1px solid #e8e8e8;
 }
 .widget-footer .btn {
   margin-bottom: 0px;

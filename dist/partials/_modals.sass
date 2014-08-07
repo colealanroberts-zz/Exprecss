@@ -1,18 +1,19 @@
 .modal
+    @include transform(translate(-50%, -50%))
+    @include transform-origin(0 0)
     @include backface-visibility(hidden)
     @extend %box-shadow-default
     @extend %force-hardware-accel
-    z-index: $z-index-modal
     position: fixed
-    overflow-x: hidden
-    top: 35%
+    z-index: $z-index-alpha + 1
+    top: 50%
     left: 50%
-    margin-left: -($width-modal / 2)
-    min-width: $width-modal / 2
+    overflow-x: hidden
     height: auto
     width: $width-modal
     background: $white
     border-radius: $border-radius-default
+    border: 1px solid $border-grey
     @include breakpoint(mobile)
         width: 100%
 
@@ -29,16 +30,16 @@
         &.small
             padding: 14px 20px
 
-        &-success
+        &-success, &-info, &-important
             color: $white
+
+        &-success
             background: $brand-green
 
         &-info
-            color: $white
             background: $exprecss-blue
 
         &-important
-            color: $white
             background: $brand-red
 
         &-border-bottom
@@ -47,7 +48,9 @@
     &-body
         overflow: auto
         padding: $padding-default
-
+        overflow: auto
+        border-top: 1px solid $border-grey
+        border-bottom: 1px solid $border-grey
     p
         margin: 0 0 10px 0
         font:
@@ -56,10 +59,18 @@
     &-footer
         overflow: auto
         margin: 0
-        padding: 20px
+        padding: 10px
+        background: $background-grey
 
         .btn
             margin-bottom: 0px
+
+        @include breakpoint(mobile)
+            .btn
+                margin-bottom: 10px
+
+                &:last-of-type
+                    margin-bottom: 0
 
     &-overlay
         @extend %force-hardware-accel
