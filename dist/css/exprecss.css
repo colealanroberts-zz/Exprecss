@@ -2817,7 +2817,6 @@ button:focus {
   width: 550px;
   background: white;
   border-radius: 2px;
-  border: 1px solid #e8e8e8;
 }
 @media screen and (max-width: 480px) {
   .modal {
@@ -2831,6 +2830,10 @@ button:focus {
   color: #6a7781;
   letter-spacing: 1px;
   text-transform: uppercase;
+  border-top: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px dotted #e8e8e8;
+  border-left: 1px solid #e8e8e8;
   font-size: 0.875em;
 }
 .modal-header.small {
@@ -2855,7 +2858,8 @@ button:focus {
   overflow: auto;
   padding: 20px;
   overflow: auto;
-  border-top: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
 }
 .modal p {
@@ -2867,6 +2871,9 @@ button:focus {
   margin: 0;
   padding: 10px;
   background: #f8f8f8;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
 }
 .modal-footer .btn {
   margin-bottom: 0px;
@@ -3001,7 +3008,6 @@ button:focus {
   background: white;
   border-radius: 2px;
   display: block;
-  border: 1px solid #e8e8e8;
 }
 @media screen and (max-width: 480px) {
   .widget {
@@ -3015,6 +3021,10 @@ button:focus {
   padding: 15px 20px;
   overflow: auto;
   color: #6a7781;
+  border-top: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px dotted #e8e8e8;
+  border-left: 1px solid #e8e8e8;
 }
 .widget-header.small {
   padding: 14px 20px;
@@ -3039,7 +3049,8 @@ button:focus {
 .widget-body {
   padding: 20px;
   overflow: auto;
-  border-top: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
 }
 .widget-body p {
@@ -3051,6 +3062,9 @@ button:focus {
   margin: 0;
   padding: 10px;
   background: #f8f8f8;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
 }
 .widget-footer .btn {
   margin-bottom: 0px;

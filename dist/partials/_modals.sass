@@ -13,7 +13,6 @@
     width: $width-modal
     background: $white
     border-radius: $border-radius-default
-    border: 1px solid $border-grey
     @include breakpoint(mobile)
         width: 100%
 
@@ -24,6 +23,10 @@
         color: $header-grey
         letter-spacing: 1px
         text-transform: uppercase
+        border-top: 1px solid $border-grey
+        border-right: 1px solid $border-grey
+        border-bottom: 1px dotted $border-grey
+        border-left: 1px solid $border-grey
         font:
             size: $font-size-14
 
@@ -49,7 +52,8 @@
         overflow: auto
         padding: $padding-default
         overflow: auto
-        border-top: 1px solid $border-grey
+        border-left: 1px solid $border-grey
+        border-right: 1px solid $border-grey
         border-bottom: 1px solid $border-grey
     p
         margin: 0 0 10px 0
@@ -61,6 +65,9 @@
         margin: 0
         padding: 10px
         background: $background-grey
+        border-left: 1px solid $border-grey
+        border-right: 1px solid $border-grey
+        border-bottom: 1px solid $border-grey
 
         .btn
             margin-bottom: 0px

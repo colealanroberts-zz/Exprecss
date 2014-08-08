@@ -4,7 +4,6 @@
     background: $white
     border-radius: $border-radius-default
     display: block
-    border: 1px solid $border-grey
     @include breakpoint(mobile)
         margin-bottom: $margin-bottom-default
 
@@ -15,6 +14,10 @@
         padding: 15px 20px
         overflow: auto
         color: $header-grey
+        border-top: 1px solid $border-grey
+        border-right: 1px solid $border-grey
+        border-bottom: 1px dotted $border-grey
+        border-left: 1px solid $border-grey
 
         &.small
             padding: 14px 20px
@@ -39,7 +42,8 @@
     &-body
         padding: $padding-default
         overflow: auto
-        border-top: 1px solid $border-grey
+        border-left: 1px solid $border-grey
+        border-right: 1px solid $border-grey
         border-bottom: 1px solid $border-grey
 
         p
@@ -52,6 +56,9 @@
         margin: 0
         padding: 10px
         background: $background-grey
+        border-left: 1px solid $border-grey
+        border-right: 1px solid $border-grey
+        border-bottom: 1px solid $border-grey
 
         .btn
             margin-bottom: 0px
