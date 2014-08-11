@@ -16,7 +16,6 @@
         color: $header-grey
         border-top: 1px solid $border-grey
         border-right: 1px solid $border-grey
-        border-bottom: 1px dotted $border-grey
         border-left: 1px solid $border-grey
 
         &.small
@@ -42,9 +41,14 @@
     &-body
         padding: $padding-default
         overflow: auto
+        border-top: 1px dotted $border-grey
         border-left: 1px solid $border-grey
         border-right: 1px solid $border-grey
-        border-bottom: 1px solid $border-grey
+        border-bottom: 1px dotted $border-grey
+
+        &.border-solid
+            border-top: 1px solid $border-grey
+            border-bottom: 1px solid $border-grey
 
         p
             margin: 0 0 10px 0

@@ -26,43 +26,31 @@
 
 .input-append
     position: relative
-    display: inline-block
-    overflow: auto
+    display: block
     width: 100%
-    height: $height-input-default + 1px
+    height: $height-input-default
 
-    &:after
-        @include triangle(10px, gray, down)
-        position: absolute
-        display: inline-block
-        content: ''
-        z-index: $z-index-alpha
-        top: 17px
-        right: 5px
-        pointer-events: none
-        margin: 0 10px
+    div[class^='col-']
+        margin-right: 0
 
-    .input-default
-        height: 38px
+    input
+        border-top: 1px solid $border-grey
+        border-right: 0
+        border-bottom: 1px solid $border-grey
+        border-left: 1px solid $border-grey
+        border-radius: $border-radius-default 0 0 $border-radius-default
 
-    .select, .input-default
-        position: absolute
-        margin-bottom: 0
+        &:focus, &:active
+            border-right: 1px solid $exprecss-blue !important
+
+    .dropdown
         height: $height-input-default
 
-    .select
-        display: inline-block
-        z-index: $z-index-alpha - 1
-        right: 0
-        top: 1px
-        right: 1px
-        width: auto
-        height: $height-input-default - 2px
-        padding: 0 35px 0 20px
-        border: 0
-        cursor: pointer
-        border-left: 1px solid $border-grey
-        border-radius: 0 $border-radius-default $border-radius-default 0
+        .btn
+            position: relative
+            padding-top: 10px
+            padding-bottom: 10px
+            height: 100%
+            border-radius: 0 $border-radius-default $border-radius-default 0
 
-        &:focus
-            outline: 0 none
+

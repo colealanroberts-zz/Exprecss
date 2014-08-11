@@ -18,7 +18,11 @@
     display: inline-block
 
     &-menu
+        @include transform(translateX(-50%))
+        @include appearance(none)
         position: absolute
+        left: 50%
+        outline: 0 none
         display: block
         margin: 0
         padding: 0
@@ -28,16 +32,20 @@
         z-index: $z-index-dropdown-menu
         visibility: hidden
         border-radius: $border-radius-default
+        background: $white
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1),0 0 0 1px rgba(0,0,0,0.06)
 
         &:before
-            @include triangle(18px, $white, up)
+            @include image-retina('../img/dropdown-triangle', 'png', 13px, $height-dropdown-triangle)
             @include transform(translateX(-50%))
-            left: 50%
-            top: -9px
             position: absolute
-            content: ''
+            z-index: $z-index-alpha
             display: block
+            content: ''
+            top: -($height-dropdown-triangle)
+            left: 50%
+            width: 13px
+            height: $height-dropdown-triangle
 
         li
             display: block
@@ -47,17 +55,19 @@
                 border-bottom: none
 
             a
+                @include transition(all, linear, $transition-duration-default)
                 display: block
                 padding: 10px
 
+                &:hover
+                    background: darken($white, 3%)
+
         &-inactive
             @include transition(all, $ease-in-out-back, $transition-duration-default)
-            @include transform(scale(0.9))
             @include opacity(0)
 
         &-active
             @include transition(all, $ease-in-out-back, $transition-duration-default)
-            @include transform(scale(1.0))
             @include opacity(1, $white)
             display: block
             visibility: visible

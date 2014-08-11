@@ -36,6 +36,28 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dist\/img\/dropdown-triangle.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1067,
+		"inputAbbreviatedPath": "\/dist\/img\/dropdown-triangle.png",
+		"outputAbbreviatedPath": "\/dist\/img\/dropdown-triangle.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/img\/dropdown-triangle@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1300,
+		"inputAbbreviatedPath": "\/dist\/img\/dropdown-triangle@2x.png",
+		"outputAbbreviatedPath": "\/dist\/img\/dropdown-triangle@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dist\/js\/exprecss.js": {
 		"fileType": 64,
 		"ignore": 0,
