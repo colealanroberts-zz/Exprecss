@@ -46,8 +46,11 @@
         border-right: 1px solid $border-grey
         border-bottom: 1px dotted $border-grey
 
-        &.border-solid
+        &.border-no-header
             border-top: 1px solid $border-grey
+            border-bottom: 1px solid $border-grey
+
+        &.border-header
             border-bottom: 1px solid $border-grey
 
         p
@@ -66,3 +69,10 @@
 
         .btn
             margin-bottom: 0px
+            @include breakpoint(mobile)
+                margin-bottom: 10px
+
+    &-header, &-body, &-footer
+        @include breakpoint(mobile)
+            border-left: 0
+            border-right: 0

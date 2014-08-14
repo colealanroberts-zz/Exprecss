@@ -2320,7 +2320,7 @@ img {
 
 .checkbox {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   height: 20px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2385,7 +2385,7 @@ img {
   position: relative;
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   width: 80px;
   height: 28px;
   cursor: pointer;
@@ -2458,7 +2458,7 @@ img {
   width: 20px;
   height: 20px;
   background: white;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border: 1px solid #e8e8e8;
 }
 .radio input[type="radio"]:checked {
@@ -2498,7 +2498,7 @@ select::-ms-expand {
   height: 39px;
   background: white;
   border: 1px solid #e8e8e8;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .select select {
   background-color: #fcfcfc;
@@ -2608,7 +2608,7 @@ select::-ms-expand {
   background: #fcfcfc;
   border: 1px solid #e8e8e8;
   border-radius: 2px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 0.8125em;
 }
 .input-default:focus, .textarea-default:focus {
@@ -2646,7 +2646,7 @@ select::-ms-expand {
 }
 .input-append .dropdown .btn {
   position: relative;
-  padding-top: 10px;
+  padding-top: 9px;
   padding-bottom: 10px;
   height: 100%;
   border-radius: 0 2px 2px 0;
@@ -2700,7 +2700,7 @@ button:focus {
 }
 @media screen and (max-width: 480px) {
   .btn {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     width: 100%;
     float: none;
   }
@@ -2863,8 +2863,11 @@ button:focus {
   border-right: 1px solid #e8e8e8;
   border-bottom: 1px dotted #e8e8e8;
 }
-.modal-body.border-solid {
+.modal-body.border-no-header {
   border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+.modal-body.border-header {
   border-bottom: 1px solid #e8e8e8;
 }
 .modal p {
@@ -2891,6 +2894,12 @@ button:focus {
     margin-bottom: 0;
   }
 }
+@media screen and (max-width: 480px) {
+  .modal-header, .modal-body, .modal-footer {
+    border-left: 0;
+    border-right: 0;
+  }
+}
 .modal-overlay {
   position: fixed;
   z-index: 9999;
@@ -2912,7 +2921,7 @@ button:focus {
 }
 @media screen and (max-width: 480px) {
   .card {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 }
 .card .btn:last-of-type {
@@ -3016,7 +3025,7 @@ button:focus {
 }
 @media screen and (max-width: 480px) {
   .widget {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 }
 .widget .btn:last-of-type {
@@ -3058,8 +3067,11 @@ button:focus {
   border-right: 1px solid #e8e8e8;
   border-bottom: 1px dotted #e8e8e8;
 }
-.widget-body.border-solid {
+.widget-body.border-no-header {
   border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+.widget-body.border-header {
   border-bottom: 1px solid #e8e8e8;
 }
 .widget-body p {
@@ -3077,6 +3089,17 @@ button:focus {
 }
 .widget-footer .btn {
   margin-bottom: 0px;
+}
+@media screen and (max-width: 480px) {
+  .widget-footer .btn {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .widget-header, .widget-body, .widget-footer {
+    border-left: 0;
+    border-right: 0;
+  }
 }
 
 .alert {
