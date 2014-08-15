@@ -3017,8 +3017,6 @@ button:focus {
 }
 
 .widget {
-  overflow-x: hidden;
-  overflow-y: auto;
   background: white;
   border-radius: 2px;
   display: block;
@@ -3061,7 +3059,6 @@ button:focus {
 }
 .widget-body {
   padding: 20px;
-  overflow: auto;
   border-top: 1px dotted #e8e8e8;
   border-left: 1px solid #e8e8e8;
   border-right: 1px solid #e8e8e8;
