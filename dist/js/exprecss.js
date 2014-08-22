@@ -1,15 +1,15 @@
 function responsiveNav() {
-    $('body').on('click', '.btn-responsive-nav, .btn-responsive-nav-close', function(e) {
-        $('.navbar ul').toggleClass('nav-close nav-open');
-        e.preventDefault();
-    });
+	$('body').on('click', '.btn-responsive-nav, .btn-responsive-nav-close', function(e) {
+		$('.navbar ul').toggleClass('nav-close nav-open');
+		e.preventDefault();
+	});
 }
 
 function dropdownMenu() {
-    $('.dropdown-menu').addClass('dropdown-menu-inactive');
-    $('body').on('click blur', '.btn-dropdown', function(e) {
-        var that = $(this),
-            menu = $('#' + that.data('for'));
+	$('.dropdown-menu').addClass('dropdown-menu-inactive');
+	$('body').on('click blur', '.btn-dropdown', function(e) {
+		var that = $(this),
+			menu = $('#' + that.data('for'));
 
 		if (e.type === 'click') {
 			e.preventDefault();
@@ -19,17 +19,17 @@ function dropdownMenu() {
 			menu.removeClass('dropdown-menu-active');
 			menu.addClass('dropdown-menu-inactive');
 		}
-    });
+	});
 }
 
-$(document).ready(function() {
-    'use strict';
+if (typeof $ !== 'undefined') $(document).ready(function() {
+	'use strict';
 
-    // Dropdown
-    dropdownMenu();
+	// Dropdown
+	dropdownMenu();
 
-    // Responsive Nav
-    responsiveNav();
+	// Responsive Nav
+	responsiveNav();
 });
 
 (function() {
@@ -51,9 +51,9 @@ $(document).ready(function() {
 		};
 	});
 
-	app.service('$expModal', function($compile, $rootScope) {
+	app.service('$expModal', function($compile, $rootScope, $document) {
 		var scope = $rootScope.$new(true),
-			$body = angular.element('body'),
+			$body = angular.element($document[0].body),
 			overlay = $compile('<div class="modal-overlay" ng-if="showOverlay" ng-click="close()"></div>')(scope, function(elem) {
 				$body.append(elem);
 			}),
