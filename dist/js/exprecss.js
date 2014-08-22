@@ -35,7 +35,7 @@ $(document).ready(function() {
 (function() {
 	'use strict';
 
-	var app = angular.module('exprecss', ['ngAnimate']).run(function($rootScope, $expConfirm) {
+	var app = angular.module('exprecss', []).run(function($rootScope, $expConfirm) {
 		$rootScope.errorConfirm = function() {
 			$expConfirm('Error', 'Something real bad just now!', 'Freak out', 'Ignore').then(function() {
 				alert('You freaked out');
