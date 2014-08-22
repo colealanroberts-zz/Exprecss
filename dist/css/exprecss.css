@@ -2111,6 +2111,10 @@ img {
   font-size: 2.25em;
 }
 
+.inline-block-reset {
+  font-size: 0;
+}
+
 .navbar {
   width: 100%;
   position: relative;
@@ -3058,8 +3062,8 @@ button:focus {
     margin-bottom: 10px;
   }
 }
-.widget .btn:last-of-type {
-  margin-bottom: 0px;
+.widget .btn:not(.btn-dropdown):last-of-type {
+  margin-bottom: 0;
 }
 .widget-header {
   padding: 15px 20px;
