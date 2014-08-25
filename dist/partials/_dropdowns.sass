@@ -1,11 +1,11 @@
 .caret
+    position: relative
     display: inline-block
-    margin-left: $margin-left-caret
     content: ''
     top: -2px
-    position: relative
     width: 10px
     height: 10px
+    margin-left: $margin-left-caret
 
     &-dark
         @include triangle(10px, $dark-grey, down)
@@ -21,9 +21,9 @@
         @include transform(translateX(-50%))
         @include appearance(none)
         position: absolute
+        display: block
         left: 50%
         outline: 0 none
-        display: block
         margin: 0
         padding: 0
         width: auto
@@ -38,12 +38,10 @@
         &:before
             @include image-retina('../img/dropdown-triangle', 'png', 13px, $height-dropdown-triangle)
             @include transform(translateX(-50%))
-            position: absolute
+            @include position(absolute, -($height-dropdown-triangle) null null 50%)
             z-index: $z-index-alpha
             display: block
             content: ''
-            top: -($height-dropdown-triangle)
-            left: 50%
             width: 13px
             height: $height-dropdown-triangle
 

@@ -1,6 +1,8 @@
+$version: 'v0.1.29'
+
 /*!
- * Exprecss v0.1.24 (http://exprecss.com)
- * Copyright 2014 Cole Roberts - @colealan
+ * Exprecss #{$version} (http://exprecss.com)
+ * Copyright 2014 Cole Roberts & Jacob Biggs
  * Licensed under MIT
  */
 
@@ -8,7 +10,7 @@
 @import "../vendor/bourbon/dist/bourbon/"
 @import "../vendor/neat/app/assets/stylesheets/neat"
 
-// Import Modules
+// Import Modules (Required)
 @import "modules/_variables"
 @import "modules/_extends"
 @import "modules/_mixins"
@@ -16,7 +18,7 @@
 @import "modules/_fonts"
 @import "modules/_animations"
 
-// Import Partials
+// Import Partials (Optional)
 @import "partials/_structure"
 @import "partials/scaffolding"
 @import "partials/_helpers"
@@ -30,7 +32,6 @@
 @import "partials/_inputs"
 @import "partials/_labels"
 @import "partials/_buttons"
-@import "partials/_hero-unit"
 @import "partials/_modals"
 @import "partials/_cards"
 @import "partials/_widgets"

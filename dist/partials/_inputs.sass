@@ -15,8 +15,7 @@
     border: 1px solid $border-grey
     border-radius: $border-radius-default
     margin-bottom: $margin-bottom-default
-    font:
-        size: em(13)
+    font-size: em(13)
 
     &:focus
         @include appearance(none)
@@ -47,9 +46,8 @@
         height: $height-input-default
 
         .btn
+            @include padding(9px null 10px null)
             position: relative
-            padding-top: 9px
-            padding-bottom: 10px
             height: 100%
             border-radius: 0 $border-radius-default $border-radius-default 0
 

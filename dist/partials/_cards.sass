@@ -34,11 +34,10 @@
 
         &:after
             @include linear-gradient(transparent, rgba(black, 0.8))
+            @include position(absolute, null null 0 0)
             position: absolute
             display: block
             content: ''
-            left: 0
-            bottom: 0
             width: 100%
             height: 60%
 
@@ -65,9 +64,9 @@
 
     &-info
         @include transition(all, $ease-out-cubic, 350ms)
+        @include margin(0 15px)
+        @include opacity(0)
         position: absolute
-        margin: 0 15px
-        opacity: 0
         z-index: $z-index-card-title
         bottom: -20px
         color: darken($white, 10%)

@@ -17,19 +17,18 @@ select::-ms-expand
         @include box-sizing(border-box)
         @include appearance(none)
         @extend %box-shadow-default
-        padding: 10px
         position: relative
         display: inline-block
+        width: 100%
+        height: 100%
+        padding: 10px
         cursor: pointer
         color: $dark-grey
-        height: 100%
-        width: 100%
+        font-size: $font-size-12
         overflow: hidden
         outline: 0px none
         border: none
         border-radius: $border-radius-default
-        font:
-            size: $font-size-12
 
         &.success
             border: 1px solid $brand-green
@@ -66,10 +65,7 @@ select::-ms-expand
                 z-index: 5
 
             &:before
-                position: absolute
-                top: 0
-                right: 1rem
-                bottom: 0
+                @include position(absolute, 0 1rem 0 null)
                 z-index: 2
                 content: ''
                 display: block
@@ -78,8 +74,6 @@ select::-ms-expand
 
     &:after
         @include triangle(10px, gray, down)
+        @include position(absolute, 17px 20px null null)
         display: inline-block
         content: ''
-        top: 17px
-        right: 20px
-        position: absolute

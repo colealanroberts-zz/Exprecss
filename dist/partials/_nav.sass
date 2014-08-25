@@ -8,19 +8,17 @@
         overflow: initial
 
     ul
+        @include margin(0 auto)
         display: block
-        margin: 0 auto
         padding: 10px
         max-width: 68em
         overflow-x: auto
         list-style-type: none
         @include breakpoint(tablet)
-            @include linear-gradient(darken(#313437, 10%), darken(#313437, 10%))
-            position: fixed
+            @include linear-gradient(darken(#313437, 10%), darken(#313437, 10%)) // These should have vars
+            @include position(fixed, 0 0 null null)
             z-index: $z-index-alpha
             padding-top: 15px
-            top: 0
-            right: 0
             min-height: 100%
             width: $width-navbar-responsive
 
@@ -32,12 +30,12 @@
                 size: $font-size-14
 
         li
+            @include padding(0 15px)
             margin: 0
-            padding: 0 15px
             display: inline
             @include breakpoint(tablet)
+                @include padding(5px 10px)
                 display: block
-                padding: 5px 10px
 
             a
                 text-transform: uppercase
@@ -59,9 +57,7 @@
 
     &-fixed
         @include backface-visibility(hidden)
-        position: fixed
-        top: 0
-        left: 0
+        @include position(fixed, 0 null null 0)
         overflow: initial
 
         ul
@@ -69,6 +65,4 @@
             padding-bottom: 30px
 
     &-absolute
-        position: absolute
-        top: 0
-        left: 0
+        @include position(absolute, 0 null null 0)

@@ -1,5 +1,6 @@
 button
     -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: antialiased
     -moz-font-smoothing: antialiased
     -o-font-smoothing: antialised
     font-smoothing: antialiased
@@ -10,12 +11,11 @@ button
         outline: 0 none
 
 .btn
+    @include padding(12px 20px)
     @extend %btn
-    padding: 12px 20px
     color: $white
     border-radius: $border-radius-default
-    font:
-        size: $font-size-14
+    font-size: $font-size-14
 
     @include breakpoint(mobile)
         margin-bottom: 10px
@@ -47,9 +47,9 @@ button
 
             + label
                 @include linear-gradient(darken($white, 1%), darken($white, 3%))
+                @include padding(8px 25px)
                 display: inline-block
                 margin: 0
-                padding: 8px 25px
                 float: left
                 width: auto
                 text-align: center
@@ -78,9 +78,9 @@ button
         display: none
         @extend %btn
         @include breakpoint(tablet)
+            @include padding(8px 16px)
+            @include margin(10px)
             display: inline-block !important // I need to get rid of this nonsense
-            margin: 10px
-            padding: 8px 16px
             float: right
             color: $white !important
             background: $base-color
@@ -90,12 +90,12 @@ button
         display: none
         @include breakpoint(tablet)
             position: relative
+            z-index: 9999
             display: inline-block !important // I need to get rid of this nonsense
             float: right
             padding-right: 10px
             padding-top: 10px
             cursor: pointer
-            z-index: 9999
 
             svg
                 display: inline-block

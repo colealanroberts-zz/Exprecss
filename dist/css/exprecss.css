@@ -1,6 +1,6 @@
 /*!
- * Exprecss v0.1.24 (http://exprecss.com)
- * Copyright 2014 Cole Roberts - @colealan
+ * Exprecss v0.1.29 (http://exprecss.com)
+ * Copyright 2014 Cole Roberts & Jacob Biggs
  * Licensed under MIT
  */
 * {
@@ -1917,11 +1917,11 @@ hr {
   background-color: #f0f0f0;
   background-image: -webkit-linear-gradient(left, #f0f0f0 10%, #e6e6e6, #f0f0f0 90%);
   background-image: linear-gradient(to right,#f0f0f0 10%, #e6e6e6, #f0f0f0 90%);
-  margin-bottom: 10px;
   display: block;
-  border: 0;
   height: 1px;
   width: 100%;
+  border: 0 none;
+  margin-bottom: 10px;
 }
 
 a {
@@ -2003,14 +2003,6 @@ img {
 }
 .remove-border {
   border: 0 !important;
-}
-
-.no-blur {
-  -webkit-transform: preserve3d;
-  -moz-transform: preserve3d;
-  -ms-transform: preserve3d;
-  -o-transform: preserve3d;
-  transform: preserve3d;
 }
 
 .full-width {
@@ -2128,8 +2120,8 @@ img {
   }
 }
 .navbar ul {
-  display: block;
   margin: 0 auto;
+  display: block;
   padding: 10px;
   max-width: 68em;
   overflow-x: auto;
@@ -2141,10 +2133,10 @@ img {
     background-image: -webkit-linear-gradient(#191a1c, #191a1c);
     background-image: linear-gradient(#191a1c, #191a1c);
     position: fixed;
-    z-index: 9999;
-    padding-top: 15px;
     top: 0;
     right: 0;
+    z-index: 9999;
+    padding-top: 15px;
     min-height: 100%;
     width: 225px;
   }
@@ -2156,14 +2148,14 @@ img {
   font-size: 0.875em;
 }
 .navbar ul li {
-  margin: 0;
   padding: 0 15px;
+  margin: 0;
   display: inline;
 }
 @media screen and (max-width: 800px) {
   .navbar ul li {
-    display: block;
     padding: 5px 10px;
+    display: block;
   }
 }
 .navbar ul li a {
@@ -2210,8 +2202,8 @@ img {
   display: block;
 }
 .footer ul {
-  margin: 0;
   padding: 20px 0;
+  margin: 0;
   list-style-type: none;
 }
 .footer ul li {
@@ -2235,13 +2227,13 @@ img {
 }
 
 .caret {
+  position: relative;
   display: inline-block;
-  margin-left: 15px;
   content: "";
   top: -2px;
-  position: relative;
   width: 10px;
   height: 10px;
+  margin-left: 15px;
 }
 .caret-dark {
   height: 0;
@@ -2274,9 +2266,9 @@ img {
   -o-appearance: none;
   appearance: none;
   position: absolute;
+  display: block;
   left: 50%;
   outline: 0 none;
-  display: block;
   margin: 0;
   padding: 0;
   width: auto;
@@ -2296,11 +2288,11 @@ img {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
   position: absolute;
+  top: -8px;
+  left: 50%;
   z-index: 9999;
   display: block;
   content: "";
-  top: -8px;
-  left: 50%;
   width: 13px;
   height: 8px;
 }
@@ -2356,23 +2348,23 @@ img {
 
 .checkbox {
   position: relative;
-  margin-bottom: 10px;
   height: 20px;
+  margin-bottom: 10px;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
 }
 .checkbox-sidelabel {
   position: relative;
-  margin-left: 30px;
   top: 4px;
+  margin-left: 30px;
 }
 .checkbox-input {
   position: absolute;
-  padding: 10px;
   top: 0;
   width: 22px;
   height: 22px;
+  padding: 10px;
   cursor: pointer;
   background: #fcfcfc;
   border: 1px solid #e8e8e8;
@@ -2388,12 +2380,18 @@ img {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   position: absolute;
+  top: 5px;
+  left: 4px;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -khtml-opacity: 0;
+  -moz-opacity: 0;
   opacity: 0;
+  background: transparent;
+  position: absolute;
   content: "";
   width: 9px;
   height: 5px;
-  top: 5px;
-  left: 4px;
   border: 3px solid #3498db;
   border-top: none;
   border-right: none;
@@ -2417,10 +2415,10 @@ img {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
+  margin-right: 0;
+  margin-left: 0;
   display: inline-block;
   position: relative;
-  margin-left: 0;
-  margin-right: 0;
   margin-bottom: 10px;
   width: 80px;
   height: 28px;
@@ -2450,11 +2448,11 @@ img {
   -o-appearance: none;
   appearance: none;
   position: absolute;
+  top: -1px;
+  left: 0;
   display: block;
   padding: 10px;
   content: "";
-  top: -1px;
-  left: 0px;
   border-radius: 50%;
   outline: 0;
   width: 6px;
@@ -2470,9 +2468,9 @@ img {
   box-shadow: none;
 }
 .toggle input[type="checkbox"]:checked:after {
-  display: block;
-  outline: 0;
+  position: relative;
   top: -1px;
+  outline: 0;
   left: 43px;
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18), inset 0 0 1px 1px rgba(255, 255, 255, 0.7);
@@ -2488,14 +2486,14 @@ img {
   -o-appearance: none;
   appearance: none;
   outline: 0;
-  border-radius: 50%;
-  padding: 4px;
   cursor: pointer;
+  padding: 4px;
   width: 20px;
   height: 20px;
   background: white;
-  margin-bottom: 10px;
   border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 .radio input[type="radio"]:checked {
   -webkit-appearance: none;
@@ -2551,18 +2549,18 @@ select::-ms-expand {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  padding: 10px;
   position: relative;
   display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
   cursor: pointer;
   color: #3e4044;
-  height: 100%;
-  width: 100%;
+  font-size: 0.75em;
   overflow: hidden;
   outline: 0px none;
   border: none;
   border-radius: 2px;
-  font-size: 0.75em;
   text-indent: 0.01px;
   text-overflow: "";
   -moz-appearance: treeitem;
@@ -2611,11 +2609,11 @@ select::-ms-expand {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid gray;
-  display: inline-block;
-  content: "";
+  position: absolute;
   top: 17px;
   right: 20px;
-  position: absolute;
+  display: inline-block;
+  content: "";
 }
 
 .input-default {
@@ -2681,9 +2679,9 @@ select::-ms-expand {
   height: 39px;
 }
 .input-append .dropdown .btn {
-  position: relative;
   padding-top: 9px;
   padding-bottom: 10px;
+  position: relative;
   height: 100%;
   border-radius: 0 2px 2px 0;
 }
@@ -2714,6 +2712,7 @@ label + span {
 
 button {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialised;
   font-smoothing: antialiased;
@@ -2768,9 +2767,9 @@ button:focus {
   background-color: #fcfcfc;
   background-image: -webkit-linear-gradient(#fcfcfc, #f7f7f7);
   background-image: linear-gradient(#fcfcfc, #f7f7f7);
+  padding: 8px 25px;
   display: inline-block;
   margin: 0;
-  padding: 8px 25px;
   float: left;
   width: auto;
   text-align: center;
@@ -2800,9 +2799,9 @@ button:focus {
 }
 @media screen and (max-width: 800px) {
   .btn-responsive-nav {
-    display: inline-block !important;
-    margin: 10px;
     padding: 8px 16px;
+    margin: 10px;
+    display: inline-block !important;
     float: right;
     color: white !important;
     background: #3498db;
@@ -2815,12 +2814,12 @@ button:focus {
 @media screen and (max-width: 800px) {
   .btn-responsive-nav-close {
     position: relative;
+    z-index: 9999;
     display: inline-block !important;
     float: right;
     padding-right: 10px;
     padding-top: 10px;
     cursor: pointer;
-    z-index: 9999;
   }
   .btn-responsive-nav-close svg {
     display: inline-block;
@@ -2838,6 +2837,9 @@ button:focus {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
@@ -2845,10 +2847,7 @@ button:focus {
   transform-origin: 0 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  position: fixed;
   z-index: 10000;
-  top: 50%;
-  left: 50%;
   overflow-x: hidden;
   height: auto;
   width: 550px;
@@ -2861,8 +2860,8 @@ button:focus {
   }
 }
 .modal-header {
-  position: relative;
   padding: 15px 20px;
+  position: relative;
   overflow: auto;
   color: #6a7781;
   letter-spacing: 1px;
@@ -2938,13 +2937,13 @@ button:focus {
 }
 .modal-overlay {
   position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 9999;
   display: block;
   overflow-y: scroll;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background: rgba(248, 248, 248, 0.9);
 }
 
@@ -3000,10 +2999,11 @@ button:focus {
   background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.8));
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
   position: absolute;
+  bottom: 0;
+  left: 0;
+  position: absolute;
   display: block;
   content: "";
-  left: 0;
-  bottom: 0;
   width: 100%;
   height: 60%;
 }
@@ -3035,9 +3035,14 @@ button:focus {
   -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
   -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
   transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
-  position: absolute;
   margin: 0 15px;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -khtml-opacity: 0;
+  -moz-opacity: 0;
   opacity: 0;
+  background: transparent;
+  position: absolute;
   z-index: 1030;
   bottom: -20px;
   color: #e6e6e6;
@@ -3053,9 +3058,9 @@ button:focus {
 }
 
 .widget {
+  display: block;
   background: white;
   border-radius: 2px;
-  display: block;
 }
 @media screen and (max-width: 480px) {
   .widget {
@@ -3121,7 +3126,7 @@ button:focus {
   border-bottom: 1px solid #e8e8e8;
 }
 .widget-footer .btn {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 480px) {
   .widget-footer .btn {
@@ -3136,8 +3141,8 @@ button:focus {
 }
 
 .alert {
-  display: block;
   margin: 20px 0;
   padding: 15px;
+  display: block;
   border-radius: 2px;
 }

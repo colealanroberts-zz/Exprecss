@@ -1,7 +1,7 @@
 .widget
+    display: block
     background: $white
     border-radius: $border-radius-default
-    display: block
     @include breakpoint(mobile)
         margin-bottom: $margin-bottom-default
 
@@ -9,7 +9,7 @@
         margin-bottom: 0
 
     &-header
-        padding: 15px 20px
+        @include padding(15px 20px)
         overflow: auto
         color: $header-grey
         border-top: 1px solid $border-grey
@@ -17,7 +17,7 @@
         border-left: 1px solid $border-grey
 
         &.small
-            padding: 14px 20px
+            @include padding(14px 20px)
 
         &-success, &-info, &-important
             color: $white
@@ -52,8 +52,7 @@
 
         p
             margin: 0 0 10px 0
-            font:
-                size: $font-size-14
+            font-size: $font-size-14
 
     &-footer
         overflow: auto
@@ -65,7 +64,7 @@
         border-bottom: 1px solid $border-grey
 
         .btn
-            margin-bottom: 0px
+            margin-bottom: 0
             @include breakpoint(mobile)
                 margin-bottom: 10px
 

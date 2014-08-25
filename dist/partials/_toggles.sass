@@ -2,10 +2,9 @@
     input[type="checkbox"]
         @include transition(all, linear, $transition-duration-default * 1.5)
         @include appearance(none)
+        @include margin(null 0 null 0)
         display: inline-block
         position: relative
-        margin-left: 0
-        margin-right: 0
         margin-bottom: $margin-bottom-default
         width: $width-toggle
         height: $height-toggle
@@ -23,12 +22,10 @@
         &:after
             @include transition(all, linear, $transition-duration-default * 1.5)
             @include appearance(none)
-            position: absolute
+            @include position(absolute, -1px null null 0)
             display: block
             padding: 10px
             content: ''
-            top: -1px
-            left: 0px
             border-radius: 50%
             outline: 0
             width: $width-toggle-indicator
@@ -44,9 +41,8 @@
             box-shadow: none
 
             &:after
-                display: block
+                @include position(relative, -1px null null null)
                 outline: 0
-                top: -1px
                 left: ceil($width-toggle / 2) + ($width-toggle-indicator / 2)
                 border-radius: 50%
                 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18), inset 0 0 1px 1px rgba(255, 255, 255, 0.7)

@@ -1,13 +1,11 @@
 .modal
     @include transform(translate(-50%, -50%))
+    @include position(fixed, 50% null null 50%)
     @include transform-origin(0 0)
     @include backface-visibility(hidden)
     @extend %box-shadow-default
     @extend %force-hardware-accel
-    position: fixed
     z-index: $z-index-alpha + 1
-    top: 50%
-    left: 50%
     overflow-x: hidden
     height: auto
     width: $width-modal
@@ -17,8 +15,8 @@
         width: 100%
 
     &-header
+        @include padding(15px 20px)
         position: relative
-        padding: 15px 20px
         overflow: auto
         color: $header-grey
         letter-spacing: 1px
@@ -26,11 +24,10 @@
         border-top: 1px solid $border-grey
         border-right: 1px solid $border-grey
         border-left: 1px solid $border-grey
-        font:
-            size: $font-size-14
+        font-size: $font-size-14
 
         &.small
-            padding: 14px 20px
+            @include padding(14px 20px)
 
         &-success, &-info, &-important
             color: $white
@@ -93,13 +90,9 @@
             border-right: 0
 
     &-overlay
+        @include position(fixed, 0 0 0 0)
         @extend %force-hardware-accel
-        position: fixed
         z-index: $z-index-alpha
         display: block
         overflow-y: scroll
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
         background: rgba($background-grey, 0.9)
