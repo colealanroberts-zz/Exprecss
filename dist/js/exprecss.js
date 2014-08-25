@@ -1,41 +1,31 @@
-function responsiveNav() {
-	$('body').on('click', '.btn-responsive-nav, .btn-responsive-nav-close', function(e) {
-		$('.navbar ul').toggleClass('nav-close nav-open');
-		e.preventDefault();
-	});
-}
-
-function dropdownMenu() {
-	$('.dropdown-menu').addClass('dropdown-menu-inactive');
-	$('body').on('click blur', '.btn-dropdown', function(e) {
-		var that = $(this),
-			menu = $('#' + that.data('for'));
-
-		if (e.type === 'click') {
-			e.preventDefault();
-			menu.toggleClass('dropdown-menu-inactive dropdown-menu-active');
-			that.focus();
-		} else {
-			menu.removeClass('dropdown-menu-active');
-			menu.addClass('dropdown-menu-inactive');
-		}
-	});
-}
-
-if (typeof $ !== 'undefined') $(document).ready(function() {
-	'use strict';
-
-	// Dropdown
-	dropdownMenu();
-
-	// Responsive Nav
-	responsiveNav();
-});
-
 (function() {
 	'use strict';
 
-	var app = angular.module('exprecss', []).run(function($rootScope, $expConfirm) {
+	var app = angular.module('exprecss', []).run(function($rootScope, $expConfirm, $document) {
+		$document.on('click', function(e) {
+			if (e.target.className.indexOf('btn-responsive-nav') >= 0
+				|| e.target.className.indexOf('btn-responsive-nav-close') >= 0) {
+				angular.element($document[0].querySelector('.navbar ul')).toggleClass('nav-close nav-open');
+				e.preventDefault();
+			}
+		});
+
+		$document.on('click', function(e) {
+			if (e.target.className.indexOf('btn-dropdown') >= 0) {
+				var that = angular.element(e.target),
+					menu = angular.element($document[0].querySelector('#' + that.attr('data-for') || that.attr('for')));
+
+				e.preventDefault();
+				menu.toggleClass('dropdown-menu-inactive dropdown-menu-active');
+				that[0].focus();
+
+				that.one('blur', function() {
+					menu.removeClass('dropdown-menu-active');
+					menu.addClass('dropdown-menu-inactive');
+				});
+			}
+		});
+
 		$rootScope.errorConfirm = function() {
 			$expConfirm('Error', 'Something real bad just now!', 'Freak out', 'Ignore').then(function() {
 				alert('You freaked out');
