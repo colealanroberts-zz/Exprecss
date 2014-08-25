@@ -92,7 +92,7 @@ if (typeof $ !== 'undefined') $(document).ready(function() {
 		var $expConfirm = function(title, html, confirmText, cancelText, options) {
 			var deferred = $q.defer(),
 				scope = $rootScope.$new(),
-				$body = angular.element('body');
+				$body = angular.element($document[0].body);
 
 
 			options = options || {};
