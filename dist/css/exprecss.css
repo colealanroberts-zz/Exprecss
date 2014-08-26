@@ -1880,11 +1880,6 @@ img {
   overflow: auto;
   background: white;
 }
-@media screen and (max-width: 800px) {
-  .navbar {
-    overflow: initial;
-  }
-}
 .navbar ul {
   margin: 0 auto;
   display: block;
@@ -1892,20 +1887,6 @@ img {
   max-width: 68em;
   overflow-x: auto;
   list-style-type: none;
-}
-@media screen and (max-width: 800px) {
-  .navbar ul {
-    background-color: #191a1c;
-    background-image: -webkit-linear-gradient(#191a1c, #191a1c);
-    background-image: linear-gradient(#191a1c, #191a1c);
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 9999;
-    padding-top: 15px;
-    min-height: 100%;
-    width: 225px;
-  }
 }
 .navbar ul .brand {
   color: #3498db;
@@ -1918,12 +1899,6 @@ img {
   margin: 0;
   display: inline;
 }
-@media screen and (max-width: 800px) {
-  .navbar ul li {
-    padding: 5px 10px;
-    display: block;
-  }
-}
 .navbar ul li a {
   text-transform: uppercase;
   text-decoration: none;
@@ -1933,18 +1908,8 @@ img {
 .navbar ul li a:hover {
   color: #3e4044;
 }
-@media screen and (max-width: 800px) {
-  .navbar ul li a:hover {
-    color: white;
-  }
-}
 .navbar ul li .active {
   color: #3e4044;
-}
-@media screen and (max-width: 800px) {
-  .navbar ul li .active {
-    color: white;
-  }
 }
 .navbar-fixed {
   -webkit-backface-visibility: hidden;

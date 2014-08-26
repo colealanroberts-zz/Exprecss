@@ -4,8 +4,6 @@
     margin-bottom: 40px
     overflow: auto
     background: $white
-    @include breakpoint(tablet)
-        overflow: initial
 
     ul
         @include margin(0 auto)
@@ -14,13 +12,6 @@
         max-width: 68em
         overflow-x: auto
         list-style-type: none
-        @include breakpoint(tablet)
-            @include linear-gradient(darken(#313437, 10%), darken(#313437, 10%)) // These should have vars
-            @include position(fixed, 0 0 null null)
-            z-index: $z-index-alpha
-            padding-top: 15px
-            min-height: 100%
-            width: $width-navbar-responsive
 
         .brand
             color: $exprecss-blue
@@ -33,9 +24,6 @@
             @include padding(0 15px)
             margin: 0
             display: inline
-            @include breakpoint(tablet)
-                @include padding(5px 10px)
-                display: block
 
             a
                 text-transform: uppercase
@@ -46,14 +34,9 @@
 
                 &:hover
                     color: $dark-grey
-                    @include breakpoint(tablet)
-                        color: $white
 
             .active
                 color: $dark-grey
-                @include breakpoint(tablet)
-                    color: $white
-
 
     &-fixed
         @include backface-visibility(hidden)
