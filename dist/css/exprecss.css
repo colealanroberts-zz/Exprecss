@@ -1,5 +1,5 @@
 /*!
- * Exprecss v0.1.31 (http://exprecss.com)
+ * Exprecss v0.1.32 (http://exprecss.com)
  * Copyright 2014 Cole Roberts & Jacob Biggs
  * Licensed under MIT
  */
@@ -54,7 +54,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-1-of-2 {
   float: left;
   display: block;
@@ -70,7 +69,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-1-of-3 {
   float: left;
   display: block;
@@ -86,7 +84,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-1-of-4 {
   float: left;
   display: block;
@@ -102,7 +99,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-1-of-5 {
   float: left;
   display: block;
@@ -118,7 +114,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-1-of-6 {
   float: left;
   display: block;
@@ -134,7 +129,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-1-of-7 {
   float: left;
   display: block;
@@ -150,7 +144,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-1-of-8 {
   float: left;
   display: block;
@@ -166,7 +159,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-1-of-9 {
   float: left;
   display: block;
@@ -182,7 +174,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-1-of-10 {
   float: left;
   display: block;
@@ -198,7 +189,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-1-of-11 {
   float: left;
   display: block;
@@ -214,7 +204,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-1-of-12 {
   float: left;
   display: block;
@@ -230,7 +219,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-2 {
   float: left;
   display: block;
@@ -246,7 +234,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-2-of-3 {
   float: left;
   display: block;
@@ -262,7 +249,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-2-of-4 {
   float: left;
   display: block;
@@ -278,7 +264,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-2-of-5 {
   float: left;
   display: block;
@@ -294,7 +279,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-2-of-6 {
   float: left;
   display: block;
@@ -310,7 +294,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-2-of-7 {
   float: left;
   display: block;
@@ -326,7 +309,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-2-of-8 {
   float: left;
   display: block;
@@ -342,7 +324,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-2-of-9 {
   float: left;
   display: block;
@@ -358,7 +339,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-2-of-10 {
   float: left;
   display: block;
@@ -374,7 +354,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-2-of-11 {
   float: left;
   display: block;
@@ -390,7 +369,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-2-of-12 {
   float: left;
   display: block;
@@ -406,7 +384,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-3 {
   float: left;
   display: block;
@@ -422,7 +399,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-3-of-4 {
   float: left;
   display: block;
@@ -438,7 +414,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-3-of-5 {
   float: left;
   display: block;
@@ -454,7 +429,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-3-of-6 {
   float: left;
   display: block;
@@ -470,7 +444,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-3-of-7 {
   float: left;
   display: block;
@@ -486,7 +459,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-3-of-8 {
   float: left;
   display: block;
@@ -502,7 +474,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-3-of-9 {
   float: left;
   display: block;
@@ -518,7 +489,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-3-of-10 {
   float: left;
   display: block;
@@ -534,7 +504,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-3-of-11 {
   float: left;
   display: block;
@@ -550,7 +519,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-3-of-12 {
   float: left;
   display: block;
@@ -566,7 +534,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-4 {
   float: left;
   display: block;
@@ -582,7 +549,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-4-of-5 {
   float: left;
   display: block;
@@ -598,7 +564,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-4-of-6 {
   float: left;
   display: block;
@@ -614,7 +579,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-4-of-7 {
   float: left;
   display: block;
@@ -630,7 +594,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-4-of-8 {
   float: left;
   display: block;
@@ -646,7 +609,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-4-of-9 {
   float: left;
   display: block;
@@ -662,7 +624,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-4-of-10 {
   float: left;
   display: block;
@@ -678,7 +639,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-4-of-11 {
   float: left;
   display: block;
@@ -694,7 +654,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-4-of-12 {
   float: left;
   display: block;
@@ -710,7 +669,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-5 {
   float: left;
   display: block;
@@ -726,7 +684,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-5-of-6 {
   float: left;
   display: block;
@@ -742,7 +699,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-5-of-7 {
   float: left;
   display: block;
@@ -758,7 +714,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-5-of-8 {
   float: left;
   display: block;
@@ -774,7 +729,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-5-of-9 {
   float: left;
   display: block;
@@ -790,7 +744,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-5-of-10 {
   float: left;
   display: block;
@@ -806,7 +759,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-5-of-11 {
   float: left;
   display: block;
@@ -822,7 +774,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-5-of-12 {
   float: left;
   display: block;
@@ -838,7 +789,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-6 {
   float: left;
   display: block;
@@ -854,7 +804,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-6-of-7 {
   float: left;
   display: block;
@@ -870,7 +819,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-6-of-8 {
   float: left;
   display: block;
@@ -886,7 +834,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-6-of-9 {
   float: left;
   display: block;
@@ -902,7 +849,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-6-of-10 {
   float: left;
   display: block;
@@ -918,7 +864,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-6-of-11 {
   float: left;
   display: block;
@@ -934,7 +879,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-6-of-12 {
   float: left;
   display: block;
@@ -950,7 +894,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-7 {
   float: left;
   display: block;
@@ -966,7 +909,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-7-of-8 {
   float: left;
   display: block;
@@ -982,7 +924,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-7-of-9 {
   float: left;
   display: block;
@@ -998,7 +939,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-7-of-10 {
   float: left;
   display: block;
@@ -1014,7 +954,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-7-of-11 {
   float: left;
   display: block;
@@ -1030,7 +969,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-7-of-12 {
   float: left;
   display: block;
@@ -1046,7 +984,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-8 {
   float: left;
   display: block;
@@ -1062,7 +999,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-8-of-9 {
   float: left;
   display: block;
@@ -1078,7 +1014,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-8-of-10 {
   float: left;
   display: block;
@@ -1094,7 +1029,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-8-of-11 {
   float: left;
   display: block;
@@ -1110,7 +1044,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-8-of-12 {
   float: left;
   display: block;
@@ -1126,7 +1059,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-9 {
   float: left;
   display: block;
@@ -1142,7 +1074,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-9-of-10 {
   float: left;
   display: block;
@@ -1158,7 +1089,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-9-of-11 {
   float: left;
   display: block;
@@ -1174,7 +1104,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-9-of-12 {
   float: left;
   display: block;
@@ -1190,7 +1119,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-10 {
   float: left;
   display: block;
@@ -1206,7 +1134,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-10-of-11 {
   float: left;
   display: block;
@@ -1222,7 +1149,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-10-of-12 {
   float: left;
   display: block;
@@ -1238,7 +1164,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-11 {
   float: left;
   display: block;
@@ -1254,7 +1179,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-11-of-12 {
   float: left;
   display: block;
@@ -1270,7 +1194,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .col-12 {
   float: left;
   display: block;
@@ -1286,7 +1209,6 @@ html, body {
   }
 }
 
-@debug:quiet '$render-shift: false, skipping generation';
 .padding-top-0 {
   padding-top: 0;
 }

@@ -11,9 +11,6 @@
                 .shift-#{$index1}
                     @include shift($index1)
 
-            @else
-                @debug:quiet '$render-shift: #{$render-shift}, skipping generation'
-
         @else
             .col-#{$index1}-of-#{$index2}
                 @include span-columns($index1 of $index2)
@@ -23,9 +20,6 @@
             @if $render-shift == true
                 .shift-#{$index1}-of-#{$index2}
                     @include shift($index1 of $index2)
-
-            @else
-                @debug:quiet '$render-shift: #{$render-shift}, skipping generation'
 
         $index2: $index2 + 1 !global
     $index1: $index1 + 1 !global
