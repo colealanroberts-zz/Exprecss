@@ -1,5 +1,5 @@
 /*!
- * Exprecss v0.1.29 (http://exprecss.com)
+ * Exprecss v0.1.30 (http://exprecss.com)
  * Copyright 2014 Cole Roberts & Jacob Biggs
  * Licensed under MIT
  */
@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-.btn, .btn-responsive-nav {
+.btn {
   display: inline-block;
   margin-bottom: 0;
   text-align: center;
