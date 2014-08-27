@@ -1605,11 +1605,11 @@ hr {
   background-color: #f0f0f0;
   background-image: -webkit-linear-gradient(left, #f0f0f0 10%, #e6e6e6, #f0f0f0 90%);
   background-image: linear-gradient(to right,#f0f0f0 10%, #e6e6e6, #f0f0f0 90%);
+  margin: 0 0 10px;
   display: block;
   height: 1px;
   width: 100%;
   border: 0 none;
-  margin-bottom: 10px;
 }
 
 a {
