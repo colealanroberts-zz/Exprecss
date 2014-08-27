@@ -2770,9 +2770,9 @@ button:focus {
   font-size: 0.875em;
 }
 .widget-footer {
+  padding: 10px 20px;
   overflow: auto;
   margin: 0;
-  padding: 10px;
   background: #f8f8f8;
   border-left: 1px solid #e8e8e8;
   border-right: 1px solid #e8e8e8;
@@ -2784,12 +2784,6 @@ button:focus {
 @media screen and (max-width: 480px) {
   .widget-footer .btn {
     margin-bottom: 10px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .widget-header, .widget-body, .widget-footer {
-    border-left: 0;
-    border-right: 0;
   }
 }
 
