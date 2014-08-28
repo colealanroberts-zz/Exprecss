@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-.btn {
+button, .btn {
   display: inline-block;
   margin-bottom: 0;
   text-align: center;
@@ -1799,7 +1799,7 @@ img {
   width: 100%;
   position: relative;
   margin-bottom: 40px;
-  overflow: auto;
+  overflow: hidden;
   background: white;
 }
 .navbar ul {
