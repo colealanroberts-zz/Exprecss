@@ -1,5 +1,5 @@
 /*!
- * Exprecss v0.1.37 (http://exprecss.com)
+ * Exprecss v0.1.38 (http://exprecss.com)
  * Copyright 2014 Cole Roberts & Jacob Biggs
  * Licensed under MIT
  */
@@ -2585,11 +2585,11 @@ button:focus {
 }
 @media screen and (max-width: 480px) {
   .modal {
-    -webkit-transform: translate(none);
-    -moz-transform: translate(none);
-    -ms-transform: translate(none);
-    -o-transform: translate(none);
-    transform: translate(none);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
     -webkit-transform-origin: 0 0;
     -moz-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
