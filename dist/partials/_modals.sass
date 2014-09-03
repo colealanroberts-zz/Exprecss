@@ -1,5 +1,5 @@
 .modal
-    @include transform(translate(-50%, -50%))
+    @include transform(translate(-50%, -51%))
     @include position(fixed, 50% null null 50%)
     @include transform-origin(0 0)
     @include backface-visibility(hidden)
@@ -12,6 +12,7 @@
     background: $white
     border-radius: $border-radius-default
     @include breakpoint(mobile)
+        @include position(absolute, 50% null null 50%)
         width: 100%
 
     &-header

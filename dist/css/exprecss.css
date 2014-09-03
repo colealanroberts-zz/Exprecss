@@ -2493,11 +2493,11 @@ button:focus {
 }
 
 .modal {
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -51%);
+  -moz-transform: translate(-50%, -51%);
+  -ms-transform: translate(-50%, -51%);
+  -o-transform: translate(-50%, -51%);
+  transform: translate(-50%, -51%);
   position: fixed;
   top: 50%;
   left: 50%;
@@ -2517,6 +2517,9 @@ button:focus {
 }
 @media screen and (max-width: 480px) {
   .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 100%;
   }
 }
