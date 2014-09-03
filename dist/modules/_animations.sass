@@ -23,6 +23,20 @@
         @include transform(scale(0.8) translate(-50%, -50%))
         opacity: 0
 
+@include keyframes(modal-open-responsive)
+    0%
+        opacity: 0
+
+    100%
+        opacity: 1
+
+@include keyframes(modal-close-responsive)
+    0%
+        opacity: 1
+
+    100%
+        opacity: 0
+
 .nav-open, .nav-close
     @include transition(all, linear, $transition-duration-default)
     @include backface-visibility(hidden)
@@ -38,9 +52,13 @@
 
 .modal.ng-enter
     @include animation(modal-open $ease-out-cubic 400ms)
+    @include breakpoint(mobile)
+        @include animation(modal-open-responsive $ease-out-cubic 400ms)
 
 .modal.ng-leave
     @include animation(modal-hide $ease-in-cubic 250ms)
+    @include breakpoint(mobile)
+        @include animation(modal-close-responsive $ease-out-cubic 400ms)
 
 .modal-overlay.ng-enter
     @include transition(all $ease-out-cubic 300ms)

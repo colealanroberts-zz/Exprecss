@@ -12,7 +12,9 @@
     background: $white
     border-radius: $border-radius-default
     @include breakpoint(mobile)
-        @include position(absolute, 50% null null 50%)
+        @include transform(translate(none))
+        @include transform-origin(0 0)
+        @include position(relative, 0 null null 0)
         width: 100%
 
     &-header

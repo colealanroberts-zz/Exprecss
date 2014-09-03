@@ -1515,6 +1515,60 @@ html, body {
     opacity: 0;
   }
 }
+@-webkit-keyframes modal-open-responsive {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes modal-open-responsive {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes modal-open-responsive {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes modal-close-responsive {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes modal-close-responsive {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes modal-close-responsive {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 .nav-open, .nav-close {
   -webkit-transition: all, linear, 300ms;
   -moz-transition: all, linear, 300ms;
@@ -1548,11 +1602,25 @@ html, body {
   -moz-animation: modal-open cubic-bezier(0.215, 0.61, 0.355, 1) 400ms;
   animation: modal-open cubic-bezier(0.215, 0.61, 0.355, 1) 400ms;
 }
+@media screen and (max-width: 480px) {
+  .modal.ng-enter {
+    -webkit-animation: modal-open-responsive cubic-bezier(0.215, 0.61, 0.355, 1) 400ms;
+    -moz-animation: modal-open-responsive cubic-bezier(0.215, 0.61, 0.355, 1) 400ms;
+    animation: modal-open-responsive cubic-bezier(0.215, 0.61, 0.355, 1) 400ms;
+  }
+}
 
 .modal.ng-leave {
   -webkit-animation: modal-hide cubic-bezier(0.55, 0.055, 0.675, 0.19) 250ms;
   -moz-animation: modal-hide cubic-bezier(0.55, 0.055, 0.675, 0.19) 250ms;
   animation: modal-hide cubic-bezier(0.55, 0.055, 0.675, 0.19) 250ms;
+}
+@media screen and (max-width: 480px) {
+  .modal.ng-leave {
+    -webkit-animation: modal-close-responsive cubic-bezier(0.215, 0.61, 0.355, 1) 400ms;
+    -moz-animation: modal-close-responsive cubic-bezier(0.215, 0.61, 0.355, 1) 400ms;
+    animation: modal-close-responsive cubic-bezier(0.215, 0.61, 0.355, 1) 400ms;
+  }
 }
 
 .modal-overlay.ng-enter {
@@ -2517,9 +2585,19 @@ button:focus {
 }
 @media screen and (max-width: 480px) {
   .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    -webkit-transform: translate(none);
+    -moz-transform: translate(none);
+    -ms-transform: translate(none);
+    -o-transform: translate(none);
+    transform: translate(none);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
   }
 }
