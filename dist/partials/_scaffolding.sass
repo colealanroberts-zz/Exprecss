@@ -1,10 +1,13 @@
 .container
     @include outer-container
+    @include padding(0 $padding-container)
     padding-left: $padding-container
     padding-right: $padding-container
     @include breakpoint(mobile)
-        padding-left: $padding-container-responsive
-        padding-right: $padding-container-responsive
+        @include padding(0 $padding-container-responsive)
+
+        &:after
+            display: none
 
 .row
     @include row()

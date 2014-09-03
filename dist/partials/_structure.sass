@@ -53,6 +53,8 @@ img
         content: ''
         display: block
         height: $height-sticky-footer
+        @include breakpoint(mobile)
+            display: none
 
 .box-shadow-default
     @extend %box-shadow-default

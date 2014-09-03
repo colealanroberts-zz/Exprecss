@@ -1641,6 +1641,11 @@ img {
   display: block;
   height: 84px;
 }
+@media screen and (max-width: 480px) {
+  .wrapper:after {
+    display: none;
+  }
+}
 
 ::selection {
   background: rgba(52, 152, 219, 0.2);
@@ -1654,6 +1659,7 @@ img {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -1664,8 +1670,10 @@ img {
 }
 @media screen and (max-width: 480px) {
   .container {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px;
+  }
+  .container:after {
+    display: none;
   }
 }
 
