@@ -153,7 +153,7 @@
 	app.directive('expConfirm', function ($expModal) {
 		return {
 			restrict: 'AE',
-			template: '<div class="modal" ng-if="open">\n    <div class="modal-header" ng-class="headerClass">{{ title }}</div>\n    <div class="modal-body" ng-bind-html="html">\n    </div>\n    <div class="modal-footer">\n        <a class="btn float-left" ng-class="cancelClass" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>\n        <a class="btn float-right" ng-class="confirmClass" ng-click="confirm()">{{ confirmText }}</a>\n    </div>\n</div>',
+			template: '<div class="modal" ng-if="open">\n    <div class="modal-header" ng-class="headerClass">{{ title }}</div>\n    <div class="modal-body" ng-bind-html="html">\n    </div>\n    <div class="modal-footer">\n        <a class="btn float-left" id="cancel-modal-btn" ng-class="cancelClass" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>\n        <a class="btn float-right" id="confirm-modal-btn" ng-class="confirmClass" ng-click="confirm()">{{ confirmText }}</a>\n    </div>\n</div>',
 			link: function(scope, elem, attr) {
 			}
 		}
