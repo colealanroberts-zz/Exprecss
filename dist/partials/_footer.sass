@@ -1,5 +1,8 @@
 .footer
+    position: relative
     display: block
+    height: $height-footer
+    clear: both
 
     ul
         @include padding(20px 0)
@@ -16,9 +19,6 @@
                 font:
                     size: em(11)
                     weight: 600
-
-    &-sticky
-        height: $height-sticky-footer
 
 .copyright
     display: block

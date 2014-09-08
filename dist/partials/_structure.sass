@@ -47,17 +47,14 @@ img
 
 .wrapper
     min-height: 100%
-    margin-bottom: -($height-sticky-footer)
+    margin-bottom: -($height-footer)
 
     &:after
-        content: ''
+        content: ""
         display: block
-        height: $height-sticky-footer
+        height: $height-footer
         @include breakpoint(mobile)
             display: none
-
-.box-shadow-default
-    @extend %box-shadow-default
 
 ::selection
     background: rgba($base-color, 0.2)
