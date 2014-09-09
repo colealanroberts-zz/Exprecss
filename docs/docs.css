@@ -1,78 +1,65 @@
-.section-title {
-  font-family: "Gotham A", "Gotham B";
-  font-weight: 300;
-  font-style: normal; }
-
-body {
-  font-family: "Gotham A", "Gotham B";
-  font-weight: 400;
-  font-style: normal; }
-
-h3 {
-  font-family: "Gotham A", "Gotham B";
-  font-weight: 500;
-  font-style: normal; }
-
 @-webkit-keyframes rotate-text {
   0% {
     opacity: 0; }
-
   30% {
     opacity: 1; }
-
   50% {
     opacity: 1; }
-
   70% {
     opacity: 1; }
-
   100% {
     opacity: 0; } }
 @-moz-keyframes rotate-text {
   0% {
     opacity: 0; }
-
   30% {
     opacity: 1; }
-
   50% {
     opacity: 1; }
-
   70% {
     opacity: 1; }
-
   100% {
     opacity: 0; } }
 @-o-keyframes rotate-text {
   0% {
     opacity: 0; }
-
   30% {
     opacity: 1; }
-
   50% {
     opacity: 1; }
-
   70% {
     opacity: 1; }
-
   100% {
     opacity: 0; } }
-@-keyframes rotate-text {
+@keyframes rotate-text {
   0% {
     opacity: 0; }
-
   30% {
     opacity: 1; }
-
   50% {
     opacity: 1; }
-
   70% {
     opacity: 1; }
-
   100% {
     opacity: 0; } }
+@font-face {
+  font-family: Gotham-Bold;
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/Gotham-Bold/Gotham-Bold.eot");
+  src: url("../fonts/Gotham-Bold/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Bold/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold/Gotham-Bold.ttf") format("truetype"), url("../fonts/Gotham-Bold/Gotham-Bold.svg#Gotham-Bold") format("svg"); }
+@font-face {
+  font-family: Gotham-Book;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Gotham-Book/Gotham-Book.eot");
+  src: url("../fonts/Gotham-Book/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Book/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book/Gotham-Book.ttf") format("truetype"), url("../fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book") format("svg"); }
+@font-face {
+  font-family: Gotham-Thin;
+  font-weight: 100;
+  font-style: normal;
+  src: url("../fonts/Gotham-Thin/Gotham-Thin.eot");
+  src: url("../fonts/Gotham-Thin/Gotham-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Thin/Gotham-Thin.woff") format("woff"), url("../fonts/Gotham-Thin/Gotham-Thin.ttf") format("truetype"), url("../fonts/Gotham-Thin/Gotham-Thin.svg#Gotham-Thin") format("svg"); }
 .node-depth * {
   background-color: rgba(255, 0, 0, 0.2); }
 .node-depth * * {
@@ -86,8 +73,9 @@ h3 {
 .node-depth * * * * * * {
   background-color: rgba(255, 255, 0, 0.2); }
 
-body {
-  color: #5f6a80; }
+html, body {
+  color: #2B3551;
+  font-family: "Gotham-Book", sans-serif; }
 
 .rotate-text {
   -webkit-animation: rotate-text 3050ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
@@ -135,8 +123,8 @@ body {
           .navbar-exprecss ul li a.changelog {
             display: none; } }
         .navbar-exprecss ul li a.changelog:hover {
-          color: white;
-          border-color: white; }
+          color: #FFFFFF;
+          border-color: #FFFFFF; }
 
 .svg-logo {
   margin-top: 20px;
@@ -156,9 +144,9 @@ body {
 
 .grid div[class^='col-'], .grid div[class*='col-'] {
   margin-right: 0;
-  background: #3498db;
+  background: #3498DB;
   height: 40px;
-  color: white;
+  color: #FFFFFF;
   padding: 10px; }
   .grid div[class^='col-']:nth-of-type(2n + 1), .grid div[class*='col-']:nth-of-type(2n + 1) {
     background: #258cd1; }
@@ -172,7 +160,7 @@ body {
 section {
   padding: 40px 0; }
   section:nth-of-type(even) {
-    background: #f8f8f8; }
+    background: #F8F8F8; }
 
 .prettyprint {
   width: 100%;
@@ -180,17 +168,17 @@ section {
   overflow-y: auto; }
 
 .hero-unit-demo {
-  background-image: -webkit-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
-  background-image: -moz-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
-  background-image: -o-linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
-  background-image: linear-gradient(rgba(23, 42, 113, 0.95), rgba(46, 127, 156, 0.9)), url("../docs/img/bg-hero-unit.jpg");
+  background-image: -webkit-linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
+  background-image: -moz-linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
+  background-image: -o-linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
+  background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
   margin-top: -78px;
-  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#1E3174', endColorstr='#3C859F');
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#2C3E50', endColorstr='#2C3E50');
   padding: 150px 0;
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; }
+  background-position: right bottom; }
   @media screen and (max-width: 480px) {
     .hero-unit-demo {
       margin-top: -89px;
@@ -204,7 +192,7 @@ section {
     .hero-unit-demo h1, .hero-unit-demo p {
       text-align: center; } }
   .hero-unit-demo .name {
-    color: white;
+    color: #FFFFFF;
     margin: 0;
     font-size: 50px;
     font-weight: 100;
@@ -241,7 +229,7 @@ section {
   background-image: -o-linear-gradient(#258cd1, #217dbb);
   background-image: linear-gradient(#258cd1, #217dbb);
   filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#258CD1', endColorstr='#217DBB');
-  border: 1px solid #25516f;
+  border: 1px solid #25516F;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   letter-spacing: 1px;
   text-shadow: 0 2px 4px #217dbb;
@@ -272,7 +260,7 @@ section {
   width: 407px;
   display: block;
   padding: 6px 10px;
-  border: 8px solid rgba(255, 255, 255, 0.1);
+  border: 8px solid rgba(255, 255, 255, 0.12);
   background: rgba(47, 53, 62, 0.7);
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
@@ -284,9 +272,8 @@ section {
   .bower-install span {
     top: 2px;
     position: relative;
-    color: #ffcc2f;
-    font-size: 11px;
-    font-weight: 600; }
+    color: #FFCC2F;
+    font-size: 11px; }
     @media screen and (max-width: 800px) {
       .bower-install span {
         top: 0; } }
@@ -311,21 +298,21 @@ section {
   -o-transition: all, linear, 300ms;
   transition: all, linear, 300ms;
   padding: 20px 32px;
-  border: 1px solid #3498db;
+  border: 1px solid #3498DB;
   margin-bottom: 20px;
   border-radius: 999px;
   display: inline-block;
-  color: #3498db;
+  color: #3498DB;
   font-size: 10px;
   font-weight: 600; }
   .footer .btn-download:hover {
-    color: white;
-    background: #3498db; }
+    color: #FFFFFF;
+    background: #3498DB; }
 
 .input-default {
   font-family: "Gotham-Book", sans-serif; }
 
 .section-title {
-  color: #343a45;
+  color: #08090e;
   margin: 0;
   font-size: 36px; }
