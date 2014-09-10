@@ -168,10 +168,10 @@ section {
   overflow-y: auto; }
 
 .hero-unit-demo {
-  background-image: -webkit-linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
-  background-image: -moz-linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
-  background-image: -o-linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
-  background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
+  background-image: -webkit-linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
+  background-image: -moz-linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
+  background-image: -o-linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
+  background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
   margin-top: -78px;
   filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#2C3E50', endColorstr='#2C3E50');
   padding: 150px 0;
@@ -261,7 +261,7 @@ section {
   display: block;
   padding: 6px 10px;
   border: 8px solid rgba(255, 255, 255, 0.12);
-  background: rgba(47, 53, 62, 0.7);
+  background: #2F353E;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box; }
