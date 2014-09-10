@@ -1,21 +1,8 @@
-.caret
-    position: relative
-    display: inline-block
-    content: ''
-    top: -2px
-    width: 10px
-    height: 10px
-    margin-left: $margin-left-caret
-
-    &-dark
-        @include triangle(10px, $dark-grey, down)
-
-    &-light
-        @include triangle(10px, $white, down)
-
 .dropdown
     position: relative
     display: inline-block
+    width: 100%
+    height: $height-input-default
 
     &-menu
         @include transform(translateX(-50%))
@@ -26,8 +13,7 @@
         outline: 0 none
         margin: 0
         padding: 0
-        width: auto
-        min-width: $min-width-dropdown-menu
+        width: 100%
         height: auto
         z-index: $z-index-dropdown-menu
         visibility: hidden

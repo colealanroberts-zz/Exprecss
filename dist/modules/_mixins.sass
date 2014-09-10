@@ -59,3 +59,23 @@
             -webkit-background-size: $width $height
             -moz-background-size: $width $height
             background-size: $width $height
+
+// Caret
+@mixin caret($width, $height, $bg-color, $direction: down)
+
+    &:before, &:after
+        position: absolute
+        display: inline-block
+        content: ''
+        width: $width
+        height: $height
+        background: $bg-color
+
+    @if $direction == down
+        &:before
+            @include transform(rotate(45deg))
+            left: 32px
+
+        &:after
+            @include transform(rotate(-45deg))
+            left: 27px
