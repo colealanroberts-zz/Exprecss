@@ -74,8 +74,13 @@
   background-color: rgba(255, 255, 0, 0.2); }
 
 html, body {
-  color: #2B3551;
+  color: #5D687C;
   font-family: "Gotham-Book", sans-serif; }
+
+.wrapper {
+  margin-bottom: -137px; }
+  .wrapper:after {
+    height: 137px; }
 
 .rotate-text {
   -webkit-animation: rotate-text 3050ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
@@ -179,6 +184,9 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right bottom; }
+  @media screen and (max-width: 800px) {
+    .hero-unit-demo {
+      background-position: left center; } }
   @media screen and (max-width: 480px) {
     .hero-unit-demo {
       margin-top: -89px;
@@ -292,27 +300,39 @@ section {
     .bower-logo {
       display: none; } }
 
+.footer {
+  height: auto;
+  background: #47505f; }
+  .footer ul {
+    padding: 40px 0; }
+
 .footer .btn-download {
   -webkit-transition: all, linear, 300ms;
   -moz-transition: all, linear, 300ms;
   -o-transition: all, linear, 300ms;
   transition: all, linear, 300ms;
+  display: inline-block;
   padding: 20px 32px;
-  border: 1px solid #3498DB;
   margin-bottom: 20px;
   border-radius: 999px;
-  display: inline-block;
-  color: #3498DB;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
   font-size: 10px;
   font-weight: 600; }
   .footer .btn-download:hover {
     color: #FFFFFF;
-    background: #3498DB; }
+    background: #3498DB;
+    border: 1px solid #3498DB; }
+
+.copyright {
+  color: #FFFFFF; }
+  .copyright a {
+    font-weight: 600; }
 
 .input-default {
   font-family: "Gotham-Book", sans-serif; }
 
 .section-title {
-  color: #08090e;
+  color: #47505f;
   margin: 0;
   font-size: 36px; }

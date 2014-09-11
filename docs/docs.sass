@@ -7,7 +7,7 @@ $brand-red: #DF4938
 $brand-yellow: ''
 $dark-grey: #5C5C5C
 $border-grey: #E8E8E8
-$body-text-color: #2B3551
+$body-text-color: #5D687C
 $brand-blue: #3498DB
 $light-grey: #FCFCFC
 $brand-background-grey: #F8F8F8
@@ -34,6 +34,8 @@ $font-size-14: 14px
 $font-size-16: 16px
 $font-size-24: 24px
 $font-size-36: 36px
+
+$height-footer: 137px
 
 $animation-rotate-duration: 3050ms
 
@@ -177,6 +179,12 @@ html, body
     color: $body-text-color
     font-family: $font-family-default
 
+.wrapper
+    margin-bottom: -($height-footer)
+
+    &:after
+        height: $height-footer
+
 .rotate-text
     -webkit-animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
     -moz-animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
@@ -284,6 +292,8 @@ section
         size: cover
         repeat: no-repeat
         position: right bottom
+    @include breakpoint(tablet)
+        background-position: left center
     @include breakpoint(mobile)
         margin-top: -89px
         padding: 80px 0 30px 0
@@ -406,14 +416,21 @@ section
     @include breakpoint(tablet)
         display: none
 
+.footer
+    height: auto
+    background: darken($body-text-color, 10%)
+
+    ul
+        padding: 40px 0
+
 .footer .btn-download
     @include transition(all, linear, 300ms)
+    display: inline-block
     padding: 20px 32px
-    border: 1px solid $base-color
     margin-bottom: 20px
     border-radius: 999px
-    display: inline-block
-    color: $base-color
+    color: $white
+    border: 1px solid $white
     font:
         size: 10px
         weight: 600
@@ -421,6 +438,13 @@ section
     &:hover
         color: $white
         background: $base-color
+        border: 1px solid $base-color
+
+.copyright
+    color: $white
+
+    a
+        font-weight: 600
 
 .input-default
     font:
@@ -428,7 +452,7 @@ section
 
 
 .section-title
-    color: darken($body-text-color, 20%)
+    color: darken($body-text-color, 10%)
     margin: 0
     font:
         size: $font-size-36
