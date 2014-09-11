@@ -12,21 +12,20 @@ select::-ms-expand
     margin-bottom: $margin-bottom-default
 
     select
-        @include linear-gradient(darken($white, 1%), darken($white, 3%))
         @include transition(all, linear, $transition-duration-default)
         @include box-sizing(border-box)
         @include appearance(none)
-        @extend %box-shadow-default
         position: relative
         display: inline-block
         width: 100%
         height: 100%
         padding: 10px
         cursor: pointer
-        color: $dark-grey
+        color: $header-grey
         font-size: $font-size-12
         overflow: hidden
-        outline: 0px none
+        outline: 0 none
+        background: $white
         border: none
         border-radius: $border-radius-default
 
@@ -72,8 +71,21 @@ select::-ms-expand
                 width: 1.5rem
                 background: darken($white, 2%)
 
+    &:before, &:after
+        position: absolute
+        pointer-events: none
+
     &:after
-        @include caret(12px, down, 0.8)
-        @include position(absolute, 13px 20px null null)
+        @include position(absolute, 1px 0 null null)
+        @include caret()
         display: inline-block
         content: ''
+        width: 40px
+        height: 35px
+        border-top: none
+        border-right: none
+        border-left: 1px solid $border-grey
+        background:
+            repeat: no-repeat
+            position: center center
+            size: 26%

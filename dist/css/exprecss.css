@@ -27,7 +27,7 @@ html, body {
   font-smoothing: antialiased;
 }
 
-.box-shadow-default, .select select, .modal {
+.box-shadow-default, .modal {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.045);
 }
 
@@ -2265,9 +2265,6 @@ select::-ms-expand {
   margin-bottom: 10px;
 }
 .select select {
-  background-color: #fcfcfc;
-  background-image: -webkit-linear-gradient(#fcfcfc, #f7f7f7);
-  background-image: linear-gradient(#fcfcfc, #f7f7f7);
   -webkit-transition: all, linear, 300ms;
   -moz-transition: all, linear, 300ms;
   transition: all, linear, 300ms;
@@ -2285,10 +2282,11 @@ select::-ms-expand {
   height: 100%;
   padding: 10px;
   cursor: pointer;
-  color: #3E4044;
+  color: #6A7781;
   font-size: 0.75em;
   overflow: hidden;
-  outline: 0px none;
+  outline: 0 none;
+  background: #FFFFFF;
   border: none;
   border-radius: 2px;
   text-indent: 0.01px;
@@ -2333,12 +2331,19 @@ select::-ms-expand {
     background: #fafafa;
   }
 }
+.select:before, .select:after {
+  position: absolute;
+  pointer-events: none;
+}
 .select:after {
-  filter: alpha(opacity=0.8);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="0.8")";
-  -khtml-opacity: 0.8;
-  -moz-opacity: 0.8;
-  opacity: 0.8;
+  position: absolute;
+  top: 1px;
+  right: 0;
+  filter: alpha(opacity=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="1")";
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
   background: transparent;
   position: absolute;
   display: inline-block;
@@ -2346,11 +2351,16 @@ select::-ms-expand {
   width: 12px;
   height: 12px;
   background-image: url("../img/icon-chevron-down.svg");
-  position: absolute;
-  top: 13px;
-  right: 20px;
   display: inline-block;
   content: "";
+  width: 40px;
+  height: 35px;
+  border-top: none;
+  border-right: none;
+  border-left: 1px solid #E8E8E8;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 26%;
 }
 
 .input-default {
