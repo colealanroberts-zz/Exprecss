@@ -1,0 +1,17 @@
+.caret
+    @include caret(12px, down, 0.8)
+    position: relative
+    display: inline-block
+    margin-left: 10px
+
+// Hide caret if parent class is .col-1-of-6
+.col-1-of-6
+    .dropdown
+        .btn-dropdown
+            color: transparent
+
+        .caret
+            @include transform(translateX(-50%))
+            @include caret(12px, down)
+            left: 50%
+            margin-left: 0
