@@ -2050,6 +2050,7 @@ img {
   transition: all, linear, 300ms;
   display: block;
   padding: 10px;
+  font-size: 0.75em;
 }
 .dropdown-menu li a:hover {
   background: #f7f7f7;
