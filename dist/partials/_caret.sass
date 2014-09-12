@@ -1,8 +1,11 @@
 .caret
-    @include caret(12px, down, 0.8)
-    position: relative
+    position: absolute
     display: inline-block
+    margin-top: 5px
     margin-left: 10px
+
+    &-dark
+        @include caret(12px, down, 0.8)
 
 // Hide caret if parent class is .col-1-of-6
 .col-1-of-6

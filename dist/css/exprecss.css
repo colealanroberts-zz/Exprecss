@@ -1909,6 +1909,12 @@ img {
 }
 
 .caret {
+  position: absolute;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.caret-dark {
   filter: alpha(opacity=0.8);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="0.8")";
   -khtml-opacity: 0.8;
@@ -1921,9 +1927,6 @@ img {
   width: 12px;
   height: 12px;
   background-image: url("../img/icon-chevron-down.svg");
-  position: relative;
-  display: inline-block;
-  margin-left: 10px;
 }
 
 .col-1-of-6 .dropdown .btn-dropdown {
@@ -2584,23 +2587,6 @@ button:focus, input.btn:focus {
   overflow: hidden;
   text-overflow: ellipsis;
   border-radius: 0 2px 2px 0;
-}
-.btn-dropdown:after {
-  filter: alpha(opacity=0.8);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="0.8")";
-  -khtml-opacity: 0.8;
-  -moz-opacity: 0.8;
-  opacity: 0.8;
-  background: transparent;
-  position: absolute;
-  display: inline-block;
-  content: "";
-  width: 12px;
-  height: 12px;
-  background-image: url("../img/icon-chevron-down.svg");
-  position: absolute;
-  top: 14px;
-  right: 30px;
 }
 
 .modal {
