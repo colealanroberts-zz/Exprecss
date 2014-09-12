@@ -1,7 +1,7 @@
 {
   "name": "simpli",
   "description": "A lightweight responsive framework built on Bourbon & Neat",
-  "version": "0.1.43",
+  "version": "0.1.44",
   "main": "dist/css/app.css",
   "ignore": [
     ".*",
