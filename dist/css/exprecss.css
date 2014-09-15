@@ -2682,9 +2682,9 @@ button:focus, input.btn:focus {
   font-size: 0.875em;
 }
 .modal-footer {
+  padding: 15px 20px;
   overflow: auto;
   margin: 0;
-  padding: 10px;
   background: #F8F8F8;
   border-left: 1px solid #E8E8E8;
   border-right: 1px solid #E8E8E8;
@@ -2889,7 +2889,7 @@ button:focus, input.btn:focus {
   font-size: 0.875em;
 }
 .widget-footer {
-  padding: 10px 20px;
+  padding: 15px 20px;
   overflow: auto;
   margin: 0;
   background: #F8F8F8;

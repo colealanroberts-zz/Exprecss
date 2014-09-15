@@ -16,19 +16,6 @@
         @media screen and (max-width: $point)
             @content
 
-// Background Clip
-@mixin background-clip($property)
-    background-clip: $property + "-box"
-    -moz-background-clip: $property
-    -webkit-background-clip: $property
-
-// Background Image
-@mixin linear-gradient-image($g1, $g2, $bg-image)
-    background-image: -webkit-linear-gradient($g1, $g2), url($bg-image)
-    background-image: -moz-linear-gradient($g1, $g2), url($bg-image)
-    background-image: -o-linear-gradient($g1, $g2), url($bg-image)
-    background-image: linear-gradient($g1, $g2), url($bg-image)
-
 // Opacity
 @mixin opacity($opacity, $bg-color: false)
     filter: alpha(opacity=$opacity)
