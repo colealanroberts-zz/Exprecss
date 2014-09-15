@@ -1,5 +1,5 @@
 /*!
- * Exprecss v0.1.45 (http://exprecss.com)
+ * Exprecss v0.1.46 (http://exprecss.com)
  * Copyright 2014 Cole Roberts & Jacob Biggs
  * Licensed under MIT
  */
@@ -31,7 +31,7 @@ html, body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.045);
 }
 
-.nav-open, .nav-close, .modal, .modal-overlay, .card-header, .card-title {
+.nav-open, .nav-close, .modal, .modal-overlay {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -2544,42 +2544,6 @@ button:focus, input.btn:focus {
 .btn-dropdown {
   outline: 0 none;
 }
-.btn-responsive-nav {
-  display: none;
-}
-@media screen and (max-width: 800px) {
-  .btn-responsive-nav {
-    padding: 8px 16px;
-    margin: 10px;
-    display: inline-block !important;
-    float: right;
-    color: #FFFFFF !important;
-    background: #3498DB;
-    border-radius: 2px;
-  }
-}
-.btn-responsive-nav-close {
-  display: none;
-}
-@media screen and (max-width: 800px) {
-  .btn-responsive-nav-close {
-    position: relative;
-    z-index: 9999;
-    display: inline-block !important;
-    float: right;
-    padding-right: 10px;
-    padding-top: 10px;
-    cursor: pointer;
-  }
-  .btn-responsive-nav-close svg {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-  }
-  .btn-responsive-nav-close svg path {
-    fill: #6f7279;
-  }
-}
 .btn-dropdown {
   padding: 9px 0 10px;
   position: relative;
@@ -2717,116 +2681,6 @@ button:focus, input.btn:focus {
   display: block;
   overflow-y: scroll;
   background: rgba(248, 248, 248, 0.9);
-}
-
-.card {
-  height: auto;
-  overflow: hidden;
-  background: #FFFFFF;
-  border: 1px solid #E8E8E8;
-  border-radius: 2px;
-}
-@media screen and (max-width: 480px) {
-  .card {
-    margin-bottom: 10px;
-  }
-}
-.card .btn:last-of-type {
-  margin-bottom: 0px;
-}
-.card-header {
-  -webkit-transition: all, linear, 300ms;
-  -moz-transition: all, linear, 300ms;
-  transition: all, linear, 300ms;
-  position: relative;
-  overflow: hidden;
-  height: 175px;
-}
-.card-header:hover .card-title {
-  -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  bottom: 25px;
-}
-.card-header:hover .card-info {
-  -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
-  -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
-  transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
-  bottom: 10px;
-  opacity: 1;
-}
-.card-header:hover .card-image {
-  -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  filter: alpha(opacity=0.9);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="0.9")";
-  -khtml-opacity: 0.9;
-  -moz-opacity: 0.9;
-  opacity: 0.9;
-  background: transparent;
-}
-.card-header:after {
-  background-color: transparent;
-  background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  display: block;
-  content: "";
-  width: 100%;
-  height: 60%;
-}
-.card-image {
-  -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-.card-title {
-  -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 250ms;
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  z-index: 1030;
-  left: 15px;
-  bottom: 10px;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  font-size: 0.875em;
-}
-.card-info {
-  -webkit-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
-  -moz-transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
-  transition: all, cubic-bezier(0.215, 0.61, 0.355, 1), 350ms;
-  margin: 0 15px;
-  filter: alpha(opacity=0);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="0")";
-  -khtml-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-  background: transparent;
-  position: absolute;
-  z-index: 1030;
-  bottom: -20px;
-  color: #e6e6e6;
-  font-size: 0.875em;
-}
-.card-body {
-  overflow: auto;
-  padding: 20px;
-}
-.card-body p {
-  margin-bottom: 10px;
-  font-size: 0.875em;
 }
 
 .widget {

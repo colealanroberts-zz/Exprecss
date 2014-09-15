@@ -2,7 +2,7 @@
     display: block
     background: $white
     border-radius: $border-radius-default
-    @include breakpoint(mobile)
+    @include media(mobile)
         margin-bottom: $margin-bottom-default
 
     .btn:not(.btn-dropdown):last-of-type
@@ -65,5 +65,5 @@
 
         .btn
             margin-bottom: 0
-            @include breakpoint(mobile)
+            @include media(mobile)
                 margin-bottom: 10px

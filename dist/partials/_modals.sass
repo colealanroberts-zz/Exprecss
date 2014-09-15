@@ -11,7 +11,7 @@
     width: $width-modal
     background: $white
     border-radius: $border-radius-default
-    @include breakpoint(mobile)
+    @include media(mobile)
         @include transform(translate(0, 0))
         @include transform-origin(0 0)
         @include position(relative, 0 null null 0)
@@ -80,7 +80,7 @@
         .btn
             margin-bottom: 0px
 
-        @include breakpoint(mobile)
+        @include media(mobile)
             .btn
                 margin-bottom: 10px
 
@@ -88,7 +88,7 @@
                     margin-bottom: 0
 
     &-header, &-body, &-footer
-        @include breakpoint(mobile)
+        @include media(mobile)
             border-left: 0
             border-right: 0
 

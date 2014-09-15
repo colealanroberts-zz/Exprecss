@@ -43,21 +43,21 @@
     @extend %force-hardware-accel
 
 .nav-open
-    @include breakpoint(tablet)
+    @include media(tablet)
         @include transform(translateX(0px))
 
 .nav-close
-    @include breakpoint(tablet)
+    @include media(tablet)
         @include transform(translateX(225px))
 
 .modal.ng-enter
     @include animation(modal-open $ease-out-cubic 400ms)
-    @include breakpoint(mobile)
+    @include media(mobile)
         @include animation(modal-open-responsive $ease-out-cubic 400ms)
 
 .modal.ng-leave
     @include animation(modal-hide $ease-in-cubic 250ms)
-    @include breakpoint(mobile)
+    @include media(mobile)
         @include animation(modal-close-responsive $ease-out-cubic 400ms)
 
 .modal-overlay.ng-enter

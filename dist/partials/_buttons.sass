@@ -22,7 +22,7 @@ button, input.btn
     border-radius: $border-radius-default
     font-size: $font-size-14
 
-    @include breakpoint(mobile)
+    @include media(mobile)
         margin-bottom: 10px
         width: 100%
         float: none
@@ -78,36 +78,6 @@ button, input.btn
 
     &-dropdown
         outline: 0 none
-
-    &-responsive-nav
-        display: none
-        @include breakpoint(tablet)
-            @include padding(8px 16px)
-            @include margin(10px)
-            display: inline-block !important // I need to get rid of this nonsense
-            float: right
-            color: $white !important
-            background: $base-color
-            border-radius: $border-radius-default
-
-    &-responsive-nav-close
-        display: none
-        @include breakpoint(tablet)
-            position: relative
-            z-index: 9999
-            display: inline-block !important // I need to get rid of this nonsense
-            float: right
-            padding-right: 10px
-            padding-top: 10px
-            cursor: pointer
-
-            svg
-                display: inline-block
-                width: 14px
-                height: 14px
-
-                path
-                    fill: lighten($dark-grey, 20%)
 
     &-dropdown
         @include padding(9px 0 10px 0)

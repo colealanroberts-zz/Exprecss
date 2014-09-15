@@ -4,7 +4,7 @@
         @if $index1 == $index2
             .col-#{$index1}
                 @include span-columns($index1)
-                @include breakpoint(mobile)
+                @include media(mobile)
                     width: 100%
 
             @if $render-shift == true
@@ -14,7 +14,7 @@
         @else
             .col-#{$index1}-of-#{$index2}
                 @include span-columns($index1 of $index2)
-                @include breakpoint(mobile)
+                @include media(mobile)
                     width: 100%
 
             @if $render-shift == true
