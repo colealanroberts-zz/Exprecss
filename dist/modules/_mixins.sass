@@ -50,7 +50,7 @@
 // Caret
 @mixin caret($bg-size: 25%, $direction: down, $opacity: 1.0)
     @include opacity($opacity)
-    position: absolute
+    @include position(absolute, 0 null null 0)
     display: block
     content: ''
     width: 100%
