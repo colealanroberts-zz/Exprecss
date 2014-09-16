@@ -5,16 +5,4 @@
     margin-left: 10px
 
     &-dark
-        @include caret(12px, down, 0.8)
-
-// Hide caret if parent class is .col-1-of-6
-.col-1-of-6
-    .dropdown
-        .btn-dropdown
-            color: transparent
-
-        .caret
-            @include transform(translateX(-50%))
-            @include caret(12px, down)
-            left: 50%
-            margin-left: 0
+        @include caret(down, 0.8)

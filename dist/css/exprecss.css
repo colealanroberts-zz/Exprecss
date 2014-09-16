@@ -1,5 +1,5 @@
 /*!
- * Exprecss v0.1.46 (http://exprecss.com)
+ * Exprecss v0.1.47 (http://exprecss.com)
  * Copyright 2014 Cole Roberts & Jacob Biggs
  * Licensed under MIT
  */
@@ -1915,29 +1915,6 @@ img {
   margin-left: 10px;
 }
 .caret-dark {
-  filter: alpha(opacity=0.8);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="0.8")";
-  -khtml-opacity: 0.8;
-  -moz-opacity: 0.8;
-  opacity: 0.8;
-  background: transparent;
-  position: absolute;
-  display: inline-block;
-  content: "";
-  width: 12px;
-  height: 12px;
-  background-image: url("../img/icon-chevron-down.svg");
-}
-
-.col-1-of-6 .dropdown .btn-dropdown {
-  color: transparent;
-}
-.col-1-of-6 .dropdown .caret {
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
   filter: alpha(opacity=1);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="1")";
   -khtml-opacity: 1;
@@ -1945,13 +1922,14 @@ img {
   opacity: 1;
   background: transparent;
   position: absolute;
-  display: inline-block;
+  display: block;
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 100%;
+  height: 100%;
+  background-size: down;
   background-image: url("../img/icon-chevron-down.svg");
-  left: 50%;
-  margin-left: 0;
+  background-repeat: no-repeat;
+  background-background-position: center center;
 }
 
 .footer {
@@ -2350,11 +2328,14 @@ select::-ms-expand {
   opacity: 1;
   background: transparent;
   position: absolute;
-  display: inline-block;
+  display: block;
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 100%;
+  height: 100%;
+  background-size: 25%;
   background-image: url("../img/icon-chevron-down.svg");
+  background-repeat: no-repeat;
+  background-background-position: center center;
   display: inline-block;
   content: "";
   width: 40px;

@@ -48,11 +48,15 @@
             background-size: $width $height
 
 // Caret
-@mixin caret($dim: 12px, $direction: down, $opacity: 1.0)
+@mixin caret($bg-size: 25%, $direction: down, $opacity: 1.0)
     @include opacity($opacity)
     position: absolute
-    display: inline-block
+    display: block
     content: ''
-    width: $dim
-    height: $dim
-    background-image: url("../img/icon-chevron-down.svg")
+    width: 100%
+    height: 100%
+    background:
+        size: $bg-size
+        image: url("../img/icon-chevron-down.svg")
+        repeat: no-repeat
+        background-position: center center
