@@ -1,19 +1,18 @@
 .dropdown
-    position: relative
+    position: absolute
     display: inline-block
-    width: 100%
-    height: $height-input-default
+    height: 100%
 
     &-menu
-        @include transform(translateX(-50%))
         @include appearance(none)
         position: absolute
         display: block
-        left: 50%
         outline: 0 none
         margin: 0
+        right: 0
         padding: 0
         width: 100%
+        min-width: $min-width-dropdown-menu
         height: auto
         z-index: $z-index-dropdown-menu
         visibility: hidden
@@ -23,8 +22,7 @@
 
         &:before
             @include image-retina('../img/dropdown-triangle', 'png', 13px, $height-dropdown-triangle)
-            @include transform(translateX(-50%))
-            @include position(absolute, -($height-dropdown-triangle) null null 50%)
+            @include position(absolute, -($height-dropdown-triangle) 15px null null)
             z-index: $z-index-alpha
             display: block
             content: ''

@@ -76,6 +76,7 @@ select::-ms-expand
         pointer-events: none
 
     &:after
+        @include position(absolute, 1px 0 null null)
         @include caret()
         display: block
         content: ''
@@ -84,7 +85,3 @@ select::-ms-expand
         border-top: none
         border-right: none
         border-left: 1px solid $border-grey
-        background:
-            repeat: no-repeat
-            position: center center
-            size: 26%
