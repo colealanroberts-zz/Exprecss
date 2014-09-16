@@ -2,6 +2,29 @@
     position: absolute
     display: inline-block
     height: 100%
+    right: 0
+
+    &-menu-container
+        position: relative
+
+        &-inactive
+            @include transition(all, $ease-in-out-back, $transition-duration-default)
+            @include opacity(0)
+
+        &-active
+            @include transition(all, $ease-in-out-back, $transition-duration-default)
+            @include opacity(1, $white)
+            display: block
+            visibility: visible
+
+        &:before
+            @include image-retina('../img/dropdown-triangle', 'png', 13px, $height-dropdown-triangle)
+            @include position(absolute, -($height-dropdown-triangle) 15px null null)
+            z-index: $z-index-alpha
+            display: block
+            content: ''
+            width: 13px
+            height: $height-dropdown-triangle
 
     &-menu
         @include appearance(none)
@@ -12,22 +35,14 @@
         right: 0
         padding: 0
         width: 100%
-        min-width: $min-width-dropdown-menu
+        overflow-y: scroll
         height: auto
+        min-width: $min-width-dropdown-menu
+        max-height: $max-height-dropdown-menu
         z-index: $z-index-dropdown-menu
-        visibility: hidden
         border-radius: $border-radius-default
         background: $white
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1),0 0 0 1px rgba(0,0,0,0.06)
-
-        &:before
-            @include image-retina('../img/dropdown-triangle', 'png', 13px, $height-dropdown-triangle)
-            @include position(absolute, -($height-dropdown-triangle) 15px null null)
-            z-index: $z-index-alpha
-            display: block
-            content: ''
-            width: 13px
-            height: $height-dropdown-triangle
 
         li
             display: block
@@ -44,13 +59,3 @@
 
                 &:hover
                     background: darken($white, 3%)
-
-        &-inactive
-            @include transition(all, $ease-in-out-back, $transition-duration-default)
-            @include opacity(0)
-
-        &-active
-            @include transition(all, $ease-in-out-back, $transition-duration-default)
-            @include opacity(1, $white)
-            display: block
-            visibility: visible

@@ -16,12 +16,12 @@
 					menu = angular.element($document[0].querySelector('#' + that.attr('data-for') || that.attr('for')));
 
 				e.preventDefault();
-				menu.toggleClass('dropdown-menu-inactive dropdown-menu-active');
+				menu.toggleClass('dropdown-menu-container-inactive dropdown-menu-container-active');
 				that[0].focus();
 
 				that.one('blur', function() {
-					menu.removeClass('dropdown-menu-active');
-					menu.addClass('dropdown-menu-inactive');
+					menu.removeClass('dropdown-menu-container-active');
+					menu.addClass('dropdown-menu-container-inactive');
 				});
 			}
 		});
