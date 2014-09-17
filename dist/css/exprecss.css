@@ -1899,7 +1899,7 @@ select::-ms-expand {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background-size: 12px;
+    background-size: 10px;
     background-image: url("../img/icon-chevron-down.svg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -2077,7 +2077,7 @@ button, input.btn {
       width: 100%;
       height: 100%;
       pointer-events: none;
-      background-size: 12px;
+      background-size: 10px;
       background-image: url("../img/icon-chevron-down.svg");
       background-repeat: no-repeat;
       background-position: center center;
