@@ -624,6 +624,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/exprecss-screenshot.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.28635e+06,
+		"inputAbbreviatedPath": "\/exprecss-screenshot.png",
+		"outputAbbreviatedPath": "\/exprecss-screenshot.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/README.html": {
 		"fileType": 8192,
 		"ignore": 1,
