@@ -8,14 +8,16 @@
         position: relative
 
         &-inactive
-            @include transition(all, $ease-in-out-back, $transition-duration-default)
+            @include transition(all, $ease-in-cubic, 200ms)
+            @include transform(translateY(-40px))
             @include opacity(0)
+            z-index: $z-index-basement
 
         &-active
-            @include transition(all, $ease-in-out-back, $transition-duration-default)
-            @include opacity(1, $white)
+            @include transition(all, $ease-out-cubic, $transition-duration-300)
+            @include transform(translateY(0px))
+            @include opacity(1)
             display: block
-            visibility: visible
 
         &:before
             @include image-retina('../img/dropdown-triangle', 'png', 13px, $height-dropdown-triangle)
@@ -52,7 +54,7 @@
                 border-bottom: none
 
             a
-                @include transition(all, linear, $transition-duration-default)
+                @include transition(all, linear, $transition-duration-300)
                 display: block
                 padding: 10px
                 font-size: $font-size-12

@@ -5,7 +5,7 @@
     resize: none
 
 .input-default, .textarea-default
-    @include transition(all, linear, $transition-duration-default)
+    @include transition(all, linear, $transition-duration-300)
     @include box-sizing(border-box)
     @include appearance(none)
     @include fill-parent
@@ -30,7 +30,9 @@
     height: $height-input-default
 
     input
-        width: calc(100% - 40px)
+        position: relative
+        z-index: $z-index-alpha
+        width: calc(100% - 41px) // This is not a magic number, this is the width of the .btn-dropdown
         border-top: 1px solid $border-grey
         border-right: 0
         border-bottom: 1px solid $border-grey
