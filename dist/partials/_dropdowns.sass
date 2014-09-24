@@ -17,6 +17,7 @@
             @include transition(all, $ease-out-cubic, $transition-duration-300)
             @include transform(translateY(0px))
             @include opacity(1)
+            z-index: $z-index-alpha - 1
             display: block
 
         &:before
