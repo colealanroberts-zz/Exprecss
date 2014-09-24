@@ -18,6 +18,9 @@
             @include opacity(1)
             z-index: $z-index-alpha + 1
 
+            .dropdown-menu
+                display: block
+
         &:before
             @include image-retina('../img/dropdown-triangle', 'png', 13px, $height-dropdown-triangle)
             @include position(absolute, -($height-dropdown-triangle) 15px null null)
@@ -30,7 +33,7 @@
     &-menu
         @include appearance(none)
         position: absolute
-        display: block
+        display: none
         outline: 0 none
         margin: 0
         right: 0
