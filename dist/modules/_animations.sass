@@ -1,3 +1,21 @@
+@include keyframes(dropdown-open)
+    0%
+        @include transform(translateY(-40px))
+        @include opacity(0)
+
+    100%
+        @include transform(translateY(0px))
+        @include opacity(1)
+
+@include keyframes(dropdown-close)
+    0%
+        @include transform(translateY(0px))
+        @include opacity(1)
+
+    100%
+        @include transform(translateY(-40px))
+        @include opacity(0)
+
 @include keyframes(modal-open)
     0%
         @include transform(scale3d(0.1, 0.1, 1) translate(-50%, -50%))
@@ -36,19 +54,6 @@
 
     100%
         opacity: 0
-
-.nav-open, .nav-close
-    @include transition(all, linear, $transition-duration-300)
-    @include backface-visibility(hidden)
-    @extend %force-hardware-accel
-
-.nav-open
-    @include media(tablet)
-        @include transform(translateX(0px))
-
-.nav-close
-    @include media(tablet)
-        @include transform(translateX(225px))
 
 .modal.ng-enter
     @include animation(modal-open $ease-out-cubic 400ms)

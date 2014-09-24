@@ -20,7 +20,7 @@
 				that[0].focus();
 
 				that.one('blur', function() {
-					menu.removeClass('dropdown-menu-container-active');
+					menu.removeClass('dropdown-menu-container-inactive');
 					menu.addClass('dropdown-menu-container-inactive');
 				});
 			}
