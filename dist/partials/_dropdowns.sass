@@ -8,18 +8,15 @@
         position: relative
 
         &-inactive
-            @include animation(dropdown-close $ease-out-cubic 200ms)
+            @include transition()
+            @include animation(dropdown-close $ease-out-cubic 150ms)
             @include opacity(0)
 
-            .dropdown-menu
-                visibility: hidden
-
         &-active
+            @include transition()
             @include animation(dropdown-open $ease-out-cubic 200ms)
             @include opacity(1)
-
-            .dropdown-menu
-                visibility: visible
+            z-index: $z-index-alpha + 1
 
         &:before
             @include image-retina('../img/dropdown-triangle', 'png', 13px, $height-dropdown-triangle)
@@ -32,7 +29,6 @@
 
     &-menu
         @include appearance(none)
-        z-index: $z-index-alpha + 1
         position: absolute
         display: block
         outline: 0 none
