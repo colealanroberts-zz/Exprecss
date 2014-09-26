@@ -36,6 +36,9 @@
         &-border-bottom
             border-bottom: 1px solid $border-grey
 
+    &-body, &-footer
+        @xtend %clearfix
+
     &-body
         @include padding(20px)
         border-top: 1px dotted $border-grey
