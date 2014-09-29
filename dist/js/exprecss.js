@@ -19,7 +19,11 @@
 				menu.toggleClass('dropdown-menu-container-inactive dropdown-menu-container-active');
 				that[0].focus();
 
-				that.one('blur', function() {
+				menu.one('mousedown', function(ev) {
+					ev.target.click();
+				});
+
+				that.one('blur', function(ev) {
 					menu.removeClass('dropdown-menu-container-active');
 					menu.addClass('dropdown-menu-container-inactive');
 				});

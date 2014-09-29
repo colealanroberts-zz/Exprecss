@@ -32,7 +32,7 @@
     input
         position: relative
         z-index: $z-index-alpha - 1
-        width: calc(100% - 41px) // This is not a magic number, this is the width of the .btn-dropdown
+        width: calc(100% - 41px)
         border-top: 1px solid $border-grey
         border-right: 0
         border-bottom: 1px solid $border-grey
@@ -42,4 +42,13 @@
         &:focus, &:active
             border-right: 1px solid $exprecss-blue
 
-
+.input-file-upload
+    @include opacity(0)
+    position: absolute
+    top: 0
+    right: 0
+    margin: 0
+    padding: 0
+    cursor: pointer
+    height: 100%
+    width: 100%
