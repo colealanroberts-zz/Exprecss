@@ -1,6 +1,6 @@
 .toggle
     input[type="checkbox"]
-        @include transition(all, linear, $transition-duration-300 * 1.5)
+        @include transition(all, linear, $transition-duration-default * 1.5)
         @include appearance(none)
         @include margin(null 0 null 0)
         display: inline-block
@@ -20,7 +20,7 @@
             @include transform(translate3d(0,0,0))
 
         &:after
-            @include transition(all, linear, $transition-duration-300 * 1.5)
+            @include transition(all, linear, $transition-duration-default * 1.5)
             @include appearance(none)
             @include position(absolute, -1px null null 0)
             display: block
