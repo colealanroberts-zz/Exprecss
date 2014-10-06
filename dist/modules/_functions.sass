@@ -36,7 +36,7 @@ $direction-list: top right bottom left
 @each $name, $number in (0: 0, 10: 10px, 25: 25px, 40: 40px, 60: 60px, 100: 100px)
     @each $direction in $direction-list
         .padding-#{$direction}-#{$name}
-            padding-#{$direction}: $number
+            padding-#{$direction}: $number !important
 
         .margin-#{$direction}-#{$name}
-            margin-#{$direction}: $number
+            margin-#{$direction}: $number !important

@@ -11,11 +11,18 @@
     width: $width-modal
     background: $white
     border-radius: $border-radius-default
+    @include media(tablet)
+        width: calc(100% - 40px)
     @include media(mobile)
-        @include transform(translate(0, 0))
-        @include transform-origin(0 0)
-        @include position(relative, 0 null null 0)
-        width: 100%
+        @include transform(translateX(-50%))
+        @include transform-origin(initial)
+        @include position(absolute, 20px null null 50%)
+        overflow-y: scroll
+        width: calc(100% - 40px)
+        height: calc(100% - 40px)
+        min-height: 300px
+        box-shadow: 0 2px 10px rgba(black, 0.2)
+        border-radius: 0
 
     &-header
         @include padding(15px 20px)
@@ -58,6 +65,8 @@
         border-left: 1px solid $border-grey
         border-right: 1px solid $border-grey
         border-bottom: 1px dotted $border-grey
+        @include media(mobile)
+            border: 0
 
         &.border-no-header
             border-top: 1px solid $border-grey
@@ -79,6 +88,11 @@
         border-left: 1px solid $border-grey
         border-right: 1px solid $border-grey
         border-bottom: 1px solid $border-grey
+        @include media(mobile)
+            position: absolute
+            bottom: 0
+            width: 100%
+            border-radius: $border-radius-default
 
         .btn
             margin-bottom: 0px
@@ -89,11 +103,6 @@
 
                 &:last-of-type
                     margin-bottom: 0
-
-    &-header, &-body, &-footer
-        @include media(mobile)
-            border-left: 0
-            border-right: 0
 
     &-overlay
         @include position(fixed, 0 0 0 0)
