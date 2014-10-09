@@ -60,3 +60,10 @@
         image: url("../img/icon-chevron-down.svg")
         repeat: no-repeat
         position: center center
+
+@mixin font-smoothing($arg)
+    -moz-osx-font-smoothing: $arg
+    -webkit-font-smoothing: $arg
+    -moz-font-smoothing: $arg
+    -o-font-smoothing: $arg
+    font-smoothing: $arg

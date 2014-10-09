@@ -3,11 +3,7 @@ button, .btn
     @extend %btn
 
 button, input.btn
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: antialiased
-    -moz-font-smoothing: antialiased
-    -o-font-smoothing: antialised
-    font-smoothing: antialiased
+    @include font-smoothing(antialiased)
 
     &:focus
         @include appearance(none)

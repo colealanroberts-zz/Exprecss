@@ -2,49 +2,19 @@
     @include fill-parent
     position: relative
     overflow: hidden
-    background: $white
 
     ul
         @include margin(0 auto)
+        @include padding(15px 0)
         display: block
-        padding: 15px 0
         max-width: 68em
         overflow-x: auto
         list-style-type: none
-
-        .brand
-            color: $exprecss-blue
-            text-transform: none
-            letter-spacing: initial
-            font:
-                size: $font-size-14
 
         li
             @include padding(0 15px)
             margin: 0
             display: inline
 
-            a
-                text-transform: uppercase
-                text-decoration: none
-                letter-spacing: 1px
-                font:
-                    size: $font-size-12
-
-                &:hover
-                    color: $dark-grey
-
             .active
                 color: $dark-grey
-
-    &-fixed
-        @include backface-visibility(hidden)
-        @include position(fixed, 0 null null 0)
-        overflow: initial
-
-        ul
-            padding-top: 30px
-            padding-bottom: 30px
-
-    &-absolute
-        @include position(absolute, 0 null null 0)

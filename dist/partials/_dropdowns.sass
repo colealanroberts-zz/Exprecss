@@ -8,12 +8,12 @@
         position: relative
 
         &-inactive
-            @include animation(dropdown-close $ease-out-cubic 150ms)
+            @include animation(dropdown-close $ease-out-cubic ($transition-duration-default - 50ms))
             @include transition()
             @include opacity(0)
 
         &-active
-            @include animation(dropdown-open $ease-out-cubic 200ms)
+            @include animation(dropdown-open $ease-out-cubic $transition-duration-default)
             @include transition()
             @include opacity(1)
             z-index: $z-index-alpha + 1
