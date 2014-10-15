@@ -1,7 +1,7 @@
 {
   "name": "Exprecss",
   "description": "A lightweight responsive framework built on Bourbon & Neat",
-  "version": "0.1.72",
+  "version": "0.1.73",
   "main": "dist/css/app.css",
   "ignore": [
     ".*",
@@ -11,7 +11,7 @@
   "dependencies": {
     "bourbon": "latest",
     "neat": "latest",
-	"angular": "1.3.0-beta.16",
-	"angular-animate": "1.3.0-beta.16"
+	"angular": "1.3.0-beta.19",
+	"angular-animate": "1.3.0-beta.19"
   }
 }
