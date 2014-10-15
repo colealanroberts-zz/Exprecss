@@ -3,15 +3,17 @@
 
 	var app = angular.module('exprecss', []).run(function($rootScope, $expConfirm, $document) {
 		$document.on('click', function(e) {
-			if (e.target.className.indexOf('btn-responsive-nav') >= 0
-				|| e.target.className.indexOf('btn-responsive-nav-close') >= 0) {
+			if (e.target.className &&
+				(e.target.className.indexOf('btn-responsive-nav') >= 0 ||
+					e.target.className.indexOf('btn-responsive-nav-close') >= 0)) {
 				angular.element($document[0].querySelector('.navbar ul')).toggleClass('nav-close nav-open');
 				e.preventDefault();
 			}
 		});
 
 		$document.on('click', function(e) {
-			if (e.target.className.indexOf('btn-dropdown') >= 0) {
+			if (e.target.className &&
+				e.target.className.indexOf('btn-dropdown') >= 0) {
 				var that = angular.element(e.target),
 					menu = angular.element($document[0].querySelector('#' + that.attr('data-for') || that.attr('for')));
 
