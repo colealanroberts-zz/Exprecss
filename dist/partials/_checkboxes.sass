@@ -7,8 +7,9 @@
     &-sidelabel
         @include padding(4px 0 2px 30px)
         position: relative
-        margin-bottom: 0
+        cursor: pointer
         height: 100%
+        margin-bottom: 0
 
     &-input
         @include position(absolute, 0 null null null)
@@ -39,7 +40,8 @@
         @include position(absolute, 0 null null 0)
         visibility: hidden
         width: 22px
-        height: 100%
+        height: 22px
+        margin: 0
 
         &:checked + label:after
             @include opacity(1)
