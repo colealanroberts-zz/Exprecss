@@ -1,0 +1,25 @@
+.validation-text
+    @include opacity(0)
+    z-index: $z-index-omega
+    position: relative
+    display: block
+    margin-bottom: -($height-input-default / 2)
+    font-size: $font-size-12
+
+    &-success
+        color: $brand-green
+
+    &-info
+        color: $brand-blue
+
+    &-important
+        color: $brand-red
+
+.validation-text-success.animation-validate ~.input-default
+    border-color: $brand-green
+
+.validation-text-info.animation-validate ~.input-default
+    border-color: $brand-blue
+
+.validation-text-important.animation-validate ~.input-default
+    border-color: $brand-red

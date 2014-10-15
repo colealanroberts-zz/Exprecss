@@ -1,3 +1,4 @@
+// Dropdown Desktop
 @include keyframes(dropdown-open)
     0%
         @include transform(translateY(-40px))
@@ -16,6 +17,7 @@
         @include transform(translateY(-40px))
         @include opacity(0)
 
+// Modal Desktop
 @include keyframes(modal-open)
     0%
         @include transform(scale3d(0.1, 0.1, 1) translate(-50%, -50%))
@@ -41,6 +43,8 @@
         @include transform(scale(0.8) translate(-50%, -50%))
         opacity: 0
 
+
+// Modal Mobile
 @include keyframes(modal-open-responsive)
     0%
         opacity: 0
@@ -78,3 +82,9 @@
 
     &.ng-leave-active
         opacity: 0
+
+.animation-validate
+    @include transition(all, linear, $transition-duration-default)
+    @include opacity(1 !important)
+    @extend %force-hardware-accel
+    margin-bottom: 4px !important
