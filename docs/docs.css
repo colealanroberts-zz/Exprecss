@@ -60,19 +60,6 @@
   font-style: normal;
   src: url("../fonts/Gotham-Thin/Gotham-Thin.eot");
   src: url("../fonts/Gotham-Thin/Gotham-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Thin/Gotham-Thin.woff") format("woff"), url("../fonts/Gotham-Thin/Gotham-Thin.ttf") format("truetype"), url("../fonts/Gotham-Thin/Gotham-Thin.svg#Gotham-Thin") format("svg"); }
-.node-depth * {
-  background-color: rgba(255, 0, 0, 0.2); }
-.node-depth * * {
-  background-color: rgba(0, 255, 0, 0.2); }
-.node-depth * * * {
-  background-color: rgba(0, 0, 255, 0.2); }
-.node-depth * * * * {
-  background-color: rgba(255, 0, 255, 0.2); }
-.node-depth * * * * * {
-  background-color: rgba(0, 255, 255, 0.2); }
-.node-depth * * * * * * {
-  background-color: rgba(255, 255, 0, 0.2); }
-
 html, body {
   color: #5D687C;
   font-family: "Gotham-Book", sans-serif; }
@@ -81,6 +68,9 @@ html, body {
   margin-bottom: -137px; }
   .wrapper:after {
     height: 137px; }
+
+label {
+  font-weight: 600; }
 
 .rotate-text {
   -webkit-animation: rotate-text 3050ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
