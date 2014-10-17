@@ -3,17 +3,21 @@
     z-index: $z-index-omega
     position: relative
     display: block
+    padding-left: 10px
     margin-bottom: -($height-input-default / 2)
     font-size: $font-size-12
 
     &-success
         color: $brand-green
+        border-left: 2px solid $brand-green
 
     &-info
         color: $brand-blue
+        border-left: 2px solid $brand-blue
 
     &-important
         color: $brand-red
+        border-left: 2px solid $brand-red
 
 .validation-text-success.animation-validate ~.input-default
     border-color: $brand-green

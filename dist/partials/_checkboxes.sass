@@ -13,8 +13,8 @@
 
     &-input
         @include position(absolute, 0 null null null)
-        width: 22px
-        height: 22px
+        width: $wxh-checkbox
+        height: $wxh-checkbox
         padding: 10px
         cursor: pointer
         background: $light-grey
@@ -39,8 +39,8 @@
     input[type="checkbox"]
         @include position(absolute, 0 null null 0)
         visibility: hidden
-        width: 22px
-        height: 22px
+        width: $wxh-checkbox
+        height: $wxh-checkbox
         margin: 0
 
         &:checked + label:after

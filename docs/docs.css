@@ -315,7 +315,8 @@ section {
     border: 1px solid #3498DB; }
 
 .copyright {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  font-size: 11px; }
   .copyright a {
     font-weight: 600; }
 
