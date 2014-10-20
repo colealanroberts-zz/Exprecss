@@ -60,6 +60,13 @@ $breakpoint-mobile: 480px
 $breakpoint-tablet: 800px
 $breakpoint-desktop: 980px
 
+// Mobile Multiplier
+// On mobile devices things like checkboxes and radio buttons should be increased from their base size
+// Example: $wxh-checkbox = 22px, $size-mobile-multiplier = 1.5
+// $wxh-checkbox * $size-mobile-multiplier = 33px, from their we'll round down to the nearest even number
+// $wxh-checkbox * $size-mobile-multipler = 32px
+$mobile-multiplier: 1.5
+
 // Font
 $golden-ratio: 1.618
 $font-size-12: em(12)
