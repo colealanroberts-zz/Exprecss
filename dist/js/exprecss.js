@@ -50,7 +50,7 @@
 	app.service('$expModal', function($compile, $rootScope, $document) {
 		var scope = $rootScope.$new(true),
 			$body = angular.element($document[0].body),
-			overlay = $compile('<div class="modal-overlay" ng-if="showOverlay" ng-click="close() || showOverlay = false"></div>')(scope, function(elem) {
+			overlay = $compile('<div class="modal-overlay" ng-if="showOverlay" ng-click="close(); showOverlay = false"></div>')(scope, function(elem) {
 				$body.append(elem);
 			}),
 			registry = {},
