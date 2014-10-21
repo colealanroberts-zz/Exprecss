@@ -25,7 +25,7 @@
 					ev.target.click();
 				});
 
-				that.one('blur', function(ev) {
+				that.one('blur', function() {
 					menu.removeClass('dropdown-menu-container-active');
 					menu.addClass('dropdown-menu-container-inactive');
 				});
@@ -50,7 +50,7 @@
 	app.service('$expModal', function($compile, $rootScope, $document) {
 		var scope = $rootScope.$new(true),
 			$body = angular.element($document[0].body),
-			overlay = $compile('<div class="modal-overlay" ng-if="showOverlay" ng-click="close()"></div>')(scope, function(elem) {
+			overlay = $compile('<div class="modal-overlay" ng-if="showOverlay" ng-click="close() || showOverlay = false"></div>')(scope, function(elem) {
 				$body.append(elem);
 			}),
 			registry = {},
@@ -122,7 +122,7 @@
 					confirmModal.remove();
 					$expModal.hideOverlay();
 					deferred.resolve();
-				}
+				};
 
 			angular.extend(scope, {
 				cancel: cancel,
@@ -156,7 +156,7 @@
 		return $expConfirm;
 	});
 
-	app.directive('expConfirm', function ($expModal) {
+	app.directive('expConfirm', function () {
 		return {
 			restrict: 'AE',
 			template: '<div class="modal" ng-if="open">\n    <div class="modal-header" ng-class="headerClass">{{ title }}</div>\n    <div class="modal-body" ng-bind-html="html">\n    </div>\n    <div class="modal-footer">\n        <a class="btn float-left" id="cancel-modal-btn" ng-class="cancelClass" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>\n        <a class="btn float-right" id="confirm-modal-btn" ng-class="confirmClass" ng-click="confirm()">{{ confirmText }}</a>\n    </div>\n</div>',
@@ -177,7 +177,7 @@
 			link: function(scope, elem, attr) {
 				var overlayListener = function () {
 					scope.open = false;
-				}
+				};
 
 				scope.$watch('open', function (val) {
 					if (val) {
@@ -209,7 +209,7 @@
 					html: scope.html
 				}, scope);
 
-				elem.on('click', function(e) {
+				elem.on('click', function() {
 
 					scope.isOpen = true;
 					scope.$apply();
@@ -244,12 +244,12 @@
 			}
 
 			return result;
-		}
+		};
 
 		// Get plain number array
 		var clean = function(str) {
 			return str.replace(separators, '').split('');
-		}
+		};
 
 		/* Get next position for cursor by number index
 
@@ -268,10 +268,10 @@
 			}
 
 			posArr.push(posArr[posArr.length - 1] + 1);
-			posArr.shift()
+			posArr.shift();
 
 			return posArr;
-		}
+		};
 
 		// Get indexes for numbers by string position
 		var whichChars = function(mask) {
@@ -288,7 +288,7 @@
 			indexArr.push(indexArr[indexArr.length - 1]);
 
 			return indexArr;
-		}
+		};
 
 
 		return {
