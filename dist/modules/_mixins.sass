@@ -17,18 +17,12 @@
             @content
 
 // Opacity
-@mixin opacity($opacity, $bg-color: false)
+@mixin opacity($opacity)
     filter: alpha(opacity=$opacity)
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="#{$opacity}")"
     -khtml-opacity: $opacity
     -moz-opacity: $opacity
     opacity: $opacity
-
-    @if $bg-color == false
-        background: transparent
-
-    @else if $bg-color == $bg-color
-        background: rgba($bg-color, $opacity)
 
 // Will Change
 @mixin will-change($property)
