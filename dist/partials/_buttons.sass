@@ -62,15 +62,14 @@ button, input.btn
                 border-left: 1px solid $border-grey
                 border-bottom: 1px solid $border-grey
 
-            &:only-of-type + label
-                border-radius: $border-radius-default !important
-
             &:first-of-type + label
-                border-radius: $border-radius-default 0 0 $border-radius-default
+                border-top-left-radius: $border-radius-default
+                border-bottom-left-radius: $border-radius-default
 
             &:last-of-type + label
                 border-right: 1px solid $border-grey
-                border-radius: 0 $border-radius-default $border-radius-default 0
+                border-top-right-radius: $border-radius-default
+                border-bottom-right-radius: $border-radius-default
 
             &:checked + label
                 color: $white
