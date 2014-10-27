@@ -5,12 +5,15 @@
         outline: 0
         cursor: pointer
         padding: 4px
-        width: $width-radio
-        height: $height-radio
+        width: $wxh-radio
+        height: $wxh-radio
         background: $white
         border: 1px solid $border-grey
         border-radius: 50%
         margin-bottom: $margin-bottom-default
+        @include media(mobile)
+            width: mobile-scale($wxh-radio)
+            height: mobile-scale($wxh-radio)
 
         &:checked
             @include appearance(none)
@@ -21,11 +24,12 @@
             &:after
                 display: block
                 position: relative
-                width: 10px
-                height: 10px
+                width: $wxh-radio-checked
+                height: $wxh-radio-checked
                 outline: 0
                 content: ''
                 border-radius: 50%
                 background: $base-color
-
-
+                @include media(mobile)
+                    width: mobile-scale(15px)
+                    height: mobile-scale(15px)

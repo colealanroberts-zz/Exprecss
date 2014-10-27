@@ -1,26 +1,27 @@
 html, body
-    @extend %font-smoothing-antialiased
+    @include font-smoothing(true)
     height: 100%
     width: 100%
     min-height: 100%
     margin: 0
     padding: 0
-    line-height: 1.618
-    font-size: 100%
-    font-style: normal
-    background: $white
+    line-height: $line-height-base
+    font:
+        size: 100% 
+        style: normal
     @include media(tablet)
         height: 100%
         max-height: 100%
         overflow-y: scroll
-        -webkit-overflow-scrolling: touch
         -ms-touch-start-action: manipulation
         touch-action: manipulation
-        -webkit-touch-callout: none
-        -webkit-text-size-adjust: none
-        -webkit-tap-highlight-color: rgba(0,0,0,0)
-        -webkit-user-select: text
-
+        -webkit:
+            user-select: text
+            text-size-adjust: none
+            touch-callout: none
+            overflow-scrolling: touch
+            tap-highlight-color: rgba(0, 0, 0, 0)
+            
 hr
     @include linear-gradient(to right, darken($white, 6%) 10%, darken($white, 10%), darken($white, 6%) 90%)
     @include margin(0 0 10px 0)
@@ -46,8 +47,8 @@ img
     max-width: 100%
 
 fieldset
-    padding: 0
     border: 0
+    padding: 0
 
 .wrapper
     min-height: 100%

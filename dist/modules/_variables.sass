@@ -65,15 +65,18 @@ $breakpoint-desktop: 980px
 // Example: $wxh-checkbox = 22px, $size-mobile-multiplier = 1.5
 // $wxh-checkbox * $size-mobile-multiplier = 33px, from their we'll round down to the nearest even number
 // $wxh-checkbox * $size-mobile-multipler = 32px
-$mobile-multiplier: 1.5
+$mobile-multiplier: 1.333
 
 // Font
-$golden-ratio: 1.618
 $font-size-12: em(12)
+$font-size-body: em(13)
 $font-size-14: em(14)
 $font-size-16: em(16)
 $font-size-24: em(24)
 $font-size-36: em(36)
+
+// Line Height
+$line-height-base: 1.5
 
 // Z-Index
 $z-index-alpha: 9999
@@ -90,12 +93,13 @@ $z-index-basement: -1
 $padding-default: 20px
 $padding-container: 20px
 $padding-container-responsive: 10px
+$padding-btn-base: 10px 20px
 
 // Margin
 $margin-bottom-default: 10px
 
 // Inputs
-$height-input-default: 39px
+$height-input-default: 40px
 
 // Animations
 $modal-animate-distance: 20px
@@ -116,8 +120,8 @@ $width-dropdown-caret: 40
 $width-navbar-responsive: 225px
 
 // Radios
-$width-radio: 20px
-$height-radio: 20px
+$wxh-radio: 22px // Since the radio is a perfect circle let's just use the same var
+$wxh-radio-checked: 12px 
 
 // Footer
 $height-footer: 66px

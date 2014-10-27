@@ -31,12 +31,11 @@
             height: $height-dropdown-triangle
 
     &-menu
+        @include position(absolute, null 0 null null)
         @include appearance(none)
-        position: absolute
         display: none
         outline: 0 none
         margin: 0
-        right: 0
         padding: 0
         width: 100%
         overflow-y: scroll
@@ -46,7 +45,7 @@
         border-radius: $border-radius-default
         background: $white
         visibility: visible
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1),0 0 0 1px rgba(0,0,0,0.06)
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.06)
 
         li
             display: block

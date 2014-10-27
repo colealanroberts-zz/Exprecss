@@ -55,9 +55,10 @@
         repeat: no-repeat
         position: center center
 
-@mixin font-smoothing($arg)
-    -moz-osx-font-smoothing: $arg
-    -webkit-font-smoothing: $arg
-    -moz-font-smoothing: $arg
-    -o-font-smoothing: $arg
-    font-smoothing: $arg
+@mixin font-smoothing($arg-true)
+    @if $arg-true == true
+        -moz-osx-font-smoothing: grayscale
+        -webkit-font-smoothing: antialiased
+        -moz-font-smoothing: antialiased
+        -o-font-smoothing: antialiased
+        font-smoothing: antialiased
