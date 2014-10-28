@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <title>Exprecss Frontend Framework</title>
     <link rel="stylesheet" href="dist/css/exprecss.css">
-    <link rel="stylesheet" href="dist/css/normalize.css">
     <link rel="stylesheet" href="docs/docs.css">
     <link rel="stylesheet" href="docs/prettify-theme.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6740492/729904/css/fonts.css" />
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -50,7 +48,7 @@
                 </div>
                 <div class="hero-group">
                     <a href="https://github.com/colealanroberts/colealanroberts.github.io/archive/master.zip" class="btn btn-download-repo">Download from Github
-                    <span class="version">Currently in v0.1.83</span>
+                    <span class="version">Currently in v0.1.84</span>
                     </a>
                     <a href="https://github.com/colealanroberts/Exprecss" class="btn btn-view-examples">Explore the Repo</a>
                     <div class="bower-install">
@@ -67,6 +65,7 @@
                 <h2>Header level 2</h2>
                 <h3>Header Level 3</h3>
                 <h4>Header Level 4</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam porro, consequuntur sint illo maiores voluptatum ipsum, quos molestias fugiat nihil explicabo eaque nemo amet, nesciunt voluptate? Officiis dolorum esse, molestiae.</p>
             </div>
         </section>
         <section class="grid">
@@ -156,7 +155,7 @@
                 <a href="#" class="btn btn-action">.btn-action</a>
                 <a href="#" class="btn btn-info">.btn-info</a>
                 <a href="#" class="btn btn-important">.btn-important</a>
-                <hr>
+                
                 <h3>File Upload Button</h3>
                 <p>This styles the file browse button</p>
 <pre class="prettyprint lang-html">
@@ -169,7 +168,6 @@
                     <span>File to Upload</span>
                     <input type="file" class="input-file-upload">
                 </button>
-
                 <h3>Grouped Buttons</h3>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
@@ -198,7 +196,7 @@
                         </div>
                     </div>
                 </div>
-                <hr>
+                
                 <h3>Dropdown Menu</h3>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
@@ -231,7 +229,8 @@
                         </div>
                     </div>
                 </div>
-                <hr>
+            </div>
+            <div class="row">
                 <h3>Inputs</h3>
                 <h4>Inline Forms</h4>
                 <p>Example Usage</p>
@@ -260,31 +259,30 @@
         &lt;div&gt;
     &lt;form&gt;
 &lt;/div&gt;</pre>
-                <div class="row">
-                    <form action="">
-                        <div class="col-3">
-                            <label for="first-name">First Name</label>
-                            <span>Default Placeholder</span>
-                            <input type="text" class="input-default">
-                        </div>
-                        <div class="col-3">
-                            <label for="">Last Name</label>
-                            <span class="placeholder-success">Placeholder Success</span>
-                            <input type="text" class="input-default">
-                        </div>
-                        <div class="col-3">
-                            <label for="">Email</label>
-                            <span class="placeholder-info">Placeholder Info</span>
-                            <input type="text" class="input-default">
-                        </div>
-                        <div class="col-3">
-                            <label for="password">Password</label>
-                            <span class="placeholder-important">Placeholder Important</span>
-                            <input type="password" class="input-default">
-                        </div>
-                    </form>
-                </div>
-                <hr>
+                <form action="">
+                    <div class="col-3">
+                        <label for="first-name">First Name</label>
+                        <span>Default Placeholder</span>
+                        <input type="text" class="input-default">
+                    </div>
+                    <div class="col-3">
+                        <label for="">Last Name</label>
+                        <span class="placeholder-success">Placeholder Success</span>
+                        <input type="text" class="input-default">
+                    </div>
+                    <div class="col-3">
+                        <label for="">Email</label>
+                        <span class="placeholder-info">Placeholder Info</span>
+                        <input type="text" class="input-default">
+                    </div>
+                    <div class="col-3">
+                        <label for="password">Password</label>
+                        <span class="placeholder-important">Placeholder Important</span>
+                        <input type="password" class="input-default">
+                    </div>
+                </form>
+            </div>
+                
                 <h4>Stacked Forms</h4>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
@@ -465,7 +463,7 @@
                         </div>
                     </div>
                 </div>
-                <hr>
+                
                 <h3>Validation</h3>
                 <p>At times you'll need to display input validation information to a user. While a modal is sometimes an acceptable solution, it is jolting and can feel overwhelming. Validation classes are the perfect way to alert a user that the information provided was insufficient. With Exprecss' beautifully simple approach you are now able to alert a user without being too distracting. The validation text is fired only when the client side validation comes back as insufficient.</p>
                 <pre class="prettyprint lang-html">
@@ -534,7 +532,7 @@
                     </div>
 
                 </div>
-                <hr>
+                
                 <h3>Selects</h3>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
@@ -563,7 +561,7 @@
                         </div>
                     </div>
                 </div>
-                <hr>
+                
                 <h3>Radio Buttons</h3>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
@@ -579,7 +577,7 @@
                         <input type="radio" name="radio-example">
                     </div>
                 </div>
-                <hr>
+                
                 <h3>Checkboxes</h3>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
@@ -597,7 +595,7 @@
                         </div>
                     </div>
                 </div>
-                <hr>
+                
             </div>
         </section>
         <section class="helpers">
@@ -617,7 +615,7 @@
                         <a href="#" class="btn btn-action center-h-relative">Button Centered: Relative</a>
                     </div>
                 </div>
-                <hr>
+                
                 <h3>Full Width Elements</h3>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">
@@ -631,7 +629,7 @@
                         <a href="#" class="btn btn-primary full-width">Full Width Button</a>
                     </div>
                 </div>
-                <hr>
+                
                 <h3>Text Alignment</h3>
                 <p>Example Usage</p>
                 <pre class="prettyprint lang-html">

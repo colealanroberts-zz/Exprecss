@@ -1,5 +1,5 @@
 /*!
- * Exprecss v0.1.83 (http://exprecss.com)
+ * Exprecss v0.1.84 (http://exprecss.com)
  * A lightweight responsive framework built on Bourbon, Neat & AngularJS
  * Copyright 2014 Cole Roberts & Jacob Biggs
  * Licensed under MIT
@@ -20,6 +20,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 @media screen and (max-width: 480px) { .col-1 { width: 100%; } }
 
 .shift-1 { margin-left: 8.5298%; }
+
+@media screen and (max-width: 480px) { .col-mobile-1 { float: left; display: block; margin-right: 2.35765%; width: 6.17215%; }
+  .col-mobile-1:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-1 { float: left; display: block; margin-right: 2.35765%; width: 6.17215%; }
+  .col-tablet-1:last-child { margin-right: 0; } }
 
 .col-1-of-2 { float: left; display: block; margin-right: 16.03631%; width: 41.98184%; }
 .col-1-of-2:last-child { margin-right: 0; }
@@ -93,6 +99,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 
 .shift-2 { margin-left: 17.05961%; }
 
+@media screen and (max-width: 480px) { .col-mobile-2 { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
+  .col-mobile-2:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-2 { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
+  .col-tablet-2:last-child { margin-right: 0; } }
+
 .col-2-of-3 { float: left; display: block; margin-right: 10.1484%; width: 63.28387%; }
 .col-2-of-3:last-child { margin-right: 0; }
 @media screen and (max-width: 480px) { .col-2-of-3 { width: 100%; } }
@@ -159,6 +171,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 
 .shift-3 { margin-left: 25.58941%; }
 
+@media screen and (max-width: 480px) { .col-mobile-3 { float: left; display: block; margin-right: 2.35765%; width: 23.23176%; }
+  .col-mobile-3:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-3 { float: left; display: block; margin-right: 2.35765%; width: 23.23176%; }
+  .col-tablet-3:last-child { margin-right: 0; } }
+
 .col-3-of-4 { float: left; display: block; margin-right: 7.42297%; width: 73.14426%; }
 .col-3-of-4:last-child { margin-right: 0; }
 @media screen and (max-width: 480px) { .col-3-of-4 { width: 100%; } }
@@ -219,6 +237,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 
 .shift-4 { margin-left: 34.11922%; }
 
+@media screen and (max-width: 480px) { .col-mobile-4 { float: left; display: block; margin-right: 2.35765%; width: 31.76157%; }
+  .col-mobile-4:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-4 { float: left; display: block; margin-right: 2.35765%; width: 31.76157%; }
+  .col-tablet-4:last-child { margin-right: 0; } }
+
 .col-4-of-5 { float: left; display: block; margin-right: 5.85151%; width: 78.8297%; }
 .col-4-of-5:last-child { margin-right: 0; }
 @media screen and (max-width: 480px) { .col-4-of-5 { width: 100%; } }
@@ -273,6 +297,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 
 .shift-5 { margin-left: 42.64902%; }
 
+@media screen and (max-width: 480px) { .col-mobile-5 { float: left; display: block; margin-right: 2.35765%; width: 40.29137%; }
+  .col-mobile-5:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-5 { float: left; display: block; margin-right: 2.35765%; width: 40.29137%; }
+  .col-tablet-5:last-child { margin-right: 0; } }
+
 .col-5-of-6 { float: left; display: block; margin-right: 4.82916%; width: 82.52847%; }
 .col-5-of-6:last-child { margin-right: 0; }
 @media screen and (max-width: 480px) { .col-5-of-6 { width: 100%; } }
@@ -321,6 +351,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 
 .shift-6 { margin-left: 51.17883%; }
 
+@media screen and (max-width: 480px) { .col-mobile-6 { float: left; display: block; margin-right: 2.35765%; width: 48.82117%; }
+  .col-mobile-6:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-6 { float: left; display: block; margin-right: 2.35765%; width: 48.82117%; }
+  .col-tablet-6:last-child { margin-right: 0; } }
+
 .col-6-of-7 { float: left; display: block; margin-right: 4.11092%; width: 85.12701%; }
 .col-6-of-7:last-child { margin-right: 0; }
 @media screen and (max-width: 480px) { .col-6-of-7 { width: 100%; } }
@@ -363,6 +399,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 
 .shift-7 { margin-left: 59.70863%; }
 
+@media screen and (max-width: 480px) { .col-mobile-7 { float: left; display: block; margin-right: 2.35765%; width: 57.35098%; }
+  .col-mobile-7:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-7 { float: left; display: block; margin-right: 2.35765%; width: 57.35098%; }
+  .col-tablet-7:last-child { margin-right: 0; } }
+
 .col-7-of-8 { float: left; display: block; margin-right: 3.57866%; width: 87.05267%; }
 .col-7-of-8:last-child { margin-right: 0; }
 @media screen and (max-width: 480px) { .col-7-of-8 { width: 100%; } }
@@ -399,6 +441,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 
 .shift-8 { margin-left: 68.23843%; }
 
+@media screen and (max-width: 480px) { .col-mobile-8 { float: left; display: block; margin-right: 2.35765%; width: 65.88078%; }
+  .col-mobile-8:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-8 { float: left; display: block; margin-right: 2.35765%; width: 65.88078%; }
+  .col-tablet-8:last-child { margin-right: 0; } }
+
 .col-8-of-9 { float: left; display: block; margin-right: 3.16844%; width: 88.53684%; }
 .col-8-of-9:last-child { margin-right: 0; }
 @media screen and (max-width: 480px) { .col-8-of-9 { width: 100%; } }
@@ -429,6 +477,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 
 .shift-9 { margin-left: 76.76824%; }
 
+@media screen and (max-width: 480px) { .col-mobile-9 { float: left; display: block; margin-right: 2.35765%; width: 74.41059%; }
+  .col-mobile-9:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-9 { float: left; display: block; margin-right: 2.35765%; width: 74.41059%; }
+  .col-tablet-9:last-child { margin-right: 0; } }
+
 .col-9-of-10 { float: left; display: block; margin-right: 2.84259%; width: 89.71574%; }
 .col-9-of-10:last-child { margin-right: 0; }
 @media screen and (max-width: 480px) { .col-9-of-10 { width: 100%; } }
@@ -453,6 +507,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 
 .shift-10 { margin-left: 85.29804%; }
 
+@media screen and (max-width: 480px) { .col-mobile-10 { float: left; display: block; margin-right: 2.35765%; width: 82.94039%; }
+  .col-mobile-10:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-10 { float: left; display: block; margin-right: 2.35765%; width: 82.94039%; }
+  .col-tablet-10:last-child { margin-right: 0; } }
+
 .col-10-of-11 { float: left; display: block; margin-right: 2.57751%; width: 90.67477%; }
 .col-10-of-11:last-child { margin-right: 0; }
 @media screen and (max-width: 480px) { .col-10-of-11 { width: 100%; } }
@@ -471,6 +531,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 
 .shift-11 { margin-left: 93.82785%; }
 
+@media screen and (max-width: 480px) { .col-mobile-11 { float: left; display: block; margin-right: 2.35765%; width: 91.4702%; }
+  .col-mobile-11:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-11 { float: left; display: block; margin-right: 2.35765%; width: 91.4702%; }
+  .col-tablet-11:last-child { margin-right: 0; } }
+
 .col-11-of-12 { float: left; display: block; margin-right: 2.35765%; width: 91.4702%; }
 .col-11-of-12:last-child { margin-right: 0; }
 @media screen and (max-width: 480px) { .col-11-of-12 { width: 100%; } }
@@ -482,6 +548,12 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 @media screen and (max-width: 480px) { .col-12 { width: 100%; } }
 
 .shift-12 { margin-left: 102.35765%; }
+
+@media screen and (max-width: 480px) { .col-mobile-12 { float: left; display: block; margin-right: 2.35765%; width: 100%; }
+  .col-mobile-12:last-child { margin-right: 0; } }
+
+@media screen and (max-width: 800px) { .col-tablet-12 { float: left; display: block; margin-right: 2.35765%; width: 100%; }
+  .col-tablet-12:last-child { margin-right: 0; } }
 
 .col-width-5 { float: left; width: 5%; margin-right: 0; }
 
@@ -678,7 +750,9 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; ma
 html, body { -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -o-font-smoothing: antialiased; font-smoothing: antialiased; height: 100%; width: 100%; min-height: 100%; margin: 0; padding: 0; line-height: 1.5; font-size: 100%; font-style: normal; }
 @media screen and (max-width: 800px) { html, body { height: 100%; max-height: 100%; overflow-y: scroll; -ms-touch-start-action: manipulation; touch-action: manipulation; -webkit-user-select: text; -webkit-text-size-adjust: none; -webkit-touch-callout: none; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: transparent; } }
 
-hr { background-color: #f0f0f0; background-image: -webkit-linear-gradient(left, #f0f0f0 10%, #e6e6e6, #f0f0f0 90%); background-image: linear-gradient(to right,#f0f0f0 10%, #e6e6e6, #f0f0f0 90%); margin: 0 0 10px; display: block; height: 1px; width: 100%; border: 0 none; }
+h1, h2, h3, h4, h5, h6 { list-style: 1.1; text-rendering: optimizeLegibility; margin: 0; }
+
+hr { background-color: #f0f0f0; background-image: -webkit-linear-gradient(left, #f0f0f0 10%, #e6e6e6, #f0f0f0 90%); background-image: linear-gradient(to right,#f0f0f0 10%, #e6e6e6, #f0f0f0 90%); margin: 10px 0; display: block; height: 1px; width: 100%; border: 0 none; }
 
 a { color: #3498DB; text-decoration: none; }
 
@@ -801,7 +875,7 @@ select::-ms-expand { display: none; }
   .select select:after { z-index: 5; }
   .select select:before { position: absolute; top: 0; right: 1rem; bottom: 0; z-index: 2; content: ""; display: block; width: 1.5rem; background: #fafafa; } }
 .select:before, .select:after { position: absolute; pointer-events: none; }
-.select:after { position: absolute; top: 1px; right: 0; filter: alpha(opacity=1); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="1")"; -khtml-opacity: 1; -moz-opacity: 1; opacity: 1; display: inline-block; content: ""; width: 100%; height: 100%; pointer-events: none; background-size: 10px; background-image: url("../img/icon-chevron-down.svg"); background-repeat: no-repeat; background-position: center center; display: block; content: ""; width: 40px; height: 35px; border-top: none; border-right: none; }
+.select:after { position: absolute; top: 2px; right: 0; filter: alpha(opacity=1); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="1")"; -khtml-opacity: 1; -moz-opacity: 1; opacity: 1; display: inline-block; content: ""; width: 100%; height: 100%; pointer-events: none; background-size: 10px; background-image: url("../img/icon-chevron-down.svg"); background-repeat: no-repeat; background-position: center center; display: block; content: ""; width: 40px; height: 35px; border-top: none; border-right: none; }
 
 .input-default { height: 40px; }
 

@@ -21,10 +21,15 @@ html, body
             touch-callout: none
             overflow-scrolling: touch
             tap-highlight-color: rgba(0, 0, 0, 0)
+
+h1, h2, h3, h4, h5, h6
+    list-style: 1.1
+    text-rendering: optimizeLegibility
+    margin: 0
             
 hr
     @include linear-gradient(to right, darken($white, 6%) 10%, darken($white, 10%), darken($white, 6%) 90%)
-    @include margin(0 0 10px 0)
+    @include margin(10px 0)
     display: block
     height: 1px
     width: 100%

@@ -46,20 +46,20 @@
   font-family: Gotham-Bold;
   font-weight: 600;
   font-style: normal;
-  src: url("../fonts/Gotham-Bold/Gotham-Bold.eot");
-  src: url("../fonts/Gotham-Bold/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Bold/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold/Gotham-Bold.ttf") format("truetype"), url("../fonts/Gotham-Bold/Gotham-Bold.svg#Gotham-Bold") format("svg"); }
+  src: url("fonts/Gotham-Bold/Gotham-Bold.eot");
+  src: url("fonts/Gotham-Bold/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Bold/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold/Gotham-Bold.ttf") format("truetype"), url("fonts/Gotham-Bold/Gotham-Bold.svg#Gotham-Bold") format("svg"); }
 @font-face {
   font-family: Gotham-Book;
   font-weight: 400;
   font-style: normal;
-  src: url("../fonts/Gotham-Book/Gotham-Book.eot");
-  src: url("../fonts/Gotham-Book/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Book/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book/Gotham-Book.ttf") format("truetype"), url("../fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book") format("svg"); }
+  src: url("fonts/Gotham-Book/Gotham-Book.eot");
+  src: url("fonts/Gotham-Book/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Book/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book/Gotham-Book.ttf") format("truetype"), url("fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book") format("svg"); }
 @font-face {
   font-family: Gotham-Thin;
   font-weight: 100;
   font-style: normal;
-  src: url("../fonts/Gotham-Thin/Gotham-Thin.eot");
-  src: url("../fonts/Gotham-Thin/Gotham-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Thin/Gotham-Thin.woff") format("woff"), url("../fonts/Gotham-Thin/Gotham-Thin.ttf") format("truetype"), url("../fonts/Gotham-Thin/Gotham-Thin.svg#Gotham-Thin") format("svg"); }
+  src: url("fonts/Gotham-Thin/Gotham-Thin.eot");
+  src: url("fonts/Gotham-Thin/Gotham-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Thin/Gotham-Thin.woff") format("woff"), url("../fonts/Gotham-Thin/Gotham-Thin.ttf") format("truetype"), url("fonts/Gotham-Thin/Gotham-Thin.svg#Gotham-Thin") format("svg"); }
 html, body {
   color: #5D687C;
   font-family: "Gotham-Book", sans-serif; }
