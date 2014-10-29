@@ -52,6 +52,7 @@
         &:after
             @include transition(transform, linear, 100ms)
             @include transform(rotate(-45deg))
+            @include box-sizing(initial)
             @include opacity(0)
             position: absolute
             top: 5px

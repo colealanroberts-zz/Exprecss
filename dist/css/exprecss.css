@@ -1,5 +1,5 @@
 /*!
- * Exprecss v0.1.84 (http://exprecss.com)
+ * Exprecss v0.1.85 (http://exprecss.com)
  * A lightweight responsive framework built on Bourbon, Neat & AngularJS
  * Copyright 2014 Cole Roberts & Jacob Biggs
  * Licensed under MIT
@@ -853,7 +853,7 @@ fieldset { border: 0; padding: 0; }
 @media screen and (max-width: 480px) { .checkbox-sidelabel { top: 8px; } }
 .checkbox-input { position: relative; top: 0; float: left; width: 22px; height: 22px; cursor: pointer; background: #FCFCFC; border: 1px solid #E8E8E8; border-radius: 2px; overflow: hidden; margin-bottom: 0; }
 @media screen and (max-width: 480px) { .checkbox-input { width: 28px; height: 28px; } }
-.checkbox-input:after { -webkit-transition: -webkit-transform, linear, 100ms; -moz-transition: -moz-transform, linear, 100ms; transition: transform, linear, 100ms; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); filter: alpha(opacity=0); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="0")"; -khtml-opacity: 0; -moz-opacity: 0; opacity: 0; position: absolute; top: 5px; left: 4px; content: ""; width: 9px; height: 5px; border: 3px solid #FFFFFF; border-top: none; border-right: none; background: transparent; }
+.checkbox-input:after { -webkit-transition: -webkit-transform, linear, 100ms; -moz-transition: -moz-transform, linear, 100ms; transition: transform, linear, 100ms; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-box-sizing: initial; -moz-box-sizing: initial; box-sizing: initial; filter: alpha(opacity=0); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="0")"; -khtml-opacity: 0; -moz-opacity: 0; opacity: 0; position: absolute; top: 5px; left: 4px; content: ""; width: 9px; height: 5px; border: 3px solid #FFFFFF; border-top: none; border-right: none; background: transparent; }
 @media screen and (max-width: 480px) { .checkbox-input:after { top: 7px; left: 6px; width: 14px; height: 6px; } }
 
 .radio input[type="radio"] { -webkit-transition: all, linear, 200ms; -moz-transition: all, linear, 200ms; transition: all, linear, 200ms; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; outline: 0; cursor: pointer; padding: 4px; width: 22px; height: 22px; background: #FFFFFF; border: 1px solid #E8E8E8; border-radius: 50%; margin-bottom: 10px; }
