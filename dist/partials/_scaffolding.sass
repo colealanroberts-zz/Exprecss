@@ -1,8 +1,8 @@
 .container
     @include outer-container
-    @include padding(0 $padding-container)
+    @include padding(0 $px-gutter-base)
     @include media(mobile)
-        @include padding(0 $padding-container-responsive)
+        @include padding(0 $px-gutter-small)
 
         &:after
             display: none

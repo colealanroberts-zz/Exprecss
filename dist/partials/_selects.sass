@@ -1,6 +1,3 @@
-select::-ms-expand
-    display: none
-
 .select
     @include appearance(none)
     @include fill-parent
@@ -8,7 +5,7 @@ select::-ms-expand
     display: block
     height: $height-input-default
     background: $white
-    margin-bottom: $margin-bottom-default
+    margin-bottom: $px-gutter-small
 
     select
         @include transition(all, linear, $transition-duration-default)

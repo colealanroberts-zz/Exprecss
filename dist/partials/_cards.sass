@@ -5,10 +5,10 @@
     border: 1px solid $border-grey
     border-radius: $border-radius-default
     @include breakpoint(mobile)
-        margin-bottom: $margin-bottom-default
+        margin-bottom: $px-gutter-small
 
     .btn:last-of-type
-        margin-bottom: 0px
+        margin-bottom: 0
 
     &-header
         @extend %force-hardware-accel
@@ -75,9 +75,9 @@
 
     &-body
         overflow: auto
-        padding: $padding-default
+        padding: $px-gutter-base
 
         p
-            margin-bottom: 10px
+            margin-bottom: $px-gutter-small
             font:
                 size: $font-size-14
