@@ -1,12 +1,12 @@
 /*!
- * Exprecss v0.1.86 (http://exprecss.com)
+ * Exprecss v0.1.87 (http://exprecss.com)
  * A lightweight responsive framework built on Bourbon, Neat & AngularJS
  * Copyright 2014 Cole Roberts & Jacob Biggs
  * Licensed under MIT
  */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-button, .btn, .btn-group input[type="radio"] + label { display: inline-block; margin-bottom: 0; text-align: center; vertical-align: middle; cursor: pointer; border: transparent; white-space: nowrap; text-decoration: none; margin-bottom: 10px; }
+button, .btn, .btn-group input[type="radio"] + label { display: inline-block; text-align: center; vertical-align: middle; cursor: pointer; border: transparent; white-space: nowrap; text-decoration: none; margin-bottom: 10px; }
 
 .modal-body, .modal-footer, .widget-body, .widget-footer { *zoom: 1; clear: both; }
 .modal-body:after, .modal-footer:after, .widget-body:after, .widget-footer:after, .modal-body:before, .modal-footer:before, .widget-body:before, .widget-footer:before { content: ""; display: table; clear: both; }
@@ -900,7 +900,7 @@ button, .btn { -webkit-user-select: none; -moz-user-select: none; -ms-user-selec
 button, input.btn { -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -o-font-smoothing: antialiased; font-smoothing: antialiased; }
 button:focus, input.btn:focus { -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; box-shadow: none; outline: 0 none; }
 
-.btn { padding: 20px; -ms-touch-action: manipulation; touch-action: manipulation; color: #FFFFFF; border-radius: 2px; font-size: 0.875em; }
+.btn { padding: 12px 20px; -ms-touch-action: manipulation; touch-action: manipulation; color: #FFFFFF; border-radius: 2px; font-size: 0.875em; }
 @media screen and (max-width: 480px) { .btn { margin-bottom: 10px; width: 100%; float: none; } }
 .btn-primary { color: #3E4044; background: #FFFFFF; border: 1px solid #E8E8E8; }
 .btn-action { background: #6BAD42; border: 1px solid #6BAD42; }
@@ -909,7 +909,7 @@ button:focus, input.btn:focus { -webkit-appearance: none; -moz-appearance: none;
 .btn-file-upload { position: relative; }
 .btn-group { overflow: auto; }
 .btn-group input[type="radio"] { display: none; }
-.btn-group input[type="radio"] + label { padding: 20px; margin: 0; float: left; text-transform: initial; border-top: 1px solid #E8E8E8; border-left: 1px solid #E8E8E8; border-bottom: 1px solid #E8E8E8; font-size: 0.875em; font-weight: normal; }
+.btn-group input[type="radio"] + label { padding: 12px 20px; margin: 0; float: left; text-transform: initial; border-top: 1px solid #E8E8E8; border-left: 1px solid #E8E8E8; border-bottom: 1px solid #E8E8E8; font-size: 0.875em; font-weight: normal; }
 .btn-group input[type="radio"]:first-of-type + label { border-top-left-radius: 2px; border-bottom-left-radius: 2px; }
 .btn-group input[type="radio"]:last-of-type + label { border-right: 1px solid #E8E8E8; border-top-right-radius: 2px; border-bottom-right-radius: 2px; }
 .btn-group input[type="radio"]:checked + label { color: #FFFFFF; background: #3498DB; border: 1px solid #3498DB; box-shadow: none; }

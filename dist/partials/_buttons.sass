@@ -11,7 +11,7 @@ button, input.btn
         outline: 0 none
 
 .btn
-    @include padding($px-gutter-small * 2)
+    @include padding(($px-gutter-small + 2px) $px-gutter-small * 2)
     -ms-touch-action: manipulation
     touch-action: manipulation
     color: $white
@@ -50,7 +50,7 @@ button, input.btn
             display: none
 
             + label
-                @include padding($px-gutter-small * 2)
+                @include padding(($px-gutter-small + 2px) $px-gutter-small * 2)
                 @extend %btn
                 margin: 0
                 float: left
