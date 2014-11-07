@@ -228,8 +228,8 @@
 			separator = /[\(\)\[\]\s\-]/;
 
 		var applyMask = function(charArray, mask) {
-			var i = 0, len = charArray.length, result = '';
-			for (var n in mask) {
+            var i = 0, len = charArray.length, result = '', mlen = mask.length;
+            for (var n = 0; n < mlen; n++) {
 				var c = mask.charAt(n);
 
 				if (separator.test(c)) {
