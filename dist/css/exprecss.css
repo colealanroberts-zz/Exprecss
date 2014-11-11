@@ -750,6 +750,8 @@ button, .btn, .btn-group input[type="radio"] + label { display: inline-block; te
 html, body { -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -o-font-smoothing: antialiased; font-smoothing: antialiased; height: 100%; width: 100%; min-height: 100%; margin: 0; padding: 0; line-height: 1.5; font-size: 100%; font-style: normal; }
 @media screen and (max-width: 800px) { html, body { height: 100%; max-height: 100%; overflow-y: scroll; -ms-touch-start-action: manipulation; touch-action: manipulation; -webkit-user-select: text; -webkit-text-size-adjust: none; -webkit-touch-callout: none; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: transparent; } }
 
+body { overflow-y: scroll; }
+
 h1, h2, h3, h4, h5, h6 { list-style: 1.1; text-rendering: optimizeLegibility; margin: 0; }
 
 hr { background-color: #f0f0f0; background-image: -webkit-linear-gradient(left, #f0f0f0 10%, #e6e6e6, #f0f0f0 90%); background-image: linear-gradient(to right,#f0f0f0 10%, #e6e6e6, #f0f0f0 90%); margin: 10px 0; display: block; height: 1px; width: 100%; border: 0 none; }
@@ -777,7 +779,7 @@ fieldset { border: 0; padding: 0; }
 @media screen and (max-width: 480px) { .container { padding: 0 10px; }
   .container:after { display: none; } }
 
-.row { display: block; position: relative; display: block; width: auto; height: auto; max-width: 100%; }
+.row { display: block; position: relative; width: auto; height: auto; max-width: 100%; }
 .row:after { content: ""; display: table; clear: both; }
 
 .remove-padding { padding: 0 !important; }
@@ -905,6 +907,7 @@ button:focus, input.btn:focus { -webkit-appearance: none; -moz-appearance: none;
 .btn-primary { color: #3E4044; background: #FFFFFF; border: 1px solid #E8E8E8; }
 .btn-action { background: #6BAD42; border: 1px solid #6BAD42; }
 .btn-info { background: #3498DB; border: 1px solid #3498DB; }
+.btn-inline-form { padding-top: 9px; padding-bottom: 9px; height: 40px; }
 .btn-important { background: #D0021B; border: 1px solid #D0021B; }
 .btn-file-upload { position: relative; }
 .btn-group { overflow: auto; }
