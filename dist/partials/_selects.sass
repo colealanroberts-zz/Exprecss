@@ -25,6 +25,13 @@
         border: 1px solid $border-grey
         border-radius: $border-radius-default
 
+        // Firefox Hack
+        // This is sort of hacky, but this removes the ugly down arrow on Firefox 29
+        // See Gist: https://gist.github.com/joaocunha/6273016
+        text-indent: 0.01px
+        text-overflow: ""
+        -moz-appearance: none
+
         &.success
             border: 1px solid $brand-green
 
@@ -42,14 +49,6 @@
             &:-moz-focusring
                 color: transparent
                 text-shadow: 0 0 0 #000
-
-        // This is sort of hacky, but this removes the ugly down arrow on Firefox 29
-        // See Gist: https://gist.github.com/joaocunha/6273016
-        text-indent: 0.01px
-        text-overflow: ''
-
-        // More hacks for FireFox 30
-        -moz-appearance: treeitem
 
         // IE9 hack to hide the arrow, we've purposely excluded the breakpoint mixin.
         @media screen and (min-width: 0\0)
