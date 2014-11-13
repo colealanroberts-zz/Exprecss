@@ -1,6 +1,7 @@
 // For Style Guide Only
 // Colors
 $exprecss-blue: #3498DB
+$exprecss-grey: #6E7B87
 $white: #FFFFFF
 $brand-green: #6BAD42
 $brand-red: #DF4938
@@ -35,7 +36,7 @@ $font-size-16: 16px
 $font-size-24: 24px
 $font-size-36: 36px
 
-$height-footer: 137px
+$height-footer: 80px
 
 $animation-rotate-duration: 3050ms
 
@@ -162,7 +163,7 @@ $animation-rotate-duration: 3050ms
     src: url("fonts/Gotham-Thin/Gotham-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Thin/Gotham-Thin.woff") format("woff"), url("../fonts/Gotham-Thin/Gotham-Thin.ttf") format("truetype"), url("fonts/Gotham-Thin/Gotham-Thin.svg#Gotham-Thin") format("svg")
 
 html, body
-    color: $body-text-color
+    color: lighten($exprecss-grey, 4%)
     font-family: $font-family-default
 
 .wrapper
@@ -173,12 +174,6 @@ html, body
 
 label
     font-weight: 600
-
-.rotate-text
-    -webkit-animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
-    -moz-animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
-    -o-animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
-    animation: rotate-text $animation-rotate-duration cubic-bezier(0.645,  0.045, 0.355, 1.000) infinite
 
 .navbar-exprecss
     width: 100%
@@ -224,6 +219,29 @@ label
                     color: $white
                     border-color: $white
 
+.pos-rel
+    position: relative
+
+.sidebar
+    position: relative
+    float: left
+    height: auto
+    width: 241px
+    padding: 20px
+
+
+    li
+        padding: 2px 0
+
+        a
+            color: $exprecss-grey
+            padding: 0 10px
+            font-size: $font-size-14
+
+    .active
+        color: $exprecss-blue
+        border-left: 2px solid $exprecss-blue
+
 
 .svg-logo
     margin-top: 20px
@@ -263,24 +281,28 @@ label
 section
     padding: 40px 0
 
-    &:nth-of-type(even)
-        background: #F8F8F8
-
 .prettyprint
     width: 100%
     overflow-x: scroll
     overflow-y: auto
 
+#particles
+    position: absolute
+    top: 0
+    right: 0
+    height: 562px
+    width: 100%
+
 .hero-unit-demo
-    @include linear-gradient-image(rgba($asphalt, 0.8), rgba($asphalt, 0.4), '../docs/img/bg-hero-unit.jpg')
-    margin-top: -78px
     filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#{$asphalt}', endColorstr='#{$asphalt}')
-    padding: 150px 0
+    padding: 110px 0
     height: auto
     background:
         size: cover
         repeat: no-repeat
         position: right bottom
+    background-image: -webkit-linear-gradient(180deg, rgba($asphalt, 0.8), rgba($asphalt, 0.55))
+
     @include breakpoint(tablet)
         background-position: left center
     @include breakpoint(mobile)
@@ -309,10 +331,10 @@ section
     .tagline
         margin-top: 0
         margin-bottom: 30px
-        font-size: $font-size-14
+        font-size: $font-size-16
 
         p
-            color: darken($white, 15%)
+            color: $white
             height: 25px
 
         #description-rotate
@@ -365,13 +387,15 @@ section
         margin-left: 0
 
 .hero-group
+    position: relative
+    z-index: 9999
     display: block
 
 .bower-install
     display: inline-block
     border-radius: $border-radius-default
     overflow-y: auto
-    width: 407px
+    width: 410px
     display: block
     padding: 6px 10px
     border: 8px solid rgba(255, 255, 255, 0.12)
@@ -407,30 +431,13 @@ section
 
 .footer
     height: auto
-    background: darken($body-text-color, 10%)
 
     ul
-        padding: 40px 0
-
-.footer .btn-download
-    @include transition(all, linear, 300ms)
-    display: inline-block
-    padding: 20px 32px
-    margin-bottom: 20px
-    border-radius: 999px
-    color: $white
-    border: 1px solid $white
-    font:
-        size: 10px
-        weight: 600
-
-    &:hover
-        color: $white
-        background: $base-color
-        border: 1px solid $base-color
+        border-top: 1px solid $border-grey
+        padding: 30px 0
 
 .copyright
-    color: $white
+    color: #5B6A77
     font-size: 11px
 
     a
@@ -440,9 +447,8 @@ section
     font:
         family: $font-family-default
 
-
 .section-title
-    color: darken($body-text-color, 10%)
+    color: $exprecss-grey
     margin: 0
     font:
         size: $font-size-36

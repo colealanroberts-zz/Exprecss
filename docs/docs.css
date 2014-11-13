@@ -61,22 +61,16 @@
   src: url("fonts/Gotham-Thin/Gotham-Thin.eot");
   src: url("fonts/Gotham-Thin/Gotham-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Thin/Gotham-Thin.woff") format("woff"), url("../fonts/Gotham-Thin/Gotham-Thin.ttf") format("truetype"), url("fonts/Gotham-Thin/Gotham-Thin.svg#Gotham-Thin") format("svg"); }
 html, body {
-  color: #5D687C;
+  color: #788591;
   font-family: "Gotham-Book", sans-serif; }
 
 .wrapper {
-  margin-bottom: -137px; }
+  margin-bottom: -80px; }
   .wrapper:after {
-    height: 137px; }
+    height: 80px; }
 
 label {
   font-weight: 600; }
-
-.rotate-text {
-  -webkit-animation: rotate-text 3050ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
-  -moz-animation: rotate-text 3050ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
-  -o-animation: rotate-text 3050ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
-  animation: rotate-text 3050ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite; }
 
 .navbar-exprecss {
   width: 100%;
@@ -121,6 +115,25 @@ label {
           color: #FFFFFF;
           border-color: #FFFFFF; }
 
+.pos-rel {
+  position: relative; }
+
+.sidebar {
+  position: relative;
+  float: left;
+  height: auto;
+  width: 241px;
+  padding: 20px; }
+  .sidebar li {
+    padding: 2px 0; }
+    .sidebar li a {
+      color: #6E7B87;
+      padding: 0 10px;
+      font-size: 14px; }
+  .sidebar .active {
+    color: #3498DB;
+    border-left: 2px solid #3498DB; }
+
 .svg-logo {
   margin-top: 20px;
   position: relative;
@@ -154,26 +167,27 @@ label {
 
 section {
   padding: 40px 0; }
-  section:nth-of-type(even) {
-    background: #F8F8F8; }
 
 .prettyprint {
   width: 100%;
   overflow-x: scroll;
   overflow-y: auto; }
 
+#particles {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 562px;
+  width: 100%; }
+
 .hero-unit-demo {
-  background-image: -webkit-linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
-  background-image: -moz-linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
-  background-image: -o-linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
-  background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.4)), url("../docs/img/bg-hero-unit.jpg");
-  margin-top: -78px;
   filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#2C3E50', endColorstr='#2C3E50');
-  padding: 150px 0;
+  padding: 110px 0;
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right bottom; }
+  background-position: right bottom;
+  background-image: -webkit-linear-gradient(180deg, rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.55)); }
   @media screen and (max-width: 800px) {
     .hero-unit-demo {
       background-position: left center; } }
@@ -198,9 +212,9 @@ section {
   .hero-unit-demo .tagline {
     margin-top: 0;
     margin-bottom: 30px;
-    font-size: 14px; }
+    font-size: 16px; }
     .hero-unit-demo .tagline p {
-      color: #d9d9d9;
+      color: #FFFFFF;
       height: 25px; }
     .hero-unit-demo .tagline #description-rotate {
       vertical-align: top;
@@ -249,13 +263,15 @@ section {
       margin-left: 0; } }
 
 .hero-group {
+  position: relative;
+  z-index: 9999;
   display: block; }
 
 .bower-install {
   display: inline-block;
   border-radius: 2px;
   overflow-y: auto;
-  width: 407px;
+  width: 410px;
   display: block;
   padding: 6px 10px;
   border: 8px solid rgba(255, 255, 255, 0.12);
@@ -291,31 +307,13 @@ section {
       display: none; } }
 
 .footer {
-  height: auto;
-  background: #47505f; }
+  height: auto; }
   .footer ul {
-    padding: 40px 0; }
-
-.footer .btn-download {
-  -webkit-transition: all, linear, 300ms;
-  -moz-transition: all, linear, 300ms;
-  -o-transition: all, linear, 300ms;
-  transition: all, linear, 300ms;
-  display: inline-block;
-  padding: 20px 32px;
-  margin-bottom: 20px;
-  border-radius: 999px;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  font-size: 10px;
-  font-weight: 600; }
-  .footer .btn-download:hover {
-    color: #FFFFFF;
-    background: #3498DB;
-    border: 1px solid #3498DB; }
+    border-top: 1px solid #E8E8E8;
+    padding: 30px 0; }
 
 .copyright {
-  color: #FFFFFF;
+  color: #5B6A77;
   font-size: 11px; }
   .copyright a {
     font-weight: 600; }
@@ -324,6 +322,6 @@ section {
   font-family: "Gotham-Book", sans-serif; }
 
 .section-title {
-  color: #47505f;
+  color: #6E7B87;
   margin: 0;
   font-size: 36px; }

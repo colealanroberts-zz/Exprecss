@@ -22,8 +22,11 @@
 </head>
     <body ng-app="exprecss" onload="prettyPrint()">
         <div class="wrapper">
-            <nav class="navbar-exprecss">
-                <ul>
+
+            <!-- Hero Unit -->
+            <section class="hero-unit-demo">
+                <div id="particles"></div>
+                <div class="container">
                     <a href="#" class="logo">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve" class="svg-logo">
@@ -34,14 +37,9 @@
                             </g>
                         </svg>
                     </a>
-                    <li><a href="https://github.com/colealanroberts/Exprecss/releases" class="changelog">Change Log</a></li>
-                </ul>
-            </nav>
-            <section class="hero-unit-demo">
-                <div class="container">
                     <h1 class="name">Expre<span>css</span></h1>
                     <div class="tagline">
-                        <p>A <span id="description-rotate">lightweight responsive</span> framework built on
+                        <p>A lightweight responsive framework built on
                             <span><strong>Bourbon</strong></span>,
                             <span><strong>Neat</strong></span>
                             &amp;
@@ -60,66 +58,87 @@
                     </div>
                 </div>
             </section>
-            <!-- Include Foundation -->
-            <div ng-include src="'docs/components/foundation.html'"></div>
-
-            <!-- Include Grid -->
-            <div ng-include src="'docs/components/grid.html'"></div>
-
-            <!-- Include Scaffolding -->
-            <div ng-include src="'docs/components/scaffolding.html'"></div>
-
-            <!-- Include Navbar -->
-            <div ng-include src="'docs/components/nav.html'"></div>
-
-            <!-- Include Modals -->
-            <div ng-include src="'docs/components/modals.html'"></div>
-
-            <!-- UI Components -->
-            <section class="ui-components">
+            <main>
                 <div class="container">
-                    <p class="section-title">UI Components</p>
-                    <!-- Begin Importing Components -->
+                    <div class="row">
+                        <div class="col-3 pos-rel float-right">
+                            <aside class="sidebar">
+                                <ul>
+                                    <li><a href="" class="active">Typography</a></li>
+                                    <li><a href="">Grid</a></li>
+                                    <li><a href="">Scaffolding</a></li>
+                                    <li><a href="">Navbar</a></li>
+                                    <li><a href="">Modal</a></li>
+                                    <li><a href="">UI Components</a></li>
+                                    <li><a href="">Helpers</a></li>
+                                    <li><a href="">Sticky Footer</a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="col-9">
 
-                    <!-- Include UI Buttons -->
-                    <div ng-include src="'docs/components/ui-buttons.html'"></div>
+                            <!-- Include Foundation -->
+                            <div ng-include src="'docs/components/foundation.html'"></div>
 
-                    <!-- Include UI Dropdowns -->
-                    <div ng-include src="'docs/components/ui-dropdowns.html'"></div>
+                            <!-- Include Grid -->
+                            <div ng-include src="'docs/components/grid.html'"></div>
 
-                    <!-- Include UI Inputs -->
-                    <div ng-include src="'docs/components/ui-inputs.html'"></div>
+                            <!-- Include Scaffolding -->
+                            <div ng-include src="'docs/components/scaffolding.html'"></div>
 
-                    <!-- Include UI Validation -->
-                    <div ng-include src="'docs/components/ui-validation.html'"></div>
+                            <!-- Include Navbar -->
+                            <div ng-include src="'docs/components/nav.html'"></div>
 
-                    <!-- Include UI Widgets -->
-                    <div ng-include src="'docs/components/ui-widgets.html'"></div>
+                            <!-- Include Modals -->
+                            <div ng-include src="'docs/components/modals.html'"></div>
 
-                    <!-- Include UI Selects -->
-                    <div ng-include src="'docs/components/ui-selects.html'"></div>
+                            <!-- UI Components -->
+                            <section class="ui-components">
+                                <div class="container">
+                                    <p class="section-title">UI Components</p>
+                                    <!-- Begin Importing Components -->
 
-                    <!-- Include UI Radios -->
-                    <div ng-include src="'docs/components/ui-radios.html'"></div>
+                                    <!-- Include UI Buttons -->
+                                    <div ng-include src="'docs/components/ui-buttons.html'"></div>
 
-                    <!-- Include UI Radios -->
-                    <div ng-include src="'docs/components/ui-checkboxes.html'"></div>
+                                    <!-- Include UI Dropdowns -->
+                                    <div ng-include src="'docs/components/ui-dropdowns.html'"></div>
+
+                                    <!-- Include UI Inputs -->
+                                    <div ng-include src="'docs/components/ui-inputs.html'"></div>
+
+                                    <!-- Include UI Validation -->
+                                    <div ng-include src="'docs/components/ui-validation.html'"></div>
+
+                                    <!-- Include UI Widgets -->
+                                    <div ng-include src="'docs/components/ui-widgets.html'"></div>
+
+                                    <!-- Include UI Selects -->
+                                    <div ng-include src="'docs/components/ui-selects.html'"></div>
+
+                                    <!-- Include UI Radios -->
+                                    <div ng-include src="'docs/components/ui-radios.html'"></div>
+
+                                    <!-- Include UI Radios -->
+                                    <div ng-include src="'docs/components/ui-checkboxes.html'"></div>
+                                </div>
+                            </section>
+
+                            <!-- Include Helpers -->
+                            <div ng-include src="'docs/components/helpers.html'"></div>
+
+                            <!-- Include Helpers -->
+                            <div ng-include src="'docs/components/footer.html'"></div>
+                        </div>
+                    </div>
                 </div>
-            </section>
-
-            <!-- Include Helpers -->
-            <div ng-include src="'docs/components/helpers.html'"></div>
-
-            <!-- Include Helpers -->
-            <div ng-include src="'docs/components/footer.html'"></div>
-
+            </main>
         </div> <!-- End of .wrapper -->
 
         <!-- Attribution -->
         <footer class="footer footer-sticky text-center">
             <div class="container">
                 <ul>
-                    <li><a href="https://github.com/colealanroberts/Exprecss" class="btn-download">Download Exprecss on Github</a></li>
                     <span class="copyright">Copyright &copy; 2014. Crafted by <a href="http://twitter.com/colealan">Cole Roberts</a> and <a href="https://www.linkedin.com/pub/jacob-biggs/68/7/81b">Jacob Biggs</a></span>
                 </ul>
             </div>
@@ -129,7 +148,8 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="vendor/angular/angular.min.js"></script>
         <script src="vendor/angular-animate/angular-animate.min.js"></script>
-        <script src="docs/docs.js"></script>
         <script src="dist/js/exprecss.js"></script>
+        <script src="docs/particles.js"></script>
+        <script src="docs/docs.js"></script>
     </body>
 </html>
