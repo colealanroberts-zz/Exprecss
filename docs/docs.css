@@ -42,27 +42,9 @@
     opacity: 1; }
   100% {
     opacity: 0; } }
-@font-face {
-  font-family: Gotham-Bold;
-  font-weight: 600;
-  font-style: normal;
-  src: url("fonts/Gotham-Bold/Gotham-Bold.eot");
-  src: url("fonts/Gotham-Bold/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Bold/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold/Gotham-Bold.ttf") format("truetype"), url("fonts/Gotham-Bold/Gotham-Bold.svg#Gotham-Bold") format("svg"); }
-@font-face {
-  font-family: Gotham-Book;
-  font-weight: 400;
-  font-style: normal;
-  src: url("fonts/Gotham-Book/Gotham-Book.eot");
-  src: url("fonts/Gotham-Book/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Book/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book/Gotham-Book.ttf") format("truetype"), url("fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book") format("svg"); }
-@font-face {
-  font-family: Gotham-Thin;
-  font-weight: 100;
-  font-style: normal;
-  src: url("fonts/Gotham-Thin/Gotham-Thin.eot");
-  src: url("fonts/Gotham-Thin/Gotham-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Thin/Gotham-Thin.woff") format("woff"), url("../fonts/Gotham-Thin/Gotham-Thin.ttf") format("truetype"), url("fonts/Gotham-Thin/Gotham-Thin.svg#Gotham-Thin") format("svg"); }
 html, body {
   color: #788591;
-  font-family: "Gotham-Book", sans-serif; }
+  font-family: "proxima-nova-alt", sans-serif; }
 
 .wrapper {
   margin-bottom: -80px; }
@@ -207,8 +189,7 @@ section {
     color: #FFFFFF;
     margin: 0;
     font-size: 50px;
-    font-weight: 100;
-    font-family: "Gotham-Thin", sans-serif; }
+    font-weight: 100; }
   .hero-unit-demo .tagline {
     margin-top: 0;
     margin-bottom: 30px;
@@ -319,7 +300,7 @@ section {
     font-weight: 600; }
 
 .input-default {
-  font-family: "Gotham-Book", sans-serif; }
+  font-family: "proxima-nova-alt", sans-serif; }
 
 .section-title {
   color: #6E7B87;

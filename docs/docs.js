@@ -33,7 +33,7 @@ particlesJS('particles', {
     particles: {
         color: '#fff',
         shape: 'circle', // "circle", "edge" or "triangle"
-        opacity: 0.5,
+        opacity: 0.4,
         size: 1,
         size_random: true,
         nb: 50,
@@ -51,7 +51,7 @@ particlesJS('particles', {
         },
         anim: {
             enable: true,
-            speed: 0.35
+            speed: 0.45
         }
     },
     interactivity: {
