@@ -191,7 +191,7 @@ section {
     font-size: 50px;
     font-weight: 100; }
   .hero-unit-demo .tagline {
-    margin-top: 0;
+    margin-top: -4px;
     margin-bottom: 30px;
     font-size: 16px; }
     .hero-unit-demo .tagline p {
