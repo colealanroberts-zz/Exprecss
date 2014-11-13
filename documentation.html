@@ -7,701 +7,129 @@
     <link rel="stylesheet" href="docs/docs.css">
     <link rel="stylesheet" href="docs/prettify-theme.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-29186069-2', 'exprecss.com');
-  ga('send', 'pageview');
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-</script>
+      ga('create', 'UA-29186069-2', 'exprecss.com');
+      ga('send', 'pageview');
+
+    </script>
 </head>
-<body ng-app="exprecss">
-    <div class="wrapper">
-        <nav class="navbar-exprecss">
-            <ul>
-                <a href="#" class="logo">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve" class="svg-logo">
-                        <g>
-                            <polygon fill="none" stroke="#231F20" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="59,3 0.7,27 23,36" class="svg-polygon-1"/>
-                            <polygon fill="none" stroke="#231F20" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="59,3 48.6,49.7 23,36" class="svg-polygon-2"/>
-                            <polyline fill="none" stroke="#231F20" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="23,36 23,56 32.1,40.9" class="svg-polygon-3"/>
-                        </g>
-                    </svg>
-                </a>
-                <li><a href="https://github.com/colealanroberts/Exprecss/releases" class="changelog">Change Log</a></li>
-            </ul>
-        </nav>
-        <section class="hero-unit-demo">
-            <div class="container">
-                <h1 class="name">Expre<span>css</span></h1>
-                <div class="tagline">
-                    <p>A <span id="description-rotate">lightweight responsive</span> framework built on
-                        <span><strong>Bourbon</strong></span>,
-                        <span><strong>Neat</strong></span>
-                        &amp;
-                        <span><strong>AngularJS</strong></span>
-                    </p>
-                </div>
-                <div class="hero-group">
-                    <a href="https://github.com/colealanroberts/colealanroberts.github.io/archive/master.zip" class="btn btn-download-repo">Download from Github
-                    <span class="version">Currently in v0.1.90</span>
+    <body ng-app="exprecss" onload="prettyPrint()">
+        <div class="wrapper">
+            <nav class="navbar-exprecss">
+                <ul>
+                    <a href="#" class="logo">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve" class="svg-logo">
+                            <g>
+                                <polygon fill="none" stroke="#231F20" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="59,3 0.7,27 23,36" class="svg-polygon-1"/>
+                                <polygon fill="none" stroke="#231F20" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="59,3 48.6,49.7 23,36" class="svg-polygon-2"/>
+                                <polyline fill="none" stroke="#231F20" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="23,36 23,56 32.1,40.9" class="svg-polygon-3"/>
+                            </g>
+                        </svg>
                     </a>
-                    <a href="https://github.com/colealanroberts/Exprecss" class="btn btn-view-examples">Explore the Repo</a>
-                    <div class="bower-install">
-                        <img src="docs/img/bower-logo.png" class="bower-logo">
-                        <span>bower install exprecss</span>
+                    <li><a href="https://github.com/colealanroberts/Exprecss/releases" class="changelog">Change Log</a></li>
+                </ul>
+            </nav>
+            <section class="hero-unit-demo">
+                <div class="container">
+                    <h1 class="name">Expre<span>css</span></h1>
+                    <div class="tagline">
+                        <p>A <span id="description-rotate">lightweight responsive</span> framework built on
+                            <span><strong>Bourbon</strong></span>,
+                            <span><strong>Neat</strong></span>
+                            &amp;
+                            <span><strong>AngularJS</strong></span>
+                        </p>
+                    </div>
+                    <div class="hero-group">
+                        <a href="https://github.com/colealanroberts/colealanroberts.github.io/archive/master.zip" class="btn btn-download-repo">Download from Github
+                        <span class="version">Currently in v0.1.90</span>
+                        </a>
+                        <a href="https://github.com/colealanroberts/Exprecss" class="btn btn-view-examples">Explore the Repo</a>
+                        <div class="bower-install">
+                            <img src="docs/img/bower-logo.png" class="bower-logo">
+                            <span>bower install exprecss</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="foundation">
+            </section>
+            <!-- Include Foundation -->
+            <div ng-include src="'docs/components/foundation.html'"></div>
+
+            <!-- Include Grid -->
+            <div ng-include src="'docs/components/grid.html'"></div>
+
+            <!-- Include Scaffolding -->
+            <div ng-include src="'docs/components/scaffolding.html'"></div>
+
+            <!-- Include Navbar -->
+            <div ng-include src="'docs/components/nav.html'"></div>
+
+            <!-- Include Modals -->
+            <div ng-include src="'docs/components/modals.html'"></div>
+
+            <!-- UI Components -->
+            <section class="ui-components">
+                <div class="container">
+                    <p class="section-title">UI Components</p>
+                    <!-- Begin Importing Components -->
+
+                    <!-- Include UI Buttons -->
+                    <div ng-include src="'docs/components/ui-buttons.html'"></div>
+
+                    <!-- Include UI Dropdowns -->
+                    <div ng-include src="'docs/components/ui-dropdowns.html'"></div>
+
+                    <!-- Include UI Inputs -->
+                    <div ng-include src="'docs/components/ui-inputs.html'"></div>
+
+                    <!-- Include UI Validation -->
+                    <div ng-include src="'docs/components/ui-validation.html'"></div>
+
+                    <!-- Include UI Widgets -->
+                    <div ng-include src="'docs/components/ui-widgets.html'"></div>
+
+                    <!-- Include UI Selects -->
+                    <div ng-include src="'docs/components/ui-selects.html'"></div>
+
+                    <!-- Include UI Radios -->
+                    <div ng-include src="'docs/components/ui-radios.html'"></div>
+
+                    <!-- Include UI Radios -->
+                    <div ng-include src="'docs/components/ui-checkboxes.html'"></div>
+                </div>
+            </section>
+
+            <!-- Include Helpers -->
+            <div ng-include src="'docs/components/helpers.html'"></div>
+
+            <!-- Include Helpers -->
+            <div ng-include src="'docs/components/footer.html'"></div>
+
+        </div> <!-- End of .wrapper -->
+
+        <!-- Attribution -->
+        <footer class="footer footer-sticky text-center">
             <div class="container">
-                <p class="section-title">Typography Foundation</p>
-                <h1>Header Level 1</h1>
-                <h2>Header level 2</h2>
-                <h3>Header Level 3</h3>
-                <h4>Header Level 4</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam porro, consequuntur sint illo maiores voluptatum ipsum, quos molestias fugiat nihil explicabo eaque nemo amet, nesciunt voluptate? Officiis dolorum esse, molestiae.</p>
+                <ul>
+                    <li><a href="https://github.com/colealanroberts/Exprecss" class="btn-download">Download Exprecss on Github</a></li>
+                    <span class="copyright">Copyright &copy; 2014. Crafted by <a href="http://twitter.com/colealan">Cole Roberts</a> and <a href="https://www.linkedin.com/pub/jacob-biggs/68/7/81b">Jacob Biggs</a></span>
+                </ul>
             </div>
-        </section>
-        <section class="grid">
-            <div class="container">
-                <p class="section-title">Grid</p>
-                <p>Exprecss is built upon Thoughbot's Neat Grid. I've made it simpler to implement and the grid is laid out using .col-X to denote column width.</p>
-                <p>For more details about the Neat grid visit the <a href="http://thoughtbot.github.io/neat-docs/latest/">documentation.</a></p>
-                <div class="col-1">col-1</div>
-                <div class="col-11">col-11</div>
-                <div class="col-2">col-2</div>
-                <div class="col-10">col-10</div>
-                <div class="col-3">col-3</div>
-                <div class="col-9">col-9</div>
-                <div class="col-4">col-4</div>
-                <div class="col-8">col-8</div>
-                <div class="col-5">col-5</div>
-                <div class="col-7">col-7</div>
-                <div class="col-6">col-6</div>
-                <div class="col-6">col-6</div>
-            </div>
-        </section>
-        <section class="scaffolding">
-            <div class="container">
-                <p class="section-title">Scaffolding</p>
-                <h3>Row</h3>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
-    &lt;div class="col-4"&gt;
-        &lt;a href="#" class="btn btn-primary"&gt;Buttons in Row&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;a href="#" class="btn btn-primary"&gt;Buttons in Row&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;a href="#" class="btn btn-primary"&gt;Buttons in Row&lt;/a&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                <div class="row">
-                    <div class="col-4"><a href="#" class="btn btn-primary">Buttons in Row</a></div>
-                    <div class="col-4"><a href="#" class="btn btn-primary">Buttons in Row</a></div>
-                    <div class="col-4"><a href="#" class="btn btn-primary">Buttons in Row</a></div>
-                </div>
-            </div>
-        </section>
-        <section class="nav">
-            <div class="container">
-                <p class="section-title">Navbar</p>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;nav class="navbar"&gt;
-    &lt;ul&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;About&lt;/&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;</pre>
-                <nav class="navbar">
-                    <ul class="nav-close">
-                        <li><a href="#" class="brand">Exprecss</a></li>
-                        <li><a href="#" class="active">Example-1</a></li>
-                        <li><a href="#">Example-2</a></li>
-                        <li><a href="#">Example-3</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-        <section class="modals">
-            <div class="container">
-                <p class="section-title">Modal</p>
-                <p>Example Modals</p>
-                <a href="" class="btn btn-info" id="modal-example" exp-modal-click="Modal Title" exp-modal-click-html='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, at, vel, id, similique nemo voluptatibus ab iure quis quod aut dolorum culpa vero aspernatur impedit nisi facilis deserunt tenetur. Iste.</p>'>Open Modal</a>
-
-                <a href="" class="btn btn-info" ng-click="errorConfirm()">Confirmation</a>
-                <a href="" class="btn btn-info" ng-click="errorAlert()">Alert</a>
-            </div>
-        </section>
-        <section class="ui-components">
-            <div class="container">
-                <p class="section-title">UI Components</p>
-                <h3>Buttons</h3>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;a href="#" class="btn btn-primary">Example Button&lt;/a&gt;</pre>
-                <a href="#" class="btn btn-primary">.btn-primary</a>
-                <a href="#" class="btn btn-action">.btn-action</a>
-                <a href="#" class="btn btn-info">.btn-info</a>
-                <a href="#" class="btn btn-important">.btn-important</a>
-
-                <h3>File Upload Button</h3>
-                <p>This styles the file browse button</p>
-<pre class="prettyprint lang-html">
-    &lt;button class="btn btn-primary btn-file-upload"&gt;
-        &lt;span&gt;File to Upload&lt;/span&gt;
-        &lt;input type="file" class="input-file-upload"&gt;
-    &lt;/button&gt;
-</pre>
-                <button class="btn btn-primary btn-file-upload">
-                    <span>File to Upload</span>
-                    <input type="file" class="input-file-upload">
-                </button>
-                <h3>Grouped Buttons</h3>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
-    &lt;div class="col-12"&gt;
-        &lt;div class="btn-group"&gt;
-            &lt;input type="radio" id="example-checkbox-1" name="example" checked&gt;
-            &lt;label for="example-checkbox-1"&gt;One&lt;/label&gt;
-
-            &lt;input type="radio" id="example-checkbox-2" name="example" checked&gt;
-            &lt;label for="example-checkbox-2"&gt;One&lt;/label&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="btn-group">
-                            <input type="radio" id="example-grouped-1" name="example-grouped-3" checked>
-                            <label for="example-grouped-1">One</label>
-
-                            <input type="radio" id="example-grouped-2" name="example-grouped-3">
-                            <label for="example-grouped-2">Two</label>
-
-                            <input type="radio" id="example-grouped-3" name="example-grouped-3">
-                            <label for="example-grouped-3">Three</label>
-                        </div>
-                    </div>
-                </div>
-
-                <h3>Dropdown Menu</h3>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
-    &lt;div class="dropdown"&gt;
-        &lt;a href="#" class="btn btn-dropdown"&gt;Dropdown Toggle&lt;span class="caret caret-light"&gt;&lt;/span&gt;&lt;/a&gt;
-        &lt;ul class="dropdown-menu"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="input-append">
-                            <input type="text" class="input-default">
-                            <div class="dropdown">
-                            <a href="#" class="btn btn-primary btn-dropdown" data-for="something"></a>
-                            <div class="dropdown-menu-container dropdown-menu-container-inactive" id="something">
-                                <ul class="dropdown-menu">
-                                    <li><a href="https://github.com/">Github</a></li>
-                                    <li><a href="https://news.layervault.com/">Designer News</a></li>
-                                    <li><a href="https://news.ycombinator.com/">Hacker News</a></li>
-                                    <li><a href="https://dribbble.com/">Dribbble</a></li>
-                                    <li><a href="https://twitter.com/colealan">Cole's Twitter</a></li>
-                                    <li><a href="https://google.com">Google</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <h3>Inputs</h3>
-                <h4>Inline Forms</h4>
-                <p>Inputs in Exprecss can be declared by using: .input-default. A default behavior is to fade the placeholder text on focus</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
-    &lt;form action=""&gt;
-        &lt;div class="col-3"&gt;
-            &lt;label for="first-name"&gt;First Name&lt;label&gt;
-            &lt;span&gt;Default Placeholder&lt;span&gt;
-            &lt;input type="text"&gt;
-        &lt;div&gt;
-        &lt;div class="col-3"&gt;
-            &lt;label for="last-name"&gt;Last Name&lt;label&gt;
-            &lt;span class="placeholder-success"&gt;Placeholder Success&lt;span&gt;
-            &lt;input type="text"&gt;
-        &lt;div&gt;
-        &lt;div class="col-3"&gt;
-            &lt;label for="email"&gt;Email&lt;label&gt;
-            &lt;span class="placeholder-info"&gt;Placeholder Info&lt;span&gt;
-            &lt;input type="text"&gt;
-        &lt;div&gt;
-        &lt;div class="col-3"&gt;
-            &lt;label for="password"&gt;Password&lt;label&gt;
-            &lt;span class="placeholder-important"&gt;Placeholder Important&lt;span&gt;
-            &lt;input type="password"&gt;
-        &lt;div&gt;
-    &lt;form&gt;
-&lt;/div&gt;</pre>
-            <div class="row">
-                <div class="col-6">
-                    <div class="col-3-of-6">
-                        <input type="text" class="input-default" placeholder="Example Placeholder">
-                    </div>
-                    <div class="col-3-of-6">
-                        <a href="" class="btn btn-action btn-inline-form full-width">Submit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <form action="">
-                    <div class="col-3">
-                        <label for="first-name">First Name</label>
-                        <span>Default Placeholder</span>
-                        <input type="text" class="input-default">
-                    </div>
-                    <div class="col-3">
-                        <label for="">Last Name</label>
-                        <span class="placeholder-success">Placeholder Success</span>
-                        <input type="text" class="input-default">
-                    </div>
-                    <div class="col-3">
-                        <label for="">Email</label>
-                        <span class="placeholder-info">Placeholder Info</span>
-                        <input type="text" class="input-default">
-                    </div>
-                    <div class="col-3">
-                        <label for="password">Password</label>
-                        <span class="placeholder-important">Placeholder Important</span>
-                        <input type="password" class="input-default">
-                    </div>
-                </form>
-            </div>
-
-                <h4>Stacked Forms</h4>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-// Sign In Form
-&lt;div class="row"&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="widget"&gt;
-        &lt;div class="widget-header text-center"&gt;Sign In&lt;/div&gt;
-        &lt;div class="widget-body"&gt;
-            &lt;label for=""&gt;Username&lt;/label&gt;
-            &lt;span&gt;Placeholder&lt;/div&gt;
-            &lt;input type="text"&gt;
-            &lt;label for=""&gt;Password&lt;/label&gt;
-            &lt;span&gt;Placeholder&lt;/div&gt;
-            &lt;input type="password"&gt;
-            &lt;div class="checkbox"&gt;
-                &lt;label for="example-checkbox" class="checkbox-sidelabel"&gt;Remember Me&lt;/label&gt;
-                &lt;input type="checkbox" id="example-checkbox" checked&gt;
-                &lt;label for="example-checkbox" class="checkbox-input"&gt;&lt;/label&gt;
-            &lt;/div&gt;
-        &lt;div class="widget-footer&gt;
-            &lt;a href="#" class="btn btn-primary full-width"&gt;Sign In&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-// Credit Card Information Form
-&lt;div class="row"&gt;
-    &lt;div class="col-8"&gt;
-        &lt;div class="widget"&gt;
-        &lt;div class="widget-header text-center"&gt;Credit Card Information&lt;/div&gt;
-        &lt;div class="widget-body"&gt;
-            &lt;div class="row"&gt;
-                &lt;div class="col-8-of-8"&gt;
-                    &lt;class="col-4-of-8"&gt;
-                        &lt;label for=""&gt;Card Nicknamme&lt;/label&gt;
-                        &lt;input type="text"&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="row"&gt;
-                &lt;div class="col-3-of-8"&gt;
-                    ...
-                &lt;/div&gt;
-                &lt;div class="col-1-of-8"&gt;
-                    ...
-                &lt;/div&gt;
-                &lt;div class="col-2-of-8"&gt;
-                    ...
-                &lt;/div&gt;
-                &lt;div class="col-2-of-8"&gt;
-                    ...
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="row"&gt;
-                &lt;div class="col-3-of-8"&gt;
-                    ...
-                &lt;/div&gt;
-                &lt;div class="col-3-of-8"&gt;
-                    ...
-                &lt;/div&gt;
-                &lt;div class="col-2-of-8"&gt;
-                    ...
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="row"&gt;
-                &lt;div class="col-8-of-8"&gt;
-                    ...
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;div class="widget-footer&gt;
-            &lt;a href="#" class="btn btn-info float-right"&gt;Submit&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-</pre>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="widget">
-                            <div class="widget-header text-center">Sign In</div>
-                            <div class="widget-body">
-                                <label for="">Username</label>
-                                <span>Placeholder</span>
-                                <input type="text" class="input-default"   >
-                                <label for="">Password</label>
-                                <span>Placeholder</span>
-                                <input type="password" class="input-default">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="example-checkbox" checked>
-                                    <label for="example-checkbox" class="checkbox-input"></label>
-                                    <label for="example-checkbox" class="checkbox-sidelabel">Remember Me</label>
-                                </div>
-                            </div>
-                            <div class="widget-footer">
-                                <a href="#" class="btn btn-primary full-width">Sign In</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="widget">
-                            <div class="widget-header white">Credit Card Information</div>
-                            <div class="widget-body">
-                                <div class="row">
-                                    <div class="col-8-of-8">
-                                        <div class="col-4-of-8">
-                                            <label for="">Card Nickname</label>
-                                            <input type="text" class="input-default">
-                                        </div>
-                                        <div class="col-4-of-8">
-                                            <label for="">Name of Cardholder</label>
-                                            <input type="text" class="input-default">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-3-of-8">
-                                        <label for="">Credit Card Number</label>
-                                        <input type="text" exp-mask="0000-0000-0000-0000" class="input-default">
-                                    </div>
-                                    <div class="col-1-of-8">
-                                        <label for="">CCV</label>
-                                        <input type="text" class="input-default">
-                                    </div>
-                                    <div class="col-2-of-8">
-                                        <label for="example">Exp Month</label>
-                                        <div class="select">
-                                            <select name="example" id="example">
-                                                <option value="">January</option>
-                                                <option value="">February</option>
-                                                <option value="">March</option>
-                                                <option value="">April</option>
-                                                <option value="">May</option>
-                                                <option value="">June</option>
-                                                <option value="">July</option>
-                                                <option value="">August</option>
-                                                <option value="">September</option>
-                                                <option value="">Octocat</option>
-                                                <option value="">November</option>
-                                                <option value="">December</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-2-of-8">
-                                        <label for="example">Exp Year</label>
-                                        <div class="select">
-                                            <select name="example" id="example">
-                                                <option value="">2014</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4-of-8">
-                                        <label for="">Address on Card</label>
-                                        <input type="text" class="input-default">
-                                    </div>
-                                    <div class="col-2-of-8">
-                                        <label for="">Zip</label>
-                                        <input type="text" class="input-default">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-8-of-8">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="example-checkbox-cc" class="input-default" checked>
-                                            <label for="example-checkbox-cc" class="checkbox-input"></label>
-                                            <label for="example-checkbox" class="checkbox-sidelabel">Remember My Info</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget-footer">
-                                <a class="btn btn-info float-right">Submit</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h3>Validation</h3>
-                <p>At times you'll need to display input validation information to a user. While a modal is sometimes an acceptable solution, it is jolting and can feel overwhelming. Validation classes are the perfect way to alert a user that the information provided was insufficient. With Exprecss' beautifully simple approach you are now able to alert a user without being too distracting. The validation text is fired only when the client side validation comes back as insufficient.</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
-    &lt;div class="col-4"/&gt;
-        &lt;label for=""&gt;Validation Example&lt;/label&gt;
-        &lt;span class="validation-text validation-text-important"&gt;Oops! You forgot to enter a valid email.&lt;/span&gt;
-        &lt;input type="text" class="input-default" placeholder="Email"&gt;
-        &lt;a href="" class="btn btn-action btn-validate-me"&gt;Validate Me&lt;/a&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                <div class="row">
-                    <div class="col-4">
-                        <label for="">Validation Example</label>
-                        <span class="validation-text validation-text-important">Oops! You forgot to enter a valid email.</span>
-                        <input type="text" class="input-default" placeholder="Email">
-                        <a href="" class="btn btn-action btn-validate-me">Validate Me</a>
-                    </div>
-                </div>
-                <h3>Widgets</h3>
-                <p>Example Usage</p>
-                <div class="row">
-                    <div class="col-3">
-                        <div class="widget">
-                            <div class="widget-header small">Hello</div>
-                            <div class="widget-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, maxime non nulla vitae eaque quibusdam consectetur error mollitia. Aperiam, doloribus necessitatibus illo labore assumenda sunt ullam excepturi commodi quis quam.</p>
-                            </div>
-                            <div class="widget-footer">
-                                <a href="" class="btn btn-primary full-width">Submit</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="widget">
-                            <div class="widget-header widget-header-success small">success</div>
-                            <div class="widget-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, maxime non nulla vitae eaque quibusdam consectetur error mollitia. Aperiam, doloribus necessitatibus illo labore assumenda sunt ullam excepturi commodi quis quam.</p>
-                            </div>
-                            <div class="widget-footer">
-                                <a href="" class="btn btn-primary full-width">Submit</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="widget">
-                            <div class="widget-header widget-header-info small">info</div>
-                            <div class="widget-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, maxime non nulla vitae eaque quibusdam consectetur error mollitia. Aperiam, doloribus necessitatibus illo labore assumenda sunt ullam excepturi commodi quis quam.</p>
-                            </div>
-                            <div class="widget-footer">
-                                <a href="" class="btn btn-primary full-width">Submit</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="widget">
-                            <div class="widget-header widget-header-important small">important</div>
-                            <div class="widget-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, maxime non nulla vitae eaque quibusdam consectetur error mollitia. Aperiam, doloribus necessitatibus illo labore assumenda sunt ullam excepturi commodi quis quam.</p>
-                            </div>
-                            <div class="widget-footer">
-                                <a href="" class="btn btn-primary full-width">Submit</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <h3>Selects</h3>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
-    &lt;div class="col-4"&gt;
-        &lt;label for="example"&gt;Pick One&gt;labe&gt;
-        &lt;select name="example" id="example"&gt;
-        &lt;div class="select"&gt;
-                &lt;option value=""&gt;Gotham&lt;/option&gt;
-                &lt;option value=""&gt;Proxima Nova&lt;/option&gt;
-                &lt;option value=""&gt;Avenir&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                <div class="row">
-                    <div class="col-4">
-                        <label for="example">Pick One</label>
-                        <span>Placeholder</span>
-                        <div class="select">
-                            <select name="example" id="example">
-                                <option value="">Gotham</option>
-                                <option value="">Proxima Nova</option>
-                                <option value="">Avenir</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <h3>Radio Buttons</h3>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
-    &lt;div class="radio"&gt;
-        &lt;input type="radio" name="radio-example checked&gt;
-        &lt;input type="radio" name="radio-example&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                <div class="row">
-                    <div class="radio">
-                        <input type="radio" name="radio-example" checked>
-                        <input type="radio" name="radio-example">
-                    </div>
-                </div>
-
-                <h3>Checkboxes</h3>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
-    &lt;div class="radio"&gt;
-        &lt;input type="radio" name="radio-example checked&gt;
-        &lt;input type="radio" name="radio-example&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                <div class="row">
-                    <div class="control-group">
-                        <div class="checkbox">
-                            <input type="checkbox" id="example-checkbox-2">
-                            <label for="example-checkbox-2" class="checkbox-input"></label>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <section class="helpers">
-            <div class="container">
-                <p class="section-title">Helper Classes</p>
-                <h3>Centering Elements</h3>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
-    &lt;div class="col-12"&gt;
-        &lt;a href="#" class="btn btn-action center-relative"&gt;Centered Button&lt;/a&gt;
-    &lt;div&gt;
-&lt;/div&gt;</pre>
-
-                <div class="row">
-                    <div class="col-12">
-                        <a href="#" class="btn btn-action center-h-relative">Button Centered: Relative</a>
-                    </div>
-                </div>
-
-                <h3>Full Width Elements</h3>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
-    &lt;div class="col-12"&gt;
-        &lt;a href="#" class="btn btn-primary full-width&gt;Full Width Button&lt;/a&gt;
-    &lt;/div&gt;
-&lt;div&gt;</pre>
-                <div class="row">
-                    <div class="col-12">
-                        <a href="#" class="btn btn-primary full-width">Full Width Button</a>
-                    </div>
-                </div>
-
-                <h3>Text Alignment</h3>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
-    &lt;div class="col-4"&gt;
-        &lt;p class="text-left"&gt;Text Left&gt;&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;p class="text-center"&gt;Text Center&gt;&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;p class="text-right"&gt;Text Right&gt;&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                <div class="row">
-                    <div class="col-4">
-                        <p class="text-left">Text Left</p>
-                    </div>
-                    <div class="col-4">
-                        <p class="text-center">Text Center</p>
-                    </div>
-                    <div class="col-4">
-                        <p class="text-right">Text Right</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="footer-example">
-            <div class="container">
-                <p class="section-title">Sticky Footer</p>
-                <p>Example Usage</p>
-                <pre class="prettyprint lang-html">
-// The wrapper class must be applied to the outermost div
-&lt;div class="wrapper"&gt;
-    &lt;div class="some-divs"&gt;&lt;/div&gt;
-    &lt;div class="some-divs"&gt;&lt;/div&gt;
-    &lt;div class="some-divs"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;footer class="footer&gt;
-    &lt;ul&gt;
-        &lt;li&gt;&lt;a&gt;Download on Github&lt;/a&gt;&lt;/li&gt;
-        &lt;span class="copyright">Copyright &copy; 2014. Cole Roberts.&lt;/span&gt;
-    &lt;/ul&gt;
-&lt;/a&gt;</pre>
-        </div>
-        </section>
-    </div>
-    <footer class="footer footer-sticky text-center">
-        <div class="container">
-            <ul>
-                <li><a href="https://github.com/colealanroberts/Exprecss" class="btn-download">Download Exprecss on Github</a></li>
-                <span class="copyright">Copyright &copy; 2014. Crafted by <a href="http://twitter.com/colealan">Cole Roberts</a> and <a href="https://www.linkedin.com/pub/jacob-biggs/68/7/81b">Jacob Biggs</a></span>
-            </ul>
-        </div>
-    </footer>
-<!-- Le JS -->
-<body onload="prettyPrint()">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="vendor/angular/angular.min.js"></script>
-<script src="vendor/angular-animate/angular-animate.min.js"></script>
-<script src="docs/docs.js"></script>
-<script src="dist/js/exprecss.js"></script>
-</body>
+        </footer>
+    <!-- Le JS -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="vendor/angular/angular.min.js"></script>
+        <script src="vendor/angular-animate/angular-animate.min.js"></script>
+        <script src="docs/docs.js"></script>
+        <script src="dist/js/exprecss.js"></script>
+    </body>
 </html>
