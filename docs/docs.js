@@ -8,7 +8,7 @@ $(function() {
 function navScroll() {
     var scrollPosition = $(window).scrollTop();
     var $el = $('.sidebar');
-    var heroHeight = 562;
+    var heroHeight = 476;
 
     $(window).scroll(function() {
     	if (scrollPosition > heroHeight) {
