@@ -1,84 +1,76 @@
-/* Tomorrow Night Eighties Theme */
+/* Tomorrow Theme */
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
-/* Pretty printing styles. Used with prettify.js. */
-/* SPAN elements with the classes below are added by prettyprint. */
-/* plain text */
+.prettyprint {
+  background: #FCFCFC;
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  border: 1px solid #EAEAEA;
+  padding: 10px;
+  border-radius: 4px;
+}
+
 .pln {
-  color: #cccccc;
+  color: #6E7B87;
 }
 
 @media screen {
-  /* string content */
   .str {
-    color: #99cc99;
+    color: #718c00;
   }
 
-  /* a keyword */
   .kwd {
-    color: #cc99cc;
+    color: #8959a8;
   }
 
-  /* a comment */
   .com {
-    color: #999999;
+    color: #8e908c;
   }
 
-  /* a type name */
   .typ {
-    color: #6699cc;
+    color: #4271ae;
   }
 
-  /* a literal value */
   .lit {
-    color: #f99157;
+    color: #f5871f;
   }
 
-  /* punctuation */
   .pun {
-    color: #cccccc;
+    color: #4d4d4c;
   }
 
-  /* lisp open bracket */
   .opn {
-    color: #cccccc;
+    color: #4d4d4c;
   }
 
-  /* lisp close bracket */
   .clo {
-    color: #cccccc;
+    color: #4d4d4c;
   }
 
-  /* a markup tag name */
   .tag {
-    color: #f2777a;
+    color: #6E7B87;
   }
 
-  /* a markup attribute name */
   .atn {
-    color: #f99157;
+    color: #f5871f;
   }
 
-  /* a markup attribute value */
   .atv {
-    color: #66cccc;
+    color: #3498DB;
   }
 
-  /* a declaration */
   .dec {
-    color: #f99157;
+    color: #f5871f;
   }
 
-  /* a variable name */
   .var {
-    color: #f2777a;
+    color: #c82829;
   }
 
-  /* a function name */
   .fun {
-    color: #6699cc;
+    color: #4271ae;
   }
 }
-/* Use higher contrast and text-weight for printable form. */
 @media print, projection {
   .str {
     color: #006600;
@@ -120,20 +112,14 @@
     color: #006600;
   }
 }
-/* Style */
-pre.prettyprint {
-  background: #2F353E;
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
-  font-size: 12px;
-  line-height: 1.5;
-  padding: 10px;
-  border-radius: 2px;
-}
-
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+ol.linenums > li {
+    list-style-type: decimal;
 }
 
 /* IE indents via margin-left */

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title>Exprecss Frontend Framework</title>
     <link rel="stylesheet" href="dist/css/exprecss.css">
     <link rel="stylesheet" href="docs/docs.css">
     <link rel="stylesheet" href="docs/prettify-theme.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <script src="//use.typekit.net/zui1jgr.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
 
     <!-- Google Analytics -->
     <script>
@@ -24,10 +27,10 @@
         <div class="wrapper">
 
             <!-- Hero Unit -->
-            <section class="hero-unit-demo">
+            <div class="hero-unit-demo">
                 <div id="particles"></div>
                 <div class="container">
-                    <h1 class="name">Expre<span>css</span></h1>
+                    <h1 class="name">Exprecss</h1>
                     <div class="tagline">
                         <p>A lightweight responsive framework built on
                             <span><strong>Bourbon</strong></span>,
@@ -38,7 +41,6 @@
                     </div>
                     <div class="hero-group">
                         <a href="https://github.com/colealanroberts/colealanroberts.github.io/archive/master.zip" class="btn btn-download-repo">Download from Github
-                        <span class="version">Currently in v0.1.90</span>
                         </a>
                         <a href="https://github.com/colealanroberts/Exprecss" class="btn btn-view-examples">Explore the Repo</a>
                         <div class="bower-install">
@@ -47,11 +49,11 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
             <main>
                 <div class="container">
                     <div class="row">
-                        <div class="col-3 pos-rel float-right">
+                        <div class="col-2 pos-rel float-right">
                             <aside class="sidebar">
                                 <ul>
                                     <li><a href="" class="active">Typography</a></li>
@@ -59,13 +61,16 @@
                                     <li><a href="">Scaffolding</a></li>
                                     <li><a href="">Navbar</a></li>
                                     <li><a href="">Modal</a></li>
-                                    <li><a href="">UI Components</a></li>
+                                    <li><a href="">Components</a></li>
+                                    <li><a href="">Widgets</a></li>
+                                    <li><a href="">Validation</a></li>
                                     <li><a href="">Helpers</a></li>
-                                    <li><a href="">Sticky Footer</a></li>
+                                    <li><a href="">Footer</a></li>
+                                    <li><a href="" class="download">Download</a></li>
                                 </ul>
                             </aside>
                         </div>
-                        <div class="col-9">
+                        <div class="col-10">
 
                             <!-- Include Foundation -->
                             <div ng-include src="'docs/components/foundation.html'"></div>
@@ -84,35 +89,45 @@
 
                             <!-- UI Components -->
                             <section class="ui-components">
-                                <div class="container">
-                                    <p class="section-title">UI Components</p>
-                                    <!-- Begin Importing Components -->
+                                <span class="section-title">UI Components</span>
+                                <!-- Begin Importing Components -->
 
-                                    <!-- Include UI Buttons -->
+                                <!-- Include UI Buttons -->
+                                <div class="subsection">
                                     <div ng-include src="'docs/components/ui-buttons.html'"></div>
+                                </div>
 
-                                    <!-- Include UI Dropdowns -->
+                                <!-- Include UI Dropdowns -->
+                                <div class="subsection">
                                     <div ng-include src="'docs/components/ui-dropdowns.html'"></div>
+                                </div>
 
-                                    <!-- Include UI Inputs -->
+                                <!-- Include UI Inputs -->
+                                <div class="subsection">
                                     <div ng-include src="'docs/components/ui-inputs.html'"></div>
+                                </div>
 
-                                    <!-- Include UI Validation -->
-                                    <div ng-include src="'docs/components/ui-validation.html'"></div>
-
-                                    <!-- Include UI Widgets -->
-                                    <div ng-include src="'docs/components/ui-widgets.html'"></div>
-
-                                    <!-- Include UI Selects -->
+                                <!-- Include UI Selects -->
+                                <div class="subsection">
                                     <div ng-include src="'docs/components/ui-selects.html'"></div>
+                                </div>
 
-                                    <!-- Include UI Radios -->
+                                <!-- Include UI Radios -->
+                                <div class="subsection">
                                     <div ng-include src="'docs/components/ui-radios.html'"></div>
+                                </div>
 
-                                    <!-- Include UI Radios -->
+                                <!-- Include UI Radios -->
+                                <div class="subsection">
                                     <div ng-include src="'docs/components/ui-checkboxes.html'"></div>
                                 </div>
                             </section>
+
+                            <!-- Include Widgets -->
+                            <div ng-include src="'docs/components/widgets.html'"></div>
+
+                            <!-- Include Validation -->
+                            <div ng-include src="'docs/components/validation.html'"></div>
 
                             <!-- Include Helpers -->
                             <div ng-include src="'docs/components/helpers.html'"></div>
@@ -129,19 +144,16 @@
         <footer class="footer footer-sticky text-center">
             <div class="container">
                 <ul>
-                    <span class="copyright">Copyright &copy; 2014. Crafted by <a href="http://twitter.com/colealan">Cole Roberts</a> and <a href="https://www.linkedin.com/pub/jacob-biggs/68/7/81b">Jacob Biggs</a></span>
+                    <span class="copyright">Copyright &copy; 2014. Crafted by <a href="http://twitter.com/colealan"><strong>Cole Roberts</strong></a> and <a href="https://www.linkedin.com/pub/jacob-biggs/68/7/81b"><strong>Jacob Biggs</strong></a></span>
                 </ul>
             </div>
         </footer>
     <!-- Le JS -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="vendor/angular/angular.min.js"></script>
         <script src="vendor/angular-animate/angular-animate.min.js"></script>
         <script src="dist/js/exprecss.js"></script>
         <script src="docs/particles.js"></script>
         <script src="docs/docs.js"></script>
-        <script src="//use.typekit.net/zui1jgr.js"></script>
-        <script>try{Typekit.load();}catch(e){}</script>
     </body>
 </html>

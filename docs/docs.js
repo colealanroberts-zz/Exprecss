@@ -1,3 +1,23 @@
+// Apps
+var myApp = angular.module("myApp", []);
+
+myApp.controller('MainController', function($scope) { });
+
+myApp.directive('slideToggle', function() {
+  return {
+    restrict: 'A',
+    scope:{},
+    controller: function ($scope) {},
+    link: function(scope, element, attr) {
+      element.bind('click', function() {
+        var $slideBox = angular.element(attr.slideToggle);
+        var slideDuration = parseInt(attr.slideToggleDuration, 10) || 200;
+        $slideBox.stop().slideToggle(slideDuration);
+      });
+    }
+  };
+});
+
 // Simple Validator Exmaple
 $(function() {
     $('.btn-validate-me').click(function() {
@@ -8,7 +28,7 @@ $(function() {
 function navScroll() {
     var scrollPosition = $(window).scrollTop();
     var $el = $('.sidebar');
-    var heroHeight = 476;
+    var heroHeight = 462;
 
     $(window).scroll(function() {
     	if (scrollPosition > heroHeight) {
@@ -23,10 +43,6 @@ function navScroll() {
     	}
     });
 }
-
-$(document).ready(function() {
-    $(window).on('scroll', navScroll);
-});
 
 // Particles JS
 particlesJS('particles', {
@@ -64,4 +80,9 @@ particlesJS('particles', {
     },
     /* Retina Display Support */
     retina_detect: true
+});
+
+$(document).ready(function() {
+    navScroll();
+    $(window).on('scroll', navScroll);
 });

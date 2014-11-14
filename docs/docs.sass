@@ -1,3 +1,7 @@
+// Import Bourbon
+@import "../vendor/bourbon/dist/_bourbon"
+
+
 // For Style Guide Only
 // Colors
 $exprecss-blue: #3498DB
@@ -7,7 +11,7 @@ $brand-green: #6BAD42
 $brand-red: #DF4938
 $brand-yellow: ''
 $dark-grey: #5C5C5C
-$border-grey: #E8E8E8
+$border-grey: #EAEAEA
 $body-text-color: #5D687C
 $brand-blue: #3498DB
 $light-grey: #FCFCFC
@@ -35,79 +39,46 @@ $font-size-14: 14px
 $font-size-16: 16px
 $font-size-24: 24px
 $font-size-36: 36px
+$font-weight-thin: 100
+$font-weight-light: 300
+$font-weight-book: 400
+$font-weight-semibold: 600
+$font-weight-bold: 700
+
+$px-gutter-small: 10px
+$px-gutter-base: 20px
 
 $height-footer: 80px
 
 $animation-rotate-duration: 3050ms
 
-// Rotate Text In
-@-webkit-keyframes rotate-text
+// Name In
+@include keyframes(animate-name-in)
     0%
+        @include transform(translateY(-40px))
         opacity: 0
-
-    30%
-        opacity: 1
-
-    50%
-        opacity: 1
-
-    70%
-        opacity: 1
-
 
     100%
-        opacity: 0
+        @include transform(translateY(0px))
+        opacity: 1
 
-@-moz-keyframes rotate-text
+@include keyframes(animate-group-in)
     0%
+        @include transform(translateY(30px))
         opacity: 0
-
-    30%
-        opacity: 1
-
-    50%
-        opacity: 1
-
-    70%
-        opacity: 1
-
 
     100%
-        opacity: 0
+        @include transform(translateY(0px))
+        opacity: 1
 
-@-o-keyframes rotate-text
+@include keyframes(animate-group-3d)
     0%
+        @include transform(scale(0.8))
         opacity: 0
-
-    30%
-        opacity: 1
-
-    50%
-        opacity: 1
-
-    70%
-        opacity: 1
-
 
     100%
-        opacity: 0
-
-@keyframes rotate-text
-    0%
-        opacity: 0
-
-    30%
+        @include transform(scale(1))
         opacity: 1
-
-    50%
-        opacity: 1
-
-    70%
-        opacity: 1
-
-
-    100%
-        opacity: 0
 
 // Mixins
 @mixin breakpoint($point)
@@ -144,69 +115,50 @@ html, body
     color: lighten($exprecss-grey, 4%)
     font-family: $font-family-default
 
+p
+    margin: 0 0 10px
+
+section
+    overflow: hidden
+    padding: 0 0 40px 0
+
+    &:first-of-type
+        padding-top: 40px
+
+label
+    font-weight: 600
+
+pre
+    display: none
+
+// Remove after dev
+
 .wrapper
     margin-bottom: -($height-footer)
 
     &:after
         height: $height-footer
 
-label
-    font-weight: 600
-
-.navbar-exprecss
-    width: 100%
-    position: relative
-    height: auto
-    overflow: auto
-    border-bottom: none
-    background: transparent
-
-    ul
-        max-width: 68em
-        margin-left: auto
-        margin-right: auto
-        padding: 10px
-        list-style-type: none
-
-        .logo
-            float: left
-            @include breakpoint(mobile)
-                float: none
-                clear: both
-
-        li
-            float: right
-
-            a.changelog
-                @include transition(all, linear, 300ms)
-                text-decoration: none
-                display: inline-block
-                position: relative
-                float: right
-                top: 20px
-                padding: 8px 12px
-                color: rgba($white, 0.8)
-                border: 1px solid rgba($white, 0.3)
-                border-radius: 2px
-                font:
-                    size: $font-size-12
-                @include breakpoint(mobile)
-                    display: none
-
-                &:hover
-                    color: $white
-                    border-color: $white
+.subsection
+    padding-bottom: 20px
 
 .pos-rel
     position: relative
+
+.navbar
+    background: #F9F9F9
 
 .sidebar
     position: relative
     float: left
     height: auto
     margin-top: 30px
-    width: 241px
+    width: 153px
     padding: 20px
+    margin-left: $px-gutter-base
+
+    ul
+        border-left: 1px solid $border-grey
 
 
     li
@@ -214,12 +166,21 @@ label
 
         a
             color: $exprecss-grey
-            padding: 0 10px
+            padding: 0 20px
             font-size: $font-size-14
+            margin-left: -1px
+
+        .download
+            color: $white
+            padding: 4px 10px
+            background: lighten($exprecss-grey, 20%)
+            border-radius: 2px
+            margin-left: 20px
 
     .active
         color: $exprecss-blue
-        border-left: 2px solid $exprecss-blue
+        border-left: 1px solid $exprecss-blue
+        font-weight: $font-weight-semibold
 
 
 .svg-logo
@@ -257,9 +218,6 @@ label
             @include breakpoint(tablet)
                 float: right
 
-section
-    padding: 40px 0
-
 .prettyprint
     width: 100%
     overflow-x: scroll
@@ -269,13 +227,14 @@ section
     position: absolute
     top: 0
     right: 0
-    height: 562px
+    height: 462px
     width: 100%
 
 .hero-unit-demo
     filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#{$asphalt}', endColorstr='#{$asphalt}')
     padding: 110px 0
     height: auto
+    height: 462px
     background:
         size: cover
         repeat: no-repeat
@@ -307,6 +266,7 @@ section
             weight: 100
 
     .tagline
+        @include animation-delay(100ms)
         margin-top: -4px
         margin-bottom: 30px
         font-size: $font-size-16
@@ -336,7 +296,15 @@ section
         width: 100%
         float: none
 
+.btn-download-repo, .btn-view-examples
+    letter-spacing: 1px
+    padding: 18px 34px
+    font:
+        size: 11px
+        weight: 600
+
 .btn-download-repo
+    text-shadow: 0 2px 4px darken($base-color, 10%)
     background-image: -webkit-linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
     background-image: -moz-linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
     background-image: -o-linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
@@ -344,25 +312,28 @@ section
     filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#258CD1', endColorstr='#217DBB')
     border: 1px solid #25516F
     box-shadow: 0 1px 4px rgba(black, 0.1), inset 0 1px 0 rgba($white, 0.15)
-    letter-spacing: 1px
-    text-shadow: 0 2px 4px darken($base-color, 10%)
-    padding: 15px 35px !important
-    font:
-        size: 11px
-        weight: 500
 
 .btn-view-examples
     margin-left: 5px
-    border: 1px solid rgba($white, 0.5)
-    letter-spacing: 1px
-    color: rgba($white, 0.8)
-    padding: 22px 35px !important
+    color: $white
     background: transparent
-    font:
-        size: 11px
-        weight: 500
+    border: 1px solid rgba($white, 0.5)
     @include breakpoint(tablet)
         margin-left: 0
+
+.btn-toggle
+    position: relative
+    display: inline-block
+    color: $exprecss-blue
+    border: 1px solid $exprecss-blue
+    padding: 6px 10px
+    border-radius: 2px
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin-bottom: 10px
+    font:
+        size: 11px
+        weight: bold
 
 .hero-group
     position: relative
@@ -373,7 +344,7 @@ section
     display: inline-block
     border-radius: $border-radius-default
     overflow-y: auto
-    width: 379px
+    width: 380px
     display: block
     padding: 6px 10px
     border: 8px solid rgba(255, 255, 255, 0.12)
@@ -389,6 +360,7 @@ section
         top: 2px
         position: relative
         color: #FFCC2F
+        letter-spacing: 1px
         font:
             size: 11px
         @include breakpoint(tablet)
@@ -426,7 +398,17 @@ section
         family: $font-family-default
 
 .section-title
+    display: block
     color: $exprecss-grey
-    margin: 0
+    margin: 0 0 10px 0
     font:
-        size: $font-size-36
+        size: 28px
+
+.subtitle
+    display: block
+    color: $exprecss-blue
+    text-transform: uppercase
+    letter-spacing: 1px
+    font:
+        size: $font-size-12
+        weight: 600
