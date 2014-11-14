@@ -49,20 +49,20 @@ particlesJS('particles', {
     particles: {
         color: '#fff',
         shape: 'circle', // "circle", "edge" or "triangle"
-        opacity: 0.4,
-        size: 1,
+        opacity: 0.45,
+        size: 2,
         size_random: true,
         nb: 50,
         line_linked: {
             enable_auto: true,
             distance: 250,
             color: '#fff',
-            opacity: 0.4,
+            opacity: 0.25,
             width: 1,
             condensed_mode: {
                 enable: true,
-                rotateX: 600,
-                rotateY: 600
+                rotateX: 800,
+                rotateY: 800
             }
         },
         anim: {

@@ -197,7 +197,7 @@ pre {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right bottom;
-  background-image: -webkit-linear-gradient(180deg, rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.55)); }
+  background-image: -webkit-linear-gradient(45deg, rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.5)); }
   @media screen and (max-width: 800px) {
     .hero-unit-demo {
       background-position: left center; } }
@@ -255,13 +255,12 @@ pre {
 
 .btn-download-repo {
   text-shadow: 0 2px 4px #217dbb;
-  background-image: -webkit-linear-gradient(#258cd1, #217dbb);
-  background-image: -moz-linear-gradient(#258cd1, #217dbb);
-  background-image: -o-linear-gradient(#258cd1, #217dbb);
-  background-image: linear-gradient(#258cd1, #217dbb);
-  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#258CD1', endColorstr='#217DBB');
-  border: 1px solid #25516F;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15); }
+  background-image: -webkit-linear-gradient(#4aa3df, #217dbb);
+  background-image: -moz-linear-gradient(#4aa3df, #217dbb);
+  background-image: -o-linear-gradient(#4aa3df, #217dbb);
+  background-image: linear-gradient(#4aa3df, #217dbb);
+  border: 1px solid #124364;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2); }
 
 .btn-view-examples {
   margin-left: 5px;

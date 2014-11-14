@@ -239,7 +239,7 @@ pre
         size: cover
         repeat: no-repeat
         position: right bottom
-    background-image: -webkit-linear-gradient(180deg, rgba($asphalt, 0.8), rgba($asphalt, 0.55))
+    background-image: -webkit-linear-gradient(45deg, rgba($asphalt, 0.7), rgba($asphalt, 0.5))
 
     @include breakpoint(tablet)
         background-position: left center
@@ -305,13 +305,12 @@ pre
 
 .btn-download-repo
     text-shadow: 0 2px 4px darken($base-color, 10%)
-    background-image: -webkit-linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
-    background-image: -moz-linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
-    background-image: -o-linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
-    background-image: linear-gradient(darken($base-color, 5%), darken($base-color, 10%))
-    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#258CD1', endColorstr='#217DBB')
-    border: 1px solid #25516F
-    box-shadow: 0 1px 4px rgba(black, 0.1), inset 0 1px 0 rgba($white, 0.15)
+    background-image: -webkit-linear-gradient(lighten($base-color, 5%), darken($base-color, 10%))
+    background-image: -moz-linear-gradient(lighten($base-color, 5%), darken($base-color, 10%))
+    background-image: -o-linear-gradient(lighten($base-color, 5%), darken($base-color, 10%))
+    background-image: linear-gradient(lighten($base-color, 5%), darken($base-color, 10%))
+    border: 1px solid darken($base-color, 30%)
+    box-shadow: 0 1px 4px rgba(black, 0.1), inset 0 1px 0 rgba($white, 0.2)
 
 .btn-view-examples
     margin-left: 5px
