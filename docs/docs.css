@@ -305,6 +305,7 @@ pre {
   display: block; }
 
 .bower-install {
+  margin-top: 10px;
   display: inline-block;
   border-radius: 2px;
   overflow-y: auto;
