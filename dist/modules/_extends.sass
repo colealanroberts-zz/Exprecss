@@ -6,15 +6,19 @@
     border: transparent
     white-space: nowrap
     text-decoration: none
-    margin-bottom: $px-gutter-small
+    -ms-touch-action: manipulation
+    touch-action: manipulation
+    background-image: none
+    margin-bottom: 0
+    font:
+        size: $font-size-14
 
 %clearfix
-    *zoom: 1
-    clear: both
-
     &:after, &:before
         content: ''
         display: table
+
+    &:after
         clear: both
 
 %box-shadow-default

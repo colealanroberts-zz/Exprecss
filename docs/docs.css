@@ -269,6 +269,7 @@ pre {
   font-weight: 600; }
 
 .btn-download-repo {
+  color: #FFFFFF;
   text-shadow: 0 2px 4px #217dbb;
   background-image: -webkit-linear-gradient(#4aa3df, #217dbb);
   background-image: -moz-linear-gradient(#4aa3df, #217dbb);
@@ -372,3 +373,6 @@ pre {
   letter-spacing: 1px;
   font-size: 12px;
   font-weight: 600; }
+
+.setup pre {
+  display: block; }
