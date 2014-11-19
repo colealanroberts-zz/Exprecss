@@ -11,13 +11,14 @@ $brand-green: #6BAD42
 $brand-red: #DF4938
 $brand-yellow: ''
 $dark-grey: #5C5C5C
-$border-grey: #EAEAEA
+$border-grey: #E7E7E7
 $body-text-color: #5D687C
 $brand-blue: #3498DB
 $light-grey: #FCFCFC
 $brand-background-grey: #F8F8F8
 $base-color: $exprecss-blue
 $asphalt: #2C3E50
+$background-light-grey: #F3F5F6
 
 // Links
 $anchor-color: $exprecss-blue
@@ -27,6 +28,10 @@ $border-radius-default: 2px
 
 // Transitions
 $transition-duration-default: 300ms
+
+// Gutters
+$px-gutter-small: 10px
+$px-gutter-base: 20px
 
 // Breakpoints
 $breakpoint-mobile: 480px
@@ -118,23 +123,35 @@ html, body
 p
     margin: 0 0 10px
 
-section
-    overflow: hidden
-    padding: 0 0 40px 0
-
-    &:first-of-type
-        padding-top: 40px
+.foundation
+    padding-top: $px-gutter-base
 
 label
     font-weight: 600
+
+section
+    padding: 45px 20px 20px 20px
+    overflow: hidden
+    border-bottom: 1px solid $border-grey
 
 pre
     display: none
 
 // Remove after dev
 
+.container-content
+    margin-top: -$px-gutter-base * 2
+    overflow: hidden
+    background: $white
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.045)
+    border: 1px solid $border-grey
+    margin-bottom: $px-gutter-base * 2
+    border-radius: 2px
+
 .wrapper
     margin-bottom: -($height-footer)
+    background: $background-light-grey
+    border: 1px solid $border-grey
 
     &:after
         height: $height-footer
@@ -231,6 +248,8 @@ pre
     width: 100%
 
 .hero-unit-demo
+    position: relative
+    top: -1px
     filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#{$asphalt}', endColorstr='#{$asphalt}')
     padding: 110px 0
     height: auto
@@ -323,13 +342,13 @@ pre
 .btn-toggle
     position: relative
     display: inline-block
-    color: $exprecss-blue
-    border: 1px solid $exprecss-blue
+    color: $white
     padding: 6px 10px
     border-radius: 2px
     letter-spacing: 1px
     text-transform: uppercase
     margin-bottom: 10px
+    background: $brand-blue
     font:
         size: 11px
         weight: bold

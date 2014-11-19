@@ -45,6 +45,13 @@ button, input.btn
         background: $brand-red
         border: 1px solid $brand-red
 
+    &.disabled, &[disabled]
+        @include opacity(0.6)
+        cursor: not-allowed
+
+        > *
+            pointer-events: none
+
     &-file-upload
         position: relative
 
