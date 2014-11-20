@@ -59,7 +59,7 @@ function introAnim() {
 function navScroll() {
     var scrollPosition = $(window).scrollTop();
     var $el = $('.sidebar');
-    var heroHeight = 462;
+    var heroHeight = 393;
 
     $(window).scroll(function() {
     	if (scrollPosition > heroHeight) {
