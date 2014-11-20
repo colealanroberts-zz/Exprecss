@@ -708,6 +708,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/docs\/img\/bg-new.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3.60145e+06,
+		"inputAbbreviatedPath": "\/docs\/img\/bg-new.jpg",
+		"outputAbbreviatedPath": "\/docs\/img\/bg-new.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/docs\/img\/bower-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,

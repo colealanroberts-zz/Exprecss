@@ -25,6 +25,37 @@ $(function() {
     });
 });
 
+function introAnim() {
+    var $nav = $('.sidebar');
+    var $main = $('main');
+    var $footer = $('footer');
+    var $hero = $('.hero-unit-demo');
+    var $heroGroup = $('.hero-group');
+
+    $nav.css({display: 'none'});
+    $main.css({display: 'none'});
+    $footer.css({display: 'none'});
+    setInterval(function() {
+        $hero.css({
+            position: 'relative',
+        });
+    }, 3025);
+
+    setInterval(function() {
+        $main.css({display: 'block'}).addClass('animation-main-in');
+    }, 3200);
+
+    setInterval(function() {
+        $heroGroup.addClass('animation-group-in').css({opacity: 1});
+    }, 3500);
+
+    setInterval(function() {
+        $nav.css({display: 'block'}).addClass('animation-nav-in');
+    }, 4000);
+
+    $hero.addClass('animation-overlay-out');
+}
+
 function navScroll() {
     var scrollPosition = $(window).scrollTop();
     var $el = $('.sidebar');
@@ -44,45 +75,8 @@ function navScroll() {
     });
 }
 
-// Particles JS
-particlesJS('particles', {
-    particles: {
-        color: '#fff',
-        shape: 'circle', // "circle", "edge" or "triangle"
-        opacity: 0.45,
-        size: 2,
-        size_random: true,
-        nb: 50,
-        line_linked: {
-            enable_auto: true,
-            distance: 250,
-            color: '#fff',
-            opacity: 0.25,
-            width: 1,
-            condensed_mode: {
-                enable: true,
-                rotateX: 800,
-                rotateY: 800
-            }
-        },
-        anim: {
-            enable: true,
-            speed: 0.45
-        }
-    },
-    interactivity: {
-        enable: false,
-        mouse: {
-            distance: 150
-        },
-        detect_on: 'canvas', // "canvas" or "window"
-        mode: 'grab'
-    },
-    /* Retina Display Support */
-    retina_detect: true
-});
-
 $(document).ready(function() {
     navScroll();
+    introAnim();
     $(window).on('scroll', navScroll);
 });
