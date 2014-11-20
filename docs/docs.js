@@ -39,7 +39,7 @@ function introAnim() {
         $hero.css({
             position: 'relative',
         });
-    }, 3025);
+    }, 2975);
 
     setInterval(function() {
         $main.css({display: 'block'}).addClass('animation-main-in');
