@@ -105,9 +105,9 @@
     transform: translateX(0px);
     opacity: 1; } }
 .animation-group-in {
-  -webkit-animation: animate-group-in cubic-bezier(0.23, 1, 0.32, 1) 325ms;
-  -moz-animation: animate-group-in cubic-bezier(0.23, 1, 0.32, 1) 325ms;
-  animation: animate-group-in cubic-bezier(0.23, 1, 0.32, 1) 325ms;
+  -webkit-animation: animate-group-in cubic-bezier(0.23, 1, 0.32, 1) 725ms;
+  -moz-animation: animate-group-in cubic-bezier(0.23, 1, 0.32, 1) 725ms;
+  animation: animate-group-in cubic-bezier(0.23, 1, 0.32, 1) 725ms;
   -webkit-animation-delay: 150ms;
   -moz-animation-delay: 150ms;
   animation-delay: 150ms; }

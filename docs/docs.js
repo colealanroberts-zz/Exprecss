@@ -46,11 +46,11 @@ function introAnim() {
     }, 3200);
 
     setInterval(function() {
-        $heroGroup.addClass('animation-group-in').css({opacity: 1});
+        $nav.css({display: 'block'}).addClass('animation-nav-in');
     }, 3500);
 
     setInterval(function() {
-        $nav.css({display: 'block'}).addClass('animation-nav-in');
+        $heroGroup.addClass('animation-group-in').css({opacity: 1});
     }, 4000);
 
     $hero.addClass('animation-overlay-out');
