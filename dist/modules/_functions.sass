@@ -1,7 +1,7 @@
 @function mobile-scale($size)
     $computed-size: floor($size * $mobile-multiplier)
 
-    @if $computed-size % 2 == 1
+    @if $computed-size % 2 == 1px
         @return $computed-size - 1px
 
     @else

@@ -6,28 +6,24 @@
             // Render Default Columns
             .col-#{$index1}
                 @include span-columns($index1)
-                @include media(mobile)
-                    width: 100%
 
             @if $render-shift == true
                 .shift-#{$index1}
                     @include shift($index1)
 
             // Render Responsive Columns
-            .col-mobile-#{$index1}
+            .col-#{$index1}-mobile
                 @include media(mobile)
                     @include span-columns($index1)
 
-            .col-tablet-#{$index1}
+            .col-#{$index1}-tablet
                 @include media(tablet)
                     @include span-columns($index1)
 
         @else
-            // Render .col-x-of-x 
+            // Render .col-x-of-x
             .col-#{$index1}-of-#{$index2}
                 @include span-columns($index1 of $index2)
-                @include media(mobile)
-                    width: 100%
 
             @if $render-shift == true
 
