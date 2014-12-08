@@ -53,6 +53,23 @@
     &-right
         text-align: right
 
+.show
+    &-mobile
+        @include media(mobile)
+            display: block !important
+
+    &-tablet
+        @include media(tablet)
+            display: block !important
+
+    &-desktop
+        @include media(desktop)
+            display: block !important
+
+    &-desktop-large
+        @include media(desktop-large)
+            display: block !important
+
 .hidden
     &-mobile
         @include media(mobile)
@@ -64,6 +81,10 @@
 
     &-desktop
         @include media(desktop)
+            display: none !important
+
+    &-desktop-large
+        @include media(desktop-large)
             display: none !important
 
 .font-size-12
