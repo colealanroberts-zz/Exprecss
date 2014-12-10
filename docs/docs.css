@@ -136,14 +136,6 @@ section {
 pre {
   display: none; }
 
-.description {
-  -webkit-animation: animate-description-in cubic-bezier(0.215, 0.61, 0.355, 1) 600ms;
-  -moz-animation: animate-description-in cubic-bezier(0.215, 0.61, 0.355, 1) 600ms;
-  animation: animate-description-in cubic-bezier(0.215, 0.61, 0.355, 1) 600ms;
-  -webkit-animation-delay: 200ms;
-  -moz-animation-delay: 200ms;
-  animation-delay: 200ms; }
-
 .container-content {
   position: relative;
   z-index: 9999;
@@ -281,18 +273,13 @@ pre {
     font-size: 50px;
     font-weight: 100; }
   .hero-unit-demo .tagline {
-    -webkit-animation-delay: 100ms;
-    -moz-animation-delay: 100ms;
-    animation-delay: 100ms;
+    /* @include animation-delay(100ms) */
     margin-top: -4px;
     margin-bottom: 30px;
     font-size: 16px; }
     .hero-unit-demo .tagline p {
       color: #FFFFFF;
       height: 25px; }
-    .hero-unit-demo .tagline #description-rotate {
-      vertical-align: top;
-      color: #d9d9d9; }
     @media screen and (max-width: 480px) {
       .hero-unit-demo .tagline {
         font-size: 11px; } }

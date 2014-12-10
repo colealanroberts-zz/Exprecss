@@ -164,11 +164,6 @@ pre
     display: none
 
 // Remove after dev
-
-.description
-    @include animation(animate-description-in $ease-out-cubic 600ms)
-    @include animation-delay(200ms)
-
 .container-content
     position: relative
     z-index: 9999
@@ -324,7 +319,7 @@ pre
             weight: 100
 
     .tagline
-        @include animation-delay(100ms)
+        /* @include animation-delay(100ms) */
         margin-top: -4px
         margin-bottom: 30px
         font-size: $font-size-16
@@ -332,10 +327,6 @@ pre
         p
             color: $white
             height: 25px
-
-        #description-rotate
-            vertical-align: top
-            color: darken($white, 15%)
 
         @include breakpoint(mobile)
             font:
