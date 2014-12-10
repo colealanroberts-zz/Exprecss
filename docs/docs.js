@@ -25,7 +25,7 @@ $(function() {
     });
 });
 
-function introAnim() {
+/*function introAnim() {
     var $nav = $('.sidebar');
     var $main = $('main');
     var $footer = $('footer');
@@ -54,7 +54,7 @@ function introAnim() {
     }, 4000);
 
     $hero.addClass('animation-overlay-out');
-}
+}*/
 
 function navScroll() {
     var scrollPosition = $(window).scrollTop();
@@ -77,6 +77,6 @@ function navScroll() {
 
 $(document).ready(function() {
     navScroll();
-    introAnim();
+    // introAnim();
     $(window).on('scroll', navScroll);
 });

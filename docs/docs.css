@@ -13,24 +13,13 @@
     opacity: 0; }
   100% {
     opacity: 1; } }
-@-webkit-keyframes animate-hero-up {
-  0% {
-    opacity: 1; }
-  100% {
-    height: 393px;
-    opacity: 1; } }
-@-moz-keyframes animate-hero-up {
-  0% {
-    opacity: 1; }
-  100% {
-    height: 393px;
-    opacity: 1; } }
-@keyframes animate-hero-up {
-  0% {
-    opacity: 1; }
-  100% {
-    height: 393px;
-    opacity: 1; } }
+/* @include keyframes(animate-hero-up)
+ * 0%
+ *     opacity: 1
+ *
+ * 100%
+ *     height: 393px
+ *     opacity: 1 */
 @-webkit-keyframes animate-main-in {
   0% {
     -webkit-transform: translateY(60px);
@@ -257,16 +246,12 @@ pre {
   width: 100%; }
 
 .hero-unit-demo {
-  -webkit-animation: animate-hero-up cubic-bezier(0.86, 0, 0.07, 1) 625ms;
-  -moz-animation: animate-hero-up cubic-bezier(0.86, 0, 0.07, 1) 625ms;
-  animation: animate-hero-up cubic-bezier(0.86, 0, 0.07, 1) 625ms;
-  -webkit-animation-delay: 2350ms;
-  -moz-animation-delay: 2350ms;
-  animation-delay: 2350ms;
+  /* @include animation(animate-hero-up $ease-in-out-quint 625ms) */
+  /* @include animation-delay(2350ms) */
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   will-change: height;
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   height: 100%;
@@ -275,7 +260,7 @@ pre {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-image: -webkit-linear-gradient(45deg, rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url("img/bg-new.jpg"); }
+  background-image: -webkit-linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url("img/bg-new.jpg"); }
   @media screen and (max-width: 800px) {
     .hero-unit-demo {
       background-position: left center; } }
@@ -366,7 +351,7 @@ pre {
   position: relative;
   z-index: 9999;
   display: block;
-  opacity: 0; }
+  opacity: 1; }
 
 .bower-install {
   margin-top: 10px;
