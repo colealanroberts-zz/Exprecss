@@ -54,9 +54,13 @@
 				$body.append(elem);
 			}),
 			registry = {},
+			beforeShowListener = null,
 			i = 0;
 
 		this.showOverlay = function(listener) {
+			if (beforeShowListener) {
+				beforeShowListener();
+			}
 			scope.showOverlay = true;
 			scope.close = listener;
 		};
@@ -81,7 +85,11 @@
 		this.deregister = function(key) {
 			$body.remove(registry[key]);
 			delete registry[key];
-		}
+		};
+
+		this.setBeforeShowListener = function(listener) {
+			beforeShowListener = listener;
+		};
 	});
 
 	app.factory('$expConfirm', function($q, $rootScope, $compile, $expModal, $document, $sce) {
@@ -89,7 +97,6 @@
 			var deferred = $q.defer(),
 				scope = $rootScope.$new(),
 				$body = angular.element($document[0].body);
-
 
 			options = options || {};
 
@@ -159,7 +166,7 @@
 	app.directive('expConfirm', function () {
 		return {
 			restrict: 'AE',
-			template: '<div class="modal" ng-if="open">\n    <div class="modal-header" ng-class="headerClass">{{ title }}</div>\n    <div class="modal-body" ng-bind-html="html">\n    </div>\n    <div class="modal-footer">\n        <a class="btn float-left" id="cancel-modal-btn" ng-class="cancelClass" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>\n        <a class="btn float-right" id="confirm-modal-btn" ng-class="confirmClass" ng-click="confirm()">{{ confirmText }}</a>\n    </div>\n</div>',
+			template: '<div class="modal" ng-if="open" id="exp-confirm-modal">\n    <div class="modal-header" ng-class="headerClass">{{ title }}</div>\n    <div class="modal-body" ng-bind-html="html">\n    </div>\n    <div class="modal-footer">\n        <a class="btn float-left" id="cancel-modal-btn" ng-class="cancelClass" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>\n        <a class="btn float-right" id="confirm-modal-btn" ng-class="confirmClass" ng-click="confirm()">{{ confirmText }}</a>\n    </div>\n</div>',
 			link: function(scope, elem, attr) {
 			}
 		}
