@@ -59,7 +59,7 @@
 
 		this.showOverlay = function(listener) {
 			if (beforeShowListener) {
-				beforeShowListener();
+				beforeShowListener(scope);
 			}
 			scope.showOverlay = true;
 			scope.close = listener;
