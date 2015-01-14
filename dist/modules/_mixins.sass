@@ -1,11 +1,15 @@
 // Responsive Breakpoint
 @mixin media($point)
+    @if $point == desktop-large
+        @media screen and (min-width: $breakpoint-desktop-large)
+            @content
+
     @if $point == desktop
-        @media screen and (min-width: $breakpoint-desktop)
+        @media screen and (min-width: $breakpoint-tablet + 1px) and (max-width: $breakpoint-desktop-large - 1px)
             @content
 
     @else if $point == tablet
-        @media screen and (max-width: $breakpoint-tablet)
+        @media screen and (min-width: $breakpoint-mobile + 1px) and (max-width: $breakpoint-tablet)
             @content
 
     @else if $point == mobile
@@ -15,7 +19,6 @@
     @else if $point == $point
         @media screen and (max-width: $point)
             @content
-
 // Opacity
 @mixin opacity($opacity)
     filter: alpha(opacity=$opacity)

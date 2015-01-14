@@ -1,7 +1,6 @@
 // Import Bourbon
 @import "../vendor/bourbon/dist/_bourbon"
 
-
 // For Style Guide Only
 // Colors
 $exprecss-blue: #3498DB
@@ -56,6 +55,17 @@ $px-gutter-base: 20px
 $height-footer: 80px
 
 $animation-rotate-duration: 3050ms
+
+// Gradient In
+@include keyframes(gradient-fade)
+    0%
+        background-position: 0% 50%
+
+    50%
+        background-position: 100% 50%
+
+    100%
+        background-position: 0% 50%
 
 // Name In
 @include keyframes(animate-description-in)
@@ -277,9 +287,8 @@ pre
     width: 100%
 
 .hero-unit-demo
-    /* @include animation(animate-hero-up $ease-in-out-quint 625ms) */
-    /* @include animation-delay(2350ms) */
-    @extend %force-hardware-accel
+    @include linear-gradient(270deg, $brand-blue, darken($brand-blue, 10%))
+    @include animation(gradient-fade 6s ease infinite)
     backface-visibility: hidden
     -webkit-backface-visibility: hidden
     will-change: height
@@ -287,16 +296,8 @@ pre
     top: 0
     width: 100%
     height: 100%
-    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#{$asphalt}', endColorstr='#{$asphalt}')
     padding: 80px 0
-    background:
-        size: cover
-        repeat: no-repeat
-        position: bottom center
-    background-image: -webkit-linear-gradient(rgba(#2c3e50, 0.7), rgba(#2c3e50, 0.7)), url("img/bg-new.jpg")
-
-    @include breakpoint(tablet)
-        background-position: left center
+    background-size: 400% 400%
     @include breakpoint(mobile)
         padding: 30px
         height: auto
