@@ -295,6 +295,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/exprecss.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/exprecss.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/README.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -340,31 +349,13 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/src\/_exprecss.sass",
-		"outputAbbreviatedPath": "\/src\/css\/exprecss.css",
+		"outputAbbreviatedPath": "\/exprecss.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 1,
 		"useLibsass": false
-		},
-	"\/src\/css\/exprecss.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/src\/css\/exprecss.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/src\/css\/normalize.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/src\/css\/normalize.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/src\/img\/dropdown-triangle.png": {
 		"fileType": 32768,
