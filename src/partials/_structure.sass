@@ -29,6 +29,8 @@ body
 h1, h2, h3, h4, h5, h6
     margin: 0
     text-rendering: optimizeLegibility
+    @include media(tablet-and-down)
+        text-rendering: auto
 
 hr
     @include linear-gradient(to right, darken($white, 6%) 10%, darken($white, 10%), darken($white, 6%) 90%)

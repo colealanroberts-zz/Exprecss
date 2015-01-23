@@ -4,12 +4,19 @@
         @media screen and (min-width: $breakpoint-desktop-large)
             @content
 
-    @if $point == desktop
+    @else if $point == desktop
         @media screen and (min-width: $breakpoint-tablet + 1px) and (max-width: $breakpoint-desktop-large - 1px)
             @content
 
+    @else if $point == desktop-and-down
+        @media screen and (max-width: $breakpoint-desktop)
+
     @else if $point == tablet
         @media screen and (min-width: $breakpoint-mobile + 1px) and (max-width: $breakpoint-tablet)
+            @content
+
+    @else if $point == tablet-and-down
+        @media screen and (max-width: $breakpoint-tablet)
             @content
 
     @else if $point == mobile
