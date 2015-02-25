@@ -24,6 +24,18 @@
         box-shadow: 0 2px 10px rgba(black, 0.2)
         border-radius: 0
 
+    // This is the transition class Angular adds when the element is in view
+    &.ng
+        &-enter
+            @include animation(modal-open $ease-out-cubic 600ms)
+            @include media(mobile)
+                @include animation(modal-open-responsive $ease-out-cubic 400ms)
+
+        &-leave
+            @include animation(modal-hide $ease-in-cubic $transition-duration-default)
+            @include media(mobile)
+                @include animation(modal-close-responsive $ease-out-cubic $transition-duration-default)
+
     &-header
         @include padding(15px 20px)
         position: relative
@@ -111,3 +123,18 @@
         display: block
         overflow-y: scroll
         background: rgba($background-grey, 0.9)
+
+        &.ng
+            &-enter
+                @include transition(all $ease-out-cubic $transition-duration-default)
+                @include opacity(0)
+
+                &-active
+                    @include opacity(1)
+
+            &-leave
+                @include transition(all $ease-in-cubic $transition-duration-default)
+                @include opacity(1)
+
+                &-active
+                    @include opacity(0)

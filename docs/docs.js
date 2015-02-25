@@ -25,37 +25,6 @@ $(function() {
     });
 });
 
-/*function introAnim() {
-    var $nav = $('.sidebar');
-    var $main = $('main');
-    var $footer = $('footer');
-    var $hero = $('.hero-unit-demo');
-    var $heroGroup = $('.hero-group');
-
-    $nav.css({display: 'none'});
-    $main.css({display: 'none'});
-    $footer.css({display: 'none'});
-    setInterval(function() {
-        $hero.css({
-            position: 'relative',
-        });
-    }, 2975);
-
-    setInterval(function() {
-        $main.css({display: 'block'}).addClass('animation-main-in');
-    }, 3200);
-
-    setInterval(function() {
-        $nav.css({display: 'block'}).addClass('animation-nav-in');
-    }, 3500);
-
-    setInterval(function() {
-        $heroGroup.addClass('animation-group-in').css({opacity: 1});
-    }, 4000);
-
-    $hero.addClass('animation-overlay-out');
-}*/
-
 function navScroll() {
     var scrollPosition = $(window).scrollTop();
     var $el = $('.sidebar');
@@ -77,6 +46,5 @@ function navScroll() {
 
 $(document).ready(function() {
     navScroll();
-    // introAnim();
     $(window).on('scroll', navScroll);
 });

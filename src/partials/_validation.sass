@@ -19,11 +19,17 @@
         color: $brand-red
         border-left: 2px solid $brand-red
 
-.validation-text-success.animation-validate ~.input-default
+.validation-text-success.animation-validate ~ .input-default
     border-color: $brand-green
 
-.validation-text-info.animation-validate ~.input-default
+.validation-text-info.animation-validate ~ .input-default
     border-color: $brand-blue
 
-.validation-text-important.animation-validate ~.input-default
+.validation-text-important.animation-validate ~ .input-default
     border-color: $brand-red
+
+.animation-validate
+    @include transition(all, linear, $transition-duration-default)
+    @include opacity(1 !important)
+    @extend %force-hardware-accel
+    margin-bottom: $px-gutter-tiny !important
