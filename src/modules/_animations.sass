@@ -45,14 +45,14 @@
 // Modal Mobile
 @include keyframes(modal-open-responsive)
     0%
-        opacity: 0
+        @include opacity(0)
 
     100%
-        opacity: 1
+        @include opacity(1)
 
 @include keyframes(modal-close-responsive)
     0%
-        opacity: 1
+        @include opacity(1)
 
     100%
-        opacity: 0
+        @include opacity(0)

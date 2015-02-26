@@ -1,6 +1,6 @@
 .modal
-    @include transform(translate(-50%, -51%))
-    @include position(fixed, 51% null null 50%)
+    @include transform(translate(-50%, -50%))
+    @include position(fixed, 50% null null 50%)
     @include transform-origin(0 0)
     @include backface-visibility(hidden)
     @extend %box-shadow-default
@@ -27,9 +27,9 @@
     // This is the transition class Angular adds when the element is in view
     &.ng
         &-enter
-            @include animation(modal-open $ease-out-cubic 600ms)
+            @include animation(modal-open $ease-out-cubic $transition-modal-open)
             @include media(mobile)
-                @include animation(modal-open-responsive $ease-out-cubic 400ms)
+                @include animation(modal-open-responsive $ease-out-cubic $transition-modal-open)
 
         &-leave
             @include animation(modal-hide $ease-in-cubic $transition-duration-default)
