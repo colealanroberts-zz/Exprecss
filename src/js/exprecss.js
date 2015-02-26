@@ -92,7 +92,7 @@
 		};
 	});
 
-	app.factory('$expConfirm', function($q, $rootScope, $compile, $expModal, $document, $sce) {
+	app.factory('$expConfirm', function($q, $rootScope, $compile, $expModal, $document, $sce, $timeout) {
 		var $expConfirm = function(title, html, confirmText, cancelText, options) {
 			var deferred = $q.defer(),
 				scope = $rootScope.$new(),
@@ -121,14 +121,18 @@
 					$body.append(elem);
 				}),
 				cancel = function() {
-					confirmModal.remove();
-					$expModal.hideOverlay();
-					deferred.reject();
+                    $timeout(function() {
+                        confirmModal.remove();
+                        $expModal.hideOverlay();
+                        deferred.reject();
+                    }, 0);
 				},
 				confirm = function() {
-					confirmModal.remove();
-					$expModal.hideOverlay();
-					deferred.resolve();
+                    $timeout(function() {
+                        confirmModal.remove();
+                        $expModal.hideOverlay();
+                        deferred.resolve();
+                    }, 0);
 				};
 
 			angular.extend(scope, {
@@ -137,23 +141,25 @@
 			});
 
 			if (cancelText) {
-				$document.on('keyup', function onEsc(e) {
+				$document.on('keypress', function onEsc(e) {
 					if (e.which === 27) {
 						cancel();
-						$document.off('keyup', onEsc);
+						$document.off('keypress', onEsc);
 					} else if (e.which === 13) {
 						confirm();
-						$document.off('keyup', onEsc)
+						$document.off('keypress', onEsc);
 					}
+                    e.preventDefault();
 				});
 				$expModal.showOverlay(cancel);
 			} else {
 				$expModal.showOverlay(confirm);
-				$document.on('keyup', function onEsc(e) {
-					if (e.which === 27 || e.which === 13) {
-						confirm();
-						$document.off('keyup', onEsc);
+				$document.on('keypress', function onEsc(e) {
+                    if (e.which === 27 || e.which === 13) {
+                        confirm();
+                        $document.off('keypress', onEsc);
 					}
+                    e.preventDefault();
 				});
 			}
 
@@ -166,7 +172,16 @@
 	app.directive('expConfirm', function () {
 		return {
 			restrict: 'AE',
-			template: '<div class="modal" ng-if="open" id="exp-confirm-modal">\n    <div class="modal-header" ng-class="headerClass">{{ title }}</div>\n    <div class="modal-body" ng-bind-html="html">\n    </div>\n    <div class="modal-footer">\n        <a class="btn float-left" id="cancel-modal-btn" ng-class="cancelClass" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>\n        <a class="btn float-right" id="confirm-modal-btn" ng-class="confirmClass" ng-click="confirm()">{{ confirmText }}</a>\n    </div>\n</div>',
+			template: '' +
+            '<div class="modal" ng-if="open" id="exp-confirm-modal">\n' +
+            '    <div class="modal-header" ng-class="headerClass">{{ title }}</div>\n' +
+            '    <div class="modal-body" ng-bind-html="html">\n' +
+            '    </div>\n' +
+            '    <div class="modal-footer">\n' +
+            '        <a class="btn float-left" id="cancel-modal-btn" ng-class="cancelClass" ng-if="cancelText" ng-click="cancel()">{{ cancelText }}</a>\n' +
+            '        <a class="btn float-right" id="confirm-modal-btn" ng-class="confirmClass" ng-click="confirm()">{{ confirmText }}</a>\n' +
+            '    </div>\n' +
+            '</div>',
 			link: function(scope, elem, attr) {
 			}
 		}
