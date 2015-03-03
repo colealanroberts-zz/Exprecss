@@ -143,23 +143,24 @@
 			if (cancelText) {
 				$document.on('keypress', function onEsc(e) {
 					if (e.which === 27) {
+                        e.preventDefault();
 						cancel();
 						$document.off('keypress', onEsc);
 					} else if (e.which === 13) {
+                        e.preventDefault();
 						confirm();
 						$document.off('keypress', onEsc);
 					}
-                    e.preventDefault();
 				});
 				$expModal.showOverlay(cancel);
 			} else {
 				$expModal.showOverlay(confirm);
 				$document.on('keypress', function onEsc(e) {
                     if (e.which === 27 || e.which === 13) {
+                        e.preventDefault();
                         confirm();
                         $document.off('keypress', onEsc);
 					}
-                    e.preventDefault();
 				});
 			}
 
