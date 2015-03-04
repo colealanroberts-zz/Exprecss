@@ -124,6 +124,7 @@
                     $timeout(function() {
                         confirmModal.remove();
                         $expModal.hideOverlay();
+                        $document.off('keypress', handleKeyPress);
                         deferred.reject();
                     }, 0);
 				},
@@ -131,37 +132,30 @@
                     $timeout(function() {
                         confirmModal.remove();
                         $expModal.hideOverlay();
+                        $document.off('keypress', handleKeyPress);
                         deferred.resolve();
                     }, 0);
-				};
+                },
+                handleKeyPress = function (e) {
+                    if (cancelText && e.which === 27){
+                        e.preventDefault();
+                        cancel();
+                    }else if (e.which === 13 || e.which === 27){
+                        e.preventDefault();
+                        confirm();
+                    }
+                };
 
 			angular.extend(scope, {
 				cancel: cancel,
 				confirm: confirm
 			});
 
+            $document.on('keypress', handleKeyPress);
 			if (cancelText) {
-				$document.on('keypress', function onEsc(e) {
-					if (e.which === 27) {
-                        e.preventDefault();
-						cancel();
-						$document.off('keypress', onEsc);
-					} else if (e.which === 13) {
-                        e.preventDefault();
-						confirm();
-						$document.off('keypress', onEsc);
-					}
-				});
 				$expModal.showOverlay(cancel);
 			} else {
 				$expModal.showOverlay(confirm);
-				$document.on('keypress', function onEsc(e) {
-                    if (e.which === 27 || e.which === 13) {
-                        e.preventDefault();
-                        confirm();
-                        $document.off('keypress', onEsc);
-					}
-				});
 			}
 
 			return deferred.promise;
