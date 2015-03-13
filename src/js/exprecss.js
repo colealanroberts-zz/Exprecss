@@ -121,8 +121,8 @@
                     $body.append(elem);
                 }),
                 cancel = function() {
+                    scope.$destroy();
                     $timeout(function() {
-                        scope.$destroy();
                         confirmModal.remove();
                         $expModal.hideOverlay();
                         $document.off('keypress', handleKeyPress);
@@ -130,8 +130,8 @@
                     }, 0);
                 },
                 confirm = function() {
+                    scope.$destroy();
                     $timeout(function() {
-                        scope.$destroy();
                         confirmModal.remove();
                         $expModal.hideOverlay();
                         $document.off('keypress', handleKeyPress);
