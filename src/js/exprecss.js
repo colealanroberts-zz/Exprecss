@@ -98,6 +98,12 @@
         }
     });
 
+    app.factory('$expAlertServerError', function($expConfirm){
+        return function() {
+            return $expConfirm('Error', 'An unexpected error has occurred.', 'Okay', null, {headerClass: 'modal-header-important'});
+        }
+    });
+
 	app.factory('$expConfirm', function($q, $rootScope, $compile, $expModal, $document, $sce, $timeout) {
 		var $expConfirm = function(title, html, confirmText, cancelText, options) {
 			var deferred = $q.defer(),
