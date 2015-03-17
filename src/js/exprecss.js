@@ -1,15 +1,15 @@
 (function() {
-    'use strict';
+	'use strict';
 
-    var app = angular.module('exprecss', []).run(function($rootScope, $expConfirm, $document) {
-        $document.on('click', function(e) {
-            if (e.target.className &&
-                (e.target.className.indexOf('btn-responsive-nav') >= 0 ||
-                e.target.className.indexOf('btn-responsive-nav-close') >= 0)) {
-                angular.element($document[0].querySelector('.navbar ul')).toggleClass('nav-close nav-open');
-                e.preventDefault();
-            }
-        });
+	var app = angular.module('exprecss', []).run(function($rootScope, $expConfirm, $document) {
+		$document.on('click', function(e) {
+			if (e.target.className &&
+				(e.target.className.indexOf('btn-responsive-nav') >= 0 ||
+					e.target.className.indexOf('btn-responsive-nav-close') >= 0)) {
+				angular.element($document[0].querySelector('.navbar ul')).toggleClass('nav-close nav-open');
+				e.preventDefault();
+			}
+		});
 
         $document.on('click', function(e) {
             if (e.target.className &&
@@ -92,11 +92,17 @@
         };
     });
 
-    app.factory('$expConfirm', function($q, $rootScope, $compile, $expModal, $document, $sce, $timeout) {
-        var $expConfirm = function(title, html, confirmText, cancelText, options) {
-            var deferred = $q.defer(),
-                scope = $rootScope.$new(),
-                $body = angular.element($document[0].body);
+    app.factory('$expAlertServerError', function($expConfirm){
+        return function() {
+            return $expConfirm('Error', 'An unexpected error has occurred.', 'Okay', null, {headerClass: 'modal-header-important'});
+        }
+    });
+
+	app.factory('$expConfirm', function($q, $rootScope, $compile, $expModal, $document, $sce, $timeout) {
+		var $expConfirm = function(title, html, confirmText, cancelText, options) {
+			var deferred = $q.defer(),
+				scope = $rootScope.$new(),
+				$body = angular.element($document[0].body);
 
             options = options || {};
 
