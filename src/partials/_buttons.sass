@@ -1,4 +1,6 @@
-button, .btn, input.btn
+.btn,
+button,
+input.btn
     @include font-smoothing(true)
     @include user-select(none)
     @extend %btn
@@ -8,6 +10,10 @@ button, .btn, input.btn
         @include appearance(none)
         box-shadow: none
         outline: 0 none
+
+button.btn,
+input.btn
+    @include padding(($px-gutter-small + 2px) $px-gutter-small * 2)
 
 .btn
     @include padding(($px-gutter-small + 2px) $px-gutter-small * 2)

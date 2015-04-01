@@ -4,7 +4,8 @@
 .textarea-default
     resize: none
 
-.input-default, .textarea-default
+.input-default,
+.textarea-default
     @include transition(all, linear, $transition-duration-default)
     @include box-sizing(border-box)
     @include appearance(none)
@@ -43,7 +44,8 @@
         border-left: 1px solid $border-grey
         border-radius: $border-radius-default 0 0 $border-radius-default
 
-        &:focus, &:active
+        &:focus,
+        &:active
             border-right: 1px solid $exprecss-blue
 
 .input-file-upload
