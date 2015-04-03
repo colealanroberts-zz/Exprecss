@@ -1,5 +1,5 @@
 .modal
-    @include transform(translate(-50%, -50%))
+    @include transform(translate(-50.1%, -50.1%))
     @include position(fixed, 50% null null 50%)
     @include transform-origin(0 0)
     @include backface-visibility(hidden)
@@ -24,7 +24,7 @@
         box-shadow: 0 2px 10px rgba(black, 0.2)
         border-radius: 0
 
-    // This is the transition class Angular adds when the element is in view
+    // Angular classes for adding and remove the modal with a transition
     &.ng
         &-enter
             @include animation(modal-open $ease-out-cubic $transition-modal-open)
@@ -43,13 +43,7 @@
         color: $header-grey
         letter-spacing: 1px
         text-transform: uppercase
-        border-top: 1px solid $border-grey
-        border-right: 1px solid $border-grey
-        border-left: 1px solid $border-grey
         font-size: $font-size-14
-
-        &.small
-            @include padding(14px 20px)
 
         &-success,
         &-info,
@@ -76,22 +70,9 @@
         overflow: auto
         padding: $px-gutter-base
         overflow: auto
-        border-top: 1px dotted $border-grey
-        border-left: 1px solid $border-grey
-        border-right: 1px solid $border-grey
-        border-bottom: 1px dotted $border-grey
-        @include media(mobile)
-            border: 0
-
-        &.border-no-header
-            border-top: 1px solid $border-grey
-            border-bottom: 1px solid $border-grey
-
-        &.border-header
-            border-bottom: 1px solid $border-grey
 
     p
-        margin: 0 0 10px 0
+        margin: 0 0 $px-gutter-small 0
         font:
             size: $font-size-14
 
@@ -100,9 +81,6 @@
         overflow: auto
         margin: 0
         background: $background-grey
-        border-left: 1px solid $border-grey
-        border-right: 1px solid $border-grey
-        border-bottom: 1px solid $border-grey
         @include media(mobile)
             position: absolute
             bottom: 0
@@ -114,7 +92,7 @@
 
         @include media(mobile)
             .btn
-                margin-bottom: 10px
+                margin-bottom: $px-gutter-small
 
                 &:last-of-type
                     margin-bottom: 0
@@ -124,9 +102,10 @@
         @extend %force-hardware-accel
         z-index: $z-index-alpha
         display: block
-        overflow-y: scroll
-        background: rgba($black, 0.7)
+        background: rgba($black, $alpha-modal-overlay)
 
+
+        // Angular classes for adding and remove the modal with a transition
         &.ng
             &-enter
                 @include transition(all $ease-out-cubic $transition-duration-default)

@@ -13,13 +13,14 @@ input.btn
 
 button.btn,
 input.btn
-    @include padding(($px-gutter-small + 2px) $px-gutter-small * 2)
+    @include padding(8px 20px)
     @include appearance(none)
+
+input.btn
     font-size: inherit
-    line-height: inherit
 
 .btn
-    @include padding(($px-gutter-small + 2px) $px-gutter-small * 2)
+    @include padding(8px 20px)
     border-radius: $border-radius-default
 
     @include media(mobile)
@@ -69,7 +70,7 @@ input.btn
             display: none
 
             + label
-                @include padding(($px-gutter-small + 2px) $px-gutter-small * 2)
+                @include padding(8px 20px)
                 @extend %btn
                 margin: 0
                 float: left

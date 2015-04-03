@@ -3,7 +3,7 @@
     text-align: center
     vertical-align: middle
     cursor: pointer
-    border: transparent
+    line-height: inherit
     white-space: nowrap
     text-decoration: none
     -ms-touch-action: manipulation
@@ -14,7 +14,8 @@
         size: $font-size-14
 
 %clearfix
-    &:after, &:before
+    &:after,
+    &:before
         content: ''
         display: table
 
