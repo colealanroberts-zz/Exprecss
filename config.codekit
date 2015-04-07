@@ -361,7 +361,7 @@
 		"outputAbbreviatedPath": "\/exprecss.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 3,
+		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 1,
 		"useLibsass": false

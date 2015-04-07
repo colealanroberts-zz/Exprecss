@@ -6,23 +6,18 @@
     @extend %box-shadow-default
     @extend %force-hardware-accel
     z-index: $z-index-alpha + 1
+    overflow-y: auto
     overflow-x: hidden
     height: auto
     width: $width-modal
-    background: $white
     border-radius: $border-radius-large
-    @include media(tablet)
-        width: calc(100% - 40px)
     @include media(mobile)
-        @include transform(translateX(-50%))
-        @include transform-origin(initial)
-        @include position(absolute, 20px null null 50%)
-        overflow-y: scroll
-        width: calc(100% - 40px)
-        height: calc(100% - 40px)
-        min-height: 300px
-        box-shadow: 0 2px 10px rgba(black, 0.2)
-        border-radius: 0
+        @include transform(none)
+        @include position(fixed, 0 0 0 0)
+        width: auto
+        height: auto
+        outline: 0
+        -webkit-overflow-scrolling: touch
 
     // Angular classes for adding and remove the modal with a transition
     &.ng
@@ -36,14 +31,37 @@
             @include media(mobile)
                 @include animation(modal-close-responsive $ease-out-cubic $transition-duration-default)
 
+    // This call is added to the <body> when the modal is open
+    &-open
+        @include media(tablet-and-down)
+            overflow: hidden
+
+            &.modal
+                overflow-x: hidden
+                overflow-y: auto
+
+    &-content,
+    &-header,
+    &-body,
+    &-footer
+        position: relative
+
+    &-content
+        overflow: hidden
+        display: block
+        background: $white
+        border-radius: $border-radius-default
+        @include media(tablet-and-down)
+            margin: $px-gutter-base
+
     &-header
         @include padding(15px 20px)
-        position: relative
         overflow: auto
         color: $header-grey
         letter-spacing: 1px
         text-transform: uppercase
         font-size: $font-size-14
+        border-radius: $border-radius-default $border-radius-default 0 0
 
         &-success,
         &-info,
@@ -62,10 +80,6 @@
         &-border-bottom
             border-bottom: 1px solid $border-grey
 
-    &-body,
-    &-footer
-        @extend %clearfix
-
     &-body
         overflow: auto
         padding: $px-gutter-base
@@ -81,11 +95,7 @@
         overflow: auto
         margin: 0
         background: $background-grey
-        @include media(mobile)
-            position: absolute
-            bottom: 0
-            width: 100%
-            border-radius: $border-radius-default
+        border-radius: 0 0 $border-radius-default $border-radius-default
 
         .btn
             margin-bottom: 0px
