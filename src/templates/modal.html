@@ -1,9 +1,11 @@
 <div class="modal" ng-if="open">
-    <div class="modal-header modal-header-info">{{ title }}</div>
-    <div class="modal-body" ng-transclude>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, at, vel, id, similique nemo voluptatibus ab iure quis quod aut dolorum culpa vero aspernatur impedit nisi facilis deserunt tenetur. Iste.</p>
-    </div>
-    <div class="modal-footer">
-        <a id="btn-okay" class="btn btn-primary float-right" ng-click="close()">Okay</a>
+    <div class="modal-content">
+        <div class="modal-header modal-header-info">{{ title }}</div>
+        <div class="modal-body" ng-transclude>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, at, vel, id, similique nemo voluptatibus ab iure quis quod aut dolorum culpa vero aspernatur impedit nisi facilis deserunt tenetur. Iste.</p>
+        </div>
+        <div class="modal-footer">
+            <a id="btn-okay" class="btn btn-primary float-right" ng-click="close()">Okay</a>
+        </div>
     </div>
 </div>

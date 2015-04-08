@@ -1,6 +1,5 @@
 .modal
-    @include transform(translate(-50.1%, -50.1%))
-    @include position(fixed, 50% null null 50%)
+    @include position(fixed, 0 0 0 0)
     @include transform-origin(0 0)
     @include backface-visibility(hidden)
     @extend %box-shadow-default
@@ -8,13 +7,11 @@
     z-index: $z-index-alpha + 1
     overflow-y: auto
     overflow-x: hidden
+    margin: $px-gutter-large auto
     height: auto
     width: $width-modal
     border-radius: $border-radius-large
     @include media(mobile)
-        @include transform(none)
-        @include position(fixed, 0 0 0 0)
-        width: auto
         height: auto
         outline: 0
         -webkit-overflow-scrolling: touch

@@ -177,13 +177,15 @@
             restrict: 'AE',
             template: '' +
             '<div class="modal" ng-if="open" id="exp-confirm-modal">\n' +
-            '    <div class="modal-header" ng-class="::headerClass">{{ ::title }}</div>\n' +
-            '    <div class="modal-body" ng-bind-html="::html">\n' +
-            '    </div>\n' +
-            '    <div class="modal-footer">\n' +
-            '        <a class="btn float-left" id="cancel-modal-btn" ng-class="::cancelClass" ng-if="::cancelText" ng-click="cancel()">{{ ::cancelText }}</a>\n' +
-            '        <a class="btn float-right" id="confirm-modal-btn" ng-class="::confirmClass" ng-click="confirm()">{{ ::confirmText }}</a>\n' +
-            '    </div>\n' +
+            '   <div class="modal-content">\n' +
+            '       <div class="modal-header" ng-class="::headerClass">{{ ::title }}</div>\n' +
+            '       <div class="modal-body" ng-bind-html="::html">\n' +
+            '       </div>\n' +
+            '       <div class="modal-footer">\n' +
+            '           <a class="btn float-left" id="cancel-modal-btn" ng-class="::cancelClass" ng-if="::cancelText" ng-click="cancel()">{{ ::cancelText }}</a>\n' +
+            '           <a class="btn float-right" id="confirm-modal-btn" ng-class="::confirmClass" ng-click="confirm()">{{ ::confirmText }}</a>\n' +
+            '       </div>\n' +
+            '   </div>\n' +
             '</div>',
             link: function(scope, elem, attr) {
             }
@@ -197,7 +199,7 @@
                 title: '@expModal',
                 open: '=expModalOpen'
             },
-            templateUrl: 'dist/templates/modal.html',
+            templateUrl: 'src/templates/modal.html',
             transclude: true,
             link: function(scope, elem, attr) {
                 var overlayListener = function () {
