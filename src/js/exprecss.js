@@ -50,7 +50,7 @@
     app.service('$expModal', function($compile, $rootScope, $document) {
         var scope = $rootScope.$new(true),
             $body = angular.element($document[0].body),
-            overlay = $compile('<div class="modal-overlay" ng-if="showOverlay" ng-click="close(); showOverlay = false"></div>')(scope, function(elem) {
+            overlay = $compile('<div class="modal-overlay" ng-if="showOverlay" ng-click="close()"></div>')(scope, function(elem) {
                 $body.append(elem);
             }),
             registry = {},
@@ -62,11 +62,22 @@
                 beforeShowListener(scope);
             }
             scope.showOverlay = true;
-            scope.close = listener;
+
+            //Prevent modal stacking by cleaning up already open modals
+            if(scope.closeCurrentModal){
+                scope.closeCurrentModal();
+            }
+            scope.closeCurrentModal = listener;
         };
 
-        this.hideOverlay = function() {
+        this.hideOverlay = scope.hideOverlay = function() {
+            scope.closeCurrentModal = null;
             scope.showOverlay = false;
+        };
+
+        this.close = scope.close = function(){
+            scope.closeCurrentModal();
+            scope.hideOverlay();
         };
 
         this.register = function(options, scope) {
