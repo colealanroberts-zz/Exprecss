@@ -29,7 +29,7 @@
         @include transform(translateY(-50%))
         @include position(absolute, 50% null null null)
 
-.center-all
+.center
     &-relative
         @include transform(translate(-50%, -50%))
         @include position(relative, 50% null null 50%)
@@ -97,20 +97,40 @@
         @include media(desktop-large)
             display: none !important
 
-.font-size-12
-    font-size: $font-size-12
+.font-size
+    &-12
+        font-size: $font-size-12
 
-.font-size-14
-    font-size: $font-size-14
+    &-14
+        font-size: $font-size-14
 
-.font-size-16
-    font-size: $font-size-16
+    &-16
+        font-size: $font-size-16
 
-.font-size-24
-    font-size: $font-size-24
+    &-24
+        font-size: $font-size-24
 
-.font-size-36
-    font-size: $font-size-36
+    &-36
+        font-size: $font-size-36
+
+.display
+    &-none
+        display: none
+
+    &-block
+        display: block
+
+    &-inline
+        display: inline
+
+    &-inline-block
+        display: inline-block
+
+    &-table
+        display: table
+
+    &-flex
+        @include display(flex)
 
 .inline-block-reset
     font-size: 0
