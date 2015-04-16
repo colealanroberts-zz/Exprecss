@@ -64,9 +64,7 @@
             scope.showOverlay = true;
 
             //Prevent modal stacking by cleaning up already open modals
-            if(scope.closeCurrentModal){
-                scope.closeCurrentModal();
-            }
+            scope.closeCurrentModal && scope.closeCurrentModal();
             scope.closeCurrentModal = listener;
         };
 
@@ -76,7 +74,7 @@
         };
 
         this.close = scope.close = function(){
-            scope.closeCurrentModal();
+            scope.closeCurrentModal && scope.closeCurrentModal();
             scope.hideOverlay();
         };
 
