@@ -72,7 +72,7 @@
 
         this.hideOverlay = scope.hideOverlay = function() {
             scope.closeCurrentModal = null;
-            scope.showOverlay = false;
+            scope.showOverlay = function(){ /* empty since there is nothing to close */ };
         };
 
         this.close = scope.close = function(){
