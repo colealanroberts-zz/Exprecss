@@ -7,15 +7,11 @@
     z-index: $z-index-alpha + 1
     overflow-y: auto
     overflow-x: hidden
-    margin: $px-gutter-large auto
     height: auto
-    width: $width-modal
+    width: 100%
+    outline: 0
     border-radius: $border-radius-large
     @include media(mobile)
-        width: 100%
-        height: auto
-        margin: $px-gutter-small auto
-        outline: 0
         -webkit-overflow-scrolling: touch
 
     // Angular classes for adding and remove the modal with a transition
@@ -32,12 +28,11 @@
 
     // This call is added to the <body> when the modal is open
     &-open
-        @include media(tablet-and-down)
-            overflow: hidden
+        overflow: hidden
 
-            &.modal
-                overflow-x: hidden
-                overflow-y: auto
+        &.modal
+            overflow-x: hidden
+            overflow-y: auto
 
     &-content,
     &-header,
@@ -47,10 +42,13 @@
 
     &-content
         display: block
+        width: $width-modal
+        margin: $px-gutter-base auto
         background: $white
         border-radius: $border-radius-default
         @include media(tablet-and-down)
-            margin: $px-gutter-small
+            width: calc(100% - #{$px-gutter-base})
+            margin: $px-gutter-small auto
 
     &-header
         @include padding(15px 20px)
