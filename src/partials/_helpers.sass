@@ -11,6 +11,22 @@
 .full-width
     @include fill-parent
 
+    &-desktop-large
+        @include media(desktop-large)
+            width: 100%
+
+    &-desktop
+        @include media(desktop-and-down)
+            width: 100%
+
+    &-tablet
+        @include media(tablet-and-down)
+            width: 100%
+
+    &-mobile
+        @include media(mobile)
+            width: 100%
+
 .center
     &-relative
         @include transform(translate(-50%, -50%))
