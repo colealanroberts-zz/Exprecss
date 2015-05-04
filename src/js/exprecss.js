@@ -78,24 +78,6 @@
             scope.hideOverlay();
         };
 
-        this.register = function(options, scope) {
-            var _options = angular.extend({
-                title: "Modal Title",
-                html: "Modal Html"
-            }, options);
-
-            registry[i] = $compile(angular.element('<div exp-modal-open="isOpen" exp-modal="'+_options.title+'">'+_options.html+'</div>'))(scope);
-
-            $body.append(registry[i]);
-
-            return i++;
-        };
-
-        this.deregister = function(key) {
-            $body.remove(registry[key]);
-            delete registry[key];
-        };
-
         this.setBeforeShowListener = function(listener) {
             beforeShowListener = listener;
         };
@@ -210,7 +192,7 @@
             },
             templateUrl: 'src/templates/modal.html',
             transclude: true,
-            link: function(scope, elem, attr) {
+            link: function(scope) {
                 var overlayListener = function () {
                     scope.open = false;
                 };
@@ -226,34 +208,6 @@
                 scope.close = function() {
                     scope.open = false;
                 }
-            }
-        }
-    });
-
-    app.directive('expModalClick', function($expModal) {
-        return {
-            restrict: "A",
-            scope: {
-                title: '@expModalClick',
-                html: '@expModalClickHtml'
-            },
-            link: function(scope, elem, attr) {
-                scope.isOpen = false;
-
-                var registryKey = $expModal.register({
-                    title: scope.title,
-                    html: scope.html
-                }, scope);
-
-                elem.on('click', function() {
-
-                    scope.isOpen = true;
-                    scope.$apply();
-                });
-
-                scope.$on('$destroy', function() {
-                    $expModal.deregister(registryKey);
-                });
             }
         }
     });
