@@ -2,15 +2,12 @@
     @include position(fixed, 0 0 0 0)
     @include transform-origin(0 0)
     @include backface-visibility(hidden)
-    @extend %box-shadow-default
-    @extend %force-hardware-accel
     z-index: $z-index-alpha + 1
     overflow-y: auto
     overflow-x: hidden
     height: auto
     width: 100%
     outline: 0
-    border-radius: $border-radius-large
     @include media(mobile)
         -webkit-overflow-scrolling: touch
 
