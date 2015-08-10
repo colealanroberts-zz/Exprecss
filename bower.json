@@ -1,7 +1,7 @@
 {
   "name": "Exprecss",
   "description": "A lightweight responsive framework built on Bourbon & Neat",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "main": "exprecss.css",
   "ignore": [
     ".*",
