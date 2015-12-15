@@ -2,7 +2,7 @@
     @include position(fixed, 0 0 0 0)
     @include transform-origin(0 0)
     @include backface-visibility(hidden)
-    z-index: $z-index-alpha + 1
+    z-index: $z-index-alpha
     overflow-y: auto
     overflow-x: hidden
     height: auto
@@ -103,7 +103,7 @@
     &-overlay
         @include position(fixed, 0 0 0 0)
         @extend %force-hardware-accel
-        z-index: $z-index-alpha
+        z-index: $z-index-alpha - 1
         display: block
         background: rgba($black, $alpha-modal-overlay)
 
