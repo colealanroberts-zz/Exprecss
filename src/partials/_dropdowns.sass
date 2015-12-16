@@ -5,7 +5,8 @@
     right: 0
 
     &-menu-container
-        position: relative
+        @include position(absolute, null 1px null null)
+        // position: relative - Added Decemeber 16th
 
         &-inactive
             @include animation(dropdown-close $ease-out-cubic ($transition-duration-default - 50ms))
@@ -41,7 +42,7 @@
         overflow-y: scroll
         height: auto
         min-width: $min-width-dropdown-menu
-        max-height: $max-height-dropdown-menu
+        max-height: $px-gutter-large * 3.5 // Intentionally show the next item if it exists
         border-radius: $border-radius-default
         background: $white
         visibility: visible
@@ -56,7 +57,9 @@
 
             a
                 display: block
-                padding: 10px
+                height: $px-gutter-large
+                line-height: $px-gutter-large
+                padding-left: $px-gutter-small
                 font-size: $font-size-12
 
                 &:hover
