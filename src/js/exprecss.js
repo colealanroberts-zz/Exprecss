@@ -1,17 +1,17 @@
-(function() {
-	'use strict';
+(function () {
+    'use strict';
 
-	var app = angular.module('exprecss', []).run(function($rootScope, $expConfirm, $document) {
-		$document.on('click', function(e) {
-			if (e.target.className &&
-				(e.target.className.indexOf('btn-responsive-nav') >= 0 ||
-					e.target.className.indexOf('btn-responsive-nav-close') >= 0)) {
-				angular.element($document[0].querySelector('.navbar ul')).toggleClass('nav-close nav-open');
-				e.preventDefault();
-			}
-		});
+    var app = angular.module('exprecss', []).run(function ($rootScope, $expConfirm, $document) {
+        $document.on('click', function (e) {
+            if (e.target.className &&
+                (e.target.className.indexOf('btn-responsive-nav') >= 0 ||
+                e.target.className.indexOf('btn-responsive-nav-close') >= 0)) {
+                angular.element($document[0].querySelector('.navbar ul')).toggleClass('nav-close nav-open');
+                e.preventDefault();
+            }
+        });
 
-        $document.on('click', function(e) {
+        $document.on('click', function (e) {
             if (e.target.className &&
                 e.target.className.indexOf('btn-dropdown') >= 0) {
                 var that = angular.element(e.target),
@@ -21,79 +21,57 @@
                 menu.toggleClass('dropdown-menu-container-inactive dropdown-menu-container-active');
                 that[0].focus();
 
-                menu.one('mousedown', function(ev) {
+                menu.one('mousedown', function (ev) {
                     ev.target.click();
                 });
 
-                that.one('blur', function() {
+                that.one('blur', function () {
                     menu.removeClass('dropdown-menu-container-active');
                     menu.addClass('dropdown-menu-container-inactive');
                 });
             }
         });
 
-        $rootScope.errorConfirm = function() {
-            $expConfirm('Error', 'Something real bad just now!', 'Freak out', 'Ignore').then(function() {
+        $rootScope.errorConfirm = function () {
+            $expConfirm('Error', 'Something real bad just now!', 'Freak out', 'Ignore').then(function () {
                 alert('You freaked out');
-            }, function() {
+            }, function () {
                 alert('You ignored it');
             });
         };
 
-        $rootScope.errorAlert = function() {
-            $expConfirm('Error', 'Something real bad just now!', 'Whatever').then(function() {
+        $rootScope.errorAlert = function () {
+            $expConfirm('Error', 'Something real bad just now!', 'Whatever').then(function () {
                 alert('You dismissed alert');
             });
         };
     });
 
-    app.service('$expModal', function($compile, $rootScope, $document) {
-        var scope = $rootScope.$new(true),
-            $body = angular.element($document[0].body),
-            overlay = $compile('<div class="modal-overlay" ng-if="showOverlay" ng-click="close()"></div>')(scope, function(elem) {
-                $body.append(elem);
-            }),
-            registry = {},
-            beforeShowListener = null,
-            i = 0;
+    app.service('$expModal', function () {
+        var beforeShowListener = null;
 
-        this.showOverlay = function(listener) {
+        this.beforeShowListener = function () {
             if (beforeShowListener) {
-                beforeShowListener(scope);
+                beforeShowListener();
             }
-            scope.showOverlay = true;
-
-            //Prevent modal stacking by cleaning up already open modals
-            scope.closeCurrentModal && scope.closeCurrentModal();
-            scope.closeCurrentModal = listener;
         };
 
-        this.hideOverlay = scope.hideOverlay = function() {
-            scope.closeCurrentModal = null;
-            scope.showOverlay = false;
-        };
-
-        this.close = scope.close = function(){
-            scope.closeCurrentModal && scope.closeCurrentModal();
-            scope.hideOverlay();
-        };
-
-        this.setBeforeShowListener = function(listener) {
+        this.setBeforeShowListener = function (listener) {
             beforeShowListener = listener;
         };
     });
 
-    app.factory('$expAlertServerError', function($expConfirm){
-        return function() {
+    app.factory('$expAlertServerError', function ($expConfirm) {
+        return function () {
             return $expConfirm('Error', 'An unexpected error has occurred.', 'Okay', null, {headerClass: 'modal-header-important'});
         }
     });
 
-	app.factory('$expConfirm', function($q, $rootScope, $compile, $expModal, $document, $sce, $timeout) {
-		var $expConfirm = function(title, html, confirmText, cancelText, options) {
-			var deferred = $q.defer(),
-				scope = $rootScope.$new(),
-				$body = angular.element($document[0].body);
+    app.factory('$expConfirm', function ($q, $rootScope, $compile, $expModal, $document, $sce, $timeout) {
+        var $expConfirm = function (title, html, confirmText, cancelText, options) {
+            var deferred = $q.defer(),
+                scope = $rootScope.$new(),
+                $body = angular.element($document[0].body);
 
             options = options || {};
 
@@ -114,32 +92,30 @@
                 open: true
             });
 
-            var confirmModal = $compile(angular.element('<div exp-confirm></div>'))(scope, function(elem) {
+            var confirmModal = $compile(angular.element('<div exp-confirm></div>'))(scope, function (elem) {
                     $body.append(elem);
                 }),
-                cancel = function() {
+                cancel = function () {
                     scope.$destroy();
-                    $timeout(function() {
+                    $timeout(function () {
                         confirmModal.remove();
-                        $expModal.hideOverlay();
                         $document.off('keypress', handleKeyPress);
                         deferred.reject();
                     }, 0);
                 },
-                confirm = function() {
+                confirm = function () {
                     scope.$destroy();
-                    $timeout(function() {
+                    $timeout(function () {
                         confirmModal.remove();
-                        $expModal.hideOverlay();
                         $document.off('keypress', handleKeyPress);
                         deferred.resolve();
                     }, 0);
                 },
                 handleKeyPress = function (e) {
-                    if (cancelText && e.which === 27){
+                    if (cancelText && e.which === 27) {
                         e.preventDefault();
                         cancel();
-                    }else if (e.which === 13 || e.which === 27){
+                    } else if (e.which === 13 || e.which === 27) {
                         e.preventDefault();
                         confirm();
                     }
@@ -147,15 +123,13 @@
 
             angular.extend(scope, {
                 cancel: cancel,
-                confirm: confirm
+                confirm: confirm,
+                close: scope.cancelText ? cancel : confirm
             });
 
             $document.on('keypress', handleKeyPress);
-            if (cancelText) {
-                $expModal.showOverlay(cancel);
-            } else {
-                $expModal.showOverlay(confirm);
-            }
+
+            $expModal.beforeShowListener();
 
             return deferred.promise;
         };
@@ -168,6 +142,7 @@
             restrict: 'AE',
             template: '' +
             '<div class="modal" ng-if="open" id="exp-confirm-modal">\n' +
+            '   <div class="modal-overlay" ng-click="close()"></div>\n' +
             '   <div class="modal-content">\n' +
             '       <div class="modal-header" ng-class="::headerClass">{{ ::title }}</div>\n' +
             '       <div class="modal-body" ng-bind-html="::html">\n' +
@@ -178,12 +153,12 @@
             '       </div>\n' +
             '   </div>\n' +
             '</div>',
-            link: function(scope, elem, attr) {
+            link: function (scope, elem, attr) {
             }
         }
     });
 
-    app.directive('expModal', function($expModal) {
+    app.directive('expModal', function () {
         return {
             restrict: 'AE',
             scope: {
@@ -192,32 +167,20 @@
             },
             templateUrl: 'src/templates/modal.html',
             transclude: true,
-            link: function(scope) {
-                var overlayListener = function () {
-                    scope.open = false;
-                };
-
-                scope.$watch('open', function (val) {
-                    if (val) {
-                        $expModal.showOverlay(overlayListener);
-                    } else {
-                        $expModal.hideOverlay();
-                    }
-                });
-
-                scope.close = function() {
+            link: function (scope) {
+                scope.close = function () {
                     scope.open = false;
                 }
             }
         }
     });
 
-    app.directive('expMask', function($log) {
+    app.directive('expMask', function ($log) {
         var maskPattern = /[\(\)\[\]0-9\-\s]+/,
             separators = /[\(\)\[\]\s\-]/g,
             separator = /[\(\)\[\]\s\-]/;
 
-        var applyMask = function(charArray, mask) {
+        var applyMask = function (charArray, mask) {
             var i = 0, len = charArray.length, result = '', mlen = mask.length;
             for (var n = 0; n < mlen; n++) {
                 var c = mask.charAt(n);
@@ -237,7 +200,7 @@
         };
 
         // Get plain number array
-        var clean = function(str) {
+        var clean = function (str) {
             return str.replace(separators, '').split('');
         };
 
@@ -249,7 +212,7 @@
          * ex. For mask: (000) 000-0000
          * return [2,3,6,7,9,10,11,12,13,14]
          */
-        var nextPositions = function(mask) {
+        var nextPositions = function (mask) {
             var posArr = [];
             for (var n in mask) {
                 if (!separator.test(mask[n])) {
@@ -264,7 +227,7 @@
         };
 
         // Get indexes for numbers by string position
-        var whichChars = function(mask) {
+        var whichChars = function (mask) {
             var i = 0, indexArr = [];
             for (var n in mask) {
                 indexArr.push(i);
@@ -285,7 +248,7 @@
             restrict: 'A',
             scope: true,
             require: '?ngModel',
-            link: function(scope, elem, attr, ngModel) {
+            link: function (scope, elem, attr, ngModel) {
                 var mask = attr['expMask'],
                     charPositions = nextPositions(mask),
                     strPositions = whichChars(mask);
@@ -295,14 +258,14 @@
                 }
 
                 if (ngModel) {
-                    ngModel.$render = function() {
+                    ngModel.$render = function () {
                         if (angular.isString(ngModel.$modelValue)) {
                             elem.val(applyMask(clean(ngModel.$modelValue), mask));
                         }
                     };
                 }
 
-                elem.on('keydown', function(e){
+                elem.on('keydown', function (e) {
                     if (e.which === 8) {
                         e.preventDefault();
 
@@ -326,7 +289,7 @@
                         elem.val(maskedValue);
 
                         if (ngModel) {
-                            scope.$apply(function() {
+                            scope.$apply(function () {
                                 ngModel.$setViewValue(maskedValue);
                             });
                         }
@@ -335,7 +298,7 @@
                     }
                 });
 
-                elem.on('keypress', function(e){
+                elem.on('keypress', function (e) {
                     e.preventDefault();
 
                     var start = elem[0].selectionStart,
@@ -359,7 +322,7 @@
                     elem.val(maskedValue);
 
                     if (ngModel) {
-                        scope.$apply(function() {
+                        scope.$apply(function () {
                             ngModel.$setViewValue(maskedValue);
                         });
                     }
