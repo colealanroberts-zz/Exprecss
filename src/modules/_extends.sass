@@ -14,12 +14,11 @@
         size: $font-size-14
 
 %clearfix
-    &:after,
-    &:before
-        content: ''
-        display: table
-
     &:after
+        visibility: hidden
+        content: ''
+        display: block
+        height: 0
         clear: both
 
 %box-shadow-default

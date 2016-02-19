@@ -47,7 +47,12 @@
 
     &-body,
     &-footer
-        @extend %clearfix
+        &:after
+            visibility: hidden
+            content: ''
+            display: block
+            height: 0
+            clear: both
 
     &-body
         @include padding(20px)
