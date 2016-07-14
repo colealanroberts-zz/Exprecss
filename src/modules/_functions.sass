@@ -1,3 +1,22 @@
+// Function to solve index problems
+// the first the first @param is the element list declared in _variables
+// The second @param is the element from the list
+@function z($els, $el)
+    $z-index: index($els, $el) * 50
+
+    @if $z-index
+        @return $z-index
+
+    @warn 'There is no "#{$el} in the element list. Perhaps you meant one of #{$element-list}?'
+    @return null
+
+// Pixel to Rems for font sizes
+$browser-context: 16
+@function rem($pixels, $context: $browser-context)
+    @return #{$pixels/$context}rem
+
+
+// Automatically scale elements when on mobile
 @function mobile-scale($size)
     $computed-size: floor($size * $mobile-multiplier)
 
@@ -6,4 +25,3 @@
 
     @else
         @return $computed-size
-
