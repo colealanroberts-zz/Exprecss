@@ -200,8 +200,7 @@
     @extend %box-shadow-default
 
 .clearfix
-    visibility: hidden
+    &:after
         content: ''
-        display: block
-        height: 0
+        display: table
         clear: both

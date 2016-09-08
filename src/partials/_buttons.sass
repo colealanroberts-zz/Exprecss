@@ -107,7 +107,7 @@ input.btn
         background: $white
 
         &:after
-            @include caret(10px)
+            @include triangle(10px, darken($border-grey, 10%), down)
             @include position(absolute, 1px 0 null null)
             display: block
             border-left: 1px solid $border-grey

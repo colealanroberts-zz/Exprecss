@@ -15,7 +15,6 @@ $browser-context: 16
 @function rem($pixels, $context: $browser-context)
     @return #{$pixels/$context}rem
 
-
 // Automatically scale elements when on mobile
 @function mobile-scale($size)
     $computed-size: floor($size * $mobile-multiplier)

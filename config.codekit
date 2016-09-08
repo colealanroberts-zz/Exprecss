@@ -552,22 +552,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": false
 		},
-	"\/src\/partials\/_caret.sass": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 2,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/src\/partials\/_caret.sass",
-		"outputAbbreviatedPath": "\/src\/css\/_caret.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": false
-		},
 	"\/src\/partials\/_checkboxes.sass": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
