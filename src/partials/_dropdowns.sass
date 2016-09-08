@@ -4,9 +4,25 @@
     height: 100%
     right: 0
 
+    &:after,
+    &:before
+        display: block
+        z-index: 2
+        content: ''
+
+    &:after
+        @include position(absolute, 0 null null 0)
+        width: 1px
+        height: 100%
+        background: $border-grey
+
+    &:before
+        @include triangle(10px, darken($border-grey, 20%), down)
+        @include position(absolute, 50% null null 50%)
+        @include transform(translate(-50%, -50%))
+
     &-menu-container
         @include position(absolute, null 1px null null)
-        // position: relative - Added Decemeber 16th
 
         &-inactive
             @include animation(dropdown-close $ease-out-cubic ($transition-duration-default - 50ms))
@@ -21,15 +37,6 @@
 
             .dropdown-menu
                 display: block
-
-        &:before
-            @include image-retina('src/img/dropdown-triangle', 'png', 13px, $height-dropdown-triangle)
-            @include position(absolute, -($height-dropdown-triangle) 15px null null)
-            z-index: $z-index-alpha + 3
-            display: block
-            content: ''
-            width: 13px
-            height: $height-dropdown-triangle
 
     &-menu
         @include position(absolute, null 0 null null)

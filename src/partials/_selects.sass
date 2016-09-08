@@ -72,11 +72,8 @@
         pointer-events: none
 
     &:after
-        @include position(absolute, 2px 0 null null)
         @include triangle(10px, darken($border-grey, 20%), down)
+        @include position(absolute, 50% $px-gutter-small null null)
+        @include transform(translateY(-50%))
         display: block
         content: ''
-        width: 40px
-        height: 35px
-        border-top: none
-        border-right: none
