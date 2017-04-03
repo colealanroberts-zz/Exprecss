@@ -11,18 +11,6 @@
     @include media(mobile)
         -webkit-overflow-scrolling: touch
 
-    // Angular classes for adding and remove the modal with a transition
-    &.ng
-        &-enter
-            @include animation(modal-open $ease-out-cubic $transition-modal-open)
-            @include media(mobile)
-                @include animation(modal-open-responsive $ease-out-cubic $transition-modal-open)
-
-        &-leave
-            @include animation(modal-hide $ease-in-cubic $transition-duration-default)
-            @include media(mobile)
-                @include animation(modal-close-responsive $ease-out-cubic $transition-duration-default)
-
     // This call is added to the <body> when the modal is open
     &-open
         overflow: hidden
@@ -105,20 +93,3 @@
         z-index: $z-index-alpha - 1
         display: block
         background: rgba($black, $alpha-modal-overlay)
-
-
-        // Angular classes for adding and remove the modal with a transition
-        &.ng
-            &-enter
-                @include transition(all $ease-out-cubic $transition-duration-default)
-                @include opacity(0)
-
-                &-active
-                    @include opacity(1)
-
-            &-leave
-                @include transition(all $ease-in-cubic $transition-duration-default)
-                @include opacity(1)
-
-                &-active
-                    @include opacity(0)
