@@ -165,7 +165,17 @@
                 title: '@expModal',
                 open: '=expModalOpen'
             },
-            templateUrl: 'src/templates/modal.html',
+            template : '' +
+            '<div class="modal" ng-if="open">' +
+            '    <div class="modal-overlay" ng-click="close()"></div>' +
+            '    <div class="modal-content">' +
+            '        <div class="modal-header modal-header-info">{{ title }}</div>' +
+            '        <div class="modal-body" ng-transclude></div>' +
+            '        <div class="modal-footer">' +
+            '            <a id="btn-okay" class="btn btn-primary float-right" ng-click="close()">Okay</a>' +
+            '        </div>' +
+            '    </div>' +
+            '</div>',
             transclude: true,
             link: function (scope) {
                 scope.close = function () {
